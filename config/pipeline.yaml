@@ -1,0 +1,9 @@
+processing_version: terrain_v1
+features_version: features_v1
+common_grid_m: 1000.0
+roi_size_km: 60.0
+roughness_kernel_cells: 3
+minimum_valid_cell_fraction: 0.90
+# Deliberately empty until local products, original labels and ROIs are verified.
+# See docs/data-acquisition.md for the job contract.
+jobs: []

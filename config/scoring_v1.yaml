@@ -1,0 +1,13 @@
+version: scoring_v1
+minimum_coverage: 0.75
+minimum_valid_cell_fraction: 0.90
+weights:
+  slope_median_deg: 0.40
+  relief_p90_p10_m: 0.30
+  roughness_local_std_m: 0.20
+  steep_fraction_15deg: 0.10
+tolerances:
+  slope_median_deg: 10.0
+  relief_p90_p10_m: 1000.0
+  roughness_local_std_m: 200.0
+  steep_fraction_15deg: 0.40

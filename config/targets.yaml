@@ -1,0 +1,11 @@
+targets:
+  - profile_id: mars_ref_01
+    body: Mars
+    region_name: Jezero study ROI (proposed; footprint unverified)
+    processing_status: not_yet_measured
+    required_source: MOLA MEGDR topography raster and original PDS label
+  - profile_id: moon_ref_01
+    body: Moon
+    region_name: LOLA crater/highlands ROI (selection pending)
+    processing_status: not_yet_measured
+    required_source: LOLA GDR topography raster and original PDS label
