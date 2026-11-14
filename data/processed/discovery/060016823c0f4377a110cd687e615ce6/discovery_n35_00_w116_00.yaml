@@ -1,0 +1,25 @@
+body: Earth
+horizontal_datum: WGS84-G1150
+interpretation_evidence: Systematically sampled available source-tile center chosen
+  before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before
+  averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain.
+  Geology/environment/resources/caves and literature novelty are unreviewed.
+label_path: C:\Users\sobro\Documents\New Apps\TerraTwin AI\data\raw\Earth\Copernicus90\Copernicus_DSM_COG_30_N35_00_W116_00_DEM\Copernicus_DSM_30_N35_00_W116_00.xml
+label_sha256: becd84ccb1df3ad3c49752ccc6e673c83721207ef1ba05c0e8ad9678a3fb144a
+latitude_bounds_deg:
+- -90.0
+- 90.0
+latitude_type: geodetic
+longitude_convention: '-180_180'
+mask_land_value: 0
+mask_path: C:\Users\sobro\Documents\New Apps\TerraTwin AI\data\processed\discovery\060016823c0f4377a110cd687e615ce6\c6917545a1f4_water.bin
+mask_sha256: 64817798171731f80550be2cbaed46aa7b5b1cdf5d8cf55cccee7ff5e7d8520c
+nodata: null
+offset: 0.0
+product_type: topographic_elevation
+raster_data_path: null
+sample_unit: m
+scale: 1.0
+source_crs: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]
+value_interpretation: standard
+vertical_datum: EGM2008 geoid

@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-11-14T17:06:19.425075+00:00",
+  "run_id": "060016823c0f4377a110cd687e615ce6",
+  "measured": 4,
+  "eligible": 4,
+  "independent_features": true,
+  "independent_ranking": true,
+  "ui_table_export_parity": true,
+  "target_switch_clears_results": true,
+  "novelty": "unreviewed",
+  "scientific_suitability_validated": false
+}

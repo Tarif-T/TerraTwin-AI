@@ -1,0 +1,3055 @@
+{
+  "request": {
+    "bbox": [
+      -118.0,
+      34.0,
+      -115.0,
+      36.0
+    ],
+    "budget": 4,
+    "reference": {
+      "slope_median_deg": 1.8805139866265086,
+      "relief_p90_p10_m": 697.9246059956658,
+      "roughness_local_std_m": 28.251268463408813,
+      "steep_fraction_15deg": 0.005648038049940547,
+      "profile_id": "mars_jezero_60km_v1",
+      "body": "Mars",
+      "region_name": "Jezero crater 60 km study ROI",
+      "roi_id": "mars_jezero_roi_60km_v1",
+      "roi_size_km": 60.0,
+      "common_grid_m": 1000.0,
+      "roughness_kernel_cells": 3,
+      "valid_cell_fraction": 1.0,
+      "qa_pass": true,
+      "source_ids": [
+        "MOLA_MEGT44N000HB"
+      ],
+      "processing_version": "terrain_v1",
+      "features_version": "features_v1",
+      "config_sha256": "73acd6b3fab6cf30413c74225b16882590f79b543bab4d315cdac4f1e3431e3c",
+      "created_utc": "2026-11-14T02:50:58.744102Z",
+      "coordinate_convention": "planetocentric; 0_360",
+      "processing_notes": "MOLA PDS4 SignedMSB2 metre topography; scale 1, offset 0; radius 3396000 m. XML declares no special missing constant; zero is valid elevation. Interpolated bins are present: nonmissing coverage is not direct-shot coverage.",
+      "synthetic": false,
+      "site_id": null,
+      "site_name": null,
+      "country": null,
+      "centroid_lat": null,
+      "centroid_lon": null,
+      "data_warning": "MOLA includes interpolated bins; raster validity is not direct-shot coverage."
+    },
+    "scoring": {
+      "version": "scoring_v1",
+      "weights": {
+        "slope_median_deg": 0.4,
+        "relief_p90_p10_m": 0.3,
+        "roughness_local_std_m": 0.2,
+        "steep_fraction_15deg": 0.1
+      },
+      "tolerances": {
+        "slope_median_deg": 10.0,
+        "relief_p90_p10_m": 1000.0,
+        "roughness_local_std_m": 200.0,
+        "steep_fraction_15deg": 0.4
+      },
+      "minimum_coverage": 0.75,
+      "minimum_valid_cell_fraction": 0.9
+    },
+    "known_centers": [
+      [
+        -116.5,
+        36.5
+      ],
+      [
+        -68.5,
+        -23.5
+      ],
+      [
+        15.5,
+        -24.5
+      ],
+      [
+        40.5,
+        13.5
+      ],
+      [
+        58.5,
+        22.5
+      ],
+      [
+        -67.5,
+        -19.5
+      ],
+      [
+        95.5,
+        37.5
+      ],
+      [
+        40.5,
+        25.5
+      ],
+      [
+        135.5,
+        -24.5
+      ],
+      [
+        -115.5,
+        34.5
+      ],
+      [
+        10.5,
+        24.5
+      ],
+      [
+        160.20112364547506,
+        -77.81689181335317
+      ],
+      [
+        -83.418055344822,
+        73.0359066517747
+      ],
+      [
+        -85.0302592718897,
+        75.01268271051367
+      ],
+      [
+        -98.42696902148067,
+        72.31936845390412
+      ],
+      [
+        -121.5,
+        41.5
+      ]
+    ]
+  },
+  "search": {
+    "bbox": [
+      -118.0,
+      34.0,
+      -115.0,
+      36.0
+    ],
+    "budget": 4,
+    "selection": "evenly sampled tile-center sequence before scoring",
+    "novelty": "unreviewed",
+    "provider": "Copernicus GLO-90 AWS 2021",
+    "coverage_index": {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/tileList.txt",
+      "sha256": "e5a5efe088e70506bc1007d22006bdcb09b0ec03177b62f9652363c13f49ed97",
+      "bytes": 1111950,
+      "etag": "16c1b1eac59600d73eb28cd0a4413c1b",
+      "etag_md5_verified": true,
+      "accessed_utc": "2026-11-14T17:01:38.417505+00:00"
+    },
+    "excluded_known_centers_within_km": 60,
+    "available_new_tiles": 5,
+    "excluded_count": 1
+  },
+  "rankings": [
+    {
+      "site_id": "discovery_n34_00_w117_00",
+      "site_name": "Search candidate 34.50, -116.50",
+      "similarity_index": 96.92915821007678,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 2.345431716009174,
+          "similarity": 0.9545724138638434,
+          "weight": 0.4,
+          "contribution": 0.38182896554553736,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 687.3147880738413,
+          "similarity": 0.9894462676684593,
+          "weight": 0.3,
+          "contribution": 0.2968338803005378,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 36.53636410955063,
+          "similarity": 0.9594208304152466,
+          "weight": 0.2,
+          "contribution": 0.19188416608304934,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0005945303210463733,
+          "similarity": 0.9874457017164335,
+          "weight": 0.1,
+          "contribution": 0.09874457017164336,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "discovery_n34_00_w117_00_DEM",
+        "discovery_n34_00_w117_00_WBM",
+        "discovery_n34_00_w117_00_XML"
+      ],
+      "warning": "Unreviewed terrain candidate; Copernicus surface model; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 1
+    },
+    {
+      "site_id": "discovery_n35_00_w116_00",
+      "site_name": "Search candidate 35.50, -115.50",
+      "similarity_index": 96.25516848687847,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 2.4830576783182723,
+          "similarity": 0.9415250081875107,
+          "weight": 0.4,
+          "contribution": 0.3766100032750043,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 684.9645422540694,
+          "similarity": 0.9871235562545329,
+          "weight": 0.3,
+          "contribution": 0.2961370668763598,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 37.47640814480289,
+          "similarity": 0.9549219224820356,
+          "weight": 0.2,
+          "contribution": 0.19098438449640712,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0009009009009009009,
+          "similarity": 0.9882023022101349,
+          "weight": 0.1,
+          "contribution": 0.0988202302210135,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "discovery_n35_00_w116_00_DEM",
+        "discovery_n35_00_w116_00_WBM",
+        "discovery_n35_00_w116_00_XML"
+      ],
+      "warning": "Unreviewed terrain candidate; Copernicus surface model; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 2
+    },
+    {
+      "site_id": "discovery_n34_00_w118_00",
+      "site_name": "Search candidate 34.50, -117.50",
+      "similarity_index": 93.88229638381435,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.4368853091681666,
+          "similarity": 0.9566067727425112,
+          "weight": 0.4,
+          "contribution": 0.3826427090970045,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 810.3348748572371,
+          "similarity": 0.8936775342133549,
+          "weight": 0.3,
+          "contribution": 0.2681032602640065,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 22.19954839414031,
+          "similarity": 0.9701946084434839,
+          "weight": 0.2,
+          "contribution": 0.1940389216886968,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.030236220472440945,
+          "similarity": 0.9403807278843569,
+          "weight": 0.1,
+          "contribution": 0.09403807278843569,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "discovery_n34_00_w118_00_DEM",
+        "discovery_n34_00_w118_00_WBM",
+        "discovery_n34_00_w118_00_XML"
+      ],
+      "warning": "Unreviewed terrain candidate; Copernicus surface model; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 3
+    },
+    {
+      "site_id": "discovery_n35_00_w117_00",
+      "site_name": "Search candidate 35.50, -116.50",
+      "similarity_index": 87.27620702517886,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 3.0530911490220953,
+          "similarity": 0.889355962152208,
+          "weight": 0.4,
+          "contribution": 0.3557423848608832,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 938.0730740084114,
+          "similarity": 0.7865110806605425,
+          "weight": 0.3,
+          "contribution": 0.23595332419816276,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 47.26217772534368,
+          "similarity": 0.9093233328833424,
+          "weight": 0.2,
+          "contribution": 0.1818646665766685,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.002442002442002442,
+          "similarity": 0.9920169461607421,
+          "weight": 0.1,
+          "contribution": 0.09920169461607421,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "discovery_n35_00_w117_00_DEM",
+        "discovery_n35_00_w117_00_WBM",
+        "discovery_n35_00_w117_00_XML"
+      ],
+      "warning": "Unreviewed terrain candidate; Copernicus surface model; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 4
+    }
+  ],
+  "profiles": [
+    {
+      "slope_median_deg": 1.4368853091681666,
+      "relief_p90_p10_m": 810.3348748572371,
+      "roughness_local_std_m": 22.19954839414031,
+      "steep_fraction_15deg": 0.030236220472440945,
+      "profile_id": "discovery_n34_00_w118_00_60km_v1",
+      "body": "Earth",
+      "region_name": "Search candidate 34.50, -117.50",
+      "roi_id": "discovery_n34_00_w118_00_roi60km_v1",
+      "roi_size_km": 60.0,
+      "common_grid_m": 1000.0,
+      "roughness_kernel_cells": 3,
+      "valid_cell_fraction": 0.9802777777777778,
+      "qa_pass": true,
+      "source_ids": [
+        "discovery_n34_00_w118_00_DEM",
+        "discovery_n34_00_w118_00_WBM",
+        "discovery_n34_00_w118_00_XML"
+      ],
+      "processing_version": "terrain_v1",
+      "features_version": "features_v1",
+      "config_sha256": "fa6e588641ee00710d5d0cbd4a160a5e7eb2fdbe8b6e887bda9b24844eb78697",
+      "created_utc": "2026-11-14T17:08:03.676917Z",
+      "coordinate_convention": "WGS84 geodetic; longitude -180..180",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed.",
+      "synthetic": false,
+      "site_id": "discovery_n34_00_w118_00",
+      "site_name": "Search candidate 34.50, -117.50",
+      "country": "Jurisdiction not independently identified",
+      "centroid_lat": 34.5,
+      "centroid_lon": -117.5,
+      "data_warning": "Unreviewed terrain candidate; Copernicus surface model"
+    },
+    {
+      "slope_median_deg": 2.345431716009174,
+      "relief_p90_p10_m": 687.3147880738413,
+      "roughness_local_std_m": 36.53636410955063,
+      "steep_fraction_15deg": 0.0005945303210463733,
+      "profile_id": "discovery_n34_00_w117_00_60km_v1",
+      "body": "Earth",
+      "region_name": "Search candidate 34.50, -116.50",
+      "roi_id": "discovery_n34_00_w117_00_roi60km_v1",
+      "roi_size_km": 60.0,
+      "common_grid_m": 1000.0,
+      "roughness_kernel_cells": 3,
+      "valid_cell_fraction": 1.0,
+      "qa_pass": true,
+      "source_ids": [
+        "discovery_n34_00_w117_00_DEM",
+        "discovery_n34_00_w117_00_WBM",
+        "discovery_n34_00_w117_00_XML"
+      ],
+      "processing_version": "terrain_v1",
+      "features_version": "features_v1",
+      "config_sha256": "87629acad59d4d35479df93de4acd1852fd5adb0ae1f53711db6076a598f64c3",
+      "created_utc": "2026-11-14T17:08:03.970364Z",
+      "coordinate_convention": "WGS84 geodetic; longitude -180..180",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed.",
+      "synthetic": false,
+      "site_id": "discovery_n34_00_w117_00",
+      "site_name": "Search candidate 34.50, -116.50",
+      "country": "Jurisdiction not independently identified",
+      "centroid_lat": 34.5,
+      "centroid_lon": -116.5,
+      "data_warning": "Unreviewed terrain candidate; Copernicus surface model"
+    },
+    {
+      "slope_median_deg": 3.0530911490220953,
+      "relief_p90_p10_m": 938.0730740084114,
+      "roughness_local_std_m": 47.26217772534368,
+      "steep_fraction_15deg": 0.002442002442002442,
+      "profile_id": "discovery_n35_00_w117_00_60km_v1",
+      "body": "Earth",
+      "region_name": "Search candidate 35.50, -116.50",
+      "roi_id": "discovery_n35_00_w117_00_roi60km_v1",
+      "roi_size_km": 60.0,
+      "common_grid_m": 1000.0,
+      "roughness_kernel_cells": 3,
+      "valid_cell_fraction": 0.99,
+      "qa_pass": true,
+      "source_ids": [
+        "discovery_n35_00_w117_00_DEM",
+        "discovery_n35_00_w117_00_WBM",
+        "discovery_n35_00_w117_00_XML"
+      ],
+      "processing_version": "terrain_v1",
+      "features_version": "features_v1",
+      "config_sha256": "cf8de5fef9cda28ae5fe75893685babf8075c09bf172a9b57ace82b1443652f9",
+      "created_utc": "2026-11-14T17:08:04.222940Z",
+      "coordinate_convention": "WGS84 geodetic; longitude -180..180",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed.",
+      "synthetic": false,
+      "site_id": "discovery_n35_00_w117_00",
+      "site_name": "Search candidate 35.50, -116.50",
+      "country": "Jurisdiction not independently identified",
+      "centroid_lat": 35.5,
+      "centroid_lon": -116.5,
+      "data_warning": "Unreviewed terrain candidate; Copernicus surface model"
+    },
+    {
+      "slope_median_deg": 2.4830576783182723,
+      "relief_p90_p10_m": 684.9645422540694,
+      "roughness_local_std_m": 37.47640814480289,
+      "steep_fraction_15deg": 0.0009009009009009009,
+      "profile_id": "discovery_n35_00_w116_00_60km_v1",
+      "body": "Earth",
+      "region_name": "Search candidate 35.50, -115.50",
+      "roi_id": "discovery_n35_00_w116_00_roi60km_v1",
+      "roi_size_km": 60.0,
+      "common_grid_m": 1000.0,
+      "roughness_kernel_cells": 3,
+      "valid_cell_fraction": 0.9975,
+      "qa_pass": true,
+      "source_ids": [
+        "discovery_n35_00_w116_00_DEM",
+        "discovery_n35_00_w116_00_WBM",
+        "discovery_n35_00_w116_00_XML"
+      ],
+      "processing_version": "terrain_v1",
+      "features_version": "features_v1",
+      "config_sha256": "29f30386e06e8f32dc925b55d4f15f0919607c2ef11de2c50454427084a91262",
+      "created_utc": "2026-11-14T17:08:04.549115Z",
+      "coordinate_convention": "WGS84 geodetic; longitude -180..180",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed.",
+      "synthetic": false,
+      "site_id": "discovery_n35_00_w116_00",
+      "site_name": "Search candidate 35.50, -115.50",
+      "country": "Jurisdiction not independently identified",
+      "centroid_lat": 35.5,
+      "centroid_lon": -115.5,
+      "data_warning": "Unreviewed terrain candidate; Copernicus surface model"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "discovery_n34_00_w118_00_DEM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_30_N34_00_W118_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_COG_30_N34_00_W118_00_DEM.tif",
+      "accessed_utc": "2026-11-14T17:01:40.171183Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "080709e6842345f037d5f1a18dbca18a6dcf14040bf9c5aff9a19afdba02af6c",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "EGM2008 geoid",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w118_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n34_00_w118_00_WBM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_WBM",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_30_N34_00_W118_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N34_00_W118_00_WBM.tif",
+      "accessed_utc": "2026-11-14T17:01:40.821234Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "d3dae46d5b04fcf619410baabea995e4a074b9808e8efa149dfdc22d6b82df13",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w118_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n34_00_w118_00_XML",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_XML",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_30_N34_00_W118_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_30_N34_00_W118_00.xml",
+      "accessed_utc": "2026-11-14T17:01:41.534059Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "42abf60cbd48b174d2c873918f478f5bda88c415ba80d15b3664949f4bda5979",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w118_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n34_00_w117_00_DEM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_30_N34_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_COG_30_N34_00_W117_00_DEM.tif",
+      "accessed_utc": "2026-11-14T17:01:43.947476Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "355dc8b9dda66853326f367245153acbbb393b9203e14a620c115cf21ed7f3ab",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "EGM2008 geoid",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n34_00_w117_00_WBM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_WBM",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_30_N34_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N34_00_W117_00_WBM.tif",
+      "accessed_utc": "2026-11-14T17:01:44.548544Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "449c56483bb813ee638a01673b81be74855718fb5797031650ae5e07463cd849",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n34_00_w117_00_XML",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_XML",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_30_N34_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_30_N34_00_W117_00.xml",
+      "accessed_utc": "2026-11-14T17:01:45.440334Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "0d18e55e57a27156e746ca6c5a3d13d57cf699b0786d45a0f4ae747fe98d4e7f",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n34_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w117_00_DEM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_30_N35_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_COG_30_N35_00_W117_00_DEM.tif",
+      "accessed_utc": "2026-11-14T17:01:48.183325Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "ef52e0c922675a8d1d2563c7e61072ee69e631fca9bfe1edb24baa3c0664f647",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "EGM2008 geoid",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w117_00_WBM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_WBM",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_30_N35_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N35_00_W117_00_WBM.tif",
+      "accessed_utc": "2026-11-14T17:01:48.744250Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "133995e67aabc1f9e7b90daa9ba8f76a742b5894b445008dc497da839027192c",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w117_00_XML",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_XML",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_30_N35_00_W117_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_30_N35_00_W117_00.xml",
+      "accessed_utc": "2026-11-14T17:01:49.407254Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "ef39429f1ef62d410090beebcbee5b50ae97e53fdf66691cc8028fefd14da843",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w117_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w116_00_DEM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_30_N35_00_W116_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_COG_30_N35_00_W116_00_DEM.tif",
+      "accessed_utc": "2026-11-14T17:01:51.778834Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "3c0d38fe564b30eabdbfb459f5b84f818be4d08d5cf98450ee86567d4c226165",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "EGM2008 geoid",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w116_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w116_00_WBM",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_WBM",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_30_N35_00_W116_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N35_00_W116_00_WBM.tif",
+      "accessed_utc": "2026-11-14T17:01:52.371598Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "0492853a4943861cf11bf44a5a5316ee8cede26e195f9435a7ad24cc3b8a3cd4",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w116_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    },
+    {
+      "source_id": "discovery_n35_00_w116_00_XML",
+      "provider": "Copernicus / Sinergise AWS",
+      "dataset": "COP_DEM_GLO90_XML",
+      "version": "AWS 2021 release",
+      "doi": "10.5270/ESA-c5d3d65",
+      "product_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_30_N35_00_W116_00.xml",
+      "download_url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_30_N35_00_W116_00.xml",
+      "accessed_utc": "2026-11-14T17:01:53.041758Z",
+      "license_or_rights": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/",
+      "checksum_sha256": "becd84ccb1df3ad3c49752ccc6e673c83721207ef1ba05c0e8ad9678a3fb144a",
+      "planetary_body": "Earth",
+      "horizontal_datum": "WGS84-G1150",
+      "vertical_datum": "Not applicable: supporting metadata/mask",
+      "pixel_size_m": 90.0,
+      "processing_version": "terrain_v1",
+      "roi_id": "discovery_n35_00_w116_00_roi60km_v1",
+      "processing_notes": "Systematically sampled available source-tile center chosen before scoring. WBM 0=no water retained; ocean(1), lake(2), river(3) excluded before averaging. DSM may include vegetation, buildings, snow, ice and infilled terrain. Geology/environment/resources/caves and literature novelty are unreviewed."
+    }
+  ],
+  "footprints": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -117.82560496170073,
+                34.22912245886558
+              ],
+              [
+                -117.80587145096857,
+                34.22917350194283
+              ],
+              [
+                -117.786137917116,
+                34.229221354875484
+              ],
+              [
+                -117.76640436163454,
+                34.22926601765434
+              ],
+              [
+                -117.74667078601578,
+                34.22930749027072
+              ],
+              [
+                -117.72693719175135,
+                34.22934577271665
+              ],
+              [
+                -117.7072035803328,
+                34.22938086498471
+              ],
+              [
+                -117.68746995325178,
+                34.22941276706816
+              ],
+              [
+                -117.66773631199989,
+                34.229441478960815
+              ],
+              [
+                -117.64800265806878,
+                34.22946700065714
+              ],
+              [
+                -117.6282689929501,
+                34.22948933215221
+              ],
+              [
+                -117.60853531813551,
+                34.22950847344169
+              ],
+              [
+                -117.58880163511668,
+                34.22952442452193
+              ],
+              [
+                -117.56906794538529,
+                34.229537185389795
+              ],
+              [
+                -117.54933425043299,
+                34.22954675604285
+              ],
+              [
+                -117.52960055175147,
+                34.22955313647926
+              ],
+              [
+                -117.50986685083245,
+                34.22955632669777
+              ],
+              [
+                -117.49013314916755,
+                34.22955632669777
+              ],
+              [
+                -117.47039944824851,
+                34.22955313647926
+              ],
+              [
+                -117.45066574956701,
+                34.22954675604285
+              ],
+              [
+                -117.4309320546147,
+                34.229537185389795
+              ],
+              [
+                -117.41119836488332,
+                34.22952442452193
+              ],
+              [
+                -117.39146468186448,
+                34.22950847344169
+              ],
+              [
+                -117.37173100704989,
+                34.22948933215221
+              ],
+              [
+                -117.35199734193122,
+                34.22946700065714
+              ],
+              [
+                -117.33226368800011,
+                34.229441478960815
+              ],
+              [
+                -117.31253004674821,
+                34.22941276706816
+              ],
+              [
+                -117.29279641966718,
+                34.22938086498472
+              ],
+              [
+                -117.27306280824864,
+                34.22934577271665
+              ],
+              [
+                -117.2533292139842,
+                34.22930749027072
+              ],
+              [
+                -117.23359563836544,
+                34.22926601765434
+              ],
+              [
+                -117.21386208288399,
+                34.229221354875484
+              ],
+              [
+                -117.19412854903142,
+                34.229173501942824
+              ],
+              [
+                -117.17439503829927,
+                34.22912245886558
+              ],
+              [
+                -117.17433178973744,
+                34.24551315733747
+              ],
+              [
+                -117.17426849895931,
+                34.26190381183163
+              ],
+              [
+                -117.17420516593005,
+                34.278294422338256
+              ],
+              [
+                -117.17414179061478,
+                34.29468498884758
+              ],
+              [
+                -117.17407837297858,
+                34.31107551134979
+              ],
+              [
+                -117.17401491298652,
+                34.327465989835154
+              ],
+              [
+                -117.17395141060356,
+                34.34385642429392
+              ],
+              [
+                -117.17388786579465,
+                34.36024681471635
+              ],
+              [
+                -117.1738242785247,
+                34.37663716109274
+              ],
+              [
+                -117.1737606487586,
+                34.393027463413354
+              ],
+              [
+                -117.17369697646117,
+                34.40941772166852
+              ],
+              [
+                -117.17363326159716,
+                34.42580793584857
+              ],
+              [
+                -117.17356950413135,
+                34.442198105943824
+              ],
+              [
+                -117.17350570402843,
+                34.45858823194466
+              ],
+              [
+                -117.17344186125304,
+                34.47497831384143
+              ],
+              [
+                -117.17337797576984,
+                34.491368351624516
+              ],
+              [
+                -117.17331404754333,
+                34.50775834528433
+              ],
+              [
+                -117.17325007653805,
+                34.52414829481127
+              ],
+              [
+                -117.17318606271854,
+                34.54053820019576
+              ],
+              [
+                -117.1731220060492,
+                34.556928061428245
+              ],
+              [
+                -117.17305790649446,
+                34.57331787849919
+              ],
+              [
+                -117.17299376401861,
+                34.589707651399024
+              ],
+              [
+                -117.17292957858602,
+                34.6060973801183
+              ],
+              [
+                -117.17286535016098,
+                34.62248706464746
+              ],
+              [
+                -117.17280107870764,
+                34.63887670497703
+              ],
+              [
+                -117.17273676419023,
+                34.65526630109755
+              ],
+              [
+                -117.1726724065729,
+                34.67165585299954
+              ],
+              [
+                -117.17260800581973,
+                34.68804536067357
+              ],
+              [
+                -117.17254356189474,
+                34.70443482411022
+              ],
+              [
+                -117.17247907476201,
+                34.72082424330008
+              ],
+              [
+                -117.17241454438543,
+                34.7372136182337
+              ],
+              [
+                -117.17234997072902,
+                34.75360294890176
+              ],
+              [
+                -117.17228535375655,
+                34.769992235294836
+              ],
+              [
+                -117.19214672000675,
+                34.77004384026709
+              ],
+              [
+                -117.2120081101557,
+                34.7700922199777
+              ],
+              [
+                -117.23186952266167,
+                34.77013737441715
+              ],
+              [
+                -117.25173095598281,
+                34.77017930357656
+              ],
+              [
+                -117.27159240857738,
+                34.77021800744772
+              ],
+              [
+                -117.29145387890357,
+                34.770253486023
+              ],
+              [
+                -117.31131536541949,
+                34.77028573929544
+              ],
+              [
+                -117.33117686658332,
+                34.770314767258704
+              ],
+              [
+                -117.35103838085324,
+                34.77034056990708
+              ],
+              [
+                -117.37089990668733,
+                34.770363147235486
+              ],
+              [
+                -117.39076144254376,
+                34.77038249923953
+              ],
+              [
+                -117.41062298688064,
+                34.77039862591534
+              ],
+              [
+                -117.43048453815607,
+                34.77041152725982
+              ],
+              [
+                -117.45034609482815,
+                34.77042120327038
+              ],
+              [
+                -117.47020765535497,
+                34.770427653945156
+              ],
+              [
+                -117.49006921819466,
+                34.77043087928286
+              ],
+              [
+                -117.50993078180532,
+                34.77043087928286
+              ],
+              [
+                -117.52979234464502,
+                34.770427653945156
+              ],
+              [
+                -117.54965390517184,
+                34.77042120327038
+              ],
+              [
+                -117.56951546184392,
+                34.77041152725982
+              ],
+              [
+                -117.58937701311935,
+                34.77039862591535
+              ],
+              [
+                -117.60923855745622,
+                34.77038249923952
+              ],
+              [
+                -117.62910009331266,
+                34.770363147235486
+              ],
+              [
+                -117.64896161914675,
+                34.77034056990708
+              ],
+              [
+                -117.66882313341665,
+                34.770314767258704
+              ],
+              [
+                -117.6886846345805,
+                34.77028573929544
+              ],
+              [
+                -117.70854612109642,
+                34.770253486023
+              ],
+              [
+                -117.72840759142261,
+                34.77021800744772
+              ],
+              [
+                -117.74826904401718,
+                34.77017930357656
+              ],
+              [
+                -117.76813047733832,
+                34.77013737441715
+              ],
+              [
+                -117.78799188984429,
+                34.7700922199777
+              ],
+              [
+                -117.80785327999324,
+                34.77004384026709
+              ],
+              [
+                -117.82771464624344,
+                34.769992235294836
+              ],
+              [
+                -117.82765002927097,
+                34.75360294890175
+              ],
+              [
+                -117.82758545561455,
+                34.7372136182337
+              ],
+              [
+                -117.82752092523798,
+                34.720824243300065
+              ],
+              [
+                -117.82745643810524,
+                34.70443482411022
+              ],
+              [
+                -117.82739199418026,
+                34.68804536067357
+              ],
+              [
+                -117.8273275934271,
+                34.67165585299954
+              ],
+              [
+                -117.82726323580975,
+                34.65526630109755
+              ],
+              [
+                -117.82719892129236,
+                34.63887670497703
+              ],
+              [
+                -117.82713464983901,
+                34.62248706464746
+              ],
+              [
+                -117.82707042141396,
+                34.60609738011829
+              ],
+              [
+                -117.82700623598137,
+                34.58970765139903
+              ],
+              [
+                -117.82694209350552,
+                34.57331787849919
+              ],
+              [
+                -117.82687799395079,
+                34.556928061428245
+              ],
+              [
+                -117.82681393728144,
+                34.54053820019576
+              ],
+              [
+                -117.82674992346193,
+                34.52414829481127
+              ],
+              [
+                -117.82668595245666,
+                34.50775834528433
+              ],
+              [
+                -117.82662202423015,
+                34.491368351624516
+              ],
+              [
+                -117.82655813874695,
+                34.47497831384143
+              ],
+              [
+                -117.82649429597156,
+                34.45858823194465
+              ],
+              [
+                -117.82643049586864,
+                34.442198105943824
+              ],
+              [
+                -117.82636673840283,
+                34.42580793584857
+              ],
+              [
+                -117.82630302353881,
+                34.409417721668504
+              ],
+              [
+                -117.82623935124138,
+                34.39302746341335
+              ],
+              [
+                -117.82617572147528,
+                34.37663716109273
+              ],
+              [
+                -117.82611213420533,
+                34.360246814716355
+              ],
+              [
+                -117.82604858939642,
+                34.34385642429392
+              ],
+              [
+                -117.82598508701346,
+                34.327465989835154
+              ],
+              [
+                -117.8259216270214,
+                34.31107551134979
+              ],
+              [
+                -117.8258582093852,
+                34.29468498884758
+              ],
+              [
+                -117.82579483406994,
+                34.278294422338256
+              ],
+              [
+                -117.82573150104068,
+                34.26190381183163
+              ],
+              [
+                -117.82566821026255,
+                34.24551315733747
+              ],
+              [
+                -117.82560496170073,
+                34.22912245886558
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "site_id": "discovery_n34_00_w118_00",
+          "latitude": 34.5,
+          "longitude": -117.5,
+          "novelty": "unreviewed"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -116.82560496170073,
+                34.22912245886558
+              ],
+              [
+                -116.80587145096858,
+                34.22917350194283
+              ],
+              [
+                -116.786137917116,
+                34.229221354875484
+              ],
+              [
+                -116.76640436163456,
+                34.22926601765434
+              ],
+              [
+                -116.7466707860158,
+                34.22930749027072
+              ],
+              [
+                -116.72693719175136,
+                34.22934577271665
+              ],
+              [
+                -116.70720358033282,
+                34.22938086498471
+              ],
+              [
+                -116.68746995325179,
+                34.22941276706816
+              ],
+              [
+                -116.66773631199989,
+                34.229441478960815
+              ],
+              [
+                -116.64800265806878,
+                34.22946700065714
+              ],
+              [
+                -116.62826899295011,
+                34.22948933215221
+              ],
+              [
+                -116.60853531813552,
+                34.22950847344169
+              ],
+              [
+                -116.58880163511668,
+                34.22952442452193
+              ],
+              [
+                -116.5690679453853,
+                34.229537185389795
+              ],
+              [
+                -116.54933425043299,
+                34.22954675604285
+              ],
+              [
+                -116.52960055175149,
+                34.22955313647926
+              ],
+              [
+                -116.50986685083245,
+                34.22955632669777
+              ],
+              [
+                -116.49013314916755,
+                34.22955632669777
+              ],
+              [
+                -116.47039944824853,
+                34.22955313647926
+              ],
+              [
+                -116.45066574956701,
+                34.22954675604285
+              ],
+              [
+                -116.43093205461471,
+                34.229537185389795
+              ],
+              [
+                -116.41119836488332,
+                34.22952442452193
+              ],
+              [
+                -116.39146468186449,
+                34.22950847344169
+              ],
+              [
+                -116.3717310070499,
+                34.22948933215221
+              ],
+              [
+                -116.35199734193122,
+                34.22946700065714
+              ],
+              [
+                -116.33226368800011,
+                34.229441478960815
+              ],
+              [
+                -116.31253004674822,
+                34.22941276706816
+              ],
+              [
+                -116.2927964196672,
+                34.22938086498472
+              ],
+              [
+                -116.27306280824865,
+                34.22934577271665
+              ],
+              [
+                -116.25332921398422,
+                34.22930749027072
+              ],
+              [
+                -116.23359563836546,
+                34.22926601765434
+              ],
+              [
+                -116.213862082884,
+                34.229221354875484
+              ],
+              [
+                -116.19412854903143,
+                34.229173501942824
+              ],
+              [
+                -116.17439503829927,
+                34.22912245886558
+              ],
+              [
+                -116.17433178973745,
+                34.24551315733747
+              ],
+              [
+                -116.17426849895932,
+                34.26190381183163
+              ],
+              [
+                -116.17420516593006,
+                34.278294422338256
+              ],
+              [
+                -116.17414179061478,
+                34.29468498884758
+              ],
+              [
+                -116.1740783729786,
+                34.31107551134979
+              ],
+              [
+                -116.17401491298654,
+                34.327465989835154
+              ],
+              [
+                -116.17395141060358,
+                34.34385642429392
+              ],
+              [
+                -116.17388786579467,
+                34.36024681471635
+              ],
+              [
+                -116.17382427852472,
+                34.37663716109274
+              ],
+              [
+                -116.17376064875862,
+                34.393027463413354
+              ],
+              [
+                -116.17369697646119,
+                34.40941772166852
+              ],
+              [
+                -116.17363326159717,
+                34.42580793584857
+              ],
+              [
+                -116.17356950413136,
+                34.442198105943824
+              ],
+              [
+                -116.17350570402844,
+                34.45858823194466
+              ],
+              [
+                -116.17344186125305,
+                34.47497831384143
+              ],
+              [
+                -116.17337797576985,
+                34.491368351624516
+              ],
+              [
+                -116.17331404754334,
+                34.50775834528433
+              ],
+              [
+                -116.17325007653807,
+                34.52414829481127
+              ],
+              [
+                -116.17318606271856,
+                34.54053820019576
+              ],
+              [
+                -116.17312200604921,
+                34.556928061428245
+              ],
+              [
+                -116.17305790649448,
+                34.57331787849919
+              ],
+              [
+                -116.17299376401863,
+                34.589707651399024
+              ],
+              [
+                -116.17292957858604,
+                34.6060973801183
+              ],
+              [
+                -116.17286535016099,
+                34.62248706464746
+              ],
+              [
+                -116.17280107870764,
+                34.63887670497703
+              ],
+              [
+                -116.17273676419025,
+                34.65526630109755
+              ],
+              [
+                -116.1726724065729,
+                34.67165585299954
+              ],
+              [
+                -116.17260800581974,
+                34.68804536067357
+              ],
+              [
+                -116.17254356189476,
+                34.70443482411022
+              ],
+              [
+                -116.17247907476202,
+                34.72082424330008
+              ],
+              [
+                -116.17241454438545,
+                34.7372136182337
+              ],
+              [
+                -116.17234997072903,
+                34.75360294890176
+              ],
+              [
+                -116.17228535375656,
+                34.769992235294836
+              ],
+              [
+                -116.19214672000675,
+                34.77004384026709
+              ],
+              [
+                -116.21200811015571,
+                34.7700922199777
+              ],
+              [
+                -116.23186952266168,
+                34.77013737441715
+              ],
+              [
+                -116.25173095598282,
+                34.77017930357656
+              ],
+              [
+                -116.27159240857739,
+                34.77021800744772
+              ],
+              [
+                -116.29145387890358,
+                34.770253486023
+              ],
+              [
+                -116.3113153654195,
+                34.77028573929544
+              ],
+              [
+                -116.33117686658332,
+                34.770314767258704
+              ],
+              [
+                -116.35103838085325,
+                34.77034056990708
+              ],
+              [
+                -116.37089990668734,
+                34.770363147235486
+              ],
+              [
+                -116.39076144254378,
+                34.77038249923953
+              ],
+              [
+                -116.41062298688065,
+                34.77039862591534
+              ],
+              [
+                -116.43048453815608,
+                34.77041152725982
+              ],
+              [
+                -116.45034609482816,
+                34.77042120327038
+              ],
+              [
+                -116.47020765535498,
+                34.770427653945156
+              ],
+              [
+                -116.49006921819468,
+                34.77043087928286
+              ],
+              [
+                -116.50993078180534,
+                34.77043087928286
+              ],
+              [
+                -116.52979234464503,
+                34.770427653945156
+              ],
+              [
+                -116.54965390517185,
+                34.77042120327038
+              ],
+              [
+                -116.56951546184393,
+                34.77041152725982
+              ],
+              [
+                -116.58937701311936,
+                34.77039862591535
+              ],
+              [
+                -116.60923855745624,
+                34.77038249923952
+              ],
+              [
+                -116.62910009331267,
+                34.770363147235486
+              ],
+              [
+                -116.64896161914676,
+                34.77034056990708
+              ],
+              [
+                -116.66882313341665,
+                34.770314767258704
+              ],
+              [
+                -116.68868463458051,
+                34.77028573929544
+              ],
+              [
+                -116.70854612109643,
+                34.770253486023
+              ],
+              [
+                -116.72840759142262,
+                34.77021800744772
+              ],
+              [
+                -116.74826904401719,
+                34.77017930357656
+              ],
+              [
+                -116.76813047733833,
+                34.77013737441715
+              ],
+              [
+                -116.78799188984429,
+                34.7700922199777
+              ],
+              [
+                -116.80785327999325,
+                34.77004384026709
+              ],
+              [
+                -116.82771464624345,
+                34.769992235294836
+              ],
+              [
+                -116.82765002927098,
+                34.75360294890175
+              ],
+              [
+                -116.82758545561457,
+                34.7372136182337
+              ],
+              [
+                -116.82752092523799,
+                34.720824243300065
+              ],
+              [
+                -116.82745643810526,
+                34.70443482411022
+              ],
+              [
+                -116.82739199418027,
+                34.68804536067357
+              ],
+              [
+                -116.8273275934271,
+                34.67165585299954
+              ],
+              [
+                -116.82726323580977,
+                34.65526630109755
+              ],
+              [
+                -116.82719892129236,
+                34.63887670497703
+              ],
+              [
+                -116.82713464983902,
+                34.62248706464746
+              ],
+              [
+                -116.82707042141398,
+                34.60609738011829
+              ],
+              [
+                -116.82700623598139,
+                34.58970765139903
+              ],
+              [
+                -116.82694209350554,
+                34.57331787849919
+              ],
+              [
+                -116.82687799395079,
+                34.556928061428245
+              ],
+              [
+                -116.82681393728146,
+                34.54053820019576
+              ],
+              [
+                -116.82674992346195,
+                34.52414829481127
+              ],
+              [
+                -116.82668595245667,
+                34.50775834528433
+              ],
+              [
+                -116.82662202423016,
+                34.491368351624516
+              ],
+              [
+                -116.82655813874695,
+                34.47497831384143
+              ],
+              [
+                -116.82649429597157,
+                34.45858823194465
+              ],
+              [
+                -116.82643049586865,
+                34.442198105943824
+              ],
+              [
+                -116.82636673840284,
+                34.42580793584857
+              ],
+              [
+                -116.82630302353883,
+                34.409417721668504
+              ],
+              [
+                -116.8262393512414,
+                34.39302746341335
+              ],
+              [
+                -116.8261757214753,
+                34.37663716109273
+              ],
+              [
+                -116.82611213420535,
+                34.360246814716355
+              ],
+              [
+                -116.82604858939644,
+                34.34385642429392
+              ],
+              [
+                -116.82598508701348,
+                34.327465989835154
+              ],
+              [
+                -116.8259216270214,
+                34.31107551134979
+              ],
+              [
+                -116.82585820938522,
+                34.29468498884758
+              ],
+              [
+                -116.82579483406995,
+                34.278294422338256
+              ],
+              [
+                -116.82573150104069,
+                34.26190381183163
+              ],
+              [
+                -116.82566821026256,
+                34.24551315733747
+              ],
+              [
+                -116.82560496170073,
+                34.22912245886558
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "site_id": "discovery_n34_00_w117_00",
+          "latitude": 34.5,
+          "longitude": -116.5,
+          "novelty": "unreviewed"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -116.82955041502484,
+                35.22915069317564
+              ],
+              [
+                -116.8095777970159,
+                35.22920365448691
+              ],
+              [
+                -116.78960515380412,
+                35.22925330576797
+              ],
+              [
+                -116.76963248701537,
+                35.2292996470088
+              ],
+              [
+                -116.74965979827557,
+                35.22934267820006
+              ],
+              [
+                -116.72968708921067,
+                35.229382399333076
+              ],
+              [
+                -116.70971436144659,
+                35.22941881039984
+              ],
+              [
+                -116.68974161660931,
+                35.22945191139297
+              ],
+              [
+                -116.6697688563248,
+                35.22948170230583
+              ],
+              [
+                -116.64979608221907,
+                35.229508183132396
+              ],
+              [
+                -116.62982329591807,
+                35.22953135386733
+              ],
+              [
+                -116.6098504990479,
+                35.229551214505946
+              ],
+              [
+                -116.58987769323448,
+                35.22956776504426
+              ],
+              [
+                -116.5699048801039,
+                35.229581005478906
+              ],
+              [
+                -116.54993206128218,
+                35.22959093580724
+              ],
+              [
+                -116.52995923839536,
+                35.22959755602723
+              ],
+              [
+                -116.50998641306946,
+                35.22960086613755
+              ],
+              [
+                -116.49001358693056,
+                35.22960086613755
+              ],
+              [
+                -116.47004076160465,
+                35.22959755602723
+              ],
+              [
+                -116.45006793871784,
+                35.22959093580724
+              ],
+              [
+                -116.4300951198961,
+                35.229581005478906
+              ],
+              [
+                -116.41012230676553,
+                35.22956776504426
+              ],
+              [
+                -116.3901495009521,
+                35.229551214505946
+              ],
+              [
+                -116.37017670408193,
+                35.22953135386733
+              ],
+              [
+                -116.35020391778095,
+                35.229508183132396
+              ],
+              [
+                -116.3302311436752,
+                35.22948170230583
+              ],
+              [
+                -116.31025838339069,
+                35.22945191139297
+              ],
+              [
+                -116.29028563855343,
+                35.229418810399835
+              ],
+              [
+                -116.27031291078934,
+                35.229382399333076
+              ],
+              [
+                -116.25034020172443,
+                35.22934267820006
+              ],
+              [
+                -116.23036751298464,
+                35.2292996470088
+              ],
+              [
+                -116.21039484619588,
+                35.22925330576797
+              ],
+              [
+                -116.19042220298411,
+                35.229203654486916
+              ],
+              [
+                -116.17044958497517,
+                35.22915069317564
+              ],
+              [
+                -116.17038314761439,
+                35.245538689349594
+              ],
+              [
+                -116.170316665613,
+                35.26192664097299
+              ],
+              [
+                -116.17025013893324,
+                35.27831454803689
+              ],
+              [
+                -116.17018356753732,
+                35.294702410532395
+              ],
+              [
+                -116.17011695138741,
+                35.31109022845062
+              ],
+              [
+                -116.17005029044563,
+                35.32747800178268
+              ],
+              [
+                -116.169983584674,
+                35.34386573051972
+              ],
+              [
+                -116.16991683403457,
+                35.36025341465287
+              ],
+              [
+                -116.16985003848932,
+                35.37664105417333
+              ],
+              [
+                -116.16978319800015,
+                35.393028649072235
+              ],
+              [
+                -116.16971631252896,
+                35.40941619934084
+              ],
+              [
+                -116.1696493820376,
+                35.42580370497032
+              ],
+              [
+                -116.16958240648782,
+                35.44219116595189
+              ],
+              [
+                -116.16951538584138,
+                35.458578582276814
+              ],
+              [
+                -116.16944832005994,
+                35.47496595393633
+              ],
+              [
+                -116.16938120910518,
+                35.491353280921714
+              ],
+              [
+                -116.16931405293872,
+                35.50774056322425
+              ],
+              [
+                -116.16924685152206,
+                35.52412780083523
+              ],
+              [
+                -116.16917960481673,
+                35.54051499374599
+              ],
+              [
+                -116.16911231278416,
+                35.556902141947816
+              ],
+              [
+                -116.16904497538583,
+                35.57328924543209
+              ],
+              [
+                -116.16897759258303,
+                35.58967630419013
+              ],
+              [
+                -116.16891016433712,
+                35.60606331821334
+              ],
+              [
+                -116.16884269060934,
+                35.62245028749309
+              ],
+              [
+                -116.16877517136092,
+                35.638837212020775
+              ],
+              [
+                -116.16870760655303,
+                35.65522409178783
+              ],
+              [
+                -116.1686399961468,
+                35.67161092678567
+              ],
+              [
+                -116.16857234010331,
+                35.68799771700573
+              ],
+              [
+                -116.16850463838357,
+                35.70438446243949
+              ],
+              [
+                -116.16843689094858,
+                35.72077116307842
+              ],
+              [
+                -116.16836909775927,
+                35.73715781891399
+              ],
+              [
+                -116.16830125877652,
+                35.753544429937726
+              ],
+              [
+                -116.16823337396119,
+                35.769930996141134
+              ],
+              [
+                -116.1883403032322,
+                35.76998454449251
+              ],
+              [
+                -116.20844725856048,
+                35.77003474612519
+              ],
+              [
+                -116.22855423826502,
+                35.77008160102888
+              ],
+              [
+                -116.24866124066477,
+                35.77012510919394
+              ],
+              [
+                -116.26876826407869,
+                35.77016527061143
+              ],
+              [
+                -116.28887530682572,
+                35.770202085273134
+              ],
+              [
+                -116.30898236722477,
+                35.77023555317145
+              ],
+              [
+                -116.32908944359471,
+                35.77026567429954
+              ],
+              [
+                -116.34919653425447,
+                35.77029244865118
+              ],
+              [
+                -116.3693036375229,
+                35.770315876220906
+              ],
+              [
+                -116.38941075171888,
+                35.7703359570039
+              ],
+              [
+                -116.40951787516123,
+                35.77035269099603
+              ],
+              [
+                -116.42962500616885,
+                35.770366078193845
+              ],
+              [
+                -116.44973214306056,
+                35.77037611859462
+              ],
+              [
+                -116.46983928415516,
+                35.770382812196274
+              ],
+              [
+                -116.48994642777153,
+                35.77038615899745
+              ],
+              [
+                -116.51005357222849,
+                35.77038615899745
+              ],
+              [
+                -116.53016071584484,
+                35.770382812196274
+              ],
+              [
+                -116.55026785693946,
+                35.77037611859462
+              ],
+              [
+                -116.57037499383115,
+                35.770366078193845
+              ],
+              [
+                -116.59048212483877,
+                35.77035269099603
+              ],
+              [
+                -116.61058924828113,
+                35.7703359570039
+              ],
+              [
+                -116.63069636247711,
+                35.770315876220906
+              ],
+              [
+                -116.65080346574554,
+                35.77029244865119
+              ],
+              [
+                -116.6709105564053,
+                35.77026567429954
+              ],
+              [
+                -116.69101763277524,
+                35.77023555317145
+              ],
+              [
+                -116.7111246931743,
+                35.770202085273134
+              ],
+              [
+                -116.73123173592133,
+                35.77016527061143
+              ],
+              [
+                -116.75133875933523,
+                35.77012510919394
+              ],
+              [
+                -116.77144576173498,
+                35.77008160102888
+              ],
+              [
+                -116.79155274143953,
+                35.770034746125184
+              ],
+              [
+                -116.8116596967678,
+                35.76998454449251
+              ],
+              [
+                -116.83176662603883,
+                35.769930996141134
+              ],
+              [
+                -116.83169874122349,
+                35.753544429937726
+              ],
+              [
+                -116.83163090224073,
+                35.73715781891399
+              ],
+              [
+                -116.83156310905143,
+                35.72077116307842
+              ],
+              [
+                -116.83149536161643,
+                35.70438446243949
+              ],
+              [
+                -116.8314276598967,
+                35.68799771700573
+              ],
+              [
+                -116.83136000385322,
+                35.67161092678567
+              ],
+              [
+                -116.83129239344699,
+                35.65522409178783
+              ],
+              [
+                -116.83122482863911,
+                35.638837212020775
+              ],
+              [
+                -116.83115730939068,
+                35.62245028749309
+              ],
+              [
+                -116.8310898356629,
+                35.60606331821333
+              ],
+              [
+                -116.83102240741698,
+                35.58967630419012
+              ],
+              [
+                -116.83095502461418,
+                35.57328924543209
+              ],
+              [
+                -116.83088768721584,
+                35.556902141947816
+              ],
+              [
+                -116.83082039518328,
+                35.54051499374599
+              ],
+              [
+                -116.83075314847795,
+                35.52412780083523
+              ],
+              [
+                -116.8306859470613,
+                35.50774056322425
+              ],
+              [
+                -116.83061879089483,
+                35.491353280921714
+              ],
+              [
+                -116.83055167994007,
+                35.47496595393633
+              ],
+              [
+                -116.83048461415864,
+                35.45857858227681
+              ],
+              [
+                -116.8304175935122,
+                35.44219116595189
+              ],
+              [
+                -116.83035061796241,
+                35.42580370497032
+              ],
+              [
+                -116.83028368747105,
+                35.40941619934084
+              ],
+              [
+                -116.83021680199987,
+                35.393028649072235
+              ],
+              [
+                -116.8301499615107,
+                35.37664105417332
+              ],
+              [
+                -116.83008316596545,
+                35.36025341465287
+              ],
+              [
+                -116.83001641532601,
+                35.34386573051972
+              ],
+              [
+                -116.82994970955438,
+                35.32747800178268
+              ],
+              [
+                -116.8298830486126,
+                35.31109022845062
+              ],
+              [
+                -116.82981643246269,
+                35.294702410532395
+              ],
+              [
+                -116.82974986106677,
+                35.27831454803689
+              ],
+              [
+                -116.82968333438701,
+                35.26192664097299
+              ],
+              [
+                -116.82961685238563,
+                35.245538689349594
+              ],
+              [
+                -116.82955041502484,
+                35.22915069317564
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "site_id": "discovery_n35_00_w117_00",
+          "latitude": 35.5,
+          "longitude": -116.5,
+          "novelty": "unreviewed"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -115.82955041502483,
+                35.22915069317564
+              ],
+              [
+                -115.80957779701589,
+                35.22920365448691
+              ],
+              [
+                -115.7896051538041,
+                35.22925330576797
+              ],
+              [
+                -115.76963248701536,
+                35.2292996470088
+              ],
+              [
+                -115.74965979827556,
+                35.22934267820006
+              ],
+              [
+                -115.72968708921066,
+                35.229382399333076
+              ],
+              [
+                -115.70971436144657,
+                35.22941881039984
+              ],
+              [
+                -115.6897416166093,
+                35.22945191139297
+              ],
+              [
+                -115.66976885632478,
+                35.22948170230583
+              ],
+              [
+                -115.64979608221905,
+                35.229508183132396
+              ],
+              [
+                -115.62982329591807,
+                35.22953135386733
+              ],
+              [
+                -115.60985049904788,
+                35.229551214505946
+              ],
+              [
+                -115.58987769323447,
+                35.22956776504426
+              ],
+              [
+                -115.56990488010389,
+                35.229581005478906
+              ],
+              [
+                -115.54993206128216,
+                35.22959093580724
+              ],
+              [
+                -115.52995923839535,
+                35.22959755602723
+              ],
+              [
+                -115.50998641306944,
+                35.22960086613755
+              ],
+              [
+                -115.49001358693054,
+                35.22960086613755
+              ],
+              [
+                -115.47004076160464,
+                35.22959755602723
+              ],
+              [
+                -115.45006793871782,
+                35.22959093580724
+              ],
+              [
+                -115.43009511989608,
+                35.229581005478906
+              ],
+              [
+                -115.41012230676552,
+                35.22956776504426
+              ],
+              [
+                -115.39014950095209,
+                35.229551214505946
+              ],
+              [
+                -115.37017670408191,
+                35.22953135386733
+              ],
+              [
+                -115.35020391778093,
+                35.229508183132396
+              ],
+              [
+                -115.33023114367519,
+                35.22948170230583
+              ],
+              [
+                -115.31025838339069,
+                35.22945191139297
+              ],
+              [
+                -115.29028563855341,
+                35.229418810399835
+              ],
+              [
+                -115.27031291078933,
+                35.229382399333076
+              ],
+              [
+                -115.25034020172441,
+                35.22934267820006
+              ],
+              [
+                -115.23036751298463,
+                35.2292996470088
+              ],
+              [
+                -115.21039484619587,
+                35.22925330576797
+              ],
+              [
+                -115.1904222029841,
+                35.229203654486916
+              ],
+              [
+                -115.17044958497516,
+                35.22915069317564
+              ],
+              [
+                -115.17038314761437,
+                35.245538689349594
+              ],
+              [
+                -115.17031666561299,
+                35.26192664097299
+              ],
+              [
+                -115.17025013893323,
+                35.27831454803689
+              ],
+              [
+                -115.17018356753731,
+                35.294702410532395
+              ],
+              [
+                -115.1701169513874,
+                35.31109022845062
+              ],
+              [
+                -115.17005029044562,
+                35.32747800178268
+              ],
+              [
+                -115.16998358467399,
+                35.34386573051972
+              ],
+              [
+                -115.16991683403455,
+                35.36025341465287
+              ],
+              [
+                -115.1698500384893,
+                35.37664105417333
+              ],
+              [
+                -115.16978319800013,
+                35.393028649072235
+              ],
+              [
+                -115.16971631252895,
+                35.40941619934084
+              ],
+              [
+                -115.16964938203759,
+                35.42580370497032
+              ],
+              [
+                -115.1695824064878,
+                35.44219116595189
+              ],
+              [
+                -115.16951538584136,
+                35.458578582276814
+              ],
+              [
+                -115.16944832005993,
+                35.47496595393633
+              ],
+              [
+                -115.16938120910517,
+                35.491353280921714
+              ],
+              [
+                -115.1693140529387,
+                35.50774056322425
+              ],
+              [
+                -115.16924685152205,
+                35.52412780083523
+              ],
+              [
+                -115.16917960481672,
+                35.54051499374599
+              ],
+              [
+                -115.16911231278415,
+                35.556902141947816
+              ],
+              [
+                -115.16904497538582,
+                35.57328924543209
+              ],
+              [
+                -115.16897759258302,
+                35.58967630419013
+              ],
+              [
+                -115.1689101643371,
+                35.60606331821334
+              ],
+              [
+                -115.16884269060932,
+                35.62245028749309
+              ],
+              [
+                -115.1687751713609,
+                35.638837212020775
+              ],
+              [
+                -115.16870760655301,
+                35.65522409178783
+              ],
+              [
+                -115.16863999614678,
+                35.67161092678567
+              ],
+              [
+                -115.1685723401033,
+                35.68799771700573
+              ],
+              [
+                -115.16850463838355,
+                35.70438446243949
+              ],
+              [
+                -115.16843689094857,
+                35.72077116307842
+              ],
+              [
+                -115.16836909775925,
+                35.73715781891399
+              ],
+              [
+                -115.16830125877651,
+                35.753544429937726
+              ],
+              [
+                -115.16823337396117,
+                35.769930996141134
+              ],
+              [
+                -115.18834030323218,
+                35.76998454449251
+              ],
+              [
+                -115.20844725856047,
+                35.77003474612519
+              ],
+              [
+                -115.228554238265,
+                35.77008160102888
+              ],
+              [
+                -115.24866124066476,
+                35.77012510919394
+              ],
+              [
+                -115.26876826407867,
+                35.77016527061143
+              ],
+              [
+                -115.2888753068257,
+                35.770202085273134
+              ],
+              [
+                -115.30898236722476,
+                35.77023555317145
+              ],
+              [
+                -115.3290894435947,
+                35.77026567429954
+              ],
+              [
+                -115.34919653425446,
+                35.77029244865118
+              ],
+              [
+                -115.36930363752289,
+                35.770315876220906
+              ],
+              [
+                -115.38941075171887,
+                35.7703359570039
+              ],
+              [
+                -115.40951787516121,
+                35.77035269099603
+              ],
+              [
+                -115.42962500616883,
+                35.770366078193845
+              ],
+              [
+                -115.44973214306054,
+                35.77037611859462
+              ],
+              [
+                -115.46983928415516,
+                35.770382812196274
+              ],
+              [
+                -115.48994642777151,
+                35.77038615899745
+              ],
+              [
+                -115.51005357222847,
+                35.77038615899745
+              ],
+              [
+                -115.53016071584483,
+                35.770382812196274
+              ],
+              [
+                -115.55026785693944,
+                35.77037611859462
+              ],
+              [
+                -115.57037499383114,
+                35.770366078193845
+              ],
+              [
+                -115.59048212483876,
+                35.77035269099603
+              ],
+              [
+                -115.61058924828112,
+                35.7703359570039
+              ],
+              [
+                -115.6306963624771,
+                35.770315876220906
+              ],
+              [
+                -115.65080346574553,
+                35.77029244865119
+              ],
+              [
+                -115.67091055640529,
+                35.77026567429954
+              ],
+              [
+                -115.69101763277523,
+                35.77023555317145
+              ],
+              [
+                -115.71112469317428,
+                35.770202085273134
+              ],
+              [
+                -115.73123173592131,
+                35.77016527061143
+              ],
+              [
+                -115.75133875933521,
+                35.77012510919394
+              ],
+              [
+                -115.77144576173497,
+                35.77008160102888
+              ],
+              [
+                -115.79155274143952,
+                35.770034746125184
+              ],
+              [
+                -115.81165969676779,
+                35.76998454449251
+              ],
+              [
+                -115.83176662603881,
+                35.769930996141134
+              ],
+              [
+                -115.83169874122348,
+                35.753544429937726
+              ],
+              [
+                -115.83163090224072,
+                35.73715781891399
+              ],
+              [
+                -115.83156310905142,
+                35.72077116307842
+              ],
+              [
+                -115.83149536161642,
+                35.70438446243949
+              ],
+              [
+                -115.83142765989669,
+                35.68799771700573
+              ],
+              [
+                -115.8313600038532,
+                35.67161092678567
+              ],
+              [
+                -115.83129239344697,
+                35.65522409178783
+              ],
+              [
+                -115.8312248286391,
+                35.638837212020775
+              ],
+              [
+                -115.83115730939066,
+                35.62245028749309
+              ],
+              [
+                -115.83108983566288,
+                35.60606331821333
+              ],
+              [
+                -115.83102240741697,
+                35.58967630419012
+              ],
+              [
+                -115.83095502461417,
+                35.57328924543209
+              ],
+              [
+                -115.83088768721582,
+                35.556902141947816
+              ],
+              [
+                -115.83082039518327,
+                35.54051499374599
+              ],
+              [
+                -115.83075314847794,
+                35.52412780083523
+              ],
+              [
+                -115.83068594706128,
+                35.50774056322425
+              ],
+              [
+                -115.83061879089482,
+                35.491353280921714
+              ],
+              [
+                -115.83055167994006,
+                35.47496595393633
+              ],
+              [
+                -115.83048461415862,
+                35.45857858227681
+              ],
+              [
+                -115.83041759351218,
+                35.44219116595189
+              ],
+              [
+                -115.8303506179624,
+                35.42580370497032
+              ],
+              [
+                -115.83028368747104,
+                35.40941619934084
+              ],
+              [
+                -115.83021680199985,
+                35.393028649072235
+              ],
+              [
+                -115.83014996151068,
+                35.37664105417332
+              ],
+              [
+                -115.83008316596543,
+                35.36025341465287
+              ],
+              [
+                -115.830016415326,
+                35.34386573051972
+              ],
+              [
+                -115.82994970955437,
+                35.32747800178268
+              ],
+              [
+                -115.82988304861259,
+                35.31109022845062
+              ],
+              [
+                -115.82981643246268,
+                35.294702410532395
+              ],
+              [
+                -115.82974986106676,
+                35.27831454803689
+              ],
+              [
+                -115.829683334387,
+                35.26192664097299
+              ],
+              [
+                -115.82961685238561,
+                35.245538689349594
+              ],
+              [
+                -115.82955041502483,
+                35.22915069317564
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "site_id": "discovery_n35_00_w116_00",
+          "latitude": 35.5,
+          "longitude": -115.5,
+          "novelty": "unreviewed"
+        }
+      }
+    ]
+  },
+  "audits": [
+    {
+      "site_id": "discovery_n34_00_w118_00",
+      "source_receipts": {
+        "DEM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_COG_30_N34_00_W118_00_DEM.tif",
+          "sha256": "080709e6842345f037d5f1a18dbca18a6dcf14040bf9c5aff9a19afdba02af6c",
+          "bytes": 4806282,
+          "etag": "f66c2075c83736ca52cfca512529969b",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:40.171183+00:00"
+        },
+        "WBM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N34_00_W118_00_WBM.tif",
+          "sha256": "d3dae46d5b04fcf619410baabea995e4a074b9808e8efa149dfdc22d6b82df13",
+          "bytes": 19996,
+          "etag": "24b008c7ccd191afb14099624871fbf8",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:40.821234+00:00"
+        },
+        "XML": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W118_00_DEM/Copernicus_DSM_30_N34_00_W118_00.xml",
+          "sha256": "42abf60cbd48b174d2c873918f478f5bda88c415ba80d15b3664949f4bda5979",
+          "bytes": 44716,
+          "etag": "04d6f5054ccca5ba5cc00512620f85de",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:41.534059+00:00"
+        }
+      },
+      "analysis_grid": "discovery_n34_00_w118_00.tif",
+      "analysis_sha256": "772711dc4f83103614313e334e9084e5ffc6dadefd5fadb542326c6e4f8e1209",
+      "mask_sha256": "df8f1574a3772a7731df0c62c9f5555d15758d3875eea85b025bae57b56b7cd3",
+      "valid_elevation_count": 3529,
+      "valid_slope_count": 3175,
+      "valid_roughness_count": 3107
+    },
+    {
+      "site_id": "discovery_n34_00_w117_00",
+      "source_receipts": {
+        "DEM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_COG_30_N34_00_W117_00_DEM.tif",
+          "sha256": "355dc8b9dda66853326f367245153acbbb393b9203e14a620c115cf21ed7f3ab",
+          "bytes": 4897192,
+          "etag": "9000cf4a8ea880ea4d0c4009a5176150",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:43.947476+00:00"
+        },
+        "WBM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N34_00_W117_00_WBM.tif",
+          "sha256": "449c56483bb813ee638a01673b81be74855718fb5797031650ae5e07463cd849",
+          "bytes": 14236,
+          "etag": "8088ade8be9250a660e9251247677aa2",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:44.548544+00:00"
+        },
+        "XML": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N34_00_W117_00_DEM/Copernicus_DSM_30_N34_00_W117_00.xml",
+          "sha256": "0d18e55e57a27156e746ca6c5a3d13d57cf699b0786d45a0f4ae747fe98d4e7f",
+          "bytes": 44733,
+          "etag": "c2b5f45f75960bb21dbd43a6570b6ef9",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:45.440334+00:00"
+        }
+      },
+      "analysis_grid": "discovery_n34_00_w117_00.tif",
+      "analysis_sha256": "f0dac1cd68a10987a405d20891e732646b5029c4c375525fd18e9bd5591618fc",
+      "mask_sha256": "3d83cac8d84497e712f02888bb64a8c2c38e556b9990f95968310967cda8ed7c",
+      "valid_elevation_count": 3600,
+      "valid_slope_count": 3364,
+      "valid_roughness_count": 3364
+    },
+    {
+      "site_id": "discovery_n35_00_w117_00",
+      "source_receipts": {
+        "DEM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_COG_30_N35_00_W117_00_DEM.tif",
+          "sha256": "ef52e0c922675a8d1d2563c7e61072ee69e631fca9bfe1edb24baa3c0664f647",
+          "bytes": 5031814,
+          "etag": "2de87b8b7c7291b7b46843fbf708b53a",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:48.183325+00:00"
+        },
+        "WBM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N35_00_W117_00_WBM.tif",
+          "sha256": "133995e67aabc1f9e7b90daa9ba8f76a742b5894b445008dc497da839027192c",
+          "bytes": 14709,
+          "etag": "c56d3c1eb4dc46108219c610c64c9979",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:48.744250+00:00"
+        },
+        "XML": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W117_00_DEM/Copernicus_DSM_30_N35_00_W117_00.xml",
+          "sha256": "ef39429f1ef62d410090beebcbee5b50ae97e53fdf66691cc8028fefd14da843",
+          "bytes": 44717,
+          "etag": "31e2b9ddb0196efab91970578f7ca2d9",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:49.407254+00:00"
+        }
+      },
+      "analysis_grid": "discovery_n35_00_w117_00.tif",
+      "analysis_sha256": "0717cc4901cb9d527d609968b34dd77edf57389244df27bd35f099d0fde323a4",
+      "mask_sha256": "7d87dafd32a40585867e5d5641b6b1452fde809c0bf054bf976f2ccf015f3a4a",
+      "valid_elevation_count": 3564,
+      "valid_slope_count": 3276,
+      "valid_roughness_count": 3242
+    },
+    {
+      "site_id": "discovery_n35_00_w116_00",
+      "source_receipts": {
+        "DEM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_COG_30_N35_00_W116_00_DEM.tif",
+          "sha256": "3c0d38fe564b30eabdbfb459f5b84f818be4d08d5cf98450ee86567d4c226165",
+          "bytes": 4776259,
+          "etag": "d439a873c97c7c24938a32673ef284a0",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:51.778834+00:00"
+        },
+        "WBM": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/AUXFILES/Copernicus_DSM_COG_30_N35_00_W116_00_WBM.tif",
+          "sha256": "0492853a4943861cf11bf44a5a5316ee8cede26e195f9435a7ad24cc3b8a3cd4",
+          "bytes": 13381,
+          "etag": "a74cf8bf622eefddd0d8048ea6d36ed0",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:52.371598+00:00"
+        },
+        "XML": {
+          "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W116_00_DEM/Copernicus_DSM_30_N35_00_W116_00.xml",
+          "sha256": "becd84ccb1df3ad3c49752ccc6e673c83721207ef1ba05c0e8ad9678a3fb144a",
+          "bytes": 44731,
+          "etag": "cd50123473ac8cf58134e876ed01b0dd",
+          "etag_md5_verified": true,
+          "accessed_utc": "2026-11-14T17:01:53.041758+00:00"
+        }
+      },
+      "analysis_grid": "discovery_n35_00_w116_00.tif",
+      "analysis_sha256": "440cb9f2b246ad63a3356f769f528f3f973c47d75e2c94267195a58b20f5a7a9",
+      "mask_sha256": "64817798171731f80550be2cbaed46aa7b5b1cdf5d8cf55cccee7ff5e7d8520c",
+      "valid_elevation_count": 3591,
+      "valid_slope_count": 3330,
+      "valid_roughness_count": 3310
+    }
+  ],
+  "failures": [],
+  "attribution": "Produced using Copernicus WorldDEM-90 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. https://registry.opendata.aws/copernicus-dem/"
+}

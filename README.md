@@ -4,6 +4,11 @@ An offline-first terrain analog shortlisting tool for Analognauts, built from th
 TerraTwin AI MVP Technical Architecture Agent Guide (v1.0, November 10, 2026).
 
 **Status: operational terrain shortlisting and scoped multi-domain evidence assessment.**
+The **Discover Earth** tab now searches outside the catalog: select a planetary target,
+draw the search bounds numerically, and start automatic public Copernicus GLO-90
+acquisition, water masking, terrain measurement and ranked coordinate results.
+The current in-app search supports 40 S to 40 N, with 1–30 candidate regions per run.
+See [geographic discovery](docs/geographic-discovery.md) for the verified example and limits.
 Three measured references (Jezero, Shackleton and Mare Tranquillitatis pit region)
 are compared with 16 Earth regions; 15 Earth profiles pass terrain QA.
 The app includes mission presets, Earth climate/geology context, published planetary
@@ -55,7 +60,7 @@ binary wheels are unavailable. Do not change the system Python environment.
 - Exponential weighted similarity, explicit coverage gating, stable ranking and CSV export.
 - Checksummed local NASADEM/PDS intake with audited interpretation sidecars.
 - Bounded metric ROI reprojection, downsampling, quality checks and Parquet output.
-- Explore, Methodology, Sources/readiness and Research evidence tabs; real user-facing profiles.
+- Explore, Methodology, Sources/readiness, Research evidence and Discover Earth tabs.
 - Synthetic numerical and raster fixtures confined to tests and temporary directories.
 - An app smoke test and a separate scientific release gate.
 

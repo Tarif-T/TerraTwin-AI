@@ -16,6 +16,9 @@ functional software acceptance.
 - Surface, volcanic-cave robotics, and water/ice research scenarios.
 - An attributed novelty/expert review register, bounded acquisition planning,
   and checksummed evidence import with conflict rejection.
+- An operational Discover Earth tab: public Copernicus GLO-90 acquisition, water
+  masking, measured new candidate coordinates, terrain rankings and saved evidence.
+  [Geographic discovery report](geographic-discovery.md) documents four verified candidates.
 
 ## Requirement coverage
 
@@ -26,7 +29,7 @@ functional software acceptance.
 | Environment | Earth ERA5 climate; gravity context; real Jezero MEDA detector temperature/pressure for sols 100–101 with hourly charts and coverage | No matched local cross-body environment model or lunar thermal/illumination/radiation series |
 | Resources | Published cave ice presence; strict compatible-abundance gate | Abundance and extraction feasibility unknown; no eligible resource ranking |
 | Caves | Lunar pit/conduit setting; Lava Beds cave lengths/ice reports; volcanic-setting comparison | Pit depth is not cave length; traversability, stability and underground morphology unverified |
-| Candidate discovery | Bounded ArcticDEM search and deterministic NASADEM acquisition plans | No worldwide completeness or uniform-area sampling; plans require acquisition and QA |
+| Candidate discovery | In-app online Copernicus geographic search, masked terrain measurements and rankings; ArcticDEM workflow and NASADEM planning also available | In-app search bounded to 40 S–40 N and 30 regions per run; no worldwide completeness or novelty proof |
 | New analog identification | Known Lava Beds baseline distinguished from unreviewed candidates; scoped literature records | No candidate certified novel; no prior report in a bounded search does not prove novelty |
 | Findings presentation | Map, evidence cards, comparisons, research tables, domain breakdown, citations and CSV | Online basemap requires network; offline coordinate overview available |
 | Validation | Numerical recomputation, UI/export parity and published-context regression | Not independent expert review, held-out scientific evaluation or field validation |
@@ -49,7 +52,7 @@ not measurements of every Earth ROI cell.
 
 ## Validation
 
-- 121 automated tests pass; Ruff lint passes.
+- 130 automated tests pass; Ruff lint passes.
 - All 19 profiles have independently recomputed features and deterministic raw-to-grid checks.
 - Independent terrain arithmetic checks cover every reference and mission preset.
 - All three real reference selectors pass UI/table/CSV parity checks.

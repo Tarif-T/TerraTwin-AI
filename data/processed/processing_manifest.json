@@ -1,6 +1,6 @@
 {
-  "git_commit": "27ed0e885014ebc7671d0a21671fe54a0d209463",
-  "code_sha256": "16451ea90f69a64898d2e49d6a4916cd36cf2ee4e9eeb6dd79d00691e6f0d2d2",
+  "git_commit": "0cc1b20cbc64777eaeec5bcdc4875fe3b4bb5f59",
+  "code_sha256": "8567d8eccb39516bf4ff36b8ce1bf4574c722e186d7f8107927926cb1c622354",
   "pipeline_config_sha256": "010a160bd1903e6c7b58406b0e058fbce7d79304142aac1ccbfc93e1aa796b13",
   "packages": {
     "terratwin-ai": "0.1.0",

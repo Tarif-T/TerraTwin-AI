@@ -1,0 +1,10 @@
+{
+  "state": "completed",
+  "updated_utc": "2026-11-14T17:06:11.186398+00:00",
+  "completed": 4,
+  "total": 4,
+  "measured": 4,
+  "eligible": 4,
+  "failed": 0,
+  "message": "Search complete"
+}

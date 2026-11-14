@@ -1,0 +1,123 @@
+{
+  "bbox": [
+    -118.0,
+    34.0,
+    -115.0,
+    36.0
+  ],
+  "budget": 4,
+  "reference": {
+    "slope_median_deg": 1.8805139866265086,
+    "relief_p90_p10_m": 697.9246059956658,
+    "roughness_local_std_m": 28.251268463408813,
+    "steep_fraction_15deg": 0.005648038049940547,
+    "profile_id": "mars_jezero_60km_v1",
+    "body": "Mars",
+    "region_name": "Jezero crater 60 km study ROI",
+    "roi_id": "mars_jezero_roi_60km_v1",
+    "roi_size_km": 60.0,
+    "common_grid_m": 1000.0,
+    "roughness_kernel_cells": 3,
+    "valid_cell_fraction": 1.0,
+    "qa_pass": true,
+    "source_ids": [
+      "MOLA_MEGT44N000HB"
+    ],
+    "processing_version": "terrain_v1",
+    "features_version": "features_v1",
+    "config_sha256": "73acd6b3fab6cf30413c74225b16882590f79b543bab4d315cdac4f1e3431e3c",
+    "created_utc": "2026-11-14T02:50:58.744102Z",
+    "coordinate_convention": "planetocentric; 0_360",
+    "processing_notes": "MOLA PDS4 SignedMSB2 metre topography; scale 1, offset 0; radius 3396000 m. XML declares no special missing constant; zero is valid elevation. Interpolated bins are present: nonmissing coverage is not direct-shot coverage.",
+    "synthetic": false,
+    "site_id": null,
+    "site_name": null,
+    "country": null,
+    "centroid_lat": null,
+    "centroid_lon": null,
+    "data_warning": "MOLA includes interpolated bins; raster validity is not direct-shot coverage."
+  },
+  "scoring": {
+    "version": "scoring_v1",
+    "weights": {
+      "slope_median_deg": 0.4,
+      "relief_p90_p10_m": 0.3,
+      "roughness_local_std_m": 0.2,
+      "steep_fraction_15deg": 0.1
+    },
+    "tolerances": {
+      "slope_median_deg": 10.0,
+      "relief_p90_p10_m": 1000.0,
+      "roughness_local_std_m": 200.0,
+      "steep_fraction_15deg": 0.4
+    },
+    "minimum_coverage": 0.75,
+    "minimum_valid_cell_fraction": 0.9
+  },
+  "known_centers": [
+    [
+      -116.5,
+      36.5
+    ],
+    [
+      -68.5,
+      -23.5
+    ],
+    [
+      15.5,
+      -24.5
+    ],
+    [
+      40.5,
+      13.5
+    ],
+    [
+      58.5,
+      22.5
+    ],
+    [
+      -67.5,
+      -19.5
+    ],
+    [
+      95.5,
+      37.5
+    ],
+    [
+      40.5,
+      25.5
+    ],
+    [
+      135.5,
+      -24.5
+    ],
+    [
+      -115.5,
+      34.5
+    ],
+    [
+      10.5,
+      24.5
+    ],
+    [
+      160.20112364547506,
+      -77.81689181335317
+    ],
+    [
+      -83.418055344822,
+      73.0359066517747
+    ],
+    [
+      -85.0302592718897,
+      75.01268271051367
+    ],
+    [
+      -98.42696902148067,
+      72.31936845390412
+    ],
+    [
+      -121.5,
+      41.5
+    ]
+  ]
+}

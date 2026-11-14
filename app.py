@@ -1,4 +1,4 @@
-"""Offline-first application: never download or preprocess rasters during a request."""
+"""Offline catalog analysis plus explicit bounded online discovery in a background worker."""
 
 import json
 
@@ -8,6 +8,7 @@ import streamlit as st
 from terratwin.characterization import characterize_filter, load_characterization
 from terratwin.config import ROOT, load_scoring, read_yaml
 from terratwin.datasets import load_prepared
+from terratwin.discovery_ui import render_discovery
 from terratwin.evidence_ui import render_characterization, render_comparison
 from terratwin.export.csv_export import export_analysis
 from terratwin.mission import mission_scoring
@@ -26,6 +27,9 @@ st.caption(
     "A terrain similarity index supports research shortlisting. "
     "It is not a probability of mission suitability."
 )
+st.caption(
+    "Explore ranks the saved catalog. Use Discover Earth to search and measure new locations."
+)
 
 base_config = load_scoring()
 config = base_config
@@ -34,8 +38,8 @@ try:
 except (ValueError, OSError, KeyError) as error:
     characterization = {}
     st.warning(f"Supplementary evidence unavailable: {error}")
-explore, methods, sources_tab, research_tab = st.tabs(
-    ["Explore", "Methodology", "Sources & readiness", "Research evidence"]
+explore, methods, sources_tab, research_tab, discovery_tab = st.tabs(
+    ["Explore", "Methodology", "Sources & readiness", "Research evidence", "Discover Earth"]
 )
 try:
     references, sites, sources = load_prepared()
@@ -388,7 +392,8 @@ with sources_tab:
                 },
                 {
                     "Capability": "Candidate discovery",
-                    "Evidence": "Bounded ArcticDEM tile search; no claim of worldwide completeness",
+                    "Evidence": "In-app Copernicus geographic discovery (40 S to 40 N); "
+                    "ArcticDEM workflow for polar regions",
                 },
                 {
                     "Capability": "Novelty / suitability",
@@ -413,3 +418,6 @@ with sources_tab:
 
 with research_tab:
     render_research(ROOT, references, sites, characterization, base_config)
+
+with discovery_tab:
+    render_discovery(ROOT, references, sites, base_config)
