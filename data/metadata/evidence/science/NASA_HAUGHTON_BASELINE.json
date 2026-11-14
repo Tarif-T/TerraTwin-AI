@@ -1,0 +1,26 @@
+{
+  "source_url": "https://ntrs.nasa.gov/api/citations/20110008151/downloads/20110008151.pdf",
+  "title": "NASA Haughton field-test baseline report",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "haughton_materials",
+      "subject_id": "baseline:haughton",
+      "domain": "geology",
+      "quantity": "geologic_setting_categories",
+      "value": [
+        "impact",
+        "polar_desert"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NASA_HAUGHTON_BASELINE"
+      ],
+      "interpretation": "Known impact/polar-desert analog baseline. No nearby ArcticDEM ROI is automatically relabeled as the crater."
+    }
+  ]
+}

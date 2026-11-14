@@ -1,0 +1,38 @@
+{
+  "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+  "title": "NASA Mars Fact Sheet",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "mars_gravity",
+      "subject_id": "body:Mars",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 3.73,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARS_FACTS"
+      ],
+      "interpretation": "NASA table mean surface gravity, not a terrain-dependent local estimate."
+    },
+    {
+      "observation_id": "mars_pressure",
+      "subject_id": "body:Mars",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 636.0,
+      "unit": "Pa",
+      "statistic": "mean_radius_context",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARS_FACTS"
+      ],
+      "interpretation": "6.36 mbar at mean radius; seasonally variable and not a Jezero MEDA measurement."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""App smoke test is valid before data arrival; --release enforces scientific acceptance."""
+"""App smoke test and dataset count/QA gates; these do not certify scientific suitability."""
 
 import argparse
 
@@ -48,7 +48,7 @@ def main():
                     raise ValueError("Release requires ten eligible sites per reference")
         except (ValueError, OSError, KeyError) as error:
             parser.exit(1, f"Release blocked: {error}\n")
-        print("PASS: scientific dataset count and ranking gates")
+        print("PASS: real dataset count and ranking gates (not scientific certification)")
 
 
 if __name__ == "__main__":

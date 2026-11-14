@@ -1,0 +1,53 @@
+{
+  "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+  "title": "NASA Moon Fact Sheet",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "moon_gravity",
+      "subject_id": "body:Moon",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 1.62,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Body reference gravity, not an ROI surface measurement."
+    },
+    {
+      "observation_id": "earth_gravity",
+      "subject_id": "body:Earth",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 9.8,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Earth reference gravity; local geographic variations are not resolved."
+    },
+    {
+      "observation_id": "moon_pressure",
+      "subject_id": "body:Moon",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 3e-10,
+      "unit": "Pa",
+      "statistic": "night_body_context",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Night exosphere pressure from 3e-15 bar; not an annual local atmosphere observation."
+    }
+  ]
+}

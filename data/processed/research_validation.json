@@ -1,0 +1,138 @@
+{
+  "checked_utc": "2026-11-14T02:22:45.802793+00:00",
+  "status": "published_context_regression_passed",
+  "independent_scientific_validation": false,
+  "cave_baseline": {
+    "site_id": "earth_lava_beds",
+    "site_name": "Lava Beds volcanic/cave-region study ROI",
+    "reference_profile_id": "moon_tranquillitatis_pit_60km_v1",
+    "scenario_id": "cave_robotics",
+    "evidence_index": 90.90377408658227,
+    "comparison_coverage": 0.9500000000000001,
+    "eligible": true,
+    "missing_required_domains": [],
+    "domains": {
+      "terrain": {
+        "similarity": 0.8412560052835939,
+        "coverage": 1.0,
+        "note": "Matched-scale terrain aggregates"
+      },
+      "geology": {
+        "similarity": 1.0,
+        "coverage": 1.0,
+        "target_categories": [
+          "igneous"
+        ],
+        "earth_categories": [
+          "igneous"
+        ],
+        "note": "Contextual material-category overlap, not ROI proportions or mineral abundance"
+      },
+      "environment": {
+        "similarity": 0.06543705003266559,
+        "coverage": 0.5,
+        "note": "Body-mean gravity context only; local thermal/radiation/atmospheric equivalence is unmeasured. Earth air and lunar surface temperatures are not mixed"
+      },
+      "resources": {
+        "similarity": null,
+        "coverage": 0.0,
+        "note": "Compatible measured resource abundance required; reported ice alone is insufficient"
+      },
+      "caves": {
+        "similarity": 1.0,
+        "coverage": 1.0,
+        "note": "Published subsurface-setting overlap; no underground accessibility or stability certification"
+      }
+    },
+    "evidence_ids": [
+      "moon_gravity",
+      "moon_pressure",
+      "mare_materials",
+      "mare_pit_depth",
+      "mare_subsurface_setting",
+      "earth_gravity",
+      "skull_length",
+      "skull_ice",
+      "lava_subsurface_setting",
+      "mushpot_length",
+      "lava_materials",
+      "lava_known_baseline"
+    ],
+    "novelty_status": "known_baseline",
+    "independent_validation": "pending",
+    "cave_resource_observations": [
+      {
+        "observation_id": "skull_length",
+        "subject_id": "earth_lava_beds",
+        "domain": "caves",
+        "quantity": "cave_length_m",
+        "value": 177.0,
+        "unit": "m",
+        "statistic": "reported_passage_length",
+        "scope": "named_site",
+        "status": "reported",
+        "source_ids": [
+          "NPS_SKULL_CAVE"
+        ],
+        "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth."
+      },
+      {
+        "observation_id": "skull_ice",
+        "subject_id": "earth_lava_beds",
+        "domain": "resources",
+        "quantity": "water_ice_presence",
+        "value": "reported_ice_floor",
+        "unit": "state",
+        "statistic": "reported_presence",
+        "scope": "named_site",
+        "status": "reported",
+        "source_ids": [
+          "NPS_SKULL_CAVE"
+        ],
+        "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established."
+      },
+      {
+        "observation_id": "lava_subsurface_setting",
+        "subject_id": "earth_lava_beds",
+        "domain": "caves",
+        "quantity": "subsurface_setting_categories",
+        "value": [
+          "volcanic_subsurface"
+        ],
+        "unit": "category",
+        "statistic": "reported_presence",
+        "scope": "named_site",
+        "status": "reported",
+        "source_ids": [
+          "NPS_SKULL_CAVE"
+        ],
+        "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile."
+      },
+      {
+        "observation_id": "mushpot_length",
+        "subject_id": "earth_lava_beds",
+        "domain": "caves",
+        "quantity": "cave_length_m",
+        "value": 235.0,
+        "unit": "m",
+        "statistic": "reported_passage_length",
+        "scope": "named_site",
+        "status": "reported",
+        "source_ids": [
+          "NPS_MUSHPOT_CAVE"
+        ],
+        "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated."
+      }
+    ],
+    "warning": "Contextual evidence index with uncalibrated weights; not a probability or certification",
+    "evidence_rank": 1
+  },
+  "reference_count": 3,
+  "earth_count": 16,
+  "scientific_sources": 11,
+  "observations": 17,
+  "research_runs": 9,
+  "ui_table_csv_parity": true,
+  "missing_resources_rejected": true,
+  "limitation": "Published labels informed these regression checks. This is not held-out model evaluation, field validation, expert approval or proof of novelty."
+}

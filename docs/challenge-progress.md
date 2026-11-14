@@ -1,125 +1,122 @@
-# Challenge development progress
+# Challenge implementation and validation
 
-## Delivered in this phase
+## Current delivery
 
-- Real Moon support: NASA LOLA 20 m south-pole DEM, independently decoded HEIGHT=DN*0.5.
-- A 60 x 60 km Shackleton study centered at USGS/IAU feature 5450 (-89.67,129.78).
-- Original damaged global Moon download preserved and excluded.
-- Antarctic REMA v2 surface model at the same 1 km measurement scale.
-- Systematic, bounded ArcticDEM search: 3 additional fixed tile-centered ROIs.
-- 15 Earth profiles total: 14 pass the 90% ground/source coverage threshold; one Arctic ROI fails and is excluded from eligible rankings.
-- 15 geology interpretations from Macrostrat, preserving original geological-map citations.
-- 15 Earth historical climate summaries (2015?2024 Copernicus ERA5 via Open-Meteo).
-- Mission presets, evidence filters, candidate cards, two-site comparisons, measured terrain cross-sections, and an offline location overview.
-- CSV exports contain location coordinates, selected mission/filters, climate, geology screening, evidence hashes and URLs.
+The app compares Mars and Moon study regions with ranked Earth candidates, maps
+locations, shows differences, and exports reproducible results. It now supports
+multi-domain research assessments. Scientific acceptance remains distinct from
+functional software acceptance.
 
-## Current terrain rankings
+- Three references: Jezero, Shackleton south pole, Mare Tranquillitatis pit region.
+- Sixteen Earth regions: desert, arid, volcanic, Arctic and Antarctic examples.
+  Fifteen pass terrain QA; ArcticDEM 26_29 remains rejected rather than hidden.
+- Fifty terrain/supporting source records; sixteen cached climate/geology summaries.
+- Eleven cited primary-source transcriptions containing seventeen scoped observations.
+- Surface, volcanic-cave robotics, and water/ice research scenarios.
+- An attributed novelty/expert review register, bounded acquisition planning,
+  and checksummed evidence import with conflict rejection.
 
-### Mars reference
+## Requirement coverage
 
-| Rank | Earth region | Terrain similarity / 100 |
-| ---: | --- | ---: |
-| 1 | Mojave-area exploratory ROI | 99.02 |
-| 2 | Atacama-area exploratory ROI | 94.42 |
-| 3 | Death Valley-area tile-centered ROI | 94.06 |
-| 4 | Qaidam-area exploratory ROI | 92.63 |
-| 5 | ArcticDEM search candidate 28_30 | 90.41 |
-
-### Moon reference
-
-| Rank | Earth region | Terrain similarity / 100 |
-| ---: | --- | ---: |
-| 1 | Antarctic REMA 18_35 tile-centered polar ROI | 51.18 |
-| 2 | Qaidam-area exploratory ROI | 48.61 |
-| 3 | Mojave-area exploratory ROI | 47.41 |
-| 4 | Death Valley-area tile-centered ROI | 46.15 |
-| 5 | ArcticDEM search candidate 28_30 | 45.34 |
-
-## Scientific interpretation
-
-Rankings still use four matched-scale terrain aggregates. Mission presets change
-engineering weights; they are not trained or independently calibrated models.
-The geological-fieldwork preset weights terrain for fieldwork and does not score
-mineralogical similarity. Temperature, precipitation and lithology filters select
-Earth field-test conditions; they do not imply environmental equivalence to Mars
-or the Moon. Missing filter evidence never passes the requested condition.
-
-Climate summaries describe the source model grid cell near each ROI centroid,
-not a field station or a whole-ROI average. The model is fixed to ERA5 (0.25 degree)
-for consistency. NASA POWER access failed; an initial ERA5-Land response lacked
-precipitation, so that model is not used for the current summaries. Annual rainfall
-is calculated only from complete calendar years; missing measurements remain null.
-
-Geology describes mapped units at a single centroid, not geological proportions
-of the 60 km footprint. The finest available mapping scale is selected; conflicting
-maps at that scale are retained. Lithology classes come from explicit keyword
-screening of original unit names, not inferred mineral concentrations.
-
-ArcticDEM data masks retain only original SETSM cells, excluding filled/merged
-and water-flattened cells. Snow/ice may remain. REMA is a surface model that may
-include snow/ice; it is not a bare-rock analog survey. The lower-ranked or rejected
-polar candidates are retained in the evidence rather than being discarded after
-seeing scores. Candidate centers were chosen before scoring.
-
-## Remaining challenge requirements
-
-| Requirement | Current state | Work still needed |
+| Requirement | Implemented capability | Scientific limit / outstanding evidence |
 | --- | --- | --- |
-| Lunar and Mars terrain | Operational | Additional mission-specific targets and finer-scale hazard assessment |
-| Geology | Real Earth centroid map context | Matched planetary/Earth geological distributions and mineral measurements |
-| Environment | Real Earth temperature/precipitation context | Comparable planetary environment measurements, illumination and thermal models |
-| Resources | Explicitly not assessed | Validated water/ice/mineral observations, uncertainty and extraction feasibility |
-| Caves | Explicitly not assessed | Authoritative cave locations, morphology, access and subsurface evidence |
-| Systematic candidate search | Bounded Arctic source-tile search | More regions/providers and a defensible global sampling strategy |
-| Novelty | Every candidate unreviewed | Scoped literature search, baseline comparison and expert review |
-| Scientific suitability | Not certified | Separated calibration/evaluation data and independent field validation |
+| Moon/Mars terrain matching | 60 km footprints, 1 km grid, four features; ranked Earth shortlist | No spatial crater morphology, small hazards or landing-pad assessment |
+| Geology | Earth centroid mapping; published Jezero and lunar mare material categories | No matched whole-ROI mineral maps; Shackleton geology unmeasured |
+| Environment | Earth ERA5 temperature/precipitation; gravity comparison and pressure context | No local planetary thermal, illumination, radiation or atmospheric equivalence model |
+| Resources | Published cave ice presence; strict compatible-abundance gate | Abundance and extraction feasibility unknown; no eligible resource ranking |
+| Caves | Lunar pit/conduit setting; Lava Beds cave lengths/ice reports; volcanic-setting comparison | Pit depth is not cave length; traversability, stability and underground morphology unverified |
+| Candidate discovery | Bounded ArcticDEM search and deterministic NASADEM acquisition plans | No worldwide completeness or uniform-area sampling; plans require acquisition and QA |
+| New analog identification | Known Lava Beds baseline distinguished from unreviewed candidates; scoped literature records | No candidate certified novel; no prior report in a bounded search does not prove novelty |
+| Findings presentation | Map, evidence cards, comparisons, research tables, domain breakdown, citations and CSV | Online basemap requires network; offline coordinate overview available |
+| Validation | Numerical recomputation, UI/export parity and published-context regression | Not independent expert review, held-out scientific evaluation or field validation |
 
-No candidate is labeled a newly proven analog, a safe landing site, or a permanent
-base location. A terrain grid with 1 km cells cannot resolve boulders, cave entrances,
-wheel-scale hazards, or construction-scale ground conditions.
+Resource rankings intentionally remain empty without comparable abundance measurements.
+Earth air temperature is never compared to lunar surface temperature. Body-mean
+pressure remains context rather than pretending to be local Jezero or Shackleton weather.
+Environmental scoring currently uses gravity alone with a provisional partial-evidence
+coverage of 0.5. Scenario weights remain uncalibrated engineering choices.
+
+The cave scenario identifies Lava Beds as a known published baseline against Mare
+Tranquillitatis. Its 90.90 contextual index reflects coarse terrain, material and
+subsurface-setting overlap; it is not 90.90% mission suitability. The 95% configured
+evidence coverage measures availability under that scenario, not confidence or
+completeness of cave characterization. Named-cave reports provide regional context,
+not measurements of every Earth ROI cell.
 
 ## Validation
 
-- 89 automated tests pass, including lunar conversion, climate missingness, masks, presets, field filters, CSV provenance and body switching.
-- Both real references pass raster QA with 100% retained analysis cells.
-- All 17 stored profiles have independently checked features and deterministic source-to-grid reproduction.
-- Independent arithmetic verifies ranking order and eligibility for every reference and mission preset.
-- AppTest verifies real Mars and Moon table/CSV score parity and stale-result clearing.
-- The release script now passes its two-reference / ten-eligible-Earth-site dataset gates. This does not certify the broader challenge or scientific suitability.
+- 109 automated tests pass; Ruff lint passes.
+- All 19 profiles have independently recomputed features and deterministic raw-to-grid checks.
+- Independent terrain arithmetic checks cover every reference and mission preset.
+- All three real reference selectors pass UI/table/CSV parity checks.
+- Nine research reference/scenario runs are deterministic and exported separately.
+- Real research UI matches cave exports, clears stale scenario exports and reports missing resources.
+- Published-context regression confirms the known cave baseline and missingness gates.
+  Published labels informed these checks; this is not independent scientific evaluation.
+
+## Use the new workflows
+
+In Research evidence, select a target and scenario, then Run evidence assessment.
+Inspect domains, missing evidence, scoped observations and source links. Download
+the assessment CSV for inputs, observations, configuration, hashes and citations.
+
+Plan additional Earth candidate regions generates a bounded acquisition plan. Save
+the download in the project root as candidate_search.yaml and run:
+
+```powershell
+.venv/Scripts/python.exe scripts/expand_earth_catalog.py --candidates candidate_search.yaml --download --register --build
+```
+
+Protected NASADEM downloads require Earthdata authentication. Planning is not
+measurement: ocean, absent or incomplete granules may fail acquisition or QA.
+Use the existing ArcticDEM workflow for high-latitude searches.
+
+The review register saves append-only local records with reviewer, timestamp,
+scope, citations and limitations. Reviewer identities are self-reported and
+unverified. Saving a record does not automatically certify rankings or novelty.
+
+Import additional measured evidence accepts the strict EvidenceBundle schema in
+[science.py](../src/terratwin/science.py). Use [the current bundle](../data/metadata/science_evidence.json)
+as a structural example: version, sources and observations. Source snapshots must
+exist inside the workspace with matching SHA256 hashes. Subjects must be prepared
+Earth site IDs, planetary profile IDs, or body:Earth/body:Moon/body:Mars.
+Existing IDs cannot silently change; revised claims need new versioned IDs.
+
+Resource comparison needs real water_ice_mass_fraction observations on both sides,
+unit fraction, values 0..1, and matching statistics and spatial scopes. Never enter
+guessed values to pass a gate. Unknown values stay null. Import checks structure
+and provenance integrity; a reviewer must assess sampling compatibility and uncertainty.
+No synthetic resource measurements are present in production data.
 
 ## Reproduce
 
+Stop Streamlit before replacing Parquet files on Windows, then run:
+
 ```powershell
-.venv/Scripts/python.exe scripts/prepare_challenge_data.py
-.venv/Scripts/python.exe -m scripts.discover_earth_regions --max-tiles 3
+.venv/Scripts/python.exe -m scripts.prepare_cave_sites
+.venv/Scripts/python.exe -m scripts.prepare_scientific_evidence
 .venv/Scripts/python.exe scripts/build_profiles.py
 .venv/Scripts/python.exe scripts/prepare_characterization.py
 .venv/Scripts/python.exe scripts/validate_real_slice.py
+.venv/Scripts/python.exe scripts/validate_research.py
 .venv/Scripts/python.exe scripts/run_smoke_test.py --release
 .venv/Scripts/python.exe -m pytest -q
+.venv/Scripts/python.exe -m ruff check src scripts tests app.py
 ```
-
-Stop the running Streamlit process before replacing prepared profile files on
-Windows. File locks can prevent atomic replacement. Restart after the build.
 
 ## Evidence
 
-- [Full numerical validation](../data/processed/real_validation.json)
-- [Mars ranking CSV](../data/processed/mars_analysis.csv)
-- [Moon ranking CSV](../data/processed/moon_analysis.csv)
-- [Earth characterization](../data/processed/characterization.json)
-- [Bounded discovery report](../data/metadata/discovery_report.json)
-- [Source manifest](../data/metadata/sources.csv)
+- [Terrain numerical validation](../data/processed/real_validation.json)
+- [Research regression report](../data/processed/research_validation.json)
+- [Mars terrain ranking](../data/processed/mars_analysis.csv)
+- [Shackleton terrain ranking](../data/processed/moon_analysis.csv)
+- [Pit-region terrain ranking](../data/processed/moon_tranquillitatis_pit_60km_v1_analysis.csv)
+- [Pit-region cave evidence assessment](../data/processed/moon_tranquillitatis_pit_60km_v1_cave_robotics_evidence.csv)
+- [Scientific observations and citations](../data/metadata/science_evidence.json)
+- [Terrain source manifest](../data/metadata/sources.csv)
 
-## Primary source documentation
-
-- [LOLA polar source archive](https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/)
-- [USGS/IAU Shackleton coordinates](https://planetarynames.wr.usgs.gov/Feature/5450)
-- [REMA source and citation](https://www.pgc.umn.edu/data/rema/)
-- [ArcticDEM source and citation](https://www.pgc.umn.edu/data/arcticdem/)
-- [PGC mask interpretation](https://www.pgc.umn.edu/guides/stereo-derived-elevation-models/pgc-dem-products-arcticdem-rema-and-earthdem/)
-- [Open-Meteo historical API and ERA5 attribution](https://open-meteo.com/en/docs/historical-weather-api)
-- [Macrostrat API](https://macrostrat.org/api)
-
-Source data remain attributable to their providers. Local SHA256 hashes support
-reproducibility but are not independent publisher checksum certification.
+Scientific snapshots are labeled structured transcriptions of inspected primary
+sources, not publisher-provided HTML checksums. Local hashes support integrity and
+reproducibility, not scientific correctness or NASA endorsement. Original terrain
+files, including the damaged lunar download, were preserved. New USGS 3DEP and
+verified LOLA products were added separately.

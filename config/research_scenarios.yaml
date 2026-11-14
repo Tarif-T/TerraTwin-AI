@@ -1,0 +1,17 @@
+version: research_scenarios_v1
+scenarios:
+  - id: surface_research
+    name: Surface geology and terrain
+    weights: {terrain: 0.6, geology: 0.3, environment: 0.1, resources: 0.0, caves: 0.0}
+    minimum_coverage: 0.6
+    required_domains: [terrain]
+  - id: cave_robotics
+    name: Volcanic cave robotics
+    weights: {terrain: 0.25, geology: 0.25, environment: 0.1, resources: 0.0, caves: 0.4}
+    minimum_coverage: 0.75
+    required_domains: [terrain, geology, caves]
+  - id: resource_research
+    name: Water and ice resource research
+    weights: {terrain: 0.25, geology: 0.15, environment: 0.1, resources: 0.5, caves: 0.0}
+    minimum_coverage: 0.75
+    required_domains: [terrain, resources]

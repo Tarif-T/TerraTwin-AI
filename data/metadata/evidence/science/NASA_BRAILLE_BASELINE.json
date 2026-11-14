@@ -1,0 +1,40 @@
+{
+  "source_url": "https://www.nasa-braille.org/about-braille/the-field-site/lava-tubes",
+  "title": "NASA BRAILLE Lava Beds field-site context",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "lava_materials",
+      "subject_id": "earth_lava_beds",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_BRAILLE_BASELINE"
+      ],
+      "interpretation": "Published volcanic lava-tube field site; regional material context does not replace the centroid geological map."
+    },
+    {
+      "observation_id": "lava_known_baseline",
+      "subject_id": "earth_lava_beds",
+      "domain": "novelty",
+      "quantity": "analog_publication_status",
+      "value": "known_baseline",
+      "unit": "state",
+      "statistic": "published_usage",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_BRAILLE_BASELINE"
+      ],
+      "interpretation": "NASA BRAILLE already uses this cave region as an analog; it is a baseline, not a newly discovered analog."
+    }
+  ]
+}

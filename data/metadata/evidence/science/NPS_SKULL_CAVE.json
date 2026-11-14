@@ -1,0 +1,55 @@
+{
+  "source_url": "https://www.nps.gov/places/skull-cave.htm",
+  "title": "National Park Service: Skull Cave",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "skull_length",
+      "subject_id": "earth_lava_beds",
+      "domain": "caves",
+      "quantity": "cave_length_m",
+      "value": 177.0,
+      "unit": "m",
+      "statistic": "reported_passage_length",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth."
+    },
+    {
+      "observation_id": "skull_ice",
+      "subject_id": "earth_lava_beds",
+      "domain": "resources",
+      "quantity": "water_ice_presence",
+      "value": "reported_ice_floor",
+      "unit": "state",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established."
+    },
+    {
+      "observation_id": "lava_subsurface_setting",
+      "subject_id": "earth_lava_beds",
+      "domain": "caves",
+      "quantity": "subsurface_setting_categories",
+      "value": [
+        "volcanic_subsurface"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile."
+    }
+  ]
+}

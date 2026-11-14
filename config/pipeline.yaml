@@ -394,3 +394,38 @@ jobs:
   supporting_files:
     ARCTICDEM_29_25_32M_DATAMASK: data/raw/Earth/ArcticDEM_discovery/29_25_32m_v4.1_datamask.tif
     ARCTICDEM_29_25_32M_MASK_UINT8: data/raw/Earth/ArcticDEM_discovery/29_25_32m_v4.1_datamask_uint8.bin
+- raster_path: data/raw/Earth/USGS_LavaBeds/USGS_n42w122_30m_average.tif
+  interpretation_path: data/metadata/interpretations/earth_lava_beds.yaml
+  source_id: USGS_LAVA_BEDS_30M
+  destination_crs: +proj=aeqd +lat_0=41.5 +lon_0=-121.5 +datum=WGS84 +units=m +type=crs
+  bounds_m: &id003
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_lava_beds_60km_v1
+    site_id: earth_lava_beds
+    roi_id: earth_lava_beds_roi_60km_v1
+    region_name: Lava Beds volcanic/cave-region study ROI
+    site_name: Lava Beds volcanic/cave-region study ROI
+    country: United States
+    centroid_lat: 41.5
+    centroid_lon: -121.5
+  supporting_files:
+    USGS_LAVA_BEDS_NATIVE: data/raw/Earth/USGS_LavaBeds/USGS_13_n42w122.tif
+    WORLDCOVER_LAVA_BEDS: data/raw/Earth/USGS_LavaBeds/ESA_WorldCover_10m_2021_v200_N39W123_Map.tif
+    WORLDCOVER_LAVA_BEDS_MASK: data/raw/Earth/USGS_LavaBeds/worldcover_land_uint8.bin
+  warnings:
+  - Cave dimensions and resource reports require separate site evidence.
+- raster_path: data/raw/Moon/LOLA_global_verified/ldem_64.xml
+  interpretation_path: data/metadata/interpretations/moon_tranquillitatis_pit.yaml
+  source_id: LOLA_LDEM64_VERIFIED
+  destination_crs: +proj=aeqd +lat_0=8.3355 +lon_0=33.222 +R=1737400 +units=m +type=crs
+  bounds_m: *id003
+  identity:
+    profile_id: moon_tranquillitatis_pit_60km_v1
+    roi_id: moon_tranquillitatis_pit_roi_60km_v1
+    region_name: Mare Tranquillitatis pit-region 60 km study
+  warnings:
+  - Orbital pit/conduit evidence is separate from kilometre-scale terrain.

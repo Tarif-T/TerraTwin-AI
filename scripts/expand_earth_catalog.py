@@ -14,6 +14,7 @@ import json
 import subprocess
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
 import requests
 import yaml
@@ -146,9 +147,8 @@ def register(candidate, item, members, archive, pipeline, catalog, sources, dire
                 seed_or_candidate="exploratory",
                 centroid_lat=lat,
                 centroid_lon=lon,
-                reason_selected=read_yaml(ROOT / "config/earth_candidates.yaml")[
-                    "selection_rationale"
-                ],
+                reason_selected=candidate.get("selection_rationale")
+                or read_yaml(ROOT / "config/earth_candidates.yaml")["selection_rationale"],
                 known_analog_reference="",
                 analysis_crs=crs,
                 analysis_bounds_m=[-30000, -30000, 30000, 30000],
@@ -164,10 +164,15 @@ def main():
     parser.add_argument("--download", action="store_true")
     parser.add_argument("--register", action="store_true")
     parser.add_argument("--build", action="store_true")
+    parser.add_argument("--candidates", type=Path, default=ROOT / "config/earth_candidates.yaml")
     args = parser.parse_args()
     if args.build and not args.register:
         parser.error("--build requires --register")
-    candidates = read_yaml(ROOT / "config/earth_candidates.yaml")["candidates"]
+    selection_config = read_yaml(args.candidates)
+    candidates = [
+        {**c, "selection_rationale": selection_config["selection_rationale"]}
+        for c in selection_config["candidates"]
+    ]
     if len({c["tile"] for c in candidates}) != len(candidates):
         raise ValueError("Duplicate candidate tile")
     pipeline_path = ROOT / "config/pipeline.yaml"
@@ -254,7 +259,7 @@ def main():
         ROOT / "data/metadata/earth_acquisition_status.json",
         dict(
             checked_utc=datetime.now(timezone.utc).isoformat(),
-            selection_config="config/earth_candidates.yaml",
+            selection_config=str(args.candidates.resolve()),
             candidates=rows,
             authentication_blocked=auth_blocked,
             note="Metadata or registration alone does not mean a profile passed terrain QA.",
@@ -279,7 +284,7 @@ def main():
             ROOT / "data/metadata/earth_acquisition_status.json",
             dict(
                 checked_utc=datetime.now(timezone.utc).isoformat(),
-                selection_config="config/earth_candidates.yaml",
+                selection_config=str(args.candidates.resolve()),
                 candidates=rows,
                 authentication_blocked=auth_blocked,
                 note="Prepared from real source members; QA status and coverage recorded per site.",

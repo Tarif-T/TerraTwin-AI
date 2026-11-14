@@ -289,6 +289,7 @@ def validate(check_ui=True):
             }
         )
     all_references = {}
+    written_bodies = set()
     for target in references:
         missions = {}
         for preset in read_yaml(ROOT / "config/missions.yaml")["missions"]:
@@ -306,9 +307,14 @@ def validate(check_ui=True):
         target_rows = list(csv.DictReader(io.StringIO(target_csv)))
         if [r["site_id"] for r in target_rows] != [r["site_id"] for r in target_results]:
             raise ValueError("Reference CSV candidate ordering mismatch")
-        (ROOT / f"data/processed/{target.body.lower()}_analysis.csv").write_text(
+        (ROOT / f"data/processed/{target.profile_id}_analysis.csv").write_text(
             target_csv, encoding="utf-8", newline=""
         )
+        if target.body not in written_bodies:
+            (ROOT / f"data/processed/{target.body.lower()}_analysis.csv").write_text(
+                target_csv, encoding="utf-8", newline=""
+            )
+            written_bodies.add(target.body)
         all_references[target.profile_id] = dict(
             body=target.body,
             rankings=target_results,
@@ -351,11 +357,26 @@ def validate(check_ui=True):
                 raise ValueError("Lunar UI export unavailable")
         elif not app.button[0].disabled:
             raise ValueError("Unavailable Moon allows ranking")
+        for target in references:
+            next(s for s in app.selectbox if s.label == "Planetary body").select(target.body).run()
+            next(s for s in app.selectbox if s.label == "Measured reference region").select(
+                target
+            ).run()
+            app.button[0].click().run()
+            table = next(f.value for f in app.dataframe if "rank" in f.value.columns)
+            expected = [r for r in verified_ranking(target, sites, config) if r["eligible"]]
+            if (
+                app.exception
+                or table["site_name"].tolist() != [r["site_name"] for r in expected]
+                or table["similarity_index"].tolist() != [r["similarity_index"] for r in expected]
+            ):
+                raise ValueError("Reference-specific UI parity failed")
         ui = {
             "checked": True,
             "real_rank_table_csv_parity": True,
             "body_switch_clears_stale_output": True,
             "moon_rankings_verified": lunar is not None,
+            "all_reference_selectors_verified": len(references),
         }
     output = ROOT / "data/processed"
     (output / "real_analysis.csv").write_text(csv_payload, encoding="utf-8", newline="")
@@ -421,6 +442,8 @@ def plot(grids, path):
             datum = "LOLA lunar reference sphere"
         elif any(source.startswith(("REMA_", "ARCTICDEM_")) for source in profile.source_ids):
             datum = "WGS84 ellipsoid"
+        elif any(source.startswith("USGS_LAVA_BEDS") for source in profile.source_ids):
+            datum = "USGS NAVD88"
         else:
             datum = "NASADEM EGM96 geoid"
         fig.colorbar(image, ax=axes[top, col], label=f"Elevation (m), {datum}", shrink=0.8)

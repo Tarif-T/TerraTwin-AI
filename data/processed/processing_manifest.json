@@ -1,7 +1,7 @@
 {
-  "git_commit": "75169a577314b7bddc811723f88bb546bcc0f628",
-  "code_sha256": "cadf18fbc54ce77eeaa54f41185cd5b5bbf9f048a2b1707471736297ad8445bb",
-  "pipeline_config_sha256": "e82da6eace219a8215916a38d54c47487393ba0843410de2a4906c38e63d742a",
+  "git_commit": "41881f724cefe54081638e412b6b2f757253dc14",
+  "code_sha256": "8028035d8e133e00504fc4189f687e5ed2a9830c792e2301447f1c05702896dd",
+  "pipeline_config_sha256": "010a160bd1903e6c7b58406b0e058fbce7d79304142aac1ccbfc93e1aa796b13",
   "packages": {
     "terratwin-ai": "0.1.0",
     "numpy": "2.4.6",
@@ -18,7 +18,7 @@
       "supporting_source_ids": [],
       "interpretation_sha256": "4cb260605cfd5872cce53346a37819dee23da3226d0421c44ccdf508da0a5fb3",
       "label_sha256": "f6de640ed5603eb03395616214c9a5707c9d49273f699d2cbeec53e93df6bd08",
-      "config_sha256": "3d6cd9d9fdbc08e73d4e9f41b71b1b69e26c3166ba6402dea55e7cb95589ecd5",
+      "config_sha256": "73acd6b3fab6cf30413c74225b16882590f79b543bab4d315cdac4f1e3431e3c",
       "destination_crs": "+proj=aeqd +lat_0=18.41 +lon_0=77.69 +R=3396000 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -43,7 +43,7 @@
       ],
       "interpretation_sha256": "ac50a2317c5da187523bee6a9f5212d342b1fadc4c551a81c892b77a9b9e9264",
       "label_sha256": "219260574b47f47554c2c8122da1e0934de2ea99ea29c2031b6223aa3982f9fd",
-      "config_sha256": "e52ecde147c0091db6196af91aa461c76afeffea9b54c9112b7417517437459a",
+      "config_sha256": "167e7ff9f043b2be76e1569727ae2530dce34dae9783c286a1b2938c8ee4936c",
       "destination_crs": "+proj=aeqd +lat_0=36.5 +lon_0=-116.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -68,7 +68,7 @@
       ],
       "interpretation_sha256": "6407d08a2171c4216c52fc774cece7547ea11442bc2e789ecf05a25613c598a0",
       "label_sha256": "6d5de247d5ba81a8d86442b0934442a308ed04119af1b53e893667f07a75b9e0",
-      "config_sha256": "13eaf4ab77829c416383da5de9693227239394c8ab99aa30b0bd3bcf6b2f8107",
+      "config_sha256": "9461f859d1ea91a9c5bc3c3e4bd0f65b679209e6a9fc06393096e7efa2eb10ff",
       "destination_crs": "+proj=aeqd +lat_0=-23.5 +lon_0=-68.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -93,7 +93,7 @@
       ],
       "interpretation_sha256": "4558b0edf67258337ea540f51aa1454a37a00c474d67843d9e8457fd47ab94d6",
       "label_sha256": "bf00abef8885cc4935c9ff1d4d3e99f39340ddfb815c1817ed829c96e54d751c",
-      "config_sha256": "25ff071725b9f38060b15a186a09a808e23f73833fd3e31147c933a0a11a618d",
+      "config_sha256": "9a0df9ce1f3879c55acb8fe78096c0f5bc8c7c9638692281196ea3227aca9612",
       "destination_crs": "+proj=aeqd +lat_0=-24.5 +lon_0=15.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -118,7 +118,7 @@
       ],
       "interpretation_sha256": "797211af732304a399def7e43d47951fe0186e45a2c5c06032ba9c408dc11a41",
       "label_sha256": "5b1b5045b317e5670ceb7817cc7243ff9f0cbdf361296cb3ea69cd80a73c2315",
-      "config_sha256": "1ddbb7cccc2b5f6ca0abfb998cce3d7341c4869c0258b80450c4a690819166fd",
+      "config_sha256": "5fc21f6183204b996f2e4a9a83d86dd2e74c94923c13af0f9ccbbbc08172f42d",
       "destination_crs": "+proj=aeqd +lat_0=13.5 +lon_0=40.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -143,7 +143,7 @@
       ],
       "interpretation_sha256": "be8e43d34091f1f6805907450644bfc9825f6a44283acae188c2a3e501631d31",
       "label_sha256": "0ee0b8e2b6ab1aa7981b2a7780c2976b5c32d664c96f41874fbaa9c77115a47c",
-      "config_sha256": "0e23169f32ce2b55c54249bfa55fd732cfe4afe9f24dc7b17e2309f72108d544",
+      "config_sha256": "6a042154f492f6675b2a70c299a62445a390898760b2ed0005f3bd1e9d4f397c",
       "destination_crs": "+proj=aeqd +lat_0=22.5 +lon_0=58.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -168,7 +168,7 @@
       ],
       "interpretation_sha256": "73ef819980004438feb3fa4488c9220786b7830e59b152a2532d8585bede77ad",
       "label_sha256": "e05401ec1993f9bb118b678ef208f01678c9dd099d326b9a12354a8807142dfe",
-      "config_sha256": "b5c235fa7aadc0f94b088f71d101bec1ff0f8221a2c33e0d572caecd7ce5b37a",
+      "config_sha256": "8d7bf841d02b2418d429bcb69d1b17215afc6e9bb6fea6e545afd6ea77d3ae69",
       "destination_crs": "+proj=aeqd +lat_0=-19.5 +lon_0=-67.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -193,7 +193,7 @@
       ],
       "interpretation_sha256": "49475a70b069547239973bf0bb9d27348e79cf30564bb94ef160c1b1a8ec1969",
       "label_sha256": "887c1249f067b518b8d06113ed52c0c032c61ebd130e9bb5946c8290c7ae17c7",
-      "config_sha256": "e75bfaecd12d3c21c3d12755162b8a2f2f86b3957018a07737e803deab79a8c7",
+      "config_sha256": "81fa06462e6b630feaf2f8f5859b9a15b536bc387478a53a1db85aae8442dba8",
       "destination_crs": "+proj=aeqd +lat_0=37.5 +lon_0=95.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -218,7 +218,7 @@
       ],
       "interpretation_sha256": "45538b7202727eac2dc2d9ebbd0e3fa1a8de200ec5898cc3d03fdd0a83dfc1a4",
       "label_sha256": "20299c2393ab3b227b564c80eaa7ea0dfed0d169dc720bcc07219d7b649c2c84",
-      "config_sha256": "252ba33d2175907a2e9462c6ab6466edf78417831816f5ce543c215a32afc148",
+      "config_sha256": "787e08f0536876151d109d8d2d78793d537dd810c3a3112d3961e4cd8e78033a",
       "destination_crs": "+proj=aeqd +lat_0=25.5 +lon_0=40.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -243,7 +243,7 @@
       ],
       "interpretation_sha256": "92fcec2e02eca7f2fe4e305e45d86e412ef05f6dcdcbdea87613b6204156ffdc",
       "label_sha256": "634799d992acdc135e31dd7eaead1ed2e2c36b419fc5c9963a6fea6a23eb983a",
-      "config_sha256": "3db2ebda625acbc43a8e60c377ff51020c4bdc13e621ed4cb60d8b5c77f60198",
+      "config_sha256": "eeca83ab89e0d47fe4cd349f35ece2990a867d4c6c1d617ee8d6738f705066d2",
       "destination_crs": "+proj=aeqd +lat_0=-24.5 +lon_0=135.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -268,7 +268,7 @@
       ],
       "interpretation_sha256": "c508eefff380db02f3bbcc381a5035c436fb397ea981674ad6acd5299695a19e",
       "label_sha256": "0e5d366a63215cf2c75a719d03986daaa2ab69f528e0a62daf54e8867a040e1b",
-      "config_sha256": "f973106f15442be309952a5925020c2546597defbebf3bf08d74938f0aba61ea",
+      "config_sha256": "49a31edcbebeea1d3030ffb2182cfee68f4f8ec641380e56b244faa4801e11f2",
       "destination_crs": "+proj=aeqd +lat_0=34.5 +lon_0=-115.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -293,7 +293,7 @@
       ],
       "interpretation_sha256": "a0075811e5b9d3aaef1a138c68db3048a07f7017b68df2d8af0aaf0c765bf9b1",
       "label_sha256": "87eb0032c7df45d270700456d4574c7910e77aa256ae4a868c326f70ce89189c",
-      "config_sha256": "a0f21efb6fe1cdb551ba65becf81c3ba014d87cb8ba67ba7fbf27df5a20b0e81",
+      "config_sha256": "0fe6448b71f2addad179cac95745e4adce3f4b7f58d8ff32f353fec14f370cff",
       "destination_crs": "+proj=aeqd +lat_0=24.5 +lon_0=10.5 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -315,7 +315,7 @@
       "supporting_source_ids": [],
       "interpretation_sha256": "06b603ead91db0660c9b3368860a54321a414d5a5072b0dc293ab7164c947248",
       "label_sha256": "68b8b28df4d1094d77afeca1ec96417fbfc7798ee97d0d08d2e3cbc4f82cae8f",
-      "config_sha256": "11a586b16fa2dcf20684a1361b58c9b490daf8ce1228f7da3ac6309183a2d2a9",
+      "config_sha256": "0f2dca358905a0d1b610b8432b78c4fb71f7b997cbb34a20702a109cb065d7da",
       "destination_crs": "+proj=aeqd +lat_0=-89.67 +lon_0=129.78 +R=1737400 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -337,7 +337,7 @@
       "supporting_source_ids": [],
       "interpretation_sha256": "5edb48b48eb15f00c571dcca15ca4792f961064deb3c8ff85843011c22f17370",
       "label_sha256": "0368a87a2d762f2d2b67c541cb43503f696153cd505c786825bc9b3fb4fea97c",
-      "config_sha256": "8f1dd555c16b254dbeadafef8661ad59fa224d6f19c5a1af5542acb1458e4104",
+      "config_sha256": "8fe87a71091a37f06f8aca295a344d8cf128b525648ad4d57644b59df3b27dda",
       "destination_crs": "+proj=aeqd +lat_0=-77.81689181335317 +lon_0=160.20112364547506 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -362,7 +362,7 @@
       ],
       "interpretation_sha256": "2b2daf8e16b5f6734e3e70800a2f72062e1c9653ba29d9f7c9b65cffa00ab804",
       "label_sha256": "5c282adfc7868020e9734e3fec59dac7c2ce7e24f96a42fc6215bc020bcfd14d",
-      "config_sha256": "11103e7c3922fb977ab71c7263e19103124f2a64d5b75e7e1b99bbfb236eb199",
+      "config_sha256": "d9fe174ed16432e2ddcd672549d116dceed49f9a53d2ca02f8ad77dc375d495a",
       "destination_crs": "+proj=aeqd +lat_0=73.0359066517747 +lon_0=-83.418055344822 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -389,7 +389,7 @@
       ],
       "interpretation_sha256": "32f2040c06519d3ab6015f283fdadc22e1946465252236b1dc998214867396ca",
       "label_sha256": "e9c7b5fcd8d527e26752bba9df913978b202dc74de9b540bcf1c20f1b81d5165",
-      "config_sha256": "12b5fc1b179ed02addaca3dc34554b3bae4a16995d567cd327bb53d1b7dae67c",
+      "config_sha256": "561a9119d793772b05dac54d06443bad02d54b06603b173a71d604a80070e6e3",
       "destination_crs": "+proj=aeqd +lat_0=75.01268271051367 +lon_0=-85.0302592718897 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -414,7 +414,7 @@
       ],
       "interpretation_sha256": "27b839c167f390126548e9fc3cd34616f8600971a2196303678452540f1fcf93",
       "label_sha256": "51093d7393b6ee070c451d44772cf21ac4b3885965c12bacaf849820bdf724f9",
-      "config_sha256": "87df4ea485835f8b5a226db74f0405e00bc1db8b9f3b97a71d46de212a241239",
+      "config_sha256": "88ea2b9ee1897b1e144c8f033a2cdebf4cbffed336997784494524e3561762c5",
       "destination_crs": "+proj=aeqd +lat_0=72.31936845390412 +lon_0=-98.42696902148067 +datum=WGS84 +units=m +type=crs",
       "bounds_m": [
         -30000.0,
@@ -428,6 +428,54 @@
       "quality_reasons": [],
       "analysis_raster": "terrain/726931b7f04e88a4.tif",
       "analysis_raster_sha256": "1d420110238066fb5109a3f368465a9d14615c5b72a773f32265e5b053a2d492"
+    },
+    {
+      "profile_id": "earth_lava_beds_60km_v1",
+      "raster_sha256": "428c1df71140df3235b3c15735dd13d683ac36f24d8b072b558fcc4a12eda5c3",
+      "reader_entrypoint_sha256": "428c1df71140df3235b3c15735dd13d683ac36f24d8b072b558fcc4a12eda5c3",
+      "supporting_source_ids": [
+        "USGS_LAVA_BEDS_NATIVE",
+        "WORLDCOVER_LAVA_BEDS",
+        "WORLDCOVER_LAVA_BEDS_MASK"
+      ],
+      "interpretation_sha256": "70ec559bf73b1ac67b9bc66d435427ecbc01913f884416bccba99772093bfeb9",
+      "label_sha256": "3bf94c40298b5c6da44288f9ce314c94fcba5c2bdf3b0f7cf96646fd052a4434",
+      "config_sha256": "53a9cbb858848a05afd5db39ab0c256b4d1dbde6dae177de4962b6470ef5a18f",
+      "destination_crs": "+proj=aeqd +lat_0=41.5 +lon_0=-121.5 +datum=WGS84 +units=m +type=crs",
+      "bounds_m": [
+        -30000.0,
+        -30000.0,
+        30000.0,
+        30000.0
+      ],
+      "valid_elevation_count": 3396,
+      "valid_slope_count": 2851,
+      "valid_roughness_count": 2647,
+      "quality_reasons": [],
+      "analysis_raster": "terrain/4b9ebabe06bd8289.tif",
+      "analysis_raster_sha256": "22d4c11becb3e29cd19ebb646150453872f9a19ee12f7a256e027a0cf9621bd6"
+    },
+    {
+      "profile_id": "moon_tranquillitatis_pit_60km_v1",
+      "raster_sha256": "1c4958699d4cffd7e777d51421b6044bba300aa0bef286a544309efb082cdbd6",
+      "reader_entrypoint_sha256": "13d388574ee3ac3f5afb66a1ca6aea6c42fcb38ecad8e8f9b4dc08f6964b6c18",
+      "supporting_source_ids": [],
+      "interpretation_sha256": "3b58b9ef2952370ed939fc5fb791edc94cf2af287c707cd40ef934e199576444",
+      "label_sha256": "13d388574ee3ac3f5afb66a1ca6aea6c42fcb38ecad8e8f9b4dc08f6964b6c18",
+      "config_sha256": "da9ab066fabc6728c0e295b8faec9d6589cbdd4b7b2ea4d18a5aa321bd1e17bb",
+      "destination_crs": "+proj=aeqd +lat_0=8.3355 +lon_0=33.222 +R=1737400 +units=m +type=crs",
+      "bounds_m": [
+        -30000.0,
+        -30000.0,
+        30000.0,
+        30000.0
+      ],
+      "valid_elevation_count": 3600,
+      "valid_slope_count": 3364,
+      "valid_roughness_count": 3364,
+      "quality_reasons": [],
+      "analysis_raster": "terrain/01fe0514a9e7581f.tif",
+      "analysis_raster_sha256": "08bdaa10bbc0975083fb68631ffd1633d09e19a28252143fd47ce74cc713521b"
     }
   ]
 }

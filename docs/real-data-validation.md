@@ -1,6 +1,6 @@
 # Current validation
 
-The catalog now includes Mars and Moon references and 15 Earth profiles (14 QA-approved).
+The catalog now includes three Mars/Moon references and 16 Earth profiles (15 QA-approved).
 See [challenge progress](challenge-progress.md) and the linked current CSVs for
 new results, source interpretation and remaining limits. The prior eleven-site
 report below records the preceding milestone; its counts and lunar blocker are historical.

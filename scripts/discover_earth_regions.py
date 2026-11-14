@@ -212,7 +212,9 @@ def discover(bbox, max_tiles):
                         region_name=name,
                         site_id=site_id,
                         site_name=name,
-                        country="Canadian Arctic",
+                        country="Canadian Arctic"
+                        if -100 <= lon <= -80 and 72 <= lat <= 78
+                        else "Arctic region; jurisdiction unverified",
                         centroid_lat=lat,
                         centroid_lon=lon,
                     ),
@@ -230,7 +232,9 @@ def discover(bbox, max_tiles):
                     properties=dict(
                         site_id=site_id,
                         site_name=name,
-                        country="Canadian Arctic",
+                        country="Canadian Arctic"
+                        if -100 <= lon <= -80 and 72 <= lat <= 78
+                        else "Arctic region; jurisdiction unverified",
                         roi_id=roi_id,
                         seed_or_candidate="systematic_candidate",
                         centroid_lat=lat,

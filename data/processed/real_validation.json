@@ -1,9 +1,9 @@
 {
-  "validated_utc": "2026-11-14T01:25:38.490142+00:00",
+  "validated_utc": "2026-11-14T02:20:53.203673+00:00",
   "status": "numerically_verified_terrain_catalog",
   "scientific_suitability_validated": false,
-  "input_data_hash": "fef41165e0517e1e699e679bd91bd77dcfbf06feb99a516243756f3c7ac5aed9",
-  "run_id": "fc07f68a0b4551e9",
+  "input_data_hash": "efbb6e7757963b3d4202215a3fc006e92dfc759e3aff7b38809c95ce6998a6e1",
+  "run_id": "99bd81224d6207c7",
   "profiles": [
     {
       "profile_id": "mars_jezero_60km_v1",
@@ -30,6 +30,24 @@
         "relief_p90_p10_m": 2132.66693299078,
         "roughness_local_std_m": 121.03643018756128,
         "steep_fraction_15deg": 0.19054696789536266
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": null,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "moon_tranquillitatis_pit_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.2873149978873618,
+        "relief_p90_p10_m": 91.89383482314668,
+        "roughness_local_std_m": 4.302441795380071,
+        "steep_fraction_15deg": 0.0032699167657550534
       },
       "absolute_errors": {
         "slope_median_deg": 0.0,
@@ -310,6 +328,24 @@
       "valid_cell_fraction": 0.9227777777777778,
       "source_mask_removed_analysis_cells": 278,
       "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_lava_beds_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.2574884083984497,
+        "relief_p90_p10_m": 525.0454701276165,
+        "roughness_local_std_m": 20.419330959637072,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9433333333333334,
+      "source_mask_removed_analysis_cells": 204,
+      "raw_to_grid_repeat_exact": true
     }
   ],
   "rankings": [
@@ -514,6 +550,57 @@
       "rank": 4
     },
     {
+      "site_id": "earth_lava_beds",
+      "site_name": "Lava Beds volcanic/cave-region study ROI",
+      "similarity_index": 91.91285506125416,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.2574884083984497,
+          "similarity": 0.9395985608858513,
+          "weight": 0.4,
+          "contribution": 0.37583942435434053,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 525.0454701276165,
+          "similarity": 0.8412392843562673,
+          "weight": 0.3,
+          "contribution": 0.25237178530688015,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 20.419330959637072,
+          "similarity": 0.9615971418235812,
+          "weight": 0.2,
+          "contribution": 0.19231942836471627,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "USGS_LAVA_BEDS_30M",
+        "USGS_LAVA_BEDS_NATIVE",
+        "WORLDCOVER_LAVA_BEDS",
+        "WORLDCOVER_LAVA_BEDS_MASK"
+      ],
+      "warning": "Cave dimensions and resource reports require separate site evidence.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 5
+    },
+    {
       "site_id": "earth_arctic_28_30",
       "site_name": "ArcticDEM search candidate 28_30",
       "similarity_index": 90.40896373397418,
@@ -561,7 +648,7 @@
         "MOLA_MEGT44N000HB"
       ],
       "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 5
+      "rank": 6
     },
     {
       "site_id": "earth_n24e010",
@@ -611,7 +698,7 @@
         "NASADEM_N24E010_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 6
+      "rank": 7
     },
     {
       "site_id": "earth_rema_18_35",
@@ -659,7 +746,7 @@
         "REMA_18_35_32M"
       ],
       "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 7
+      "rank": 8
     },
     {
       "site_id": "earth_n13e040",
@@ -709,7 +796,7 @@
         "NASADEM_N13E040_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 8
+      "rank": 9
     },
     {
       "site_id": "earth_s25e015",
@@ -759,7 +846,7 @@
         "NASADEM_S25E015_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 9
+      "rank": 10
     },
     {
       "site_id": "earth_s20w068",
@@ -809,7 +896,7 @@
         "NASADEM_S20W068_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 10
+      "rank": 11
     },
     {
       "site_id": "earth_n22e058",
@@ -859,7 +946,7 @@
         "NASADEM_N22E058_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 11
+      "rank": 12
     },
     {
       "site_id": "earth_n25e040",
@@ -909,7 +996,7 @@
         "NASADEM_N25E040_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 12
+      "rank": 13
     },
     {
       "site_id": "earth_arctic_29_25",
@@ -959,7 +1046,7 @@
         "MOLA_MEGT44N000HB"
       ],
       "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 13
+      "rank": 14
     },
     {
       "site_id": "earth_s25e135",
@@ -1009,7 +1096,7 @@
         "NASADEM_S25E135_SWB"
       ],
       "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 14
+      "rank": 15
     },
     {
       "site_id": "earth_arctic_26_29",
@@ -1267,6 +1354,57 @@
           "rank": 4
         },
         {
+          "site_id": "earth_lava_beds",
+          "site_name": "Lava Beds volcanic/cave-region study ROI",
+          "similarity_index": 91.91285506125416,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.2574884083984497,
+              "similarity": 0.9395985608858513,
+              "weight": 0.4,
+              "contribution": 0.37583942435434053,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 525.0454701276165,
+              "similarity": 0.8412392843562673,
+              "weight": 0.3,
+              "contribution": 0.25237178530688015,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 20.419330959637072,
+              "similarity": 0.9615971418235812,
+              "weight": 0.2,
+              "contribution": 0.19231942836471627,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "USGS_LAVA_BEDS_30M",
+            "USGS_LAVA_BEDS_NATIVE",
+            "WORLDCOVER_LAVA_BEDS",
+            "WORLDCOVER_LAVA_BEDS_MASK"
+          ],
+          "warning": "Cave dimensions and resource reports require separate site evidence.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 5
+        },
+        {
           "site_id": "earth_arctic_28_30",
           "site_name": "ArcticDEM search candidate 28_30",
           "similarity_index": 90.40896373397418,
@@ -1314,7 +1452,7 @@
             "MOLA_MEGT44N000HB"
           ],
           "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 5
+          "rank": 6
         },
         {
           "site_id": "earth_n24e010",
@@ -1364,7 +1502,7 @@
             "NASADEM_N24E010_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 6
+          "rank": 7
         },
         {
           "site_id": "earth_rema_18_35",
@@ -1412,7 +1550,7 @@
             "REMA_18_35_32M"
           ],
           "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 7
+          "rank": 8
         },
         {
           "site_id": "earth_n13e040",
@@ -1462,7 +1600,7 @@
             "NASADEM_N13E040_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 8
+          "rank": 9
         },
         {
           "site_id": "earth_s25e015",
@@ -1512,7 +1650,7 @@
             "NASADEM_S25E015_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 9
+          "rank": 10
         },
         {
           "site_id": "earth_s20w068",
@@ -1562,7 +1700,7 @@
             "NASADEM_S20W068_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 10
+          "rank": 11
         },
         {
           "site_id": "earth_n22e058",
@@ -1612,7 +1750,7 @@
             "NASADEM_N22E058_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 11
+          "rank": 12
         },
         {
           "site_id": "earth_n25e040",
@@ -1662,7 +1800,7 @@
             "NASADEM_N25E040_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 12
+          "rank": 13
         },
         {
           "site_id": "earth_arctic_29_25",
@@ -1712,7 +1850,7 @@
             "MOLA_MEGT44N000HB"
           ],
           "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 13
+          "rank": 14
         },
         {
           "site_id": "earth_s25e135",
@@ -1762,7 +1900,7 @@
             "NASADEM_S25E135_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-          "rank": 14
+          "rank": 15
         },
         {
           "site_id": "earth_arctic_26_29",
@@ -1846,71 +1984,78 @@
             "eligible": true
           },
           {
-            "site_id": "earth_arctic_28_30",
+            "site_id": "earth_lava_beds",
             "rank": 5,
+            "similarity_index": 91.91285506125416,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 6,
             "similarity_index": 90.40896373397418,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n24e010",
-            "rank": 6,
+            "rank": 7,
             "similarity_index": 89.35442449731461,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_rema_18_35",
-            "rank": 7,
+            "rank": 8,
             "similarity_index": 88.72304278702943,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 8,
+            "rank": 9,
             "similarity_index": 85.8371443433379,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e015",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 85.52566101916064,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 80.71408740709467,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 80.62419611489692,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 79.49204608067191,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 77.93736051127875,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 76.39514538663146,
             "feature_coverage": 1.0,
             "eligible": true
@@ -1960,64 +2105,71 @@
             "eligible": true
           },
           {
-            "site_id": "earth_s24w069",
+            "site_id": "earth_lava_beds",
             "rank": 6,
+            "similarity_index": 94.57574906654877,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 7,
             "similarity_index": 94.43271778288835,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_rema_18_35",
-            "rank": 7,
+            "rank": 8,
             "similarity_index": 93.29688410021446,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e015",
-            "rank": 8,
+            "rank": 9,
             "similarity_index": 91.28571397400108,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 91.0879551699357,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 87.68213203188373,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 87.60491749160533,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 87.35361742210787,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 86.29111835913845,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 84.90221695244333,
             "feature_coverage": 1.0,
             "eligible": true
@@ -2053,78 +2205,85 @@
             "eligible": true
           },
           {
-            "site_id": "earth_n37e095",
+            "site_id": "earth_lava_beds",
             "rank": 4,
+            "similarity_index": 91.14924810533563,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 5,
             "similarity_index": 91.09367651823601,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_28_30",
-            "rank": 5,
+            "rank": 6,
             "similarity_index": 87.30209647815765,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n24e010",
-            "rank": 6,
+            "rank": 7,
             "similarity_index": 86.75608829926598,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_rema_18_35",
-            "rank": 7,
+            "rank": 8,
             "similarity_index": 85.8847387773054,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 8,
+            "rank": 9,
             "similarity_index": 84.05710739160186,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e015",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 83.61705248636288,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 78.59299416863583,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 78.3356253707159,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 76.76807860991055,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 75.10126140893696,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 73.65860331548816,
             "feature_coverage": 1.0,
             "eligible": true
@@ -2138,7 +2297,7 @@
           }
         ]
       },
-      "csv_input_hash": "fef41165e0517e1e699e679bd91bd77dcfbf06feb99a516243756f3c7ac5aed9"
+      "csv_input_hash": "efbb6e7757963b3d4202215a3fc006e92dfc759e3aff7b38809c95ce6998a6e1"
     },
     "moon_shackleton_60km_v1": {
       "body": "Moon",
@@ -2492,6 +2651,57 @@
           "rank": 7
         },
         {
+          "site_id": "earth_lava_beds",
+          "site_name": "Lava Beds volcanic/cave-region study ROI",
+          "similarity_index": 44.608501819453174,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.2574884083984497,
+              "similarity": 0.5073499675568665,
+              "weight": 0.4,
+              "contribution": 0.2029399870227466,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 525.0454701276165,
+              "similarity": 0.20036362006296102,
+              "weight": 0.3,
+              "contribution": 0.0601090860188883,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 20.419330959637072,
+              "similarity": 0.6046620959091678,
+              "weight": 0.2,
+              "contribution": 0.12093241918183356,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "USGS_LAVA_BEDS_30M",
+            "USGS_LAVA_BEDS_NATIVE",
+            "WORLDCOVER_LAVA_BEDS",
+            "WORLDCOVER_LAVA_BEDS_MASK"
+          ],
+          "warning": "Cave dimensions and resource reports require separate site evidence.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 8
+        },
+        {
           "site_id": "earth_s25e015",
           "site_name": "Namib-area exploratory ROI",
           "similarity_index": 42.60724226108764,
@@ -2539,7 +2749,7 @@
             "NASADEM_S25E015_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 8
+          "rank": 9
         },
         {
           "site_id": "earth_n13e040",
@@ -2589,7 +2799,7 @@
             "NASADEM_N13E040_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 9
+          "rank": 10
         },
         {
           "site_id": "earth_n22e058",
@@ -2639,7 +2849,7 @@
             "NASADEM_N22E058_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 10
+          "rank": 11
         },
         {
           "site_id": "earth_s20w068",
@@ -2689,7 +2899,7 @@
             "NASADEM_S20W068_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 11
+          "rank": 12
         },
         {
           "site_id": "earth_n25e040",
@@ -2739,7 +2949,7 @@
             "NASADEM_N25E040_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 12
+          "rank": 13
         },
         {
           "site_id": "earth_arctic_29_25",
@@ -2789,7 +2999,7 @@
             "LOLA_LDEM_875S_20M"
           ],
           "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 13
+          "rank": 14
         },
         {
           "site_id": "earth_s25e135",
@@ -2839,7 +3049,7 @@
             "NASADEM_S25E135_SWB"
           ],
           "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
-          "rank": 14
+          "rank": 15
         },
         {
           "site_id": "earth_arctic_26_29",
@@ -2944,50 +3154,57 @@
             "eligible": true
           },
           {
-            "site_id": "earth_s25e015",
+            "site_id": "earth_lava_beds",
             "rank": 8,
+            "similarity_index": 44.608501819453174,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 9,
             "similarity_index": 42.60724226108764,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 42.49872404790059,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 40.56012503365531,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 40.515590615017054,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 40.30806921884981,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 39.70407996286441,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 38.954978140832374,
             "feature_coverage": 1.0,
             "eligible": true
@@ -3044,57 +3261,64 @@
             "eligible": true
           },
           {
-            "site_id": "earth_s24w069",
+            "site_id": "earth_lava_beds",
             "rank": 7,
+            "similarity_index": 52.45350815163777,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 8,
             "similarity_index": 51.96295612533947,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e015",
-            "rank": 8,
+            "rank": 9,
             "similarity_index": 51.1433052299608,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 50.92614078584491,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 49.341433274411465,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 49.28335377396057,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 49.27282500899645,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 48.77675932197034,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 48.033726112263615,
             "feature_coverage": 1.0,
             "eligible": true
@@ -3144,64 +3368,71 @@
             "eligible": true
           },
           {
-            "site_id": "earth_arctic_28_30",
+            "site_id": "earth_lava_beds",
             "rank": 6,
+            "similarity_index": 42.511759628037126,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 7,
             "similarity_index": 42.463341152195724,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n24e010",
-            "rank": 7,
+            "rank": 8,
             "similarity_index": 42.10149116755985,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e015",
-            "rank": 8,
+            "rank": 9,
             "similarity_index": 40.37071442967221,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n13e040",
-            "rank": 9,
+            "rank": 10,
             "similarity_index": 40.23253879538138,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s20w068",
-            "rank": 10,
+            "rank": 11,
             "similarity_index": 38.31711234853071,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n22e058",
-            "rank": 11,
+            "rank": 12,
             "similarity_index": 38.30428982962699,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_n25e040",
-            "rank": 12,
+            "rank": 13,
             "similarity_index": 37.936778166272696,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_arctic_29_25",
-            "rank": 13,
+            "rank": 14,
             "similarity_index": 37.34789263871658,
             "feature_coverage": 1.0,
             "eligible": true
           },
           {
             "site_id": "earth_s25e135",
-            "rank": 14,
+            "rank": 15,
             "similarity_index": 36.6751891283573,
             "feature_coverage": 1.0,
             "eligible": true
@@ -3215,17 +3446,1167 @@
           }
         ]
       },
-      "csv_input_hash": "aa3d0de21509bf795c3d200209527434b8d84f40d6d75e1eccff9a07c7464d43"
+      "csv_input_hash": "56823ffc76fb5fc95e40e6f62e62305b12ba0569b345910448d9949a4580fba3"
+    },
+    "moon_tranquillitatis_pit_60km_v1": {
+      "body": "Moon",
+      "rankings": [
+        {
+          "site_id": "earth_arctic_29_25",
+          "site_name": "ArcticDEM search candidate 29_25",
+          "similarity_index": 99.18603729630561,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.3131681891545944,
+              "similarity": 0.997418019932639,
+              "weight": 0.4,
+              "contribution": 0.3989672079730556,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 73.42472182112866,
+              "similarity": 0.981700395901669,
+              "weight": 0.3,
+              "contribution": 0.2945101187705007,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 5.10686423109186,
+              "similarity": 0.9959859656809814,
+              "weight": 0.2,
+              "contribution": 0.1991971931361963,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_29_25_32M",
+            "ARCTICDEM_29_25_32M_DATAMASK",
+            "ARCTICDEM_29_25_32M_MASK_UINT8",
+            "LOLA_LDEM64_VERIFIED"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 1
+        },
+        {
+          "site_id": "earth_n25e040",
+          "site_name": "Saudi Arabia exploratory ROI",
+          "similarity_index": 97.9646831473864,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.46573461037268993,
+              "similarity": 0.9823162641275888,
+              "weight": 0.4,
+              "contribution": 0.39292650565103554,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 124.20241743949805,
+              "similarity": 0.9682077638915664,
+              "weight": 0.3,
+              "contribution": 0.2904623291674699,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 7.251940560036049,
+              "similarity": 0.9853607178602746,
+              "weight": 0.2,
+              "contribution": 0.19707214357205494,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N25E040_HGT",
+            "NASADEM_N25E040_NUM",
+            "NASADEM_N25E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 2
+        },
+        {
+          "site_id": "earth_s25e135",
+          "site_name": "Central Australia exploratory ROI",
+          "similarity_index": 97.50944757060539,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.07432110139135562,
+              "similarity": 0.9789258404281314,
+              "weight": 0.4,
+              "contribution": 0.3915703361712526,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 49.40472868603206,
+              "similarity": 0.9584009061521382,
+              "weight": 0.3,
+              "contribution": 0.28752027184564144,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 1.0948720978174467,
+              "similarity": 0.9840900730292816,
+              "weight": 0.2,
+              "contribution": 0.19681801460585635,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_S25E135_HGT",
+            "NASADEM_S25E135_NUM",
+            "NASADEM_S25E135_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 3
+        },
+        {
+          "site_id": "earth_n22e058",
+          "site_name": "Oman exploratory ROI",
+          "similarity_index": 96.11915815391798,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.4461022941284296,
+              "similarity": 0.9842466727821437,
+              "weight": 0.4,
+              "contribution": 0.3936986691128575,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 192.38579992735043,
+              "similarity": 0.9043923790821018,
+              "weight": 0.3,
+              "contribution": 0.27131771372463054,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 7.335986280976929,
+              "similarity": 0.9849467280919413,
+              "weight": 0.2,
+              "contribution": 0.19698934561838827,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N22E058_HGT",
+            "NASADEM_N22E058_NUM",
+            "NASADEM_N22E058_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 4
+        },
+        {
+          "site_id": "earth_s20w068",
+          "site_name": "Altiplano-area exploratory ROI",
+          "similarity_index": 95.99728864785348,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.3903910427299681,
+              "similarity": 0.9897453368153775,
+              "weight": 0.4,
+              "contribution": 0.395898134726151,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 208.96999435212138,
+              "similarity": 0.8895174453539705,
+              "weight": 0.3,
+              "contribution": 0.2668552336061911,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 6.676436152386555,
+              "similarity": 0.9882001984162065,
+              "weight": 0.2,
+              "contribution": 0.19764003968324131,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0015842839036755386,
+              "similarity": 0.9957947846295142,
+              "weight": 0.1,
+              "contribution": 0.09957947846295143,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_S20W068_HGT",
+            "NASADEM_S20W068_NUM",
+            "NASADEM_S20W068_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 5
+        },
+        {
+          "site_id": "earth_s25e015",
+          "site_name": "Namib-area exploratory ROI",
+          "similarity_index": 90.28687332543895,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.9231806079985594,
+              "similarity": 0.9383928875477897,
+              "weight": 0.4,
+              "contribution": 0.37535715501911593,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 310.2870465720314,
+              "similarity": 0.8038093122522924,
+              "weight": 0.3,
+              "contribution": 0.2411427936756877,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 17.548638729945168,
+              "similarity": 0.9359146573814111,
+              "weight": 0.2,
+              "contribution": 0.18718293147628223,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_S25E015_HGT",
+            "NASADEM_S25E015_NUM",
+            "NASADEM_S25E015_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 6
+        },
+        {
+          "site_id": "earth_n13e040",
+          "site_name": "Afar-area exploratory ROI",
+          "similarity_index": 89.92984806540352,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 0.889556710739407,
+              "similarity": 0.941553440679763,
+              "weight": 0.4,
+              "contribution": 0.37662137627190523,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 349.1601554679503,
+              "similarity": 0.7731622772678761,
+              "weight": 0.3,
+              "contribution": 0.23194868318036282,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 13.25246036127717,
+              "similarity": 0.95623642231403,
+              "weight": 0.2,
+              "contribution": 0.19124728446280603,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0011890606420927466,
+              "similarity": 0.9948113673896103,
+              "weight": 0.1,
+              "contribution": 0.09948113673896103,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N13E040_HGT",
+            "NASADEM_N13E040_NUM",
+            "NASADEM_N13E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 7
+        },
+        {
+          "site_id": "earth_n24e010",
+          "site_name": "Central Sahara exploratory ROI",
+          "similarity_index": 86.57054524524813,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.6044910491373425,
+              "similarity": 0.876588504231151,
+              "weight": 0.4,
+              "contribution": 0.35063540169246044,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 322.4005779975396,
+              "similarity": 0.7941310800198138,
+              "weight": 0.3,
+              "contribution": 0.23823932400594414,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 28.008621963330175,
+              "similarity": 0.8882243683538653,
+              "weight": 0.2,
+              "contribution": 0.17764487367077308,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N24E010_HGT",
+            "NASADEM_N24E010_NUM",
+            "NASADEM_N24E010_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 8
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "site_name": "ArcticDEM search candidate 28_30",
+          "similarity_index": 85.49920029942588,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.894742220184288,
+              "similarity": 0.8515111178098014,
+              "weight": 0.4,
+              "contribution": 0.3406044471239206,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 323.4714064917255,
+              "similarity": 0.7932811569733333,
+              "weight": 0.3,
+              "contribution": 0.237984347092,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 28.49051960945248,
+              "similarity": 0.8860867784751735,
+              "weight": 0.2,
+              "contribution": 0.17721735569503472,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_28_30_32M",
+            "ARCTICDEM_28_30_32M_DATAMASK",
+            "ARCTICDEM_28_30_32M_MASK_UINT8",
+            "LOLA_LDEM64_VERIFIED"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 9
+        },
+        {
+          "site_id": "earth_lava_beds",
+          "site_name": "Lava Beds volcanic/cave-region study ROI",
+          "similarity_index": 84.12560052835939,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.2574884083984497,
+              "similarity": 0.907540268294642,
+              "weight": 0.4,
+              "contribution": 0.36301610731785683,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 525.0454701276165,
+              "similarity": 0.6484621545932191,
+              "weight": 0.3,
+              "contribution": 0.19453864637796572,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 20.419330959637072,
+              "similarity": 0.9225769925223389,
+              "weight": 0.2,
+              "contribution": 0.1845153985044678,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "USGS_LAVA_BEDS_30M",
+            "USGS_LAVA_BEDS_NATIVE",
+            "WORLDCOVER_LAVA_BEDS",
+            "WORLDCOVER_LAVA_BEDS_MASK"
+          ],
+          "warning": "Cave dimensions and resource reports require separate site evidence.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 10
+        },
+        {
+          "site_id": "earth_s24w069",
+          "site_name": "Atacama-area exploratory ROI",
+          "similarity_index": 82.85486621484777,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.0035066735711586,
+              "similarity": 0.9308853396425246,
+              "weight": 0.4,
+              "contribution": 0.3723541358570099,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 665.3091512131859,
+              "similarity": 0.5635972849016239,
+              "weight": 0.3,
+              "contribution": 0.16907918547048714,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 16.752549654932583,
+              "similarity": 0.939647438688386,
+              "weight": 0.2,
+              "contribution": 0.1879294877376772,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_S24W069_HGT",
+            "NASADEM_S24W069_NUM",
+            "NASADEM_S24W069_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 11
+        },
+        {
+          "site_id": "earth_n36w117",
+          "site_name": "Death Valley-area tile-centered ROI",
+          "similarity_index": 81.78849071523067,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.6581225710490757,
+              "similarity": 0.8718998110001724,
+              "weight": 0.4,
+              "contribution": 0.348759924400069,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 525.9304645945928,
+              "similarity": 0.6478885230421747,
+              "weight": 0.3,
+              "contribution": 0.1943665569126524,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 27.688895107200295,
+              "similarity": 0.889645449870191,
+              "weight": 0.2,
+              "contribution": 0.17792908997403822,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.01615798922800718,
+              "similarity": 0.9682933586554712,
+              "weight": 0.1,
+              "contribution": 0.09682933586554712,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N36W117_HGT",
+            "NASADEM_N36W117_NUM",
+            "NASADEM_N36W117_SWB"
+          ],
+          "warning": "Original Earth ZIP publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 12
+        },
+        {
+          "site_id": "earth_n34w116",
+          "site_name": "Mojave-area exploratory ROI",
+          "similarity_index": 78.24858312150636,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.807242717364224,
+              "similarity": 0.8589944895757925,
+              "weight": 0.4,
+              "contribution": 0.343597795830317,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 712.5688717341692,
+              "similarity": 0.5375814277795155,
+              "weight": 0.3,
+              "contribution": 0.16127442833385464,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 27.12915918236606,
+              "similarity": 0.8921387698379416,
+              "weight": 0.2,
+              "contribution": 0.17842775396758834,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.0,
+              "similarity": 0.9918585308330351,
+              "weight": 0.1,
+              "contribution": 0.09918585308330352,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N34W116_HGT",
+            "NASADEM_N34W116_NUM",
+            "NASADEM_N34W116_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 13
+        },
+        {
+          "site_id": "earth_n37e095",
+          "site_name": "Qaidam-area exploratory ROI",
+          "similarity_index": 76.12867658839862,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.604074416832054,
+              "similarity": 0.8766250265008942,
+              "weight": 0.4,
+              "contribution": 0.3506500106003577,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 907.1152646832684,
+              "similarity": 0.4425413246477731,
+              "weight": 0.3,
+              "contribution": 0.13276239739433193,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 24.41753044671074,
+              "similarity": 0.9043168852282941,
+              "weight": 0.2,
+              "contribution": 0.18086337704565883,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.015408320493066256,
+              "similarity": 0.9701098084363772,
+              "weight": 0.1,
+              "contribution": 0.09701098084363773,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "NASADEM_N37E095_HGT",
+            "NASADEM_N37E095_NUM",
+            "NASADEM_N37E095_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 14
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "site_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+          "similarity_index": 72.6796186084912,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 1.7039117804405823,
+              "similarity": 0.8679165771148065,
+              "weight": 0.4,
+              "contribution": 0.34716663084592264,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 1073.6063014381434,
+              "similarity": 0.3746689411181482,
+              "weight": 0.3,
+              "contribution": 0.11240068233544445,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 27.11571018513014,
+              "similarity": 0.8921987637143107,
+              "weight": 0.2,
+              "contribution": 0.17843975274286217,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.05083234244946492,
+              "similarity": 0.8878912016068276,
+              "weight": 0.1,
+              "contribution": 0.08878912016068276,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM64_VERIFIED",
+            "REMA_18_35_32M"
+          ],
+          "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.",
+          "rank": 15
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "site_name": "ArcticDEM search candidate 26_29",
+          "similarity_index": 74.47094954158806,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": false,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 0.2873149978873618,
+              "site_value": 3.490080578047087,
+              "similarity": 0.7259482425036512,
+              "weight": 0.4,
+              "contribution": 0.2903792970014605,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 91.89383482314668,
+              "site_value": 505.63265649638004,
+              "similarity": 0.6611736129351167,
+              "weight": 0.3,
+              "contribution": 0.198352083880535,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 4.302441795380071,
+              "site_value": 53.658893771296114,
+              "similarity": 0.7813107977186318,
+              "weight": 0.2,
+              "contribution": 0.15626215954372635,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.0032699167657550534,
+              "site_value": 0.004407713498622589,
+              "similarity": 0.9971595499015884,
+              "weight": 0.1,
+              "contribution": 0.09971595499015884,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_26_29_32M",
+            "ARCTICDEM_26_29_32M_DATAMASK",
+            "ARCTICDEM_26_29_32M_MASK_UINT8",
+            "LOLA_LDEM64_VERIFIED"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Valid raster coverage below 90%; Reference: Orbital pit/conduit evidence is separate from kilometre-scale terrain.; Insufficient raster quality",
+          "rank": null
+        }
+      ],
+      "missions": {
+        "terrain_baseline": [
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 1,
+            "similarity_index": 99.18603729630561,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 2,
+            "similarity_index": 97.9646831473864,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 3,
+            "similarity_index": 97.50944757060539,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 4,
+            "similarity_index": 96.11915815391798,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 5,
+            "similarity_index": 95.99728864785348,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 6,
+            "similarity_index": 90.28687332543895,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 7,
+            "similarity_index": 89.92984806540352,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 8,
+            "similarity_index": 86.57054524524813,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 9,
+            "similarity_index": 85.49920029942588,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_lava_beds",
+            "rank": 10,
+            "similarity_index": 84.12560052835939,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 11,
+            "similarity_index": 82.85486621484777,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 12,
+            "similarity_index": 81.78849071523067,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 13,
+            "similarity_index": 78.24858312150636,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 14,
+            "similarity_index": 76.12867658839862,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 15,
+            "similarity_index": 72.6796186084912,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 74.47094954158806,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "rover_mobility": [
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 1,
+            "similarity_index": 99.41699744043095,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 2,
+            "similarity_index": 98.38998715268853,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 3,
+            "similarity_index": 98.1139366121988,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 4,
+            "similarity_index": 98.09258819429367,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 5,
+            "similarity_index": 97.83042189868219,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 6,
+            "similarity_index": 94.09654023428895,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 7,
+            "similarity_index": 93.78052948062756,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 8,
+            "similarity_index": 91.11522517752346,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_lava_beds",
+            "rank": 9,
+            "similarity_index": 90.57193674046373,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 10,
+            "similarity_index": 89.94874412850312,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 11,
+            "similarity_index": 88.76901071150375,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 12,
+            "similarity_index": 87.71461968922011,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 13,
+            "similarity_index": 86.66980497629054,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 14,
+            "similarity_index": 86.21262235449329,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 15,
+            "similarity_index": 82.84419069580467,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 79.83461174392782,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "terrain_diversity": [
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 1,
+            "similarity_index": 99.01454051347933,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 2,
+            "similarity_index": 97.85404268235303,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 3,
+            "similarity_index": 97.35584055385695,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 4,
+            "similarity_index": 95.32761577001554,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 5,
+            "similarity_index": 94.97955834924771,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 6,
+            "similarity_index": 88.91625527082017,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 7,
+            "similarity_index": 88.3927662476273,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 8,
+            "similarity_index": 85.86232964436189,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 9,
+            "similarity_index": 85.26265729771492,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_lava_beds",
+            "rank": 10,
+            "similarity_index": 81.68518663362212,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 11,
+            "similarity_index": 79.72583422435088,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 12,
+            "similarity_index": 79.26960665789737,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 13,
+            "similarity_index": 75.36589530616507,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 14,
+            "similarity_index": 72.06475815714141,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 15,
+            "similarity_index": 67.98996411451965,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 74.37682879805253,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ]
+      },
+      "csv_input_hash": "80e11d2d476cb7467e872372483b02d460dbbf4018baa8bcb5bfdcd4c56c4845"
     }
   },
   "independent_ranking_order_verified": true,
-  "candidate_count": 15,
-  "eligible_candidate_count": 14,
+  "candidate_count": 16,
+  "eligible_candidate_count": 15,
   "ui": {
     "checked": true,
     "real_rank_table_csv_parity": true,
     "body_switch_clears_stale_output": true,
-    "moon_rankings_verified": true
+    "moon_rankings_verified": true,
+    "all_reference_selectors_verified": 3
   },
   "weight_sensitivity": [
     {
@@ -3262,71 +4643,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.82756335178205,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.01526143798363,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.02429564868247,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.32610787345565,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.64012532594367,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.30295397276099,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.4873472053167,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.37365525306325,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.1872383042223,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 77.62253826302465,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.10013853485383,
           "feature_coverage": 0.9999999999999999,
           "eligible": true
@@ -3374,71 +4762,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.99158586999766,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.77238123796548,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.6591588191289,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 89.0894442457129,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 86.01900805170182,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.73123675429876,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.92338605488972,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.85546460274338,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.77340710508696,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 78.22796566351332,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.66745940365696,
           "feature_coverage": 1.0,
           "eligible": true
@@ -3486,71 +4881,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 92.15374969916016,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 91.07831768963875,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.99344005604728,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 89.34286601813243,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 86.30975920502895,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 86.07184144659016,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 81.31369682726015,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 81.2522212817057,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 80.20801340548735,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 78.69151850179254,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 77.14091573668547,
           "feature_coverage": 1.0,
           "eligible": true
@@ -3598,71 +5000,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.68599312070191,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 89.77860127087258,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 88.75263314588673,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.13932576356348,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.39206044446381,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.01129692730952,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.1494066910165,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.03275493838765,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 78.81778559031176,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 77.22713405419294,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 75.69281796959028,
           "feature_coverage": 1.0,
           "eligible": true
@@ -3710,71 +5119,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.82618446694593,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.21566817854827,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.13964233773201,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.50445529941109,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.69555746213572,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.33660618815192,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.52919008969116,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.4314124212978,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.27692957595762,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 77.71011727482858,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.17253009087008,
           "feature_coverage": 1.0,
           "eligible": true
@@ -3822,71 +5238,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.99612680872679,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.59467907154026,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.56078382710965,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.93305821630977,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.97317879782626,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.70730193522783,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.89173384930587,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.80941966364901,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.69872664402486,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 78.1556922482603,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.60903067079434,
           "feature_coverage": 1.0,
           "eligible": true
@@ -3934,71 +5357,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.84532922766476,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.32624707889711,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.26105593075613,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.71702735342019,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.70528271145537,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.39361807403493,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.52949026285403,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.4426434232635,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.29905753010695,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 77.72866806607345,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.17087501087416,
           "feature_coverage": 1.0,
           "eligible": true
@@ -4046,71 +5476,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 91.97904374962397,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 90.49004243548538,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 89.44594418136698,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 88.72893910314144,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 85.96639485379704,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 85.65508925250165,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 80.89502916234045,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 80.8021537037257,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 79.68121307578016,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 78.14192043281663,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 76.61497476484902,
           "feature_coverage": 1.0,
           "eligible": true
@@ -4152,78 +5589,85 @@
           "eligible": true
         },
         {
-          "site_id": "earth_n37e095",
+          "site_id": "earth_lava_beds",
           "rank": 4,
+          "similarity_index": 90.54818770970017,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 5,
           "similarity_index": 89.52739931574236,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_28_30",
-          "rank": 5,
+          "rank": 6,
           "similarity_index": 84.10972699812518,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 84.07236291920024,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 82.6848400650302,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 82.37208416984909,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 81.96234827676628,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 77.08624417864715,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 76.61554232555825,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 74.61512165747797,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 72.90020453921298,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 71.67503575818927,
           "feature_coverage": 1.0,
           "eligible": true
@@ -4270,71 +5714,78 @@
           "eligible": true
         },
         {
-          "site_id": "earth_arctic_28_30",
+          "site_id": "earth_lava_beds",
           "rank": 5,
+          "similarity_index": 90.85114028097816,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 6,
           "similarity_index": 88.0410931800067,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n24e010",
-          "rank": 6,
+          "rank": 7,
           "similarity_index": 86.7233430424279,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_rema_18_35",
-          "rank": 7,
+          "rank": 8,
           "similarity_index": 86.04534606370486,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n13e040",
-          "rank": 8,
+          "rank": 9,
           "similarity_index": 84.10270504861121,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e015",
-          "rank": 9,
+          "rank": 10,
           "similarity_index": 83.2097393393039,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s20w068",
-          "rank": 10,
+          "rank": 11,
           "similarity_index": 78.44909526890171,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n22e058",
-          "rank": 11,
+          "rank": 12,
           "similarity_index": 78.26259586830763,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_n25e040",
-          "rank": 12,
+          "rank": 13,
           "similarity_index": 76.85686889792179,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_arctic_29_25",
-          "rank": 13,
+          "rank": 14,
           "similarity_index": 75.15363086476405,
           "feature_coverage": 1.0,
           "eligible": true
         },
         {
           "site_id": "earth_s25e135",
-          "rank": 14,
+          "rank": 15,
           "similarity_index": 73.66810801355462,
           "feature_coverage": 1.0,
           "eligible": true

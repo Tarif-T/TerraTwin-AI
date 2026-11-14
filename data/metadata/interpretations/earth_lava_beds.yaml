@@ -1,0 +1,24 @@
+body: Earth
+product_type: topographic_elevation
+sample_unit: m
+source_crs: GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+horizontal_datum: NAD83
+vertical_datum: NAVD88
+latitude_type: geodetic
+longitude_convention: '-180_180'
+scale: 1
+offset: 0
+nodata: -999999.0
+latitude_bounds_deg:
+- 24
+- 50
+label_path: ../../raw/Earth/USGS_LavaBeds/USGS_13_n42w122.xml
+label_sha256: 3bf94c40298b5c6da44288f9ce314c94fcba5c2bdf3b0f7cf96646fd052a4434
+mask_path: ../../raw/Earth/USGS_LavaBeds/worldcover_land_uint8.bin
+mask_sha256: 42a6087780a09c0923e07ebc3d12255aef0bd54e1f151b8a6cfc7935600256b4
+mask_land_value: 1
+interpretation_evidence: USGS 3DEP n42w122 native 1/3 arcsecond NAD83/NAVD88 metre
+  elevations, downsampled exactly 3x using area averaging to bound native ROI memory.
+  ESA WorldCover 2021 v200 nearest classes retain land except water(80)/unknown(0).
+  Fixed tile-center ROI (41.5,-121.5) includes public Lava Beds cave area; surface
+  features do not measure underground geometry.

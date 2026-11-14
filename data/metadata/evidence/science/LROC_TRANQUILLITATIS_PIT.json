@@ -1,0 +1,23 @@
+{
+  "source_url": "https://lroc.im-ldi.com/atlases/pits/3",
+  "title": "LROC Pits Atlas: Mare Tranquillitatis Pit",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "mare_pit_depth",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "caves",
+      "quantity": "pit_depth_m",
+      "value": 105.0,
+      "unit": "m",
+      "statistic": "stereo_model_depth_below_funnel",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "LROC_TRANQUILLITATIS_PIT"
+      ],
+      "interpretation": "LROC stereo-model inner pit depth below funnel; not conduit length or total access depth."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+body: Moon
+product_type: topographic_elevation
+sample_unit: m
+source_crs: PROJCS["Equirectangular Moon",GEOGCS["GCS_Moon",DATUM["D_Moon",SPHEROID["Moon",1737400,0]],PRIMEM["Reference_Meridian",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Equirectangular"],PARAMETER["standard_parallel_1",0],PARAMETER["central_meridian",180],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Metre",1],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+horizontal_datum: DE421 mean Earth/polar axis; sphere R=1737400 m
+vertical_datum: Height above 1737400 m lunar reference sphere
+latitude_type: planetocentric
+longitude_convention: '0_360'
+scale: 0.5
+offset: 0
+nodata: null
+value_interpretation: lola_height
+latitude_bounds_deg:
+- -90
+- 90
+raster_data_path: ../../raw/Moon/LOLA_global_verified/ldem_64.img
+label_path: ../../raw/Moon/LOLA_global_verified/ldem_64.xml
+label_sha256: 13d388574ee3ac3f5afb66a1ca6aea6c42fcb38ecad8e8f9b4dc08f6964b6c18
+interpretation_evidence: New official global LOLA PDS4 image; corrupted original preserved.
+  HEIGHT=DN*0.5; do not add radius offset. 60 km ROI centered on LROC Pits Atlas Mare
+  Tranquillitatis pit (8.3355,33.222). 1 km terrain grid does not resolve pit or underground
+  passage.

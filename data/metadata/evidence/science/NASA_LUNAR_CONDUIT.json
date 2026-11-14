@@ -1,0 +1,25 @@
+{
+  "source_url": "https://science.nasa.gov/solar-system/moon/new-evidence-adds-to-findings-hinting-at-network-of-caves-on-moon/",
+  "title": "NASA radar evidence for a lunar cave conduit",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "mare_subsurface_setting",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "caves",
+      "quantity": "subsurface_setting_categories",
+      "value": [
+        "volcanic_subsurface"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NASA_LUNAR_CONDUIT"
+      ],
+      "interpretation": "Published orbital evidence supports a conduit associated with the pit; traversability and stability are unverified."
+    }
+  ]
+}

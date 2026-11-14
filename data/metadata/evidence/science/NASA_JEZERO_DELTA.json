@@ -1,0 +1,25 @@
+{
+  "source_url": "https://science.nasa.gov/resource/perseverance-explores-the-jezero-crater-delta/",
+  "title": "NASA Perseverance explores the Jezero crater delta",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "jezero_delta_materials",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "sedimentary"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_JEZERO_DELTA"
+      ],
+      "interpretation": "Published delta sedimentary-rock context; no whole-ROI material proportions inferred."
+    }
+  ]
+}

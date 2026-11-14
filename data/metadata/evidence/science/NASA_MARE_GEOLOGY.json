@@ -1,0 +1,25 @@
+{
+  "source_url": "https://science.nasa.gov/image-detail/20100528/",
+  "title": "NASA Mare Tranquillitatis basaltic setting",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "mare_materials",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARE_GEOLOGY"
+      ],
+      "interpretation": "The mare is a basaltic lava setting; regional context, not mineral abundances at the pit."
+    }
+  ]
+}

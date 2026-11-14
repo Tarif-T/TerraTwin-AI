@@ -1,0 +1,25 @@
+{
+  "source_url": "https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/nasas-perseverance-makes-new-discoveries-in-mars-jezero-crater/",
+  "title": "NASA Jezero crater discoveries",
+  "verified_utc": "2026-11-14T02:14:27.324295+00:00",
+  "capture_method": "Structured transcription of primary page inspected with web research; not original HTML",
+  "claims": [
+    {
+      "observation_id": "jezero_materials",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_JEZERO_GEOLOGY"
+      ],
+      "interpretation": "Crater-floor igneous rocks; no ROI mineral percentages inferred."
+    }
+  ]
+}

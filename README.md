@@ -3,17 +3,20 @@
 An offline-first terrain analog shortlisting tool for Analognauts, built from the
 TerraTwin AI MVP Technical Architecture Agent Guide (v1.0, November 10, 2026).
 
-**Status: operational Mars/Moon terrain catalog with Earth characterization.**
-Two measured references (Jezero and Shackleton) are compared with 15 Earth regions.
-Fourteen Earth sites pass terrain QA; one Arctic candidate is explicitly rejected.
-The app includes mission presets, geological context, 2015?2024 ERA5 temperature
-and precipitation, evidence filters, candidate cards and two-site comparisons.
-Resources, caves, novelty and scientific suitability remain unassessed.
+**Status: operational terrain shortlisting and scoped multi-domain evidence assessment.**
+Three measured references (Jezero, Shackleton and Mare Tranquillitatis pit region)
+are compared with 16 Earth regions; 15 Earth profiles pass terrain QA.
+The app includes mission presets, Earth climate/geology context, published planetary
+geology and cave evidence, resource missingness gates, bounded acquisition planning,
+checksummed evidence import, and an attributed novelty/expert review register.
+Resource abundance, local cross-body thermal/radiation equivalence, cave traversability,
+novelty and independent scientific suitability remain unvalidated.
 See [the challenge progress report](docs/challenge-progress.md) for rankings,
 validation, primary sources and the remaining research requirements.
 
 The original damaged global lunar image was preserved. A newly downloaded public
-LOLA polar product supplies the lunar reference. Antarctic REMA and a bounded
+LOLA polar product supplies Shackleton; a separate verified global LOLA download
+supplies the pit-region reference. Antarctic REMA and a bounded
 ArcticDEM search add polar candidates. The terrain dataset count/ranking gate
 passes; it does not certify the full scientific challenge.
 
@@ -48,7 +51,7 @@ binary wheels are unavailable. Do not change the system Python environment.
 - Exponential weighted similarity, explicit coverage gating, stable ranking and CSV export.
 - Checksummed local NASADEM/PDS intake with audited interpretation sidecars.
 - Bounded metric ROI reprojection, downsampling, quality checks and Parquet output.
-- Explore, Methodology and Sources/readiness tabs; no synthetic user-facing results.
+- Explore, Methodology, Sources/readiness and Research evidence tabs; real user-facing profiles.
 - Synthetic numerical and raster fixtures confined to tests and temporary directories.
 - An app smoke test and a separate scientific release gate.
 

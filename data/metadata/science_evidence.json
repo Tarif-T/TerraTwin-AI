@@ -1,0 +1,387 @@
+{
+  "version": "science_v1",
+  "sources": [
+    {
+      "source_id": "NASA_MOON_FACTS",
+      "title": "NASA Moon Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+      "snapshot_path": "data/metadata/evidence/science/NASA_MOON_FACTS.json",
+      "snapshot_sha256": "42b908afeb715393f217ad8eef550e6d8c7577028fb76d541f491e39c22a3c98",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA GSFC/NSSDC"
+    },
+    {
+      "source_id": "NASA_MARS_FACTS",
+      "title": "NASA Mars Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "snapshot_path": "data/metadata/evidence/science/NASA_MARS_FACTS.json",
+      "snapshot_sha256": "8c5e2638eee792eddff07673f642e7b6cd67aeed4e2426a230af01c4ed9f8b43",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA GSFC/NSSDC"
+    },
+    {
+      "source_id": "NASA_JEZERO_GEOLOGY",
+      "title": "NASA Jezero crater discoveries",
+      "url": "https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/nasas-perseverance-makes-new-discoveries-in-mars-jezero-crater/",
+      "snapshot_path": "data/metadata/evidence/science/NASA_JEZERO_GEOLOGY.json",
+      "snapshot_sha256": "bb47e0d0e46677e24082378c235f68a9e76c87baf76dc54c63ba33288f4fb020",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA/JPL-Caltech Perseverance science"
+    },
+    {
+      "source_id": "NASA_JEZERO_DELTA",
+      "title": "NASA Perseverance explores the Jezero crater delta",
+      "url": "https://science.nasa.gov/resource/perseverance-explores-the-jezero-crater-delta/",
+      "snapshot_path": "data/metadata/evidence/science/NASA_JEZERO_DELTA.json",
+      "snapshot_sha256": "52ac166c47b40dbc3ac1bc8b437c35c84120075daeb38bcb6e5ccfcb50d9fa9e",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA/JPL-Caltech Perseverance science"
+    },
+    {
+      "source_id": "NASA_MARE_GEOLOGY",
+      "title": "NASA Mare Tranquillitatis basaltic setting",
+      "url": "https://science.nasa.gov/image-detail/20100528/",
+      "snapshot_path": "data/metadata/evidence/science/NASA_MARE_GEOLOGY.json",
+      "snapshot_sha256": "ca4871a73339407cac68fca2449838b595d4cc48e60a4fb1a170da0f21342626",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA/GSFC/LRO"
+    },
+    {
+      "source_id": "LROC_TRANQUILLITATIS_PIT",
+      "title": "LROC Pits Atlas: Mare Tranquillitatis Pit",
+      "url": "https://lroc.im-ldi.com/atlases/pits/3",
+      "snapshot_path": "data/metadata/evidence/science/LROC_TRANQUILLITATIS_PIT.json",
+      "snapshot_sha256": "4b82b36b481a5fdd703a72c0947f504ef8ff9ff3fb42efbdb7ac3278016dbd4c",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA/GSFC/Arizona State University LROC"
+    },
+    {
+      "source_id": "NASA_LUNAR_CONDUIT",
+      "title": "NASA radar evidence for a lunar cave conduit",
+      "url": "https://science.nasa.gov/solar-system/moon/new-evidence-adds-to-findings-hinting-at-network-of-caves-on-moon/",
+      "snapshot_path": "data/metadata/evidence/science/NASA_LUNAR_CONDUIT.json",
+      "snapshot_sha256": "5e8739537ac6f5ac2c399accf0210ff3215b32be291f3b53f0bbb0ab4d4f7d54",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA LRO / Mini-RF science"
+    },
+    {
+      "source_id": "NPS_SKULL_CAVE",
+      "title": "National Park Service: Skull Cave",
+      "url": "https://www.nps.gov/places/skull-cave.htm",
+      "snapshot_path": "data/metadata/evidence/science/NPS_SKULL_CAVE.json",
+      "snapshot_sha256": "96982e04914915de823edded5c1ac4784b9482b86ae124bf8c431f803e8f9f54",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "US National Park Service"
+    },
+    {
+      "source_id": "NPS_MUSHPOT_CAVE",
+      "title": "National Park Service: Mushpot Cave",
+      "url": "https://www.nps.gov/places/mushpot-cave.htm",
+      "snapshot_path": "data/metadata/evidence/science/NPS_MUSHPOT_CAVE.json",
+      "snapshot_sha256": "30e012b739a83f868325b7b6c911ab3943b2e81e73fc14e51bc054bbfa264cc9",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "US National Park Service"
+    },
+    {
+      "source_id": "NASA_BRAILLE_BASELINE",
+      "title": "NASA BRAILLE Lava Beds field-site context",
+      "url": "https://www.nasa-braille.org/about-braille/the-field-site/lava-tubes",
+      "snapshot_path": "data/metadata/evidence/science/NASA_BRAILLE_BASELINE.json",
+      "snapshot_sha256": "2778e6dc2d5b1795cf0d8d5fd5fb021a79fe24c85de356d4206f113d876d4844",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA BRAILLE science team; original references retained on project page"
+    },
+    {
+      "source_id": "NASA_HAUGHTON_BASELINE",
+      "title": "NASA Haughton field-test baseline report",
+      "url": "https://ntrs.nasa.gov/api/citations/20110008151/downloads/20110008151.pdf",
+      "snapshot_path": "data/metadata/evidence/science/NASA_HAUGHTON_BASELINE.json",
+      "snapshot_sha256": "0aba8e311d3e9459147c0437045e68e865d7942d651c018c1ed7e08ba82bb4c7",
+      "snapshot_type": "structured_transcription",
+      "accessed_utc": "2026-11-14T02:14:27.324295Z",
+      "attribution": "NASA NTRS; published field-test study"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "moon_gravity",
+      "subject_id": "body:Moon",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 1.62,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Body reference gravity, not an ROI surface measurement."
+    },
+    {
+      "observation_id": "earth_gravity",
+      "subject_id": "body:Earth",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 9.8,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Earth reference gravity; local geographic variations are not resolved."
+    },
+    {
+      "observation_id": "moon_pressure",
+      "subject_id": "body:Moon",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 3e-10,
+      "unit": "Pa",
+      "statistic": "night_body_context",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MOON_FACTS"
+      ],
+      "interpretation": "Night exosphere pressure from 3e-15 bar; not an annual local atmosphere observation."
+    },
+    {
+      "observation_id": "mars_gravity",
+      "subject_id": "body:Mars",
+      "domain": "environment",
+      "quantity": "surface_gravity_m_s2",
+      "value": 3.73,
+      "unit": "m/s2",
+      "statistic": "body_mean",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARS_FACTS"
+      ],
+      "interpretation": "NASA table mean surface gravity, not a terrain-dependent local estimate."
+    },
+    {
+      "observation_id": "mars_pressure",
+      "subject_id": "body:Mars",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 636.0,
+      "unit": "Pa",
+      "statistic": "mean_radius_context",
+      "scope": "body",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARS_FACTS"
+      ],
+      "interpretation": "6.36 mbar at mean radius; seasonally variable and not a Jezero MEDA measurement."
+    },
+    {
+      "observation_id": "jezero_materials",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_JEZERO_GEOLOGY"
+      ],
+      "interpretation": "Crater-floor igneous rocks; no ROI mineral percentages inferred."
+    },
+    {
+      "observation_id": "jezero_delta_materials",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "sedimentary"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_JEZERO_DELTA"
+      ],
+      "interpretation": "Published delta sedimentary-rock context; no whole-ROI material proportions inferred."
+    },
+    {
+      "observation_id": "mare_materials",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_MARE_GEOLOGY"
+      ],
+      "interpretation": "The mare is a basaltic lava setting; regional context, not mineral abundances at the pit."
+    },
+    {
+      "observation_id": "mare_pit_depth",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "caves",
+      "quantity": "pit_depth_m",
+      "value": 105.0,
+      "unit": "m",
+      "statistic": "stereo_model_depth_below_funnel",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "LROC_TRANQUILLITATIS_PIT"
+      ],
+      "interpretation": "LROC stereo-model inner pit depth below funnel; not conduit length or total access depth."
+    },
+    {
+      "observation_id": "mare_subsurface_setting",
+      "subject_id": "moon_tranquillitatis_pit_60km_v1",
+      "domain": "caves",
+      "quantity": "subsurface_setting_categories",
+      "value": [
+        "volcanic_subsurface"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NASA_LUNAR_CONDUIT"
+      ],
+      "interpretation": "Published orbital evidence supports a conduit associated with the pit; traversability and stability are unverified."
+    },
+    {
+      "observation_id": "skull_length",
+      "subject_id": "earth_lava_beds",
+      "domain": "caves",
+      "quantity": "cave_length_m",
+      "value": 177.0,
+      "unit": "m",
+      "statistic": "reported_passage_length",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth."
+    },
+    {
+      "observation_id": "skull_ice",
+      "subject_id": "earth_lava_beds",
+      "domain": "resources",
+      "quantity": "water_ice_presence",
+      "value": "reported_ice_floor",
+      "unit": "state",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established."
+    },
+    {
+      "observation_id": "lava_subsurface_setting",
+      "subject_id": "earth_lava_beds",
+      "domain": "caves",
+      "quantity": "subsurface_setting_categories",
+      "value": [
+        "volcanic_subsurface"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_SKULL_CAVE"
+      ],
+      "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile."
+    },
+    {
+      "observation_id": "mushpot_length",
+      "subject_id": "earth_lava_beds",
+      "domain": "caves",
+      "quantity": "cave_length_m",
+      "value": 235.0,
+      "unit": "m",
+      "statistic": "reported_passage_length",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NPS_MUSHPOT_CAVE"
+      ],
+      "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated."
+    },
+    {
+      "observation_id": "lava_materials",
+      "subject_id": "earth_lava_beds",
+      "domain": "geology",
+      "quantity": "geologic_material_categories",
+      "value": [
+        "igneous"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_BRAILLE_BASELINE"
+      ],
+      "interpretation": "Published volcanic lava-tube field site; regional material context does not replace the centroid geological map."
+    },
+    {
+      "observation_id": "lava_known_baseline",
+      "subject_id": "earth_lava_beds",
+      "domain": "novelty",
+      "quantity": "analog_publication_status",
+      "value": "known_baseline",
+      "unit": "state",
+      "statistic": "published_usage",
+      "scope": "study_region",
+      "status": "reported",
+      "source_ids": [
+        "NASA_BRAILLE_BASELINE"
+      ],
+      "interpretation": "NASA BRAILLE already uses this cave region as an analog; it is a baseline, not a newly discovered analog."
+    },
+    {
+      "observation_id": "haughton_materials",
+      "subject_id": "baseline:haughton",
+      "domain": "geology",
+      "quantity": "geologic_setting_categories",
+      "value": [
+        "impact",
+        "polar_desert"
+      ],
+      "unit": "category",
+      "statistic": "reported_presence",
+      "scope": "named_site",
+      "status": "reported",
+      "source_ids": [
+        "NASA_HAUGHTON_BASELINE"
+      ],
+      "interpretation": "Known impact/polar-desert analog baseline. No nearby ArcticDEM ROI is automatically relabeled as the crater."
+    }
+  ]
+}

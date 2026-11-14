@@ -16,6 +16,18 @@ def load_nasadem(raster_path: Path, interpretation_path: Path, source: SourceRec
 def load_earth(raster_path: Path, interpretation_path: Path, source: SourceRecord):
     if source.dataset == "NASADEM_HGT":
         return load_nasadem(raster_path, interpretation_path, source)
+    if source.dataset == "USGS_3DEP":
+        metadata = validate_local_raster(raster_path, interpretation_path, source, "Earth")
+        if (
+            metadata.horizontal_datum != "NAD83"
+            or metadata.vertical_datum != "NAVD88"
+            or metadata.latitude_bounds_deg != (24, 50)
+            or metadata.scale != 1
+            or metadata.offset != 0
+            or metadata.mask_path is None
+        ):
+            raise ValueError("USGS CONUS intake requires audited NAD83/NAVD88 metres and land mask")
+        return metadata
     if source.dataset not in ("REMA", "ArcticDEM"):
         raise ValueError("Unsupported Earth elevation source")
     metadata = validate_local_raster(raster_path, interpretation_path, source, "Earth")

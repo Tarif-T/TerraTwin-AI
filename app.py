@@ -12,6 +12,7 @@ from terratwin.evidence_ui import render_characterization, render_comparison
 from terratwin.export.csv_export import export_analysis
 from terratwin.mission import mission_scoring
 from terratwin.models import FEATURES
+from terratwin.research_ui import render_research
 from terratwin.scoring.engine import rank_candidates
 
 st.set_page_config(page_title="TerraTwin AI | Analognauts", page_icon="🌍", layout="wide")
@@ -33,7 +34,9 @@ try:
 except (ValueError, OSError, KeyError) as error:
     characterization = {}
     st.warning(f"Supplementary evidence unavailable: {error}")
-explore, methods, sources_tab = st.tabs(["Explore", "Methodology", "Sources & readiness"])
+explore, methods, sources_tab, research_tab = st.tabs(
+    ["Explore", "Methodology", "Sources & readiness", "Research evidence"]
+)
 try:
     references, sites, sources = load_prepared()
     data_error = None
@@ -135,7 +138,7 @@ with explore:
                 pd.DataFrame([reference.model_dump(include=set(FEATURES))]).T, width="stretch"
             )
             st.caption(f"Valid ground coverage: {reference.valid_cell_fraction:.1%}")
-            if reference.body == "Moon":
+            if reference.body == "Moon" and "shackleton" in reference.profile_id:
                 st.info(
                     "This Shackleton study includes south-pole terrain; it is not a selected "
                     "base or landing pad. Illumination, ice distribution and communications "
@@ -144,6 +147,12 @@ with explore:
                 st.markdown(
                     "[NASA lunar south-pole environment]"
                     "(https://www.nasa.gov/reference/moonbase-environment/)"
+                )
+            elif reference.body == "Moon":
+                st.info(
+                    "Mare Tranquillitatis pit-region surface terrain. Published pit and conduit "
+                    "observations are available in Research evidence; this grid does "
+                    "not resolve the cave."
                 )
             elif reference.body == "Mars":
                 st.caption(
@@ -374,7 +383,8 @@ with sources_tab:
                 },
                 {
                     "Capability": "Resources / caves",
-                    "Evidence": "Not assessed; subsurface and resource observations still needed",
+                    "Evidence": "Published lunar pit and Lava Beds cave observations; resource "
+                    "abundance unmeasured",
                 },
                 {
                     "Capability": "Candidate discovery",
@@ -382,7 +392,8 @@ with sources_tab:
                 },
                 {
                     "Capability": "Novelty / suitability",
-                    "Evidence": "Unreviewed; independent research and field validation required",
+                    "Evidence": "Attributed review register; known Lava Beds baseline identified; "
+                    "expert validation pending",
                 },
             ]
         ),
@@ -399,3 +410,6 @@ with sources_tab:
         "Acquisition instructions: docs/data-acquisition.md. "
         "No external data API is required to score prepared profiles."
     )
+
+with research_tab:
+    render_research(ROOT, references, sites, characterization, base_config)
