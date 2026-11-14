@@ -110,6 +110,136 @@
       "snapshot_type": "structured_transcription",
       "accessed_utc": "2026-11-14T02:14:27.324295Z",
       "attribution": "NASA NTRS; published field-test study"
+    },
+    {
+      "source_id": "MEDA_README",
+      "title": "PDS MEDA interpretation README",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/readme.txt",
+      "snapshot_path": "data/raw/Mars/MEDA/readme.txt",
+      "snapshot_sha256": "c32e17b081984383dde8ed132f877397e664d40762457588bcc11310053a0d80",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_CAL_ATS_CSV",
+      "title": "MEDA sol 100 CAL_ATS CSV",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0100/WE__0100___________CAL_ATS_________________P01.CSV",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0100___________CAL_ATS_________________P01.CSV",
+      "snapshot_sha256": "c60896719cdee316f3e98289048f668ce71cba95ee094cd3eaa9ff1cab5ec77e",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_CAL_ATS_LABEL",
+      "title": "MEDA sol 100 CAL_ATS LABEL",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0100/WE__0100___________CAL_ATS_________________P01.xml",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0100___________CAL_ATS_________________P01.xml",
+      "snapshot_sha256": "8c4ac793ffb3cb771089c00827c533d1adbf21d8fac0e4882337c1364293fb9a",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_CAL_ATS_INDEX",
+      "title": "MEDA sol 100 CAL_ATS INDEX",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0100/",
+      "snapshot_path": "data/raw/Mars/MEDA/sol_0100_data_calibrated_env_index.html",
+      "snapshot_sha256": "8800f490a7a5194e8013431904864473387a0d463d8b5ee499a24cb77db9ca8a",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_DER_PS_CSV",
+      "title": "MEDA sol 100 DER_PS CSV",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0100/WE__0100___________DER_PS__________________P01.CSV",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0100___________DER_PS__________________P01.CSV",
+      "snapshot_sha256": "76e4e85d2729f4ce32ee2248a42e087d6fe2f6bc4312b2692dff63ce29352768",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_DER_PS_LABEL",
+      "title": "MEDA sol 100 DER_PS LABEL",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0100/WE__0100___________DER_PS__________________P01.xml",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0100___________DER_PS__________________P01.xml",
+      "snapshot_sha256": "319f98263c2e4d176b81aa7ca1ca2a0e10f772b547b5489b37474dbe1c335cb0",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL100_DER_PS_INDEX",
+      "title": "MEDA sol 100 DER_PS INDEX",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0100/",
+      "snapshot_path": "data/raw/Mars/MEDA/sol_0100_data_derived_env_index.html",
+      "snapshot_sha256": "8a7dcfd11c785b048160608aad304763196e25f2c7f9fa22fc030ee19fb79bcd",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_CAL_ATS_CSV",
+      "title": "MEDA sol 101 CAL_ATS CSV",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0101/WE__0101___________CAL_ATS_________________P01.CSV",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0101___________CAL_ATS_________________P01.CSV",
+      "snapshot_sha256": "90fcca5108a6174e737f0f160d56bd0c984c9feadfdc3ca7a2e968e17b78910d",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_CAL_ATS_LABEL",
+      "title": "MEDA sol 101 CAL_ATS LABEL",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0101/WE__0101___________CAL_ATS_________________P01.xml",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0101___________CAL_ATS_________________P01.xml",
+      "snapshot_sha256": "a59c685140b9215bb8139dc7db169fa0d1cd8c7aabb5e3eda062309aad43aff6",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_CAL_ATS_INDEX",
+      "title": "MEDA sol 101 CAL_ATS INDEX",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0090_0179/sol_0101/",
+      "snapshot_path": "data/raw/Mars/MEDA/sol_0101_data_calibrated_env_index.html",
+      "snapshot_sha256": "441454872f5a3c45a517db3b1c92907b9d7a958b66481a24f0aa2f54d07f1c62",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_DER_PS_CSV",
+      "title": "MEDA sol 101 DER_PS CSV",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0101/WE__0101___________DER_PS__________________P01.CSV",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0101___________DER_PS__________________P01.CSV",
+      "snapshot_sha256": "938f935cee47b7790d6c935dc631e91aae8ce90047d5694c81f345ac3c4bf3d2",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_DER_PS_LABEL",
+      "title": "MEDA sol 101 DER_PS LABEL",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0101/WE__0101___________DER_PS__________________P01.xml",
+      "snapshot_path": "data/raw/Mars/MEDA/WE__0101___________DER_PS__________________P01.xml",
+      "snapshot_sha256": "f4c02b2dec93445e62243dcba7d357063f08cf5c9097c38812f2777004cd1cdb",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
+    },
+    {
+      "source_id": "MEDA_SOL101_DER_PS_INDEX",
+      "title": "MEDA sol 101 DER_PS INDEX",
+      "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0090_0179/sol_0101/",
+      "snapshot_path": "data/raw/Mars/MEDA/sol_0101_data_derived_env_index.html",
+      "snapshot_sha256": "8732fde820c4c04d2df71eb5246817f7d753d21a33eadbf94cc5c7b013c9eb92",
+      "snapshot_type": "original_response",
+      "accessed_utc": "2026-11-14T02:45:47.833784Z",
+      "attribution": "Rodriguez-Manfredi et al. (2021), MEDA, NASA PDS, DOI 10.17189/1522849"
     }
   ],
   "observations": [
@@ -126,7 +256,16 @@
       "source_ids": [
         "NASA_MOON_FACTS"
       ],
-      "interpretation": "Body reference gravity, not an ROI surface measurement."
+      "interpretation": "Body reference gravity, not an ROI surface measurement.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "earth_gravity",
@@ -141,7 +280,16 @@
       "source_ids": [
         "NASA_MOON_FACTS"
       ],
-      "interpretation": "Earth reference gravity; local geographic variations are not resolved."
+      "interpretation": "Earth reference gravity; local geographic variations are not resolved.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "moon_pressure",
@@ -156,7 +304,16 @@
       "source_ids": [
         "NASA_MOON_FACTS"
       ],
-      "interpretation": "Night exosphere pressure from 3e-15 bar; not an annual local atmosphere observation."
+      "interpretation": "Night exosphere pressure from 3e-15 bar; not an annual local atmosphere observation.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mars_gravity",
@@ -171,7 +328,16 @@
       "source_ids": [
         "NASA_MARS_FACTS"
       ],
-      "interpretation": "NASA table mean surface gravity, not a terrain-dependent local estimate."
+      "interpretation": "NASA table mean surface gravity, not a terrain-dependent local estimate.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mars_pressure",
@@ -186,7 +352,16 @@
       "source_ids": [
         "NASA_MARS_FACTS"
       ],
-      "interpretation": "6.36 mbar at mean radius; seasonally variable and not a Jezero MEDA measurement."
+      "interpretation": "6.36 mbar at mean radius; seasonally variable and not a Jezero MEDA measurement.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "jezero_materials",
@@ -203,7 +378,16 @@
       "source_ids": [
         "NASA_JEZERO_GEOLOGY"
       ],
-      "interpretation": "Crater-floor igneous rocks; no ROI mineral percentages inferred."
+      "interpretation": "Crater-floor igneous rocks; no ROI mineral percentages inferred.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "jezero_delta_materials",
@@ -220,7 +404,16 @@
       "source_ids": [
         "NASA_JEZERO_DELTA"
       ],
-      "interpretation": "Published delta sedimentary-rock context; no whole-ROI material proportions inferred."
+      "interpretation": "Published delta sedimentary-rock context; no whole-ROI material proportions inferred.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mare_materials",
@@ -237,7 +430,16 @@
       "source_ids": [
         "NASA_MARE_GEOLOGY"
       ],
-      "interpretation": "The mare is a basaltic lava setting; regional context, not mineral abundances at the pit."
+      "interpretation": "The mare is a basaltic lava setting; regional context, not mineral abundances at the pit.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mare_pit_depth",
@@ -252,7 +454,16 @@
       "source_ids": [
         "LROC_TRANQUILLITATIS_PIT"
       ],
-      "interpretation": "LROC stereo-model inner pit depth below funnel; not conduit length or total access depth."
+      "interpretation": "LROC stereo-model inner pit depth below funnel; not conduit length or total access depth.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mare_subsurface_setting",
@@ -269,7 +480,16 @@
       "source_ids": [
         "NASA_LUNAR_CONDUIT"
       ],
-      "interpretation": "Published orbital evidence supports a conduit associated with the pit; traversability and stability are unverified."
+      "interpretation": "Published orbital evidence supports a conduit associated with the pit; traversability and stability are unverified.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "skull_length",
@@ -284,7 +504,16 @@
       "source_ids": [
         "NPS_SKULL_CAVE"
       ],
-      "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth."
+      "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "skull_ice",
@@ -299,7 +528,16 @@
       "source_ids": [
         "NPS_SKULL_CAVE"
       ],
-      "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established."
+      "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "lava_subsurface_setting",
@@ -316,7 +554,16 @@
       "source_ids": [
         "NPS_SKULL_CAVE"
       ],
-      "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile."
+      "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "mushpot_length",
@@ -331,7 +578,16 @@
       "source_ids": [
         "NPS_MUSHPOT_CAVE"
       ],
-      "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated."
+      "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "lava_materials",
@@ -348,7 +604,16 @@
       "source_ids": [
         "NASA_BRAILLE_BASELINE"
       ],
-      "interpretation": "Published volcanic lava-tube field site; regional material context does not replace the centroid geological map."
+      "interpretation": "Published volcanic lava-tube field site; regional material context does not replace the centroid geological map.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "lava_known_baseline",
@@ -363,7 +628,16 @@
       "source_ids": [
         "NASA_BRAILLE_BASELINE"
       ],
-      "interpretation": "NASA BRAILLE already uses this cave region as an analog; it is a baseline, not a newly discovered analog."
+      "interpretation": "NASA BRAILLE already uses this cave region as an analog; it is a baseline, not a newly discovered analog.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
     },
     {
       "observation_id": "haughton_materials",
@@ -381,7 +655,340 @@
       "source_ids": [
         "NASA_HAUGHTON_BASELINE"
       ],
-      "interpretation": "Known impact/polar-desert analog baseline. No nearby ArcticDEM ROI is automatically relabeled as the crater."
+      "interpretation": "Known impact/polar-desert analog baseline. No nearby ArcticDEM ROI is automatically relabeled as the crater.",
+      "measurement_start_utc": null,
+      "measurement_stop_utc": null,
+      "sample_count": null,
+      "sampling_basis": null,
+      "measurement_method": null,
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": null,
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_ATS_LOCAL_TEMP1_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 213.51,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_CAL_ATS_CSV",
+        "MEDA_SOL100_CAL_ATS_LABEL",
+        "MEDA_SOL100_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, ATS_LOCAL_TEMP1.",
+      "measurement_start_utc": "2021-05-31T22:23:00.282000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:29.955000Z",
+      "sample_count": 102827,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP1",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_ATS_LOCAL_TEMP2_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 224.0,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_CAL_ATS_CSV",
+        "MEDA_SOL100_CAL_ATS_LABEL",
+        "MEDA_SOL100_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, ATS_LOCAL_TEMP2.",
+      "measurement_start_utc": "2021-05-31T22:23:00.282000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:29.955000Z",
+      "sample_count": 102827,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP2",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_ATS_LOCAL_TEMP3_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 217.19,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_CAL_ATS_CSV",
+        "MEDA_SOL100_CAL_ATS_LABEL",
+        "MEDA_SOL100_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, ATS_LOCAL_TEMP3.",
+      "measurement_start_utc": "2021-05-31T22:23:00.282000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:29.955000Z",
+      "sample_count": 102827,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP3",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_ATS_LOCAL_TEMP4_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 220.67,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_CAL_ATS_CSV",
+        "MEDA_SOL100_CAL_ATS_LABEL",
+        "MEDA_SOL100_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, ATS_LOCAL_TEMP4.",
+      "measurement_start_utc": "2021-05-31T22:23:00.282000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:29.955000Z",
+      "sample_count": 102827,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP4",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_ATS_LOCAL_TEMP5_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 214.78,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_CAL_ATS_CSV",
+        "MEDA_SOL100_CAL_ATS_LABEL",
+        "MEDA_SOL100_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, ATS_LOCAL_TEMP5.",
+      "measurement_start_utc": "2021-05-31T22:23:00.282000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:29.955000Z",
+      "sample_count": 102827,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP5",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol100_PRESSURE_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 759.08,
+      "unit": "Pa",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL100_DER_PS_CSV",
+        "MEDA_SOL100_DER_PS_LABEL",
+        "MEDA_SOL100_DER_PS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 100, PRESSURE.",
+      "measurement_start_utc": "2021-05-31T22:23:00.782000Z",
+      "measurement_stop_utc": "2021-06-01T22:06:16.455000Z",
+      "sample_count": 51195,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA DER_PS PRESSURE",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "Pressure-uncertainty label declares kelvin, inconsistent with pressure units; uncertainty is not interpreted. Blank uncertainty values remain unknown.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_ATS_LOCAL_TEMP1_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 212.11,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_CAL_ATS_CSV",
+        "MEDA_SOL101_CAL_ATS_LABEL",
+        "MEDA_SOL101_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, ATS_LOCAL_TEMP1.",
+      "measurement_start_utc": "2021-06-01T23:03:40.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.682000Z",
+      "sample_count": 95724,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP1",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_ATS_LOCAL_TEMP2_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 214.49,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_CAL_ATS_CSV",
+        "MEDA_SOL101_CAL_ATS_LABEL",
+        "MEDA_SOL101_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, ATS_LOCAL_TEMP2.",
+      "measurement_start_utc": "2021-06-01T23:03:40.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.682000Z",
+      "sample_count": 95724,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP2",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_ATS_LOCAL_TEMP3_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 216.54,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_CAL_ATS_CSV",
+        "MEDA_SOL101_CAL_ATS_LABEL",
+        "MEDA_SOL101_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, ATS_LOCAL_TEMP3.",
+      "measurement_start_utc": "2021-06-01T23:03:40.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.682000Z",
+      "sample_count": 95724,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP3",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_ATS_LOCAL_TEMP4_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 219.79,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_CAL_ATS_CSV",
+        "MEDA_SOL101_CAL_ATS_LABEL",
+        "MEDA_SOL101_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, ATS_LOCAL_TEMP4.",
+      "measurement_start_utc": "2021-06-01T23:03:40.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.682000Z",
+      "sample_count": 95724,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP4",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_ATS_LOCAL_TEMP5_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "sensor_local_air_temperature_k",
+      "value": 214.495,
+      "unit": "K",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_CAL_ATS_CSV",
+        "MEDA_SOL101_CAL_ATS_LABEL",
+        "MEDA_SOL101_CAL_ATS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, ATS_LOCAL_TEMP5.",
+      "measurement_start_utc": "2021-06-01T23:03:40.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.682000Z",
+      "sample_count": 95724,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA CAL_ATS ATS_LOCAL_TEMP5",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "No instrument uncertainty column is provided for ATS.",
+      "comparison_protocol": null
+    },
+    {
+      "observation_id": "meda_sol101_PRESSURE_median_v1",
+      "subject_id": "mars_jezero_60km_v1",
+      "domain": "environment",
+      "quantity": "surface_pressure_pa",
+      "value": 760.39,
+      "unit": "Pa",
+      "statistic": "observed_sample_median",
+      "scope": "named_site",
+      "status": "measured",
+      "source_ids": [
+        "MEDA_README",
+        "MEDA_SOL101_DER_PS_CSV",
+        "MEDA_SOL101_DER_PS_LABEL",
+        "MEDA_SOL101_DER_PS_INDEX"
+      ],
+      "interpretation": "Observed-sample statistics at the rover sensor, not a full-sol or ROI mean. Rover heating, detector orientation and sampling gaps may affect temperature; sensor spread and observed range are not instrument uncertainty. Sol 101, PRESSURE.",
+      "measurement_start_utc": "2021-06-01T23:03:39.482000Z",
+      "measurement_stop_utc": "2021-06-02T23:42:10.182000Z",
+      "sample_count": 47549,
+      "sampling_basis": "partial_sol_rover_sensor_samples",
+      "measurement_method": "MEDA DER_PS PRESSURE",
+      "uncertainty_value": null,
+      "uncertainty_unit": null,
+      "uncertainty_note": "Pressure-uncertainty label declares kelvin, inconsistent with pressure units; uncertainty is not interpreted. Blank uncertainty values remain unknown.",
+      "comparison_protocol": null
     }
   ]
 }

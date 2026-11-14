@@ -8,6 +8,7 @@ import yaml
 from pydantic import ValidationError
 
 from terratwin.config import read_yaml
+from terratwin.environment import render_environment
 from terratwin.science import (
     Review,
     export_assessments,
@@ -71,6 +72,7 @@ def render_research(root, references, sites, contexts, config):
         st.error(f"Scientific evidence integrity check failed: {error}")
         return
     target = st.selectbox("Research target", references, format_func=lambda p: p.region_name)
+    render_environment(root, target, bundle)
     scenarios = read_yaml(root / "config/research_scenarios.yaml")["scenarios"]
     selected = st.selectbox("Research scenario", scenarios, format_func=lambda p: p["name"])
     scenario = {**selected, "terrain_scoring": config.model_dump(mode="json")}

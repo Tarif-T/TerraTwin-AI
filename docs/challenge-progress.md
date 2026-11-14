@@ -11,7 +11,8 @@ functional software acceptance.
 - Sixteen Earth regions: desert, arid, volcanic, Arctic and Antarctic examples.
   Fifteen pass terrain QA; ArcticDEM 26_29 remains rejected rather than hidden.
 - Fifty terrain/supporting source records; sixteen cached climate/geology summaries.
-- Eleven cited primary-source transcriptions containing seventeen scoped observations.
+- Twenty-four scientific source records and twenty-nine scoped observations: eleven
+  primary-source transcriptions plus thirteen original MEDA CSV/label/index/README records.
 - Surface, volcanic-cave robotics, and water/ice research scenarios.
 - An attributed novelty/expert review register, bounded acquisition planning,
   and checksummed evidence import with conflict rejection.
@@ -22,13 +23,16 @@ functional software acceptance.
 | --- | --- | --- |
 | Moon/Mars terrain matching | 60 km footprints, 1 km grid, four features; ranked Earth shortlist | No spatial crater morphology, small hazards or landing-pad assessment |
 | Geology | Earth centroid mapping; published Jezero and lunar mare material categories | No matched whole-ROI mineral maps; Shackleton geology unmeasured |
-| Environment | Earth ERA5 temperature/precipitation; gravity comparison and pressure context | No local planetary thermal, illumination, radiation or atmospheric equivalence model |
+| Environment | Earth ERA5 climate; gravity context; real Jezero MEDA detector temperature/pressure for sols 100–101 with hourly charts and coverage | No matched local cross-body environment model or lunar thermal/illumination/radiation series |
 | Resources | Published cave ice presence; strict compatible-abundance gate | Abundance and extraction feasibility unknown; no eligible resource ranking |
 | Caves | Lunar pit/conduit setting; Lava Beds cave lengths/ice reports; volcanic-setting comparison | Pit depth is not cave length; traversability, stability and underground morphology unverified |
 | Candidate discovery | Bounded ArcticDEM search and deterministic NASADEM acquisition plans | No worldwide completeness or uniform-area sampling; plans require acquisition and QA |
 | New analog identification | Known Lava Beds baseline distinguished from unreviewed candidates; scoped literature records | No candidate certified novel; no prior report in a bounded search does not prove novelty |
 | Findings presentation | Map, evidence cards, comparisons, research tables, domain breakdown, citations and CSV | Online basemap requires network; offline coordinate overview available |
 | Validation | Numerical recomputation, UI/export parity and published-context regression | Not independent expert review, held-out scientific evaluation or field validation |
+
+See [the MEDA environmental evidence report](meda-environment.md) for the latest
+measurements, publisher checksum verification, sampling limits and uncertainty issue.
 
 Resource rankings intentionally remain empty without comparable abundance measurements.
 Earth air temperature is never compared to lunar surface temperature. Body-mean
@@ -45,12 +49,14 @@ not measurements of every Earth ROI cell.
 
 ## Validation
 
-- 109 automated tests pass; Ruff lint passes.
+- 121 automated tests pass; Ruff lint passes.
 - All 19 profiles have independently recomputed features and deterministic raw-to-grid checks.
 - Independent terrain arithmetic checks cover every reference and mission preset.
 - All three real reference selectors pass UI/table/CSV parity checks.
 - Nine research reference/scenario runs are deterministic and exported separately.
 - Real research UI matches cave exports, clears stale scenario exports and reports missing resources.
+- Local MEDA summaries reproduce the raw data and original labels; UI matches summaries
+  and removes the local-data export when switching to a lunar target.
 - Published-context regression confirms the known cave baseline and missingness gates.
   Published labels informed these checks; this is not independent scientific evaluation.
 
@@ -95,6 +101,7 @@ Stop Streamlit before replacing Parquet files on Windows, then run:
 ```powershell
 .venv/Scripts/python.exe -m scripts.prepare_cave_sites
 .venv/Scripts/python.exe -m scripts.prepare_scientific_evidence
+.venv/Scripts/python.exe -m scripts.prepare_meda
 .venv/Scripts/python.exe scripts/build_profiles.py
 .venv/Scripts/python.exe scripts/prepare_characterization.py
 .venv/Scripts/python.exe scripts/validate_real_slice.py
@@ -113,10 +120,13 @@ Stop Streamlit before replacing Parquet files on Windows, then run:
 - [Pit-region terrain ranking](../data/processed/moon_tranquillitatis_pit_60km_v1_analysis.csv)
 - [Pit-region cave evidence assessment](../data/processed/moon_tranquillitatis_pit_60km_v1_cave_robotics_evidence.csv)
 - [Scientific observations and citations](../data/metadata/science_evidence.json)
+- [Jezero MEDA environmental summary CSV](../data/processed/jezero_meda_sols100_101.csv)
 - [Terrain source manifest](../data/metadata/sources.csv)
 
-Scientific snapshots are labeled structured transcriptions of inspected primary
-sources, not publisher-provided HTML checksums. Local hashes support integrity and
+Curated snapshots are labeled structured transcriptions of inspected primary
+sources, not publisher-provided HTML checksums. MEDA records retain original
+publisher responses and verify CSV MD5 against the original PDS labels.
+Local hashes support integrity and
 reproducibility, not scientific correctness or NASA endorsement. Original terrain
 files, including the damaged lunar download, were preserved. New USGS 3DEP and
 verified LOLA products were added separately.

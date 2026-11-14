@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 from terratwin.config import ROOT
 from terratwin.ingest.manifest import sha256_file
-from terratwin.science import EvidenceBundle, Observation, ScientificSource
+from terratwin.science import EvidenceBundle, Observation, ScientificSource, load_evidence
 
 
 def prepare():
@@ -17,10 +17,21 @@ def prepare():
     folder = ROOT / "data/metadata/evidence/science"
     folder.mkdir(exist_ok=True)
     sources, observations = [], []
+    existing = load_evidence(ROOT)
+    registered = {s.source_id: s for s in existing.sources}
 
     def source(key, title, url, attribution, claims):
         parsed = [Observation.model_validate(dict(**claim, source_ids=[key])) for claim in claims]
         path = folder / f"{key}.json"
+        if key in registered:
+            record = registered[key]
+            previous = json.loads((ROOT / record.snapshot_path).read_text(encoding="utf-8"))
+            previous_claims = [Observation.model_validate(c) for c in previous["claims"]]
+            if previous_claims != parsed or str(record.url) != url:
+                raise ValueError("Registered scientific claim changed; use a new versioned ID")
+            sources.append(record)
+            observations.extend(parsed)
+            return
         snapshot = dict(
             source_url=url,
             title=title,
@@ -364,14 +375,16 @@ def prepare():
             ),
         ],
     )
+    source_ids = {s.source_id for s in sources}
+    observation_ids = {o.observation_id for o in observations}
+    # Preparation must retain imported measurements, including the MEDA slice.
+    sources.extend(s for s in existing.sources if s.source_id not in source_ids)
+    observations.extend(o for o in existing.observations if o.observation_id not in observation_ids)
     bundle = EvidenceBundle(version="science_v1", sources=sources, observations=observations)
     (ROOT / "data/metadata/science_evidence.json").write_text(
         bundle.model_dump_json(indent=2) + "\n", encoding="utf-8"
     )
-    print(
-        f"Registered {len(sources)} primary-source transcriptions "
-        f"and {len(observations)} observations"
-    )
+    print(f"Registered {len(sources)} source records and {len(observations)} observations")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-11-14T02:22:45.802793+00:00",
+  "checked_utc": "2026-11-14T02:49:49.923622+00:00",
   "status": "published_context_regression_passed",
   "independent_scientific_validation": false,
   "cave_baseline": {
@@ -74,7 +74,16 @@
         "source_ids": [
           "NPS_SKULL_CAVE"
         ],
-        "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth."
+        "interpretation": "NPS length for named Skull Cave in Lava Beds; not the size of the whole region or a lunar pit depth.",
+        "measurement_start_utc": null,
+        "measurement_stop_utc": null,
+        "sample_count": null,
+        "sampling_basis": null,
+        "measurement_method": null,
+        "uncertainty_value": null,
+        "uncertainty_unit": null,
+        "uncertainty_note": null,
+        "comparison_protocol": null
       },
       {
         "observation_id": "skull_ice",
@@ -89,7 +98,16 @@
         "source_ids": [
           "NPS_SKULL_CAVE"
         ],
-        "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established."
+        "interpretation": "NPS describes an ice floor in Skull Cave. No current ice mass, extraction permit, yield or feasibility is established.",
+        "measurement_start_utc": null,
+        "measurement_stop_utc": null,
+        "sample_count": null,
+        "sampling_basis": null,
+        "measurement_method": null,
+        "uncertainty_value": null,
+        "uncertainty_unit": null,
+        "uncertainty_note": null,
+        "comparison_protocol": null
       },
       {
         "observation_id": "lava_subsurface_setting",
@@ -106,7 +124,16 @@
         "source_ids": [
           "NPS_SKULL_CAVE"
         ],
-        "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile."
+        "interpretation": "Named Lava Beds cave is a lava-tube setting. Cave geometry is distinct from the kilometre-scale surface profile.",
+        "measurement_start_utc": null,
+        "measurement_stop_utc": null,
+        "sample_count": null,
+        "sampling_basis": null,
+        "measurement_method": null,
+        "uncertainty_value": null,
+        "uncertainty_unit": null,
+        "uncertainty_note": null,
+        "comparison_protocol": null
       },
       {
         "observation_id": "mushpot_length",
@@ -121,7 +148,16 @@
         "source_ids": [
           "NPS_MUSHPOT_CAVE"
         ],
-        "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated."
+        "interpretation": "NPS reports 235 m for named Mushpot Cave. It is a separate cave from Skull; lengths must not be conflated.",
+        "measurement_start_utc": null,
+        "measurement_stop_utc": null,
+        "sample_count": null,
+        "sampling_basis": null,
+        "measurement_method": null,
+        "uncertainty_value": null,
+        "uncertainty_unit": null,
+        "uncertainty_note": null,
+        "comparison_protocol": null
       }
     ],
     "warning": "Contextual evidence index with uncalibrated weights; not a probability or certification",
@@ -129,10 +165,12 @@
   },
   "reference_count": 3,
   "earth_count": 16,
-  "scientific_sources": 11,
-  "observations": 17,
+  "scientific_sources": 24,
+  "observations": 29,
   "research_runs": 9,
   "ui_table_csv_parity": true,
   "missing_resources_rejected": true,
+  "local_meda_ui_verified": true,
+  "local_target_switch_clears_export": true,
   "limitation": "Published labels informed these regression checks. This is not held-out model evaluation, field validation, expert approval or proof of novelty."
 }

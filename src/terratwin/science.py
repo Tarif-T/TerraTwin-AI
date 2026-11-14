@@ -45,9 +45,27 @@ class Observation(Contract):
     status: Literal["reported", "measured", "candidate", "uncertain", "unknown"]
     source_ids: list[str] = Field(min_length=1)
     interpretation: str = Field(min_length=20)
+    measurement_start_utc: datetime | None = None
+    measurement_stop_utc: datetime | None = None
+    sample_count: int | None = Field(default=None, ge=1)
+    sampling_basis: str | None = None
+    measurement_method: str | None = None
+    uncertainty_value: float | None = Field(default=None, ge=0, allow_inf_nan=False)
+    uncertainty_unit: str | None = None
+    uncertainty_note: str | None = None
+    comparison_protocol: str | None = None
 
     @model_validator(mode="after")
     def honest_missingness(self):
+        start, stop = self.measurement_start_utc, self.measurement_stop_utc
+        if (start is None) != (stop is None):
+            raise ValueError("Temporal observations require both UTC bounds")
+        if start is not None and (start.tzinfo is None or stop.tzinfo is None or stop <= start):
+            raise ValueError("Temporal bounds must be timezone-aware and strictly increasing")
+        if start is not None and (not self.sampling_basis or not self.measurement_method):
+            raise ValueError("Temporal observations require sampling and measurement methods")
+        if self.uncertainty_value is not None and not self.uncertainty_unit:
+            raise ValueError("Uncertainty requires explicit units")
         if self.status == "unknown" and self.value is not None:
             raise ValueError("Unknown observations must have a null value")
         if self.status in ("reported", "measured") and self.value is None:
@@ -215,6 +233,13 @@ def compare_observations(left, right, quantity, tolerance):
     b = [o for o in right if o.quantity == quantity and o.status in ("reported", "measured")]
     for one in a:
         for two in b:
+            if one.measurement_start_utc or two.measurement_start_utc:
+                if (
+                    not one.comparison_protocol
+                    or one.comparison_protocol != two.comparison_protocol
+                    or one.sampling_basis != two.sampling_basis
+                ):
+                    continue
             if (one.unit, one.statistic, one.scope) != (two.unit, two.statistic, two.scope):
                 continue
             if isinstance(one.value, float) and isinstance(two.value, float):
@@ -226,7 +251,9 @@ def compare_observations(left, right, quantity, tolerance):
                     right=two.model_dump(mode="json"),
                 )
     return dict(
-        similarity=None, reason="No equivalent confirmed quantity/unit/statistic/scope pair"
+        similarity=None,
+        reason="No equivalent confirmed quantity/unit/statistic/scope pair "
+        "with a shared sampling protocol for temporal observations",
     )
 
 

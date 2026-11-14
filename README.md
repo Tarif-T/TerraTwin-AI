@@ -9,10 +9,14 @@ are compared with 16 Earth regions; 15 Earth profiles pass terrain QA.
 The app includes mission presets, Earth climate/geology context, published planetary
 geology and cave evidence, resource missingness gates, bounded acquisition planning,
 checksummed evidence import, and an attributed novelty/expert review register.
+The local environmental view includes original Jezero MEDA detector temperatures
+and derived pressure for sols 100–101, with publisher checksum verification,
+hourly charts, sample coverage, uncertainty flags and CSV export.
 Resource abundance, local cross-body thermal/radiation equivalence, cave traversability,
 novelty and independent scientific suitability remain unvalidated.
 See [the challenge progress report](docs/challenge-progress.md) for rankings,
 validation, primary sources and the remaining research requirements.
+See [the MEDA evidence report](docs/meda-environment.md) for local sensor data and limits.
 
 The original damaged global lunar image was preserved. A newly downloaded public
 LOLA polar product supplies Shackleton; a separate verified global LOLA download

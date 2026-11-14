@@ -8,6 +8,7 @@ from streamlit.testing.v1 import AppTest
 from terratwin.characterization import load_characterization
 from terratwin.config import ROOT, load_scoring, read_yaml
 from terratwin.datasets import load_prepared
+from terratwin.environment import load_meda_context
 from terratwin.science import export_assessments, load_evidence, rank_assessments
 from terratwin.scoring.engine import rank_candidates
 
@@ -58,6 +59,23 @@ def validate():
     next(b for b in app.button if b.label == "Run evidence assessment").click().run()
     if app.exception or not any("No candidate meets" in w.value for w in app.warning):
         raise ValueError("Resource UI did not disclose missing required measurements")
+    mars = next(p for p in refs if p.body == "Mars")
+    next(s for s in app.selectbox if s.label == "Research target").select(mars).run()
+    next(c for c in app.checkbox if c.label == "Inspect local measurements").check().run()
+    local = load_meda_context(ROOT, bundle, mars.profile_id)
+    if app.exception or local is None:
+        raise ValueError("Local MEDA evidence could not be displayed")
+    table = next(f.value for f in app.dataframe if "observed_median" in f.value.columns)
+    expected = [s["observed_median"] for p in local["products"] for s in p["summaries"]]
+    if table["observed_median"].tolist() != expected:
+        raise ValueError("Local environmental UI differs from verified sensor summaries")
+    if not any("pressure-uncertainty" in w.value for w in app.warning):
+        raise ValueError("Pressure uncertainty unit conflict was not disclosed")
+    next(s for s in app.selectbox if s.label == "Research target").select(target).run()
+    if app.exception or any(
+        b.label == "Download local environment CSV" for b in app.get("download_button")
+    ):
+        raise ValueError("Local environment export persisted for the wrong planetary target")
     report = dict(
         checked_utc=datetime.now(timezone.utc).isoformat(),
         status="published_context_regression_passed",
@@ -70,6 +88,8 @@ def validate():
         research_runs=len(runs),
         ui_table_csv_parity=True,
         missing_resources_rejected=True,
+        local_meda_ui_verified=True,
+        local_target_switch_clears_export=True,
         limitation="Published labels informed these regression checks. This is not held-out "
         "model evaluation, field validation, expert approval or proof of novelty.",
     )

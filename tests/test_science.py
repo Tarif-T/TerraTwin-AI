@@ -127,6 +127,14 @@ def test_review_scope_and_append_only_records(tmp_path):
 
 def test_import_requires_snapshots_and_preserves_existing_claims(tmp_path):
     bundle = load_evidence(ROOT)
+    # This fixture copies only small curated transcription snapshots, not real raw data.
+    sources = [s for s in bundle.sources if s.snapshot_type == "structured_transcription"]
+    ids = {s.source_id for s in sources}
+    bundle = EvidenceBundle(
+        version=bundle.version,
+        sources=sources,
+        observations=[o for o in bundle.observations if set(o.source_ids) <= ids],
+    )
     shutil.copytree(
         ROOT / "data/metadata/evidence/science", tmp_path / "data/metadata/evidence/science"
     )
