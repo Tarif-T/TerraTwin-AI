@@ -25,8 +25,8 @@ def load_catalog(path: Path) -> dict:
         if polygon.geom_type not in ("Polygon", "MultiPolygon") or not polygon.is_valid:
             raise ValueError(f"Invalid polygon for {site_id}")
         lon, lat = properties["centroid_lon"], properties["centroid_lat"]
-        if not (-180 <= lon <= 180 and -56 <= lat <= 60):
-            raise ValueError(f"Invalid NASADEM catalog coordinates for {site_id}")
+        if not (-180 <= lon <= 180 and -90 <= lat <= 90):
+            raise ValueError(f"Invalid Earth catalog coordinates for {site_id}")
         if not polygon.covers(Point(lon, lat)):
             raise ValueError(f"Catalog centroid outside polygon for {site_id}")
         for key in ("site_name", "country", "roi_id", "seed_or_candidate", "reason_selected"):

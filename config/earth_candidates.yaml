@@ -1,0 +1,17 @@
+# Exploratory tile centers fixed before computing scores. Regional names are
+# orientation labels, not assertions of geology or scientific analog suitability.
+selection_rationale: >-
+  Geographically dispersed, predominantly inland NASADEM tiles below 40 degrees
+  latitude, allowing a 60 km square inside a single tile. Availability and land
+  coverage must be checked; these are candidates, not validated analogs.
+candidates:
+  - {tile: s24w069, region: Atacama-area exploratory ROI, country: Chile}
+  - {tile: s25e015, region: Namib-area exploratory ROI, country: Namibia}
+  - {tile: n13e040, region: Afar-area exploratory ROI, country: Ethiopia}
+  - {tile: n22e058, region: Oman exploratory ROI, country: Oman}
+  - {tile: s20w068, region: Altiplano-area exploratory ROI, country: Bolivia}
+  - {tile: n37e095, region: Qaidam-area exploratory ROI, country: China}
+  - {tile: n25e040, region: Saudi Arabia exploratory ROI, country: Saudi Arabia}
+  - {tile: s25e135, region: Central Australia exploratory ROI, country: Australia}
+  - {tile: n34w116, region: Mojave-area exploratory ROI, country: United States}
+  - {tile: n24e010, region: Central Sahara exploratory ROI, country: Libya}

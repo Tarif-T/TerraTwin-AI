@@ -1,0 +1,44 @@
+{
+  "searched_utc": "2026-11-14T01:14:47.721179+00:00",
+  "bbox": [
+    -100,
+    72,
+    -80,
+    78
+  ],
+  "source_index_sha256": "73fd2f1edf4d74b90b85a81d27638699e0d6b66b8a122e895fd337bd0eaeea51",
+  "source": "ArcticDEM v4.1 32 m",
+  "proposed_tile_count": 37,
+  "registered": [
+    {
+      "tile": "26_29",
+      "longitude": -83.418055344822,
+      "latitude": 73.0359066517747,
+      "source_url": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem/mosaics/v4.1/32m/26_29/26_29_32m_v4.1_dem.tif",
+      "x": -1150000.0,
+      "y": -1450000.0,
+      "profile_id": "earth_arctic_26_29_60km_v1"
+    },
+    {
+      "tile": "28_30",
+      "longitude": -85.0302592718897,
+      "latitude": 75.01268271051367,
+      "source_url": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem/mosaics/v4.1/32m/28_30/28_30_32m_v4.1_dem.tif",
+      "x": -1050000.0,
+      "y": -1250000.0,
+      "profile_id": "earth_arctic_28_30_60km_v1"
+    },
+    {
+      "tile": "29_25",
+      "longitude": -98.42696902148067,
+      "latitude": 72.31936845390412,
+      "source_url": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem/mosaics/v4.1/32m/29_25/29_25_32m_v4.1_dem.tif",
+      "x": -1550000.0,
+      "y": -1150000.0,
+      "profile_id": "earth_arctic_29_25_60km_v1"
+    }
+  ],
+  "novelty": "Unreviewed; systematic candidate discovery is not literature novelty proof",
+  "max_downloads": 3,
+  "coverage_threshold": 0.9
+}

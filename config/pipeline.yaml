@@ -38,5 +38,359 @@ jobs:
     centroid_lat: 36.5
     centroid_lon: -116.5
   warnings:
-  - Single availability-selected candidate; rank 1 does not establish superiority.
   - Original Earth ZIP publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/s24w069.hgt
+  interpretation_path: data/metadata/interpretations/earth_s24w069.yaml
+  source_id: NASADEM_S24W069_HGT
+  destination_crs: +proj=aeqd +lat_0=-23.5 +lon_0=-68.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_s24w069_60km_v1
+    roi_id: earth_s24w069_roi_60km_v1
+    region_name: Atacama-area exploratory ROI
+    site_id: earth_s24w069
+    site_name: Atacama-area exploratory ROI
+    country: Chile
+    centroid_lat: -23.5
+    centroid_lon: -68.5
+  supporting_files:
+    NASADEM_S24W069_SWB: data/raw/Earth/NASADEM_archives/s24w069.swb
+    NASADEM_S24W069_NUM: data/raw/Earth/NASADEM_archives/s24w069.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/s25e015.hgt
+  interpretation_path: data/metadata/interpretations/earth_s25e015.yaml
+  source_id: NASADEM_S25E015_HGT
+  destination_crs: +proj=aeqd +lat_0=-24.5 +lon_0=15.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_s25e015_60km_v1
+    roi_id: earth_s25e015_roi_60km_v1
+    region_name: Namib-area exploratory ROI
+    site_id: earth_s25e015
+    site_name: Namib-area exploratory ROI
+    country: Namibia
+    centroid_lat: -24.5
+    centroid_lon: 15.5
+  supporting_files:
+    NASADEM_S25E015_SWB: data/raw/Earth/NASADEM_archives/s25e015.swb
+    NASADEM_S25E015_NUM: data/raw/Earth/NASADEM_archives/s25e015.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n13e040.hgt
+  interpretation_path: data/metadata/interpretations/earth_n13e040.yaml
+  source_id: NASADEM_N13E040_HGT
+  destination_crs: +proj=aeqd +lat_0=13.5 +lon_0=40.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n13e040_60km_v1
+    roi_id: earth_n13e040_roi_60km_v1
+    region_name: Afar-area exploratory ROI
+    site_id: earth_n13e040
+    site_name: Afar-area exploratory ROI
+    country: Ethiopia
+    centroid_lat: 13.5
+    centroid_lon: 40.5
+  supporting_files:
+    NASADEM_N13E040_SWB: data/raw/Earth/NASADEM_archives/n13e040.swb
+    NASADEM_N13E040_NUM: data/raw/Earth/NASADEM_archives/n13e040.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n22e058.hgt
+  interpretation_path: data/metadata/interpretations/earth_n22e058.yaml
+  source_id: NASADEM_N22E058_HGT
+  destination_crs: +proj=aeqd +lat_0=22.5 +lon_0=58.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n22e058_60km_v1
+    roi_id: earth_n22e058_roi_60km_v1
+    region_name: Oman exploratory ROI
+    site_id: earth_n22e058
+    site_name: Oman exploratory ROI
+    country: Oman
+    centroid_lat: 22.5
+    centroid_lon: 58.5
+  supporting_files:
+    NASADEM_N22E058_SWB: data/raw/Earth/NASADEM_archives/n22e058.swb
+    NASADEM_N22E058_NUM: data/raw/Earth/NASADEM_archives/n22e058.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/s20w068.hgt
+  interpretation_path: data/metadata/interpretations/earth_s20w068.yaml
+  source_id: NASADEM_S20W068_HGT
+  destination_crs: +proj=aeqd +lat_0=-19.5 +lon_0=-67.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_s20w068_60km_v1
+    roi_id: earth_s20w068_roi_60km_v1
+    region_name: Altiplano-area exploratory ROI
+    site_id: earth_s20w068
+    site_name: Altiplano-area exploratory ROI
+    country: Bolivia
+    centroid_lat: -19.5
+    centroid_lon: -67.5
+  supporting_files:
+    NASADEM_S20W068_SWB: data/raw/Earth/NASADEM_archives/s20w068.swb
+    NASADEM_S20W068_NUM: data/raw/Earth/NASADEM_archives/s20w068.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n37e095.hgt
+  interpretation_path: data/metadata/interpretations/earth_n37e095.yaml
+  source_id: NASADEM_N37E095_HGT
+  destination_crs: +proj=aeqd +lat_0=37.5 +lon_0=95.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n37e095_60km_v1
+    roi_id: earth_n37e095_roi_60km_v1
+    region_name: Qaidam-area exploratory ROI
+    site_id: earth_n37e095
+    site_name: Qaidam-area exploratory ROI
+    country: China
+    centroid_lat: 37.5
+    centroid_lon: 95.5
+  supporting_files:
+    NASADEM_N37E095_SWB: data/raw/Earth/NASADEM_archives/n37e095.swb
+    NASADEM_N37E095_NUM: data/raw/Earth/NASADEM_archives/n37e095.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n25e040.hgt
+  interpretation_path: data/metadata/interpretations/earth_n25e040.yaml
+  source_id: NASADEM_N25E040_HGT
+  destination_crs: +proj=aeqd +lat_0=25.5 +lon_0=40.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n25e040_60km_v1
+    roi_id: earth_n25e040_roi_60km_v1
+    region_name: Saudi Arabia exploratory ROI
+    site_id: earth_n25e040
+    site_name: Saudi Arabia exploratory ROI
+    country: Saudi Arabia
+    centroid_lat: 25.5
+    centroid_lon: 40.5
+  supporting_files:
+    NASADEM_N25E040_SWB: data/raw/Earth/NASADEM_archives/n25e040.swb
+    NASADEM_N25E040_NUM: data/raw/Earth/NASADEM_archives/n25e040.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/s25e135.hgt
+  interpretation_path: data/metadata/interpretations/earth_s25e135.yaml
+  source_id: NASADEM_S25E135_HGT
+  destination_crs: +proj=aeqd +lat_0=-24.5 +lon_0=135.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_s25e135_60km_v1
+    roi_id: earth_s25e135_roi_60km_v1
+    region_name: Central Australia exploratory ROI
+    site_id: earth_s25e135
+    site_name: Central Australia exploratory ROI
+    country: Australia
+    centroid_lat: -24.5
+    centroid_lon: 135.5
+  supporting_files:
+    NASADEM_S25E135_SWB: data/raw/Earth/NASADEM_archives/s25e135.swb
+    NASADEM_S25E135_NUM: data/raw/Earth/NASADEM_archives/s25e135.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n34w116.hgt
+  interpretation_path: data/metadata/interpretations/earth_n34w116.yaml
+  source_id: NASADEM_N34W116_HGT
+  destination_crs: +proj=aeqd +lat_0=34.5 +lon_0=-115.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n34w116_60km_v1
+    roi_id: earth_n34w116_roi_60km_v1
+    region_name: Mojave-area exploratory ROI
+    site_id: earth_n34w116
+    site_name: Mojave-area exploratory ROI
+    country: United States
+    centroid_lat: 34.5
+    centroid_lon: -115.5
+  supporting_files:
+    NASADEM_N34W116_SWB: data/raw/Earth/NASADEM_archives/n34w116.swb
+    NASADEM_N34W116_NUM: data/raw/Earth/NASADEM_archives/n34w116.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Earth/NASADEM_archives/n24e010.hgt
+  interpretation_path: data/metadata/interpretations/earth_n24e010.yaml
+  source_id: NASADEM_N24E010_HGT
+  destination_crs: +proj=aeqd +lat_0=24.5 +lon_0=10.5 +datum=WGS84 +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_n24e010_60km_v1
+    roi_id: earth_n24e010_roi_60km_v1
+    region_name: Central Sahara exploratory ROI
+    site_id: earth_n24e010
+    site_name: Central Sahara exploratory ROI
+    country: Libya
+    centroid_lat: 24.5
+    centroid_lon: 10.5
+  supporting_files:
+    NASADEM_N24E010_SWB: data/raw/Earth/NASADEM_archives/n24e010.swb
+    NASADEM_N24E010_NUM: data/raw/Earth/NASADEM_archives/n24e010.num
+  warnings:
+  - Exploratory regional candidate; scientific analog suitability unvalidated.
+  - Publisher checksum not independently verified.
+- raster_path: data/raw/Moon/LOLA_polar/ldem_875s_20m.xml
+  interpretation_path: data/metadata/interpretations/moon_shackleton_60km_v1.yaml
+  source_id: LOLA_LDEM_875S_20M
+  destination_crs: +proj=aeqd +lat_0=-89.67 +lon_0=129.78 +R=1737400 +units=m +type=crs
+  bounds_m: &id002
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: moon_shackleton_60km_v1
+    roi_id: moon_shackleton_roi_60km_v1
+    region_name: Shackleton south-pole 60 km terrain study
+  warnings:
+  - Scientific analog suitability unvalidated.
+  - Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to
+    height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot
+    coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78);
+    not a designated base site.
+- raster_path: data/raw/Earth/REMA_18_35/18_35_32m_v2.0_dem.tif
+  interpretation_path: data/metadata/interpretations/earth_rema_18_35_60km_v1.yaml
+  source_id: REMA_18_35_32M
+  destination_crs: +proj=aeqd +lat_0=-77.81689181335317 +lon_0=160.20112364547506
+    +datum=WGS84 +units=m +type=crs
+  bounds_m: *id002
+  identity:
+    profile_id: earth_rema_18_35_60km_v1
+    roi_id: earth_rema_18_35_roi_60km_v1
+    region_name: Antarctic REMA 18_35 tile-centered polar ROI
+    site_id: earth_rema_18_35
+    site_name: Antarctic REMA 18_35 tile-centered polar ROI
+    country: Antarctica
+    centroid_lat: -77.81689181335317
+    centroid_lon: 160.20112364547506
+  warnings:
+  - Scientific analog suitability unvalidated.
+  - REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May
+    include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031
+    (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit
+    Howat et al. and PGC.
+- raster_path: data/raw/Earth/ArcticDEM_discovery/26_29_32m_v4.1_dem.tif
+  interpretation_path: data/metadata/interpretations/earth_arctic_26_29.yaml
+  source_id: ARCTICDEM_26_29_32M
+  destination_crs: +proj=aeqd +lat_0=73.0359066517747 +lon_0=-83.418055344822 +datum=WGS84
+    +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_arctic_26_29_60km_v1
+    roi_id: earth_arctic_26_29_roi_60km_v1
+    region_name: ArcticDEM search candidate 26_29
+    site_id: earth_arctic_26_29
+    site_name: ArcticDEM search candidate 26_29
+    country: Canadian Arctic
+    centroid_lat: 73.0359066517747
+    centroid_lon: -83.418055344822
+  warnings:
+  - Only original SETSM data retained; snow/ice may remain. Novelty and suitability
+    unreviewed.
+  supporting_files:
+    ARCTICDEM_26_29_32M_DATAMASK: data/raw/Earth/ArcticDEM_discovery/26_29_32m_v4.1_datamask.tif
+    ARCTICDEM_26_29_32M_MASK_UINT8: data/raw/Earth/ArcticDEM_discovery/26_29_32m_v4.1_datamask_uint8.bin
+- raster_path: data/raw/Earth/ArcticDEM_discovery/28_30_32m_v4.1_dem.tif
+  interpretation_path: data/metadata/interpretations/earth_arctic_28_30.yaml
+  source_id: ARCTICDEM_28_30_32M
+  destination_crs: +proj=aeqd +lat_0=75.01268271051367 +lon_0=-85.0302592718897 +datum=WGS84
+    +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_arctic_28_30_60km_v1
+    roi_id: earth_arctic_28_30_roi_60km_v1
+    region_name: ArcticDEM search candidate 28_30
+    site_id: earth_arctic_28_30
+    site_name: ArcticDEM search candidate 28_30
+    country: Canadian Arctic
+    centroid_lat: 75.01268271051367
+    centroid_lon: -85.0302592718897
+  warnings:
+  - Only original SETSM data retained; snow/ice may remain. Novelty and suitability
+    unreviewed.
+  supporting_files:
+    ARCTICDEM_28_30_32M_DATAMASK: data/raw/Earth/ArcticDEM_discovery/28_30_32m_v4.1_datamask.tif
+    ARCTICDEM_28_30_32M_MASK_UINT8: data/raw/Earth/ArcticDEM_discovery/28_30_32m_v4.1_datamask_uint8.bin
+- raster_path: data/raw/Earth/ArcticDEM_discovery/29_25_32m_v4.1_dem.tif
+  interpretation_path: data/metadata/interpretations/earth_arctic_29_25.yaml
+  source_id: ARCTICDEM_29_25_32M
+  destination_crs: +proj=aeqd +lat_0=72.31936845390412 +lon_0=-98.42696902148067 +datum=WGS84
+    +units=m +type=crs
+  bounds_m:
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: earth_arctic_29_25_60km_v1
+    roi_id: earth_arctic_29_25_roi_60km_v1
+    region_name: ArcticDEM search candidate 29_25
+    site_id: earth_arctic_29_25
+    site_name: ArcticDEM search candidate 29_25
+    country: Canadian Arctic
+    centroid_lat: 72.31936845390412
+    centroid_lon: -98.42696902148067
+  warnings:
+  - Only original SETSM data retained; snow/ice may remain. Novelty and suitability
+    unreviewed.
+  supporting_files:
+    ARCTICDEM_29_25_32M_DATAMASK: data/raw/Earth/ArcticDEM_discovery/29_25_32m_v4.1_datamask.tif
+    ARCTICDEM_29_25_32M_MASK_UINT8: data/raw/Earth/ArcticDEM_discovery/29_25_32m_v4.1_datamask_uint8.bin

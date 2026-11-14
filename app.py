@@ -1,11 +1,16 @@
 """Offline-first application: never download or preprocess rasters during a request."""
 
+import json
+
 import pandas as pd
 import streamlit as st
 
+from terratwin.characterization import characterize_filter, load_characterization
 from terratwin.config import ROOT, load_scoring, read_yaml
 from terratwin.datasets import load_prepared
+from terratwin.evidence_ui import render_characterization, render_comparison
 from terratwin.export.csv_export import export_analysis
+from terratwin.mission import mission_scoring
 from terratwin.models import FEATURES
 from terratwin.scoring.engine import rank_candidates
 
@@ -21,7 +26,13 @@ st.caption(
     "It is not a probability of mission suitability."
 )
 
-config = load_scoring()
+base_config = load_scoring()
+config = base_config
+try:
+    characterization = load_characterization(ROOT)
+except (ValueError, OSError, KeyError) as error:
+    characterization = {}
+    st.warning(f"Supplementary evidence unavailable: {error}")
 explore, methods, sources_tab = st.tabs(["Explore", "Methodology", "Sources & readiness"])
 try:
     references, sites, sources = load_prepared()
@@ -34,11 +45,73 @@ if references and sites and (len(sites) < 10 or {p.body for p in references} != 
     st.info(
         f"Limited real-data prototype: {len(references)} reference "
         f"and {len(sites)} Earth candidate(s). "
-        "A single candidate's rank 1 does not establish superiority. "
-        "Full MVP coverage and independent scientific validation remain incomplete."
+        + (
+            "A single candidate's rank 1 does not establish superiority. "
+            if len(sites) == 1
+            else ""
+        )
+        + "Full MVP coverage and independent scientific validation remain incomplete."
     )
 
+acquisition_path = ROOT / "data/metadata/earth_acquisition_status.json"
+if acquisition_path.exists():
+    acquisition = json.loads(acquisition_path.read_text(encoding="utf-8"))
+    prepared_ids = {p.site_id for p in sites}
+    pending = [c for c in acquisition["candidates"] if f"earth_{c['tile']}" not in prepared_ids]
+    if pending:
+        with st.expander(f"Expand Earth coverage: {len(pending)} additional regions pending"):
+            st.write(
+                "These are planned regions, not measured ranking results. Sign in to NASA "
+                "Earthdata to download each ZIP, then place it in "
+                "data/raw/Earth/NASADEM_archives/."
+            )
+            for candidate in pending:
+                st.link_button(
+                    f"Download {candidate['region']} ({candidate['tile']})",
+                    candidate["download_url"],
+                )
+            st.write("After downloading, run this command from the project folder:")
+            st.code(
+                ".venv/Scripts/python.exe scripts/expand_earth_catalog.py --register --build",
+                language="powershell",
+            )
+
 with explore:
+    presets = read_yaml(ROOT / "config/missions.yaml")["missions"]
+    preset = st.selectbox("Mission focus", presets, format_func=lambda p: p["name"])
+    config = mission_scoring(base_config, preset)
+    st.caption(preset["purpose"] + " Weights are uncalibrated engineering presets.")
+    comparison_sites = sites
+    filters = dict(max_precipitation=None, max_temperature=None, geology_class=None)
+    if st.checkbox("Apply Earth field-condition filters"):
+        st.caption(
+            "Filters select Earth testing conditions; they do not score planetary "
+            "environmental similarity. Candidates lacking required evidence are excluded."
+        )
+        dry, cold, lith = st.columns(3)
+        with dry:
+            if st.checkbox("Limit annual precipitation"):
+                filters["max_precipitation"] = st.number_input(
+                    "Maximum annual precipitation (mm)", min_value=0.0, value=250.0
+                )
+        with cold:
+            if st.checkbox("Limit mean air temperature"):
+                filters["max_temperature"] = st.number_input(
+                    "Maximum mean air temperature (°C)", min_value=-100.0, value=0.0
+                )
+        with lith:
+            lithology = st.selectbox(
+                "Mapped lithology at centroid",
+                ["Any", "volcanic", "sedimentary", "unconsolidated", "metamorphic", "plutonic"],
+            )
+            filters["geology_class"] = None if lithology == "Any" else lithology
+        comparison_sites = [
+            p for p in sites if characterize_filter(p, characterization.get(p.site_id), **filters)
+        ]
+        st.info(
+            f"{len(comparison_sites)} of {len(sites)} candidates "
+            "match the selected evidence filters."
+        )
     left, right = st.columns([1, 2])
     with left:
         st.subheader("Choose a reference")
@@ -62,6 +135,27 @@ with explore:
                 pd.DataFrame([reference.model_dump(include=set(FEATURES))]).T, width="stretch"
             )
             st.caption(f"Valid ground coverage: {reference.valid_cell_fraction:.1%}")
+            if reference.body == "Moon":
+                st.info(
+                    "This Shackleton study includes south-pole terrain; it is not a selected "
+                    "base or landing pad. Illumination, ice distribution and communications "
+                    "are not measured by LOLA elevation."
+                )
+                st.markdown(
+                    "[NASA lunar south-pole environment]"
+                    "(https://www.nasa.gov/reference/moonbase-environment/)"
+                )
+            elif reference.body == "Mars":
+                st.caption(
+                    "Jezero contains both igneous crater-floor rocks and sedimentary delta "
+                    "deposits. A single terrain profile does not describe that lithological "
+                    "distribution; inspect the Earth geology evidence separately."
+                )
+                st.markdown(
+                    "[NASA Jezero geology context]"
+                    "(https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/"
+                    "nasas-perseverance-makes-new-discoveries-in-mars-jezero-crater/)"
+                )
         else:
             target = next(
                 t for t in read_yaml(ROOT / "config/targets.yaml")["targets"] if t["body"] == body
@@ -70,7 +164,7 @@ with explore:
             st.caption(target["required_source"])
         run = st.button(
             "Find Earth Analogs",
-            disabled=reference is None or not sites,
+            disabled=reference is None or not comparison_sites,
             type="primary",
             width="stretch",
         )
@@ -83,11 +177,11 @@ with explore:
                 "to enable analysis."
             )
             st.caption(data_error)
-        elif sites:
+        elif comparison_sites:
             points = pd.DataFrame(
                 [
                     {"latitude": p.centroid_lat, "longitude": p.centroid_lon, "site": p.site_name}
-                    for p in sites
+                    for p in comparison_sites
                 ]
             )
             # Basemap tiles may require network; rankings and all evidence remain local.
@@ -95,14 +189,23 @@ with explore:
             st.caption(
                 "Only verified catalog locations are shown. Basemap tiles require a connection."
             )
+            with st.expander("Offline location overview"):
+                st.scatter_chart(points, x="longitude", y="latitude")
+                st.caption(
+                    "Longitude/latitude overview without basemap tiles; not an equal-area map."
+                )
         else:
             st.info("No verified Earth candidates are available.")
     # Recompute from the current selection on each rerun; never reuse stale rankings.
     if run and reference:
         st.session_state["analysis_reference"] = reference.profile_id
-    if reference and st.session_state.get("analysis_reference") == reference.profile_id and sites:
+    if (
+        reference
+        and st.session_state.get("analysis_reference") == reference.profile_id
+        and comparison_sites
+    ):
         try:
-            results = rank_candidates(reference, sites, config)
+            results = rank_candidates(reference, comparison_sites, config)
         except ValueError as error:
             st.error(str(error))
         else:
@@ -155,6 +258,14 @@ with explore:
                     st.markdown(
                         f"[{source.dataset} {source.version}]({source.product_url}) · {source_id}"
                     )
+                render_characterization(site, characterization.get(site.site_id, {}))
+                others = [p for p in comparison_sites if p.site_id != site.site_id]
+                if others:
+                    with st.expander("Compare two Earth candidates"):
+                        other = st.selectbox(
+                            "Compare with", others, format_func=lambda p: p.site_name
+                        )
+                        render_comparison(reference, site, other, ROOT)
             else:
                 st.info(
                     f"No eligible candidates. {len(rejected)} rejected by coverage "
@@ -180,7 +291,14 @@ with explore:
                     )
             st.download_button(
                 "Download analysis CSV",
-                export_analysis(reference, sites, results, config),
+                export_analysis(
+                    reference,
+                    comparison_sites,
+                    results,
+                    config,
+                    characterization=characterization,
+                    selection_metadata={"mission_id": preset["id"], **filters},
+                ),
                 file_name="terratwin_analysis.csv",
                 mime="text/csv",
             )
@@ -229,6 +347,47 @@ with sources_tab:
     st.write(
         "Full MVP acceptance requires one verified Mars reference, one Moon reference, "
         "and at least ten geographically distinct, QA-approved Earth profiles."
+    )
+    st.subheader("Challenge readiness")
+    mapped_count = sum(
+        bool(c.get("geology", {}).get("units"))
+        for c in characterization.values()
+        if c.get("geology")
+    )
+    climate_count = sum(c.get("climate") is not None for c in characterization.values())
+    st.dataframe(
+        pd.DataFrame(
+            [
+                {
+                    "Capability": "Terrain comparison",
+                    "Evidence": f"{len(references)} references; {len(sites)} Earth profiles",
+                },
+                {
+                    "Capability": "Geology",
+                    "Evidence": f"{mapped_count} centroid map interpretations; "
+                    "no whole-ROI mineral maps",
+                },
+                {
+                    "Capability": "Environment",
+                    "Evidence": f"{climate_count} Earth climate summaries; "
+                    "no cross-body climate equivalence",
+                },
+                {
+                    "Capability": "Resources / caves",
+                    "Evidence": "Not assessed; subsurface and resource observations still needed",
+                },
+                {
+                    "Capability": "Candidate discovery",
+                    "Evidence": "Bounded ArcticDEM tile search; no claim of worldwide completeness",
+                },
+                {
+                    "Capability": "Novelty / suitability",
+                    "Evidence": "Unreviewed; independent research and field validation required",
+                },
+            ]
+        ),
+        hide_index=True,
+        width="stretch",
     )
     if sources:
         for source in sources.values():

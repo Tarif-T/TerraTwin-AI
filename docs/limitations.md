@@ -1,11 +1,10 @@
 # Scientific and implementation limitations
 
-- A real Mars/one-Earth slice is numerically verified. Scientific suitability and
-  useful rankings across distinct candidates have not been established.
-- The real Mars/Moon/two-Earth availability checkpoint and >=10-site acceptance
-  criteria remain unmet. Rank 1 among one candidate establishes no superiority.
-- PDS decoding depends on GDAL and an audited interpretation sidecar. Supported
-  mechanics have temporary GeoTIFF tests and a real MOLA comparison; LOLA is blocked.
+- Mars and Moon terrain are numerically verified against 15 real Earth profiles;
+  14 Earth profiles pass coverage QA. The two-reference/ten-site dataset gate passes.
+- Scientific suitability, resource feasibility and novelty are not established.
+- The original global Moon binary remains damaged; a new public polar LOLA DEM
+  supplies the Shackleton reference with an explicitly validated HEIGHT conversion.
 - Source units, vertical datum, masks and coordinate semantics require scientific
   review beyond schema validation. Ingestion does not prove metadata are truthful.
 - The external NASADEM SWB mask is checksummed and applied during preprocessing.
@@ -19,10 +18,11 @@
   coverage near masks.
 - The first map uses online basemap tiles. Numerical analysis, tables, methodology
   and CSV remain local; a self-contained offline basemap is a follow-up task.
-- Interactive map/table selection synchronization, weight sliders, two-site
-  comparison, measured terrain transects and geology tags are not complete.
-- Limited weight sensitivity and independent arithmetic checks were run on the
-  real slice. Broader calibration and held-out expert assessment remain pending.
+- Interactive map/table selection synchronization and free weight sliders remain
+  incomplete. Mission presets, two-site comparison, measured terrain transects and
+  centroid geology context are implemented.
+- Weight sensitivity and independent arithmetic checks cover real candidates
+  and all reference/mission combinations. Broader calibration and held-out expert assessment remain pending.
 - Four aggregate features do not compare crater shape or spatial arrangement.
   A high index can occur for visually different landforms under broad tolerances.
 - The Earth original ZIP checksum has not been independently verified against the
@@ -37,3 +37,7 @@ Terrain similarity does not establish matching geology, chemistry, atmosphere,
 gravity, radiation, temperature, resources, accessibility, operational suitability
 or safety. It is not a NASA recommendation or endorsement. Known analogs must be
 described as baselines; novelty requires a literature review.
+
+Earth climate and geology are centroid context; they do not establish whole-ROI
+conditions or planetary environmental/mineralogical equivalence. Resources and
+caves have no measurement layer yet. See [challenge progress](challenge-progress.md).

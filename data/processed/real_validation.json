@@ -1,9 +1,9 @@
 {
-  "validated_utc": "2026-11-14T00:06:48.340028+00:00",
-  "status": "numerically_verified_limited_real_slice",
+  "validated_utc": "2026-11-14T01:25:38.490142+00:00",
+  "status": "numerically_verified_terrain_catalog",
   "scientific_suitability_validated": false,
-  "input_data_hash": "eaef4049ce83c7112851569ce44775f8afc519fd9755f47d918d3fac67c6c64f",
-  "run_id": "a42d91bc31a4d3a3",
+  "input_data_hash": "fef41165e0517e1e699e679bd91bd77dcfbf06feb99a516243756f3c7ac5aed9",
+  "run_id": "fc07f68a0b4551e9",
   "profiles": [
     {
       "profile_id": "mars_jezero_60km_v1",
@@ -20,7 +20,25 @@
         "steep_fraction_15deg": 0.0
       },
       "valid_cell_fraction": 1.0,
-      "water_mask_removed_analysis_cells": null,
+      "source_mask_removed_analysis_cells": null,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "moon_shackleton_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 8.043030830431494,
+        "relief_p90_p10_m": 2132.66693299078,
+        "roughness_local_std_m": 121.03643018756128,
+        "steep_fraction_15deg": 0.19054696789536266
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": null,
       "raw_to_grid_repeat_exact": true
     },
     {
@@ -38,11 +56,363 @@
         "steep_fraction_15deg": 0.0
       },
       "valid_cell_fraction": 0.9977777777777778,
-      "water_mask_removed_analysis_cells": 8,
+      "source_mask_removed_analysis_cells": 8,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_s24w069_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.0035066735711586,
+        "relief_p90_p10_m": 665.3091512131859,
+        "roughness_local_std_m": 16.752549654932583,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9969444444444444,
+      "source_mask_removed_analysis_cells": 11,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_s25e015_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.9231806079985594,
+        "relief_p90_p10_m": 310.2870465720314,
+        "roughness_local_std_m": 17.548638729945168,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n13e040_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.889556710739407,
+        "relief_p90_p10_m": 349.1601554679503,
+        "roughness_local_std_m": 13.25246036127717,
+        "steep_fraction_15deg": 0.0011890606420927466
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n22e058_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.4461022941284296,
+        "relief_p90_p10_m": 192.38579992735043,
+        "roughness_local_std_m": 7.335986280976929,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_s20w068_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.3903910427299681,
+        "relief_p90_p10_m": 208.96999435212138,
+        "roughness_local_std_m": 6.676436152386554,
+        "steep_fraction_15deg": 0.0015842839036755386
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 8.881784197001252e-16,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9522222222222222,
+      "source_mask_removed_analysis_cells": 172,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n37e095_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.604074416832054,
+        "relief_p90_p10_m": 907.1152646832684,
+        "roughness_local_std_m": 24.41753044671074,
+        "steep_fraction_15deg": 0.015408320493066256
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9763888888888889,
+      "source_mask_removed_analysis_cells": 85,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n25e040_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.46573461037268993,
+        "relief_p90_p10_m": 124.20241743949805,
+        "roughness_local_std_m": 7.251940560036049,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_s25e135_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.07432110139135562,
+        "relief_p90_p10_m": 49.40472868603206,
+        "roughness_local_std_m": 1.0948720978174467,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n34w116_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.807242717364224,
+        "relief_p90_p10_m": 712.5688717341692,
+        "roughness_local_std_m": 27.12915918236606,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9988888888888889,
+      "source_mask_removed_analysis_cells": 4,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n24e010_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.6044910491373425,
+        "relief_p90_p10_m": 322.4005779975396,
+        "roughness_local_std_m": 28.008621963330175,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": 0,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_rema_18_35_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.7039117804405823,
+        "relief_p90_p10_m": 1073.6063014381434,
+        "roughness_local_std_m": 27.11571018513014,
+        "steep_fraction_15deg": 0.05083234244946492
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "source_mask_removed_analysis_cells": null,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_arctic_26_29_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 3.490080578047087,
+        "relief_p90_p10_m": 505.63265649638004,
+        "roughness_local_std_m": 53.658893771296114,
+        "steep_fraction_15deg": 0.004407713498622589
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.8247222222222222,
+      "source_mask_removed_analysis_cells": 631,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_arctic_28_30_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.894742220184288,
+        "relief_p90_p10_m": 323.4714064917255,
+        "roughness_local_std_m": 28.49051960945248,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9394444444444444,
+      "source_mask_removed_analysis_cells": 218,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_arctic_29_25_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 0.3131681891545944,
+        "relief_p90_p10_m": 73.42472182112866,
+        "roughness_local_std_m": 5.10686423109186,
+        "steep_fraction_15deg": 0.0
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 0.0,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9227777777777778,
+      "source_mask_removed_analysis_cells": 278,
       "raw_to_grid_repeat_exact": true
     }
   ],
   "rankings": [
+    {
+      "site_id": "earth_n34w116",
+      "site_name": "Mojave-area exploratory ROI",
+      "similarity_index": 99.0197537663576,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.807242717364224,
+          "similarity": 0.9926996510265341,
+          "weight": 0.4,
+          "contribution": 0.39707986041061366,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 712.5688717341692,
+          "similarity": 0.9854624400101945,
+          "weight": 0.3,
+          "contribution": 0.29563873200305835,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 27.12915918236606,
+          "similarity": 0.9944051633164965,
+          "weight": 0.2,
+          "contribution": 0.19888103266329932,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N34W116_HGT",
+        "NASADEM_N34W116_NUM",
+        "NASADEM_N34W116_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 1
+    },
+    {
+      "site_id": "earth_s24w069",
+      "site_name": "Atacama-area exploratory ROI",
+      "similarity_index": 94.42106988263667,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.0035066735711586,
+          "similarity": 0.91603497629801,
+          "weight": 0.4,
+          "contribution": 0.36641399051920404,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 665.3091512131859,
+          "similarity": 0.967910693461453,
+          "weight": 0.3,
+          "contribution": 0.29037320803843586,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 16.752549654932583,
+          "similarity": 0.9441279384106107,
+          "weight": 0.2,
+          "contribution": 0.18882558768212215,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_S24W069_HGT",
+        "NASADEM_S24W069_NUM",
+        "NASADEM_S24W069_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 2
+    },
     {
       "site_id": "earth_n36w117",
       "site_name": "Death Valley-area tile-centered ROI",
@@ -90,72 +460,3900 @@
         "NASADEM_N36W117_NUM",
         "NASADEM_N36W117_SWB"
       ],
-      "warning": "Single availability-selected candidate; rank 1 does not establish superiority.; Original Earth ZIP publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
-      "rank": 1
+      "warning": "Original Earth ZIP publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 3
+    },
+    {
+      "site_id": "earth_n37e095",
+      "site_name": "Qaidam-area exploratory ROI",
+      "similarity_index": 92.62582521076659,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.604074416832054,
+          "similarity": 0.9727346405330296,
+          "weight": 0.4,
+          "contribution": 0.38909385621321185,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 907.1152646832684,
+          "similarity": 0.8112405508391262,
+          "weight": 0.3,
+          "contribution": 0.24337216525173783,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 24.41753044671074,
+          "similarity": 0.9810138609738741,
+          "weight": 0.2,
+          "contribution": 0.19620277219477483,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.015408320493066256,
+          "similarity": 0.975894584479415,
+          "weight": 0.1,
+          "contribution": 0.09758945844794151,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N37E095_HGT",
+        "NASADEM_N37E095_NUM",
+        "NASADEM_N37E095_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 4
+    },
+    {
+      "site_id": "earth_arctic_28_30",
+      "site_name": "ArcticDEM search candidate 28_30",
+      "similarity_index": 90.40896373397418,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.894742220184288,
+          "similarity": 0.9985781883774768,
+          "weight": 0.4,
+          "contribution": 0.39943127535099077,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 323.4714064917255,
+          "similarity": 0.6876651916748611,
+          "weight": 0.3,
+          "contribution": 0.20629955750245832,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 28.49051960945248,
+          "similarity": 0.9988044594984404,
+          "weight": 0.2,
+          "contribution": 0.1997608918996881,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "ARCTICDEM_28_30_32M",
+        "ARCTICDEM_28_30_32M_DATAMASK",
+        "ARCTICDEM_28_30_32M_MASK_UINT8",
+        "MOLA_MEGT44N000HB"
+      ],
+      "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 5
+    },
+    {
+      "site_id": "earth_n24e010",
+      "site_name": "Central Sahara exploratory ROI",
+      "similarity_index": 89.35442449731461,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.6044910491373425,
+          "similarity": 0.9727751686448617,
+          "weight": 0.4,
+          "contribution": 0.3891100674579447,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 322.4005779975396,
+          "similarity": 0.6869292143162463,
+          "weight": 0.3,
+          "contribution": 0.2060787642948739,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 28.008621963330175,
+          "similarity": 0.9987875031686142,
+          "weight": 0.2,
+          "contribution": 0.19975750063372286,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N24E010_HGT",
+        "NASADEM_N24E010_NUM",
+        "NASADEM_N24E010_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 6
+    },
+    {
+      "site_id": "earth_rema_18_35",
+      "site_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+      "similarity_index": 88.72304278702943,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.7039117804405823,
+          "similarity": 0.9824948071279991,
+          "weight": 0.4,
+          "contribution": 0.39299792285119967,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 1073.6063014381434,
+          "similarity": 0.6868209164803206,
+          "weight": 0.3,
+          "contribution": 0.2060462749440962,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 27.11571018513014,
+          "similarity": 0.9943382968032765,
+          "weight": 0.2,
+          "contribution": 0.1988676593606553,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.05083234244946492,
+          "similarity": 0.8931857071434305,
+          "weight": 0.1,
+          "contribution": 0.08931857071434306,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "REMA_18_35_32M"
+      ],
+      "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 7
+    },
+    {
+      "site_id": "earth_n13e040",
+      "site_name": "Afar-area exploratory ROI",
+      "similarity_index": 85.8371443433379,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.889556710739407,
+          "similarity": 0.9056560076079947,
+          "weight": 0.4,
+          "contribution": 0.3622624030431979,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 349.1601554679503,
+          "similarity": 0.705559304819938,
+          "weight": 0.3,
+          "contribution": 0.21166779144598138,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 13.25246036127717,
+          "similarity": 0.9277490152224462,
+          "weight": 0.2,
+          "contribution": 0.18554980304448926,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0011890606420927466,
+          "similarity": 0.9889144589971051,
+          "weight": 0.1,
+          "contribution": 0.09889144589971051,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N13E040_HGT",
+        "NASADEM_N13E040_NUM",
+        "NASADEM_N13E040_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 8
+    },
+    {
+      "site_id": "earth_s25e015",
+      "site_name": "Namib-area exploratory ROI",
+      "similarity_index": 85.52566101916064,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.9231806079985594,
+          "similarity": 0.9087063013275217,
+          "weight": 0.4,
+          "contribution": 0.3634825205310087,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 310.2870465720314,
+          "similarity": 0.6786582719893925,
+          "weight": 0.3,
+          "contribution": 0.20359748159681776,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 17.548638729945168,
+          "similarity": 0.947893477385876,
+          "weight": 0.2,
+          "contribution": 0.1895786954771752,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_S25E015_HGT",
+        "NASADEM_S25E015_NUM",
+        "NASADEM_S25E015_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 9
+    },
+    {
+      "site_id": "earth_s20w068",
+      "site_name": "Altiplano-area exploratory ROI",
+      "similarity_index": 80.71408740709467,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.3903910427299681,
+          "similarity": 0.8615585224976595,
+          "weight": 0.4,
+          "contribution": 0.34462340899906385,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 208.96999435212138,
+          "similarity": 0.6132671615507712,
+          "weight": 0.3,
+          "contribution": 0.18398014846523136,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 6.676436152386555,
+          "similarity": 0.8977405595986645,
+          "weight": 0.2,
+          "contribution": 0.1795481119197329,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0015842839036755386,
+          "similarity": 0.9898920468691856,
+          "weight": 0.1,
+          "contribution": 0.09898920468691857,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_S20W068_HGT",
+        "NASADEM_S20W068_NUM",
+        "NASADEM_S20W068_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 10
+    },
+    {
+      "site_id": "earth_n22e058",
+      "site_name": "Oman exploratory ROI",
+      "similarity_index": 80.62419611489692,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.4461022941284296,
+          "similarity": 0.866371767989049,
+          "weight": 0.4,
+          "contribution": 0.34654870719561964,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 192.38579992735043,
+          "similarity": 0.6031804905474559,
+          "weight": 0.3,
+          "contribution": 0.18095414716423677,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 7.335986280976929,
+          "similarity": 0.9007059710125404,
+          "weight": 0.2,
+          "contribution": 0.18014119420250807,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N22E058_HGT",
+        "NASADEM_N22E058_NUM",
+        "NASADEM_N22E058_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 11
+    },
+    {
+      "site_id": "earth_n25e040",
+      "site_name": "Saudi Arabia exploratory ROI",
+      "similarity_index": 79.49204608067191,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.46573461037268993,
+          "similarity": 0.8680743271546285,
+          "weight": 0.4,
+          "contribution": 0.34722973086185144,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 124.20241743949805,
+          "similarity": 0.5634243591163941,
+          "weight": 0.3,
+          "contribution": 0.16902730773491823,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 7.251940560036049,
+          "similarity": 0.9003275481167244,
+          "weight": 0.2,
+          "contribution": 0.1800655096233449,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N25E040_HGT",
+        "NASADEM_N25E040_NUM",
+        "NASADEM_N25E040_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 12
+    },
+    {
+      "site_id": "earth_arctic_29_25",
+      "site_name": "ArcticDEM search candidate 29_25",
+      "similarity_index": 77.93736051127875,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.3131681891545944,
+          "similarity": 0.8549309446937743,
+          "weight": 0.4,
+          "contribution": 0.3419723778775097,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 73.42472182112866,
+          "similarity": 0.5355291881799935,
+          "weight": 0.3,
+          "contribution": 0.16065875645399805,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 5.10686423109186,
+          "similarity": 0.8907227909733757,
+          "weight": 0.2,
+          "contribution": 0.17814455819467515,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "ARCTICDEM_29_25_32M",
+        "ARCTICDEM_29_25_32M_DATAMASK",
+        "ARCTICDEM_29_25_32M_MASK_UINT8",
+        "MOLA_MEGT44N000HB"
+      ],
+      "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 13
+    },
+    {
+      "site_id": "earth_s25e135",
+      "site_name": "Central Australia exploratory ROI",
+      "similarity_index": 76.39514538663146,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 0.07432110139135562,
+          "similarity": 0.8347530982929474,
+          "weight": 0.4,
+          "contribution": 0.33390123931717897,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 49.40472868603206,
+          "similarity": 0.5228190406821778,
+          "weight": 0.3,
+          "contribution": 0.15684571220465332,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 1.0948720978174467,
+          "similarity": 0.873032948789388,
+          "weight": 0.2,
+          "contribution": 0.1746065897578776,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.0,
+          "similarity": 0.9859791258660464,
+          "weight": 0.1,
+          "contribution": 0.09859791258660465,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_S25E135_HGT",
+        "NASADEM_S25E135_NUM",
+        "NASADEM_S25E135_SWB"
+      ],
+      "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 14
+    },
+    {
+      "site_id": "earth_arctic_26_29",
+      "site_name": "ArcticDEM search candidate 26_29",
+      "similarity_index": 86.38817916734848,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": false,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 3.490080578047087,
+          "similarity": 0.8513289676354301,
+          "weight": 0.4,
+          "contribution": 0.3405315870541721,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 505.63265649638004,
+          "similarity": 0.8250659557335598,
+          "weight": 0.3,
+          "contribution": 0.2475197867200679,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 53.658893771296114,
+          "similarity": 0.8807000939101792,
+          "weight": 0.2,
+          "contribution": 0.17614001878203586,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.004407713498622589,
+          "similarity": 0.9969039911720903,
+          "weight": 0.1,
+          "contribution": 0.09969039911720903,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "ARCTICDEM_26_29_32M",
+        "ARCTICDEM_26_29_32M_DATAMASK",
+        "ARCTICDEM_26_29_32M_MASK_UINT8",
+        "MOLA_MEGT44N000HB"
+      ],
+      "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Valid raster coverage below 90%; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.; Insufficient raster quality",
+      "rank": null
     }
   ],
+  "reference_analyses": {
+    "mars_jezero_60km_v1": {
+      "body": "Mars",
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "site_name": "Mojave-area exploratory ROI",
+          "similarity_index": 99.0197537663576,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.807242717364224,
+              "similarity": 0.9926996510265341,
+              "weight": 0.4,
+              "contribution": 0.39707986041061366,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 712.5688717341692,
+              "similarity": 0.9854624400101945,
+              "weight": 0.3,
+              "contribution": 0.29563873200305835,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 27.12915918236606,
+              "similarity": 0.9944051633164965,
+              "weight": 0.2,
+              "contribution": 0.19888103266329932,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N34W116_HGT",
+            "NASADEM_N34W116_NUM",
+            "NASADEM_N34W116_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 1
+        },
+        {
+          "site_id": "earth_s24w069",
+          "site_name": "Atacama-area exploratory ROI",
+          "similarity_index": 94.42106988263667,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.0035066735711586,
+              "similarity": 0.91603497629801,
+              "weight": 0.4,
+              "contribution": 0.36641399051920404,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 665.3091512131859,
+              "similarity": 0.967910693461453,
+              "weight": 0.3,
+              "contribution": 0.29037320803843586,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 16.752549654932583,
+              "similarity": 0.9441279384106107,
+              "weight": 0.2,
+              "contribution": 0.18882558768212215,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_S24W069_HGT",
+            "NASADEM_S24W069_NUM",
+            "NASADEM_S24W069_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 2
+        },
+        {
+          "site_id": "earth_n36w117",
+          "site_name": "Death Valley-area tile-centered ROI",
+          "similarity_index": 94.0642908732807,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.6581225710490757,
+              "similarity": 0.9780063251274592,
+              "weight": 0.4,
+              "contribution": 0.3912025300509837,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 525.9304645945928,
+              "similarity": 0.8419841060012301,
+              "weight": 0.3,
+              "contribution": 0.252595231800369,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 27.688895107200295,
+              "similarity": 0.997192082813576,
+              "weight": 0.2,
+              "contribution": 0.19943841656271522,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.01615798922800718,
+              "similarity": 0.9740673031873908,
+              "weight": 0.1,
+              "contribution": 0.09740673031873909,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N36W117_HGT",
+            "NASADEM_N36W117_NUM",
+            "NASADEM_N36W117_SWB"
+          ],
+          "warning": "Original Earth ZIP publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 3
+        },
+        {
+          "site_id": "earth_n37e095",
+          "site_name": "Qaidam-area exploratory ROI",
+          "similarity_index": 92.62582521076659,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.604074416832054,
+              "similarity": 0.9727346405330296,
+              "weight": 0.4,
+              "contribution": 0.38909385621321185,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 907.1152646832684,
+              "similarity": 0.8112405508391262,
+              "weight": 0.3,
+              "contribution": 0.24337216525173783,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 24.41753044671074,
+              "similarity": 0.9810138609738741,
+              "weight": 0.2,
+              "contribution": 0.19620277219477483,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.015408320493066256,
+              "similarity": 0.975894584479415,
+              "weight": 0.1,
+              "contribution": 0.09758945844794151,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N37E095_HGT",
+            "NASADEM_N37E095_NUM",
+            "NASADEM_N37E095_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 4
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "site_name": "ArcticDEM search candidate 28_30",
+          "similarity_index": 90.40896373397418,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.894742220184288,
+              "similarity": 0.9985781883774768,
+              "weight": 0.4,
+              "contribution": 0.39943127535099077,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 323.4714064917255,
+              "similarity": 0.6876651916748611,
+              "weight": 0.3,
+              "contribution": 0.20629955750245832,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 28.49051960945248,
+              "similarity": 0.9988044594984404,
+              "weight": 0.2,
+              "contribution": 0.1997608918996881,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_28_30_32M",
+            "ARCTICDEM_28_30_32M_DATAMASK",
+            "ARCTICDEM_28_30_32M_MASK_UINT8",
+            "MOLA_MEGT44N000HB"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 5
+        },
+        {
+          "site_id": "earth_n24e010",
+          "site_name": "Central Sahara exploratory ROI",
+          "similarity_index": 89.35442449731461,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.6044910491373425,
+              "similarity": 0.9727751686448617,
+              "weight": 0.4,
+              "contribution": 0.3891100674579447,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 322.4005779975396,
+              "similarity": 0.6869292143162463,
+              "weight": 0.3,
+              "contribution": 0.2060787642948739,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 28.008621963330175,
+              "similarity": 0.9987875031686142,
+              "weight": 0.2,
+              "contribution": 0.19975750063372286,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N24E010_HGT",
+            "NASADEM_N24E010_NUM",
+            "NASADEM_N24E010_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 6
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "site_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+          "similarity_index": 88.72304278702943,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 1.7039117804405823,
+              "similarity": 0.9824948071279991,
+              "weight": 0.4,
+              "contribution": 0.39299792285119967,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 1073.6063014381434,
+              "similarity": 0.6868209164803206,
+              "weight": 0.3,
+              "contribution": 0.2060462749440962,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 27.11571018513014,
+              "similarity": 0.9943382968032765,
+              "weight": 0.2,
+              "contribution": 0.1988676593606553,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.05083234244946492,
+              "similarity": 0.8931857071434305,
+              "weight": 0.1,
+              "contribution": 0.08931857071434306,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "REMA_18_35_32M"
+          ],
+          "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 7
+        },
+        {
+          "site_id": "earth_n13e040",
+          "site_name": "Afar-area exploratory ROI",
+          "similarity_index": 85.8371443433379,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.889556710739407,
+              "similarity": 0.9056560076079947,
+              "weight": 0.4,
+              "contribution": 0.3622624030431979,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 349.1601554679503,
+              "similarity": 0.705559304819938,
+              "weight": 0.3,
+              "contribution": 0.21166779144598138,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 13.25246036127717,
+              "similarity": 0.9277490152224462,
+              "weight": 0.2,
+              "contribution": 0.18554980304448926,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0011890606420927466,
+              "similarity": 0.9889144589971051,
+              "weight": 0.1,
+              "contribution": 0.09889144589971051,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N13E040_HGT",
+            "NASADEM_N13E040_NUM",
+            "NASADEM_N13E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 8
+        },
+        {
+          "site_id": "earth_s25e015",
+          "site_name": "Namib-area exploratory ROI",
+          "similarity_index": 85.52566101916064,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.9231806079985594,
+              "similarity": 0.9087063013275217,
+              "weight": 0.4,
+              "contribution": 0.3634825205310087,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 310.2870465720314,
+              "similarity": 0.6786582719893925,
+              "weight": 0.3,
+              "contribution": 0.20359748159681776,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 17.548638729945168,
+              "similarity": 0.947893477385876,
+              "weight": 0.2,
+              "contribution": 0.1895786954771752,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_S25E015_HGT",
+            "NASADEM_S25E015_NUM",
+            "NASADEM_S25E015_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 9
+        },
+        {
+          "site_id": "earth_s20w068",
+          "site_name": "Altiplano-area exploratory ROI",
+          "similarity_index": 80.71408740709467,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.3903910427299681,
+              "similarity": 0.8615585224976595,
+              "weight": 0.4,
+              "contribution": 0.34462340899906385,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 208.96999435212138,
+              "similarity": 0.6132671615507712,
+              "weight": 0.3,
+              "contribution": 0.18398014846523136,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 6.676436152386555,
+              "similarity": 0.8977405595986645,
+              "weight": 0.2,
+              "contribution": 0.1795481119197329,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0015842839036755386,
+              "similarity": 0.9898920468691856,
+              "weight": 0.1,
+              "contribution": 0.09898920468691857,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_S20W068_HGT",
+            "NASADEM_S20W068_NUM",
+            "NASADEM_S20W068_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 10
+        },
+        {
+          "site_id": "earth_n22e058",
+          "site_name": "Oman exploratory ROI",
+          "similarity_index": 80.62419611489692,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.4461022941284296,
+              "similarity": 0.866371767989049,
+              "weight": 0.4,
+              "contribution": 0.34654870719561964,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 192.38579992735043,
+              "similarity": 0.6031804905474559,
+              "weight": 0.3,
+              "contribution": 0.18095414716423677,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 7.335986280976929,
+              "similarity": 0.9007059710125404,
+              "weight": 0.2,
+              "contribution": 0.18014119420250807,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N22E058_HGT",
+            "NASADEM_N22E058_NUM",
+            "NASADEM_N22E058_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 11
+        },
+        {
+          "site_id": "earth_n25e040",
+          "site_name": "Saudi Arabia exploratory ROI",
+          "similarity_index": 79.49204608067191,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.46573461037268993,
+              "similarity": 0.8680743271546285,
+              "weight": 0.4,
+              "contribution": 0.34722973086185144,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 124.20241743949805,
+              "similarity": 0.5634243591163941,
+              "weight": 0.3,
+              "contribution": 0.16902730773491823,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 7.251940560036049,
+              "similarity": 0.9003275481167244,
+              "weight": 0.2,
+              "contribution": 0.1800655096233449,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_N25E040_HGT",
+            "NASADEM_N25E040_NUM",
+            "NASADEM_N25E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 12
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "site_name": "ArcticDEM search candidate 29_25",
+          "similarity_index": 77.93736051127875,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.3131681891545944,
+              "similarity": 0.8549309446937743,
+              "weight": 0.4,
+              "contribution": 0.3419723778775097,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 73.42472182112866,
+              "similarity": 0.5355291881799935,
+              "weight": 0.3,
+              "contribution": 0.16065875645399805,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 5.10686423109186,
+              "similarity": 0.8907227909733757,
+              "weight": 0.2,
+              "contribution": 0.17814455819467515,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_29_25_32M",
+            "ARCTICDEM_29_25_32M_DATAMASK",
+            "ARCTICDEM_29_25_32M_MASK_UINT8",
+            "MOLA_MEGT44N000HB"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 13
+        },
+        {
+          "site_id": "earth_s25e135",
+          "site_name": "Central Australia exploratory ROI",
+          "similarity_index": 76.39514538663146,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 0.07432110139135562,
+              "similarity": 0.8347530982929474,
+              "weight": 0.4,
+              "contribution": 0.33390123931717897,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 49.40472868603206,
+              "similarity": 0.5228190406821778,
+              "weight": 0.3,
+              "contribution": 0.15684571220465332,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 1.0948720978174467,
+              "similarity": 0.873032948789388,
+              "weight": 0.2,
+              "contribution": 0.1746065897578776,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.0,
+              "similarity": 0.9859791258660464,
+              "weight": 0.1,
+              "contribution": 0.09859791258660465,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "MOLA_MEGT44N000HB",
+            "NASADEM_S25E135_HGT",
+            "NASADEM_S25E135_NUM",
+            "NASADEM_S25E135_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+          "rank": 14
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "site_name": "ArcticDEM search candidate 26_29",
+          "similarity_index": 86.38817916734848,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": false,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 1.8805139866265086,
+              "site_value": 3.490080578047087,
+              "similarity": 0.8513289676354301,
+              "weight": 0.4,
+              "contribution": 0.3405315870541721,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 697.9246059956658,
+              "site_value": 505.63265649638004,
+              "similarity": 0.8250659557335598,
+              "weight": 0.3,
+              "contribution": 0.2475197867200679,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 28.251268463408813,
+              "site_value": 53.658893771296114,
+              "similarity": 0.8807000939101792,
+              "weight": 0.2,
+              "contribution": 0.17614001878203586,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.005648038049940547,
+              "site_value": 0.004407713498622589,
+              "similarity": 0.9969039911720903,
+              "weight": 0.1,
+              "contribution": 0.09969039911720903,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_26_29_32M",
+            "ARCTICDEM_26_29_32M_DATAMASK",
+            "ARCTICDEM_26_29_32M_MASK_UINT8",
+            "MOLA_MEGT44N000HB"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Valid raster coverage below 90%; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.; Insufficient raster quality",
+          "rank": null
+        }
+      ],
+      "missions": {
+        "terrain_baseline": [
+          {
+            "site_id": "earth_n34w116",
+            "rank": 1,
+            "similarity_index": 99.0197537663576,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 2,
+            "similarity_index": 94.42106988263667,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 3,
+            "similarity_index": 94.0642908732807,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 4,
+            "similarity_index": 92.62582521076659,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 5,
+            "similarity_index": 90.40896373397418,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 6,
+            "similarity_index": 89.35442449731461,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 7,
+            "similarity_index": 88.72304278702943,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 8,
+            "similarity_index": 85.8371443433379,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 9,
+            "similarity_index": 85.52566101916064,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 10,
+            "similarity_index": 80.71408740709467,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 11,
+            "similarity_index": 80.62419611489692,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 12,
+            "similarity_index": 79.49204608067191,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 77.93736051127875,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 76.39514538663146,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 86.38817916734848,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "rover_mobility": [
+          {
+            "site_id": "earth_n34w116",
+            "rank": 1,
+            "similarity_index": 99.06369010927708,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 2,
+            "similarity_index": 96.72564992670425,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 3,
+            "similarity_index": 96.43823773035504,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 4,
+            "similarity_index": 95.90310616384046,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 5,
+            "similarity_index": 95.26940294220468,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 6,
+            "similarity_index": 94.43271778288835,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 7,
+            "similarity_index": 93.29688410021446,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 8,
+            "similarity_index": 91.28571397400108,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 9,
+            "similarity_index": 91.0879551699357,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 10,
+            "similarity_index": 87.68213203188373,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 11,
+            "similarity_index": 87.60491749160533,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 12,
+            "similarity_index": 87.35361742210787,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 86.29111835913845,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 84.90221695244333,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 89.09706475843579,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "terrain_diversity": [
+          {
+            "site_id": "earth_n34w116",
+            "rank": 1,
+            "similarity_index": 98.96443677909382,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 2,
+            "similarity_index": 95.22075667539711,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 3,
+            "similarity_index": 92.89592625887957,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 4,
+            "similarity_index": 91.09367651823601,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 5,
+            "similarity_index": 87.30209647815765,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 6,
+            "similarity_index": 86.75608829926598,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 7,
+            "similarity_index": 85.8847387773054,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 8,
+            "similarity_index": 84.05710739160186,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 9,
+            "similarity_index": 83.61705248636288,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 10,
+            "similarity_index": 78.59299416863583,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 11,
+            "similarity_index": 78.3356253707159,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 12,
+            "similarity_index": 76.76807860991055,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 75.10126140893696,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 73.65860331548816,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 86.41926031107728,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ]
+      },
+      "csv_input_hash": "fef41165e0517e1e699e679bd91bd77dcfbf06feb99a516243756f3c7ac5aed9"
+    },
+    "moon_shackleton_60km_v1": {
+      "body": "Moon",
+      "rankings": [
+        {
+          "site_id": "earth_rema_18_35",
+          "site_name": "Antarctic REMA 18_35 tile-centered polar ROI",
+          "similarity_index": 51.18085083657383,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.7039117804405823,
+              "similarity": 0.530512422295778,
+              "weight": 0.4,
+              "contribution": 0.2122049689183112,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 1073.6063014381434,
+              "similarity": 0.3467814128931313,
+              "weight": 0.3,
+              "contribution": 0.10403442386793939,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 27.11571018513014,
+              "similarity": 0.6252500682849649,
+              "weight": 0.2,
+              "contribution": 0.12505001365699298,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.05083234244946492,
+              "similarity": 0.7051910192249473,
+              "weight": 0.1,
+              "contribution": 0.07051910192249473,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "REMA_18_35_32M"
+          ],
+          "warning": "Scientific analog suitability unvalidated.; REMA v2 mosaic 32 m digital surface model; WGS84 ellipsoidal metre heights. May include snow/ice surfaces; not an exposed-rock mask. Center fixed at EPSG:3031 (450000,-1250000), tile midpoint before scoring. DOI 10.7910/DVN/EBW8UC; credit Howat et al. and PGC.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 1
+        },
+        {
+          "site_id": "earth_n37e095",
+          "site_name": "Qaidam-area exploratory ROI",
+          "similarity_index": 48.60924001316855,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.604074416832054,
+              "similarity": 0.5252422777772096,
+              "weight": 0.4,
+              "contribution": 0.21009691111088383,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 907.1152646832684,
+              "similarity": 0.29359568820276194,
+              "weight": 0.3,
+              "contribution": 0.08807870646082858,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 24.41753044671074,
+              "similarity": 0.6168715270591303,
+              "weight": 0.2,
+              "contribution": 0.12337430541182606,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.015408320493066256,
+              "similarity": 0.6454247714814706,
+              "weight": 0.1,
+              "contribution": 0.06454247714814706,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N37E095_HGT",
+            "NASADEM_N37E095_NUM",
+            "NASADEM_N37E095_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 2
+        },
+        {
+          "site_id": "earth_n34w116",
+          "site_name": "Mojave-area exploratory ROI",
+          "similarity_index": 47.40781142088132,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.807242717364224,
+              "similarity": 0.5360226768197561,
+              "weight": 0.4,
+              "contribution": 0.21440907072790247,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 712.5688717341692,
+              "similarity": 0.24169031527892326,
+              "weight": 0.3,
+              "contribution": 0.07250709458367698,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 27.12915918236606,
+              "similarity": 0.6252921146308527,
+              "weight": 0.2,
+              "contribution": 0.12505842292617053,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N34W116_HGT",
+            "NASADEM_N34W116_NUM",
+            "NASADEM_N34W116_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 3
+        },
+        {
+          "site_id": "earth_n36w117",
+          "site_name": "Death Valley-area tile-centered ROI",
+          "similarity_index": 46.14702919998886,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.6581225710490757,
+              "similarity": 0.5280888008768536,
+              "weight": 0.4,
+              "contribution": 0.21123552035074145,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 525.9304645945928,
+              "similarity": 0.20054101924516893,
+              "weight": 0.3,
+              "contribution": 0.060162305773550674,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 27.688895107200295,
+              "similarity": 0.6270445580512214,
+              "weight": 0.2,
+              "contribution": 0.12540891161024428,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.01615798922800718,
+              "similarity": 0.646635542653522,
+              "weight": 0.1,
+              "contribution": 0.0646635542653522,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N36W117_HGT",
+            "NASADEM_N36W117_NUM",
+            "NASADEM_N36W117_SWB"
+          ],
+          "warning": "Original Earth ZIP publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 4
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "site_name": "ArcticDEM search candidate 28_30",
+          "similarity_index": 45.34452252995581,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.894742220184288,
+              "similarity": 0.5407334279558792,
+              "weight": 0.4,
+              "contribution": 0.2162933711823517,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 323.4714064917255,
+              "similarity": 0.16378584518993242,
+              "weight": 0.3,
+              "contribution": 0.049135753556979724,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 28.49051960945248,
+              "similarity": 0.6295628729458171,
+              "weight": 0.2,
+              "contribution": 0.12591257458916344,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_28_30_32M",
+            "ARCTICDEM_28_30_32M_DATAMASK",
+            "ARCTICDEM_28_30_32M_MASK_UINT8",
+            "LOLA_LDEM_875S_20M"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 5
+        },
+        {
+          "site_id": "earth_s24w069",
+          "site_name": "Atacama-area exploratory ROI",
+          "similarity_index": 44.78497093618303,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.0035066735711586,
+              "similarity": 0.4946264658681307,
+              "weight": 0.4,
+              "contribution": 0.19785058634725228,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 665.3091512131859,
+              "similarity": 0.2305338017921855,
+              "weight": 0.3,
+              "contribution": 0.06916014053765565,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 16.752549654932583,
+              "similarity": 0.5936772825292957,
+              "weight": 0.2,
+              "contribution": 0.11873545650585915,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_S24W069_HGT",
+            "NASADEM_S24W069_NUM",
+            "NASADEM_S24W069_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 6
+        },
+        {
+          "site_id": "earth_n24e010",
+          "site_name": "Central Sahara exploratory ROI",
+          "similarity_index": 44.69019112639657,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 1.6044910491373425,
+              "similarity": 0.5252641615231827,
+              "weight": 0.4,
+              "contribution": 0.21010566460927307,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 322.4005779975396,
+              "similarity": 0.16361055251090678,
+              "weight": 0.3,
+              "contribution": 0.04908316575327203,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 28.008621963330175,
+              "similarity": 0.6280477746517867,
+              "weight": 0.2,
+              "contribution": 0.12560955493035736,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N24E010_HGT",
+            "NASADEM_N24E010_NUM",
+            "NASADEM_N24E010_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 7
+        },
+        {
+          "site_id": "earth_s25e015",
+          "site_name": "Namib-area exploratory ROI",
+          "similarity_index": 42.60724226108764,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.9231806079985594,
+              "similarity": 0.4906692407687153,
+              "weight": 0.4,
+              "contribution": 0.19626769630748614,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 310.2870465720314,
+              "similarity": 0.16164060653149556,
+              "weight": 0.3,
+              "contribution": 0.04849218195944867,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 17.548638729945168,
+              "similarity": 0.5960450918643918,
+              "weight": 0.2,
+              "contribution": 0.11920901837287837,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_S25E015_HGT",
+            "NASADEM_S25E015_NUM",
+            "NASADEM_S25E015_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 8
+        },
+        {
+          "site_id": "earth_n13e040",
+          "site_name": "Afar-area exploratory ROI",
+          "similarity_index": 42.49872404790059,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.889556710739407,
+              "similarity": 0.4890221901195722,
+              "weight": 0.4,
+              "contribution": 0.1956088760478289,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 349.1601554679503,
+              "similarity": 0.16804780650609633,
+              "weight": 0.3,
+              "contribution": 0.050414341951828895,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 13.25246036127717,
+              "similarity": 0.5833780484811274,
+              "weight": 0.2,
+              "contribution": 0.11667560969622548,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0011890606420927466,
+              "similarity": 0.6228841278312259,
+              "weight": 0.1,
+              "contribution": 0.062288412783122596,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N13E040_HGT",
+            "NASADEM_N13E040_NUM",
+            "NASADEM_N13E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 9
+        },
+        {
+          "site_id": "earth_n22e058",
+          "site_name": "Oman exploratory ROI",
+          "similarity_index": 40.56012503365531,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.4461022941284296,
+              "similarity": 0.46781009111701793,
+              "weight": 0.4,
+              "contribution": 0.1871240364468072,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 192.38579992735043,
+              "similarity": 0.14366355552442112,
+              "weight": 0.3,
+              "contribution": 0.04309906665732633,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 7.335986280976929,
+              "similarity": 0.5663731063067818,
+              "weight": 0.2,
+              "contribution": 0.11327462126135637,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N22E058_HGT",
+            "NASADEM_N22E058_NUM",
+            "NASADEM_N22E058_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 10
+        },
+        {
+          "site_id": "earth_s20w068",
+          "site_name": "Altiplano-area exploratory ROI",
+          "similarity_index": 40.515590615017054,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.3903910427299681,
+              "similarity": 0.46521110890742684,
+              "weight": 0.4,
+              "contribution": 0.18608444356297074,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 208.96999435212138,
+              "similarity": 0.14606596581860382,
+              "weight": 0.3,
+              "contribution": 0.04381978974558114,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 6.676436152386555,
+              "similarity": 0.5645084253476156,
+              "weight": 0.2,
+              "contribution": 0.11290168506952312,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0015842839036755386,
+              "similarity": 0.6234998777209554,
+              "weight": 0.1,
+              "contribution": 0.06234998777209554,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_S20W068_HGT",
+            "NASADEM_S20W068_NUM",
+            "NASADEM_S20W068_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 11
+        },
+        {
+          "site_id": "earth_n25e040",
+          "site_name": "Saudi Arabia exploratory ROI",
+          "similarity_index": 40.30806921884981,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.46573461037268993,
+              "similarity": 0.46872941280755565,
+              "weight": 0.4,
+              "contribution": 0.18749176512302226,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 124.20241743949805,
+              "similarity": 0.13419457022932532,
+              "weight": 0.3,
+              "contribution": 0.040258371068797594,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 7.251940560036049,
+              "similarity": 0.5661351501280747,
+              "weight": 0.2,
+              "contribution": 0.11322703002561495,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_N25E040_HGT",
+            "NASADEM_N25E040_NUM",
+            "NASADEM_N25E040_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 12
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "site_name": "ArcticDEM search candidate 29_25",
+          "similarity_index": 39.70407996286441,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.3131681891545944,
+              "similarity": 0.4616324514639633,
+              "weight": 0.4,
+              "contribution": 0.18465298058558532,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 73.42472182112866,
+              "similarity": 0.1275505896936692,
+              "weight": 0.3,
+              "contribution": 0.03826517690810076,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 5.10686423109186,
+              "similarity": 0.560095580819474,
+              "weight": 0.2,
+              "contribution": 0.1120191161638948,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_29_25_32M",
+            "ARCTICDEM_29_25_32M_DATAMASK",
+            "ARCTICDEM_29_25_32M_MASK_UINT8",
+            "LOLA_LDEM_875S_20M"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 13
+        },
+        {
+          "site_id": "earth_s25e135",
+          "site_name": "Central Australia exploratory ROI",
+          "similarity_index": 38.954978140832374,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": true,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 0.07432110139135562,
+              "similarity": 0.45073712856438874,
+              "weight": 0.4,
+              "contribution": 0.18029485142575552,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 49.40472868603206,
+              "similarity": 0.12452332835250957,
+              "weight": 0.3,
+              "contribution": 0.037356998505752866,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 1.0948720978174467,
+              "similarity": 0.5489720275287605,
+              "weight": 0.2,
+              "contribution": 0.1097944055057521,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.0,
+              "similarity": 0.6210352597106326,
+              "weight": 0.1,
+              "contribution": 0.06210352597106326,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "LOLA_LDEM_875S_20M",
+            "NASADEM_S25E135_HGT",
+            "NASADEM_S25E135_NUM",
+            "NASADEM_S25E135_SWB"
+          ],
+          "warning": "Exploratory regional candidate; scientific analog suitability unvalidated.; Publisher checksum not independently verified.; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.",
+          "rank": 14
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "site_name": "ArcticDEM search candidate 26_29",
+          "similarity_index": 51.82472323429328,
+          "feature_coverage": 1.0,
+          "reference_feature_coverage": 1.0,
+          "eligible": false,
+          "components": {
+            "slope_median_deg": {
+              "reference_value": 8.043030830431494,
+              "site_value": 3.490080578047087,
+              "similarity": 0.6342608173936319,
+              "weight": 0.4,
+              "contribution": 0.25370432695745276,
+              "missing": false
+            },
+            "relief_p90_p10_m": {
+              "reference_value": 2132.66693299078,
+              "site_value": 505.63265649638004,
+              "similarity": 0.19651150957362112,
+              "weight": 0.3,
+              "contribution": 0.05895345287208634,
+              "missing": false
+            },
+            "roughness_local_std_m": {
+              "reference_value": 121.03643018756128,
+              "site_value": 53.658893771296114,
+              "similarity": 0.713989029161002,
+              "weight": 0.2,
+              "contribution": 0.14279780583220042,
+              "missing": false
+            },
+            "steep_fraction_15deg": {
+              "reference_value": 0.19054696789536266,
+              "site_value": 0.004407713498622589,
+              "similarity": 0.6279164668119321,
+              "weight": 0.1,
+              "contribution": 0.06279164668119322,
+              "missing": false
+            }
+          },
+          "source_ids": [
+            "ARCTICDEM_26_29_32M",
+            "ARCTICDEM_26_29_32M_DATAMASK",
+            "ARCTICDEM_26_29_32M_MASK_UINT8",
+            "LOLA_LDEM_875S_20M"
+          ],
+          "warning": "Only original SETSM data retained; snow/ice may remain. Novelty and suitability unreviewed.; Valid raster coverage below 90%; Reference: Scientific analog suitability unvalidated.; Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400 m is not added to height. Polar stereographic 20 m source. Interpolated altimetry is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450 (-89.67,129.78); not a designated base site.; Insufficient raster quality",
+          "rank": null
+        }
+      ],
+      "missions": {
+        "terrain_baseline": [
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 1,
+            "similarity_index": 51.18085083657383,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 2,
+            "similarity_index": 48.60924001316855,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 3,
+            "similarity_index": 47.40781142088132,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 4,
+            "similarity_index": 46.14702919998886,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 5,
+            "similarity_index": 45.34452252995581,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 6,
+            "similarity_index": 44.78497093618303,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 7,
+            "similarity_index": 44.69019112639657,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 8,
+            "similarity_index": 42.60724226108764,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 9,
+            "similarity_index": 42.49872404790059,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 10,
+            "similarity_index": 40.56012503365531,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 11,
+            "similarity_index": 40.515590615017054,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 12,
+            "similarity_index": 40.30806921884981,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 39.70407996286441,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 38.954978140832374,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 51.82472323429328,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "rover_mobility": [
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 1,
+            "similarity_index": 57.475649978564306,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 2,
+            "similarity_index": 55.04490921022143,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 3,
+            "similarity_index": 54.569647395061125,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 4,
+            "similarity_index": 54.476185959272584,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 5,
+            "similarity_index": 54.08800166159605,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 6,
+            "similarity_index": 53.35982977945384,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 7,
+            "similarity_index": 51.96295612533947,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 8,
+            "similarity_index": 51.1433052299608,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 9,
+            "similarity_index": 50.92614078584491,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 10,
+            "similarity_index": 49.341433274411465,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 11,
+            "similarity_index": 49.28335377396057,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 12,
+            "similarity_index": 49.27282500899645,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 48.77675932197034,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 48.033726112263615,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 60.484544131968,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ],
+        "terrain_diversity": [
+          {
+            "site_id": "earth_rema_18_35",
+            "rank": 1,
+            "similarity_index": 50.29091720243923,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n37e095",
+            "rank": 2,
+            "similarity_index": 47.20906661024328,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n34w116",
+            "rank": 3,
+            "similarity_index": 45.35718218358396,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n36w117",
+            "rank": 4,
+            "similarity_index": 43.86110895541569,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s24w069",
+            "rank": 5,
+            "similarity_index": 43.13455246203523,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_28_30",
+            "rank": 6,
+            "similarity_index": 42.463341152195724,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n24e010",
+            "rank": 7,
+            "similarity_index": 42.10149116755985,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e015",
+            "rank": 8,
+            "similarity_index": 40.37071442967221,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n13e040",
+            "rank": 9,
+            "similarity_index": 40.23253879538138,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s20w068",
+            "rank": 10,
+            "similarity_index": 38.31711234853071,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n22e058",
+            "rank": 11,
+            "similarity_index": 38.30428982962699,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_n25e040",
+            "rank": 12,
+            "similarity_index": 37.936778166272696,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_29_25",
+            "rank": 13,
+            "similarity_index": 37.34789263871658,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_s25e135",
+            "rank": 14,
+            "similarity_index": 36.6751891283573,
+            "feature_coverage": 1.0,
+            "eligible": true
+          },
+          {
+            "site_id": "earth_arctic_26_29",
+            "rank": null,
+            "similarity_index": 48.244512273766865,
+            "feature_coverage": 1.0,
+            "eligible": false
+          }
+        ]
+      },
+      "csv_input_hash": "aa3d0de21509bf795c3d200209527434b8d84f40d6d75e1eccff9a07c7464d43"
+    }
+  },
+  "independent_ranking_order_verified": true,
+  "candidate_count": 15,
+  "eligible_candidate_count": 14,
   "ui": {
     "checked": true,
     "real_rank_table_csv_parity": true,
-    "unavailable_moon_blocked": true
+    "body_switch_clears_stale_output": true,
+    "moon_rankings_verified": true
   },
   "weight_sensitivity": [
     {
       "feature": "slope_median_deg",
       "weight_multiplier": 0.9,
-      "score": 93.90860997163632
+      "score": 99.00932829401194,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.00932829401194,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.53846872650482,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 93.90860997163632,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.4321735923276,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.01526143798363,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.02429564868247,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.32610787345565,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.64012532594367,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.30295397276099,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.4873472053167,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.37365525306325,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.1872383042223,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 77.62253826302465,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.10013853485383,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.44048260084038,
+          "feature_coverage": 0.9999999999999999,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "slope_median_deg",
       "weight_multiplier": 1.1,
-      "score": 94.20799632095243
+      "score": 99.02937727929205,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.02937727929205,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.31270171906607,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 94.20799632095243,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.80458055086416,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.77238123796548,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.6591588191289,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 89.0894442457129,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 86.01900805170182,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.73123675429876,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.92338605488972,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.85546460274338,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.77340710508696,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 78.22796566351332,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.66745940365696,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.33989907489443,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "relief_p90_p10_m",
       "weight_multiplier": 0.9,
-      "score": 94.36942119100722
+      "score": 99.03439839827527,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.03439839827527,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 2,
+          "similarity_index": 94.36942119100722,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 3,
+          "similarity_index": 94.34777093015701,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.98155006005075,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 91.07831768963875,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.99344005604728,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 89.34286601813243,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 86.30975920502895,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 86.07184144659016,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 81.31369682726015,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 81.2522212817057,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 80.20801340548735,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 78.69151850179254,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 77.14091573668547,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.50822814448227,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "relief_p90_p10_m",
       "weight_multiplier": 1.1,
-      "score": 93.7769351371693
+      "score": 99.00596221979436,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.00596221979436,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.4900989932243,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 93.7769351371693,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.29082219736308,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 89.77860127087258,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 88.75263314588673,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.13932576356348,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.39206044446381,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.01129692730952,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.1494066910165,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.03275493838765,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 78.81778559031176,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 77.22713405419294,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 75.69281796959028,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.27512333451375,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "roughness_local_std_m",
       "weight_multiplier": 0.9,
-      "score": 93.94888439556485
+      "score": 99.01116677522919,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.01116677522919,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.42123878144434,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 93.94888439556485,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.51407907022332,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.21566817854827,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.13964233773201,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.50445529941109,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.69555746213572,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.33660618815192,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.52919008969116,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.4314124212978,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.27692957595762,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 77.71011727482858,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.17253009087008,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.35385610155932,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "roughness_local_std_m",
       "weight_multiplier": 1.1,
-      "score": 94.1751716067724
+      "score": 99.02800401273588,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.02800401273588,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.42090760731165,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 94.1751716067724,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.73318914971995,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.59467907154026,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.56078382710965,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.93305821630977,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.97317879782626,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.70730193522783,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.89173384930587,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.80941966364901,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.69872664402486,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 78.1556922482603,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.60903067079434,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.4211562305577,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "steep_fraction_15deg",
       "weight_multiplier": 0.9,
-      "score": 94.03052885868011
+      "score": 99.02401478837531,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.02401478837531,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.37887955229357,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 94.03052885868011,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.5756875013002,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.32624707889711,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.26105593075613,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.71702735342019,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.70528271145537,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.39361807403493,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.52949026285403,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.4426434232635,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.29905753010695,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 77.72866806607345,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.17087501087416,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.25381330926909,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "feature": "steep_fraction_15deg",
       "weight_multiplier": 1.1,
-      "score": 94.09738433313673
+      "score": 99.01557712101351,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 99.01557712101351,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.46242476089377,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 94.09738433313673,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 92.67497009430299,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 90.49004243548538,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 89.44594418136698,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 88.72893910314144,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 85.96639485379704,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 85.65508925250165,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 80.89502916234045,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 80.8021537037257,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 79.68121307578016,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 78.14192043281663,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 76.61497476484902,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 86.51988431536691,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     }
   ],
   "ablations": [
     {
       "removed": "slope_median_deg",
-      "score": 91.57339644697056
+      "score": 98.85294620882705,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 98.85294620882705,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 96.29945138452712,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 91.57339644697056,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 89.52739931574236,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 84.10972699812518,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 84.07236291920024,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 7,
+          "similarity_index": 82.6848400650302,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 8,
+          "similarity_index": 82.37208416984909,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 81.96234827676628,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 77.08624417864715,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 76.61554232555825,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 74.61512165747797,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 72.90020453921298,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 71.67503575818927,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 87.22503410321882,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     },
     {
       "removed": "roughness_local_std_m",
-      "score": 92.65056152126147
+      "score": 98.91456312503458,
+      "rankings": [
+        {
+          "site_id": "earth_n34w116",
+          "rank": 1,
+          "similarity_index": 98.91456312503458,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s24w069",
+          "rank": 2,
+          "similarity_index": 94.42313889303055,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n36w117",
+          "rank": 3,
+          "similarity_index": 92.65056152126147,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n37e095",
+          "rank": 4,
+          "similarity_index": 91.2569349891114,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_28_30",
+          "rank": 5,
+          "similarity_index": 88.0410931800067,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n24e010",
+          "rank": 6,
+          "similarity_index": 86.7233430424279,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_rema_18_35",
+          "rank": 7,
+          "similarity_index": 86.04534606370486,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n13e040",
+          "rank": 8,
+          "similarity_index": 84.10270504861121,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e015",
+          "rank": 9,
+          "similarity_index": 83.2097393393039,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s20w068",
+          "rank": 10,
+          "similarity_index": 78.44909526890171,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n22e058",
+          "rank": 11,
+          "similarity_index": 78.26259586830763,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_n25e040",
+          "rank": 12,
+          "similarity_index": 76.85686889792179,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_29_25",
+          "rank": 13,
+          "similarity_index": 75.15363086476405,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_s25e135",
+          "rank": 14,
+          "similarity_index": 73.66810801355462,
+          "feature_coverage": 1.0,
+          "eligible": true
+        },
+        {
+          "site_id": "earth_arctic_26_29",
+          "rank": null,
+          "similarity_index": 85.96772161143112,
+          "feature_coverage": 1.0,
+          "eligible": false
+        }
+      ]
     }
   ],
   "limitations": [
-    "One candidate cannot establish ranking utility or novelty.",
+    "Catalog-based shortlisting is not a worldwide terrain search or novelty assessment.",
     "Engineering weights/tolerances are uncalibrated.",
     "Independent arithmetic checks use the same measured grids.",
     "Earth publisher ZIP checksum remains unverified.",
-    "Lunar profile and >=10-site acceptance remain incomplete."
+    "Lunar profile and >=10-site acceptance require the release smoke check."
   ]
 }

@@ -7,8 +7,11 @@ targets:
   center_lat: 18.41
   center_lon: 77.69
   geolocation_source: https://planetarynames.wr.usgs.gov/Feature/14300
-- profile_id: moon_ref_01
+- profile_id: moon_shackleton_60km_v1
   body: Moon
-  region_name: LOLA crater/highlands ROI (selection pending)
-  processing_status: not_yet_measured
+  region_name: Shackleton south-pole 60 km terrain study
+  processing_status: configured_for_preparation
   required_source: LOLA GDR topography raster and original PDS label
+  center_lat: -89.67
+  center_lon: 129.78
+  geolocation_source: https://planetarynames.wr.usgs.gov/Feature/5450

@@ -29,6 +29,8 @@ class RasterInterpretation(Contract):
     sample_unit: Literal["m"]
     scale: float
     offset: float
+    value_interpretation: Literal["standard", "lola_height"] = "standard"
+    latitude_bounds_deg: tuple[float, float] = (-56, 60)
     nodata: float | None
     raster_data_path: str | None = None
     mask_path: str | None = None
@@ -42,6 +44,8 @@ class RasterInterpretation(Contract):
     def valid_scale(self):
         if self.scale == 0:
             raise ValueError("Elevation scale cannot be zero")
+        if not -90 <= self.latitude_bounds_deg[0] < self.latitude_bounds_deg[1] <= 90:
+            raise ValueError("Invalid source latitude coverage")
         if (self.mask_path is None) != (self.mask_sha256 is None):
             raise ValueError("A ground mask requires both a path and checksum")
         validate_body_crs(self.source_crs, self.body)
@@ -73,7 +77,13 @@ def validate_local_raster(
         raise ValueError("Original label/product metadata checksum does not match")
     if label.stat().st_size == 0:
         raise ValueError("Original label/product metadata is empty")
+    if metadata.value_interpretation == "lola_height":
+        validate_lola_height(label, metadata)
     with rasterio.open(raster_path) as dataset:
+        if metadata.value_interpretation == "lola_height" and (
+            dataset.driver != "PDS4" or raster_path.resolve() != label.resolve()
+        ):
+            raise ValueError("LOLA height conversion must read the audited original PDS4 label")
         if dataset.count != 1:
             raise ValueError("Intake requires a verified single-band topographic elevation product")
         if dataset.driver in ("PDS", "PDS4"):
@@ -108,6 +118,38 @@ def validate_local_raster(
             raise ValueError("Raster nodata differs from audited interpretation")
         if dataset.scales[0] != 1 and dataset.scales[0] != metadata.scale:
             raise ValueError("Raster scale differs from audited interpretation")
-        if dataset.offsets[0] != 0 and dataset.offsets[0] != metadata.offset:
+        if (
+            dataset.offsets[0] != 0
+            and dataset.offsets[0] != metadata.offset
+            and not (
+                metadata.value_interpretation == "lola_height" and dataset.offsets[0] == 1737400.0
+            )
+        ):
             raise ValueError("Raster offset differs from audited interpretation")
     return metadata
+
+
+def validate_lola_height(label, metadata):
+    """LOLA labels distinguish HEIGHT=DN*0.5 from RADIUS=DN*0.5+1737400."""
+    from xml.etree import ElementTree as ET
+
+    root = ET.parse(label).getroot()
+    ns = {"p": "http://pds.nasa.gov/pds4/pds/v1"}
+    identifier = root.findtext("p:Identification_Area/p:logical_identifier", namespaces=ns)
+    element = root.find(".//p:Array_2D_Image/p:Element_Array", ns)
+    if not identifier or not identifier.startswith("urn:nasa:pds:lro_lola_rdr:data_gridded:ldem_"):
+        raise ValueError("LOLA height interpretation requires an original LOLA PDS4 label")
+    if element is None or (
+        element.findtext("p:data_type", namespaces=ns) != "SignedLSB2"
+        or float(element.findtext("p:scaling_factor", namespaces=ns)) != 0.5
+        or float(element.findtext("p:value_offset", namespaces=ns)) != 1737400
+    ):
+        raise ValueError("Unexpected LOLA sample representation")
+    if (
+        metadata.body != "Moon"
+        or metadata.scale != 0.5
+        or metadata.offset != 0
+        or metadata.vertical_datum != "Height above 1737400 m lunar reference sphere"
+        or metadata.nodata is not None
+    ):
+        raise ValueError("LOLA HEIGHT conversion must preserve the documented reference sphere")

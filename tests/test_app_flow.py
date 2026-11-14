@@ -2,12 +2,14 @@
 
 import csv
 import io
+import json
 import socket
 
 import pytest
 from conftest import changed
 from streamlit.testing.v1 import AppTest
 
+import terratwin.characterization
 import terratwin.datasets
 import terratwin.export.csv_export
 from terratwin.config import ROOT
@@ -54,6 +56,21 @@ def app_flow(monkeypatch, reference, earth_sites):
         )
     assert all(profile.synthetic for profile in [mars, moon, *sites])
     monkeypatch.setattr(terratwin.datasets, "load_prepared", lambda: ([mars, moon], sites, sources))
+    contexts = {
+        site.site_id: dict(
+            latitude=site.centroid_lat,
+            longitude=site.centroid_lon,
+            climate=dict(
+                mean_temperature_c=index,
+                mean_annual_precipitation_mm=index * 100,
+                monthly_mean_temperature_c={str(n): index for n in range(1, 13)},
+            ),
+            geology=dict(status="mapped_context", units=[], lithology_classes=["volcanic"]),
+            evidence=[],
+        )
+        for index, site in enumerate(sites)
+    }
+    monkeypatch.setattr(terratwin.characterization, "load_characterization", lambda root: contexts)
 
     # The Python app must not contact a service to rank or export prepared profiles.
     def no_network(*args, **kwargs):
@@ -131,3 +148,32 @@ def test_no_eligible_candidates_explained_and_exportable(monkeypatch, reference,
     assert not app.exception
     assert any("No eligible candidates. 12 rejected" in info.value for info in app.info)
     assert len(app.get("download_button")) == 1
+
+
+def test_mission_focus_changes_scores_and_exported_weights(app_flow):
+    app, exports = app_flow
+    app.button[0].click().run()
+    baseline = list(csv.DictReader(io.StringIO(exports[-1])))
+    selector(app, "Mission focus").select_index(1).run()
+    assert not app.exception
+    rover = list(csv.DictReader(io.StringIO(exports[-1])))
+    assert rover[0]["scoring_version"].endswith("rover_mobility")
+    assert json.loads(rover[0]["weights"])["steep_fraction_15deg"] == 0.25
+    assert baseline[0]["run_id"] != rover[0]["run_id"]
+
+
+def test_field_filter_matches_rankings_and_export_and_can_be_cleared(app_flow):
+    app, exports = app_flow
+    app.button[0].click().run()
+    next(c for c in app.checkbox if c.label == "Apply Earth field-condition filters").check().run()
+    next(c for c in app.checkbox if c.label == "Limit annual precipitation").check().run()
+    assert not app.exception
+    rows = list(csv.DictReader(io.StringIO(exports[-1])))
+    assert len(rows) == 3
+    assert all(float(row["mean_annual_precipitation_mm"]) <= 250 for row in rows)
+    assert json.loads(rows[0]["selection_metadata"])["max_precipitation"] == 250
+    next(
+        c for c in app.checkbox if c.label == "Apply Earth field-condition filters"
+    ).uncheck().run()
+    assert not app.exception
+    assert len(list(csv.DictReader(io.StringIO(exports[-1])))) == 12

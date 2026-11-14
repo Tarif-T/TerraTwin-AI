@@ -1,0 +1,1576 @@
+{
+  "version": "characterization_v1",
+  "prepared_utc": "2026-11-14T01:23:08.387601+00:00",
+  "sites": {
+    "earth_n36w117": {
+      "latitude": 36.5,
+      "longitude": -116.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 20.097016151108676,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 115.30999999999999,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 8.18774193548387,
+          "2": 10.568904593639576,
+          "3": 14.366774193548386,
+          "4": 19.604,
+          "5": 23.676774193548386,
+          "6": 30.618333333333332,
+          "7": 33.86645161290323,
+          "8": 32.343870967741935,
+          "9": 27.57933333333333,
+          "10": 20.030645161290323,
+          "11": 12.13,
+          "12": 7.669354838709677
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3499185,
+            "source_id": 259,
+            "name": "Alluvial deposits in mid-level terraces",
+            "lith": "",
+            "descrip": "Gravel, sand, and silt; intermixed and interbed- ded, weakly to moderately well consolidated. Clasts are unsorted to moderately well sorted, poorly to well bedded, angular to rounded. Surface is planar with moderately packed to densely packed pavement; pavement clasts are moderately to well varnished. In places, thin eolian sand deposits mantle the surface. Soil development varies from a cambic B horizon and a stage I to II carbonate horizon to an argillic B horizon and an approximately 1-m-thick stage III to IV carbonate horizon. Thickness of unit less than 1 m to 10 m",
+            "scale": "large",
+            "best_int_name": "Late Pleistocene"
+          }
+        ],
+        "lithology_classes": [
+          "unconsolidated"
+        ],
+        "references": {
+          "259": "Fridrich, C.J., Thompson, R.A., Slate, J.L., Berry, M.E., and Machette, M.N. Geologic map of the southern Funeral Mountains including nearby groundwater discharge sites in Death Valley National Park, California and Nevada. U.S. Geological Survey Scientific Investigations Map 3151. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n36w117_geology_12dd96397dfe8da2.json",
+          "sha256": "978114a1ce2b49c0bcb810cc1a0661efce9b902af8c9fc8e3fe66875d175abfe",
+          "metadata_path": "data/raw/context/earth_n36w117_geology_12dd96397dfe8da2.request.json",
+          "metadata_sha256": "490d5faa163cc890e8da4a5d785dc010e21c6f9e0599a9574c5529cc82365905",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=36.5&lng=-116.5",
+          "requested_parameters": {
+            "lat": 36.5,
+            "lng": -116.5
+          },
+          "retrieved_utc": "2026-11-14T01:08:49.375397+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n36w117_climate_6c9fa9bd1eb4da08.json",
+          "sha256": "30188a921e0761cce6eedf8d8623ee0685e976973c4624bf8f004f2df1cd5405",
+          "metadata_path": "data/raw/context/earth_n36w117_climate_6c9fa9bd1eb4da08.request.json",
+          "metadata_sha256": "2ea3f41555c86a6b47084358c99d5072185c26a83a713f28e5e1c2c78ef4cfe4",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.5&longitude=-116.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 36.5,
+            "longitude": -116.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:28.741698+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_s24w069": {
+      "latitude": -23.5,
+      "longitude": -68.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 15.529373117985218,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 75.99,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 19.45225806451613,
+          "2": 18.98303886925795,
+          "3": 18.079677419354837,
+          "4": 15.823666666666668,
+          "5": 12.606451612903227,
+          "6": 10.513,
+          "7": 10.915806451612903,
+          "8": 11.966774193548387,
+          "9": 14.731666666666667,
+          "10": 16.606129032258064,
+          "11": 17.912333333333333,
+          "12": 18.961290322580645
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 4969814,
+            "source_id": 1087,
+            "name": "Neogene - Quaternary Siliciclastic",
+            "lith": "Siliciclastic",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Cenozoic"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "1087": "G\u00f3mez, J., Schobbenhaus, C. & Montes, N.E., compilers. Geological Map of South America 2018. Scale 1:5 000 000. Commission for the Geological Map of the World (CGMW), Colombian Geological Survey and Geological Survey of Brazil. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_s24w069_geology_0ef8e95df275eff2.json",
+          "sha256": "30e912fa7dff0a1cbd1ae738a764adb9ad9e376c7479197114ece138721dd586",
+          "metadata_path": "data/raw/context/earth_s24w069_geology_0ef8e95df275eff2.request.json",
+          "metadata_sha256": "c46192a5893a2ed3e9277d4b0b842c088a6f78289e4eb1765b5233616a0ed4d9",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=-23.5&lng=-68.5",
+          "requested_parameters": {
+            "lat": -23.5,
+            "lng": -68.5
+          },
+          "retrieved_utc": "2026-11-14T01:08:50.913149+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_s24w069_climate_997559a7a19ca66f.json",
+          "sha256": "7fda1c53ce2627554cb4108e8dc01a3c9bb7023bc8e0f3240ebba679b9c4bec0",
+          "metadata_path": "data/raw/context/earth_s24w069_climate_997559a7a19ca66f.request.json",
+          "metadata_sha256": "2a1247a3d493fff616e89f6288e02399f9ee44c84fac5b44edbc5000230cca2c",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-23.5&longitude=-68.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": -23.5,
+            "longitude": -68.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:29.464295+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_s25e015": {
+      "latitude": -24.5,
+      "longitude": 15.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 22.381658910484532,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 31.02,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 25.019354838709678,
+          "2": 25.275618374558302,
+          "3": 25.309677419354838,
+          "4": 23.78366666666667,
+          "5": 21.56032258064516,
+          "6": 17.806,
+          "7": 17.53516129032258,
+          "8": 18.42225806451613,
+          "9": 21.007,
+          "10": 23.841290322580647,
+          "11": 24.309,
+          "12": 24.878064516129033
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3306501,
+            "source_id": 190,
+            "name": "",
+            "lith": "sedimentary",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Cenozoic"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "190": "Thi\u00e9blemont, D. (ed.). New edition of the 1:10,000,000 geological map of Africa. CGMW-BRGM. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_s25e015_geology_485cf29359708087.json",
+          "sha256": "4391932cf8967a3a7aa5581b7a53a872a1e3df563464a17ad3a2e217f4d9b6dd",
+          "metadata_path": "data/raw/context/earth_s25e015_geology_485cf29359708087.request.json",
+          "metadata_sha256": "4927d512d3351874a49d82ac97805ab27e8be2da0aaa02074eab54d54dab1a06",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=-24.5&lng=15.5",
+          "requested_parameters": {
+            "lat": -24.5,
+            "lng": 15.5
+          },
+          "retrieved_utc": "2026-11-14T01:08:52.373466+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_s25e015_climate_626d2491eaaf57b6.json",
+          "sha256": "854a2b9819887580fcfa1d7b8c4fc9427247c16feb63f7338422a25e63f8741f",
+          "metadata_path": "data/raw/context/earth_s25e015_climate_626d2491eaaf57b6.request.json",
+          "metadata_sha256": "eaa9e818c94ffe04d2327ea7d3be4d69fc8a67b570fa6aa1627d9082f0166f83",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-24.5&longitude=15.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": -24.5,
+            "longitude": 15.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:30.225038+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n13e040": {
+      "latitude": 13.5,
+      "longitude": 40.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 34.20665206679441,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 89.22,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 29.412903225806453,
+          "2": 30.150883392226152,
+          "3": 32.59322580645161,
+          "4": 34.702999999999996,
+          "5": 36.498387096774195,
+          "6": 37.174,
+          "7": 37.384516129032264,
+          "8": 36.86741935483871,
+          "9": 36.833,
+          "10": 35.045806451612904,
+          "11": 33.046,
+          "12": 30.576451612903227
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3306696,
+            "source_id": 190,
+            "name": "",
+            "lith": "volcanic",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Cenozoic"
+          }
+        ],
+        "lithology_classes": [
+          "volcanic"
+        ],
+        "references": {
+          "190": "Thi\u00e9blemont, D. (ed.). New edition of the 1:10,000,000 geological map of Africa. CGMW-BRGM. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n13e040_geology_63b4a1c892f47d64.json",
+          "sha256": "351ace285d55d10d56e9592d53aec388549aae02ce769dafe36b96794d5b845b",
+          "metadata_path": "data/raw/context/earth_n13e040_geology_63b4a1c892f47d64.request.json",
+          "metadata_sha256": "e5a2ad6b3e643055d74f157f7d6128e33c14dd70cf497a9988be8a9d245f540d",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=13.5&lng=40.5",
+          "requested_parameters": {
+            "lat": 13.5,
+            "lng": 40.5
+          },
+          "retrieved_utc": "2026-11-14T01:08:54.274302+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n13e040_climate_a1805938a20fbff8.json",
+          "sha256": "03229a04ddf505cce4ce7642d18837cb543cd15eb5a243f7b6c16c0c54c0d001",
+          "metadata_path": "data/raw/context/earth_n13e040_climate_a1805938a20fbff8.request.json",
+          "metadata_sha256": "9c06cd0b2a3e0231c48ed7bd7674d07a3edf267b200dc45c36605f77a2e90cc0",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=13.5&longitude=40.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 13.5,
+            "longitude": 40.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:34.321321+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n22e058": {
+      "latitude": 22.5,
+      "longitude": 58.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 28.78387626608267,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 66.95,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 20.97548387096774,
+          "2": 22.93780918727915,
+          "3": 26.072903225806453,
+          "4": 30.501666666666665,
+          "5": 33.81870967741935,
+          "6": 35.16466666666667,
+          "7": 33.57387096774193,
+          "8": 32.95451612903226,
+          "9": 31.617333333333335,
+          "10": 29.584838709677417,
+          "11": 25.704333333333334,
+          "12": 22.24451612903226
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3193194,
+            "source_id": 154,
+            "name": "Mesozoic sedimentary rocks",
+            "lith": "sedimentary rocks",
+            "descrip": "",
+            "scale": "tiny",
+            "best_int_name": "Late Cretaceous"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "154": "Chorlton, L.B. Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database. doi: 10.4095/223767. Geological Survey of Canada, Open File 5529. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n22e058_geology_7f2acbee105da061.json",
+          "sha256": "e2dcbb51794bcc9b1ffa52db66febcf91d62ec7d7c20128defa4ccc57d3ce4a8",
+          "metadata_path": "data/raw/context/earth_n22e058_geology_7f2acbee105da061.request.json",
+          "metadata_sha256": "77d851d61a53911d46f82e8195b8e9b24b43400b6b69a0693f69ae2105f8b1e7",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=22.5&lng=58.5",
+          "requested_parameters": {
+            "lat": 22.5,
+            "lng": 58.5
+          },
+          "retrieved_utc": "2026-11-14T01:08:59.740780+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n22e058_climate_c3d97af3421cd207.json",
+          "sha256": "c791a7d2abab3b32a3e9d74cdf03d4e9b2a84626eda1083086b29a3e2d4ac90e",
+          "metadata_path": "data/raw/context/earth_n22e058_climate_c3d97af3421cd207.request.json",
+          "metadata_sha256": "8483b5cafa4529a970b6d40b3f7477c9fd9d4df8bef7baa8edbbc14204c64da4",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=22.5&longitude=58.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 22.5,
+            "longitude": 58.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:41.725385+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_s20w068": {
+      "latitude": -19.5,
+      "longitude": -67.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 10.592526690391459,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 548.6899999999999,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 12.45258064516129,
+          "2": 11.904240282685512,
+          "3": 11.603225806451613,
+          "4": 11.043333333333333,
+          "5": 8.56516129032258,
+          "6": 6.334333333333333,
+          "7": 6.562903225806451,
+          "8": 7.828387096774194,
+          "9": 10.686666666666667,
+          "10": 12.520967741935484,
+          "11": 13.713666666666668,
+          "12": 13.989999999999998
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 4968144,
+            "source_id": 1087,
+            "name": "Quaternary Siliciclastic",
+            "lith": "Siliciclastic",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Quaternary"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "1087": "G\u00f3mez, J., Schobbenhaus, C. & Montes, N.E., compilers. Geological Map of South America 2018. Scale 1:5 000 000. Commission for the Geological Map of the World (CGMW), Colombian Geological Survey and Geological Survey of Brazil. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_s20w068_geology_8276cdae8470f001.json",
+          "sha256": "5b8724416181ebe55ae8c89fa0c543d7338d5b383578fbcb5a33c43496405239",
+          "metadata_path": "data/raw/context/earth_s20w068_geology_8276cdae8470f001.request.json",
+          "metadata_sha256": "5e707f1db7089d6aacec42d9a2f6a0ed6abf3dcae8a1bd2df4a493fee0a7a1d9",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=-19.5&lng=-67.5",
+          "requested_parameters": {
+            "lat": -19.5,
+            "lng": -67.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:04.985463+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_s20w068_climate_d290d06aca9b7dac.json",
+          "sha256": "8a620d8133f5ce730e998fe9d0501cd39d31f49e1e06e659cfd14bd596feae35",
+          "metadata_path": "data/raw/context/earth_s20w068_climate_d290d06aca9b7dac.request.json",
+          "metadata_sha256": "37b4f357022ddecce72a051810ad4c01f41e0bb6a7930a2107ee9a6811383509",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-19.5&longitude=-67.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": -19.5,
+            "longitude": -67.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:47.853327+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n37e095": {
+      "latitude": 37.5,
+      "longitude": 95.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 2.9122638926909388,
+        "freezing_mean_day_fraction": 0.40323022173555984,
+        "mean_annual_precipitation_mm": 92.64,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": -12.45032258064516,
+          "2": -8.259717314487633,
+          "3": -1.2161290322580645,
+          "4": 4.307666666666666,
+          "5": 9.408064516129032,
+          "6": 13.005,
+          "7": 16.274838709677418,
+          "8": 15.927096774193547,
+          "9": 10.541666666666666,
+          "10": 2.864193548387097,
+          "11": -4.938000000000001,
+          "12": -11.126774193548387
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3185912,
+            "source_id": 154,
+            "name": "Paleozoic sedimentary rocks",
+            "lith": "sedimentary rocks",
+            "descrip": "",
+            "scale": "tiny",
+            "best_int_name": null
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "154": "Chorlton, L.B. Generalized geology of the world: bedrock domains and major faults in GIS format: a small-scale world geology map with an extended geological attribute database. doi: 10.4095/223767. Geological Survey of Canada, Open File 5529. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n37e095_geology_53b1c9e5f241ac48.json",
+          "sha256": "08006c100f69621974bd4e5bf461c02dd53fbb3d35d83f1af3941f3de2cbb161",
+          "metadata_path": "data/raw/context/earth_n37e095_geology_53b1c9e5f241ac48.request.json",
+          "metadata_sha256": "39d822113a2825b71fa21da52316afa3bf38b9c5be7b33be2bbc94534c4132eb",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=37.5&lng=95.5",
+          "requested_parameters": {
+            "lat": 37.5,
+            "lng": 95.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:13.230844+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n37e095_climate_2a2eaf14e50bb62b.json",
+          "sha256": "e7cfbfab0f5199b78d8f1f57d1ed9265e15cf6ee22ba8789d52855caefe35e07",
+          "metadata_path": "data/raw/context/earth_n37e095_climate_2a2eaf14e50bb62b.request.json",
+          "metadata_sha256": "867b83593881c3764a031ab1ac791c3b8f8f03140da96a9a295445578b5986ad",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5&longitude=95.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 37.5,
+            "longitude": 95.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:50.751728+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n25e040": {
+      "latitude": 25.5,
+      "longitude": 40.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 26.0362441828634,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 44.239999999999995,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 14.789354838709677,
+          "2": 16.669257950530035,
+          "3": 21.528387096774193,
+          "4": 25.101666666666667,
+          "5": 30.454193548387096,
+          "6": 34.44933333333333,
+          "7": 35.37935483870968,
+          "8": 35.487419354838714,
+          "9": 33.459,
+          "10": 27.341290322580644,
+          "11": 21.107000000000003,
+          "12": 16.17451612903226
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3306996,
+            "source_id": 190,
+            "name": "",
+            "lith": "sedimentary and volcaniclastic",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Neoproterozoic"
+          }
+        ],
+        "lithology_classes": [
+          "volcanic",
+          "sedimentary"
+        ],
+        "references": {
+          "190": "Thi\u00e9blemont, D. (ed.). New edition of the 1:10,000,000 geological map of Africa. CGMW-BRGM. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n25e040_geology_23ccd0c9c06aa1b1.json",
+          "sha256": "30b4a4fb396f45efb8b90c49757a89b0e52074bc74c12d25b299669dfbce5c9d",
+          "metadata_path": "data/raw/context/earth_n25e040_geology_23ccd0c9c06aa1b1.request.json",
+          "metadata_sha256": "f56777ceadd92f0f65c58229b7080ef424103cacdd2c0d53cca8eebac020c693",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=25.5&lng=40.5",
+          "requested_parameters": {
+            "lat": 25.5,
+            "lng": 40.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:16.037812+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n25e040_climate_4f4fa9f137b17867.json",
+          "sha256": "52142f55713f1822ce90bdf8ee89ac1682dc31ba4b080a22e6081f34f04dfc34",
+          "metadata_path": "data/raw/context/earth_n25e040_climate_4f4fa9f137b17867.request.json",
+          "metadata_sha256": "aa1ed6da3bd3928e7e694c85b7fd6618f1952e3ba35b105ddeaa1df0cfe8d0e3",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=25.5&longitude=40.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 25.5,
+            "longitude": 40.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:21:54.300216+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_s25e135": {
+      "latitude": -24.5,
+      "longitude": 135.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 23.63851628798248,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 204.82,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 32.31322580645161,
+          "2": 31.146996466431098,
+          "3": 28.64322580645161,
+          "4": 23.179,
+          "5": 17.366774193548387,
+          "6": 14.030666666666667,
+          "7": 13.863548387096774,
+          "8": 16.95193548387097,
+          "9": 20.936333333333334,
+          "10": 25.79225806451613,
+          "11": 28.413,
+          "12": 31.421290322580646
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 696014,
+            "source_id": 5,
+            "name": "dunes 38496",
+            "lith": "",
+            "descrip": "Dunes, sandplain with dunes and swales; may include numerous interdune claypans; may be locally gypsiferous",
+            "scale": "medium",
+            "best_int_name": "Cenozoic"
+          }
+        ],
+        "lithology_classes": [],
+        "references": {
+          "5": "Raymond, O.L., Liu, S., Gallagher, R., Zhang, W., Highet, L.M. Surface Geology of Australia 1:1 million scale dataset 2012 edition. Commonwealth of Australia (Geoscience Australia). "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_s25e135_geology_c321ff1035168546.json",
+          "sha256": "819e8d182752bfa4bc6b85345ce2518f50caa0b10157d86442ba296506562cc7",
+          "metadata_path": "data/raw/context/earth_s25e135_geology_c321ff1035168546.request.json",
+          "metadata_sha256": "21a99b523ce7b07e44397d7aa165bf80e0d0790f89589e3bc57414724677da14",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=-24.5&lng=135.5",
+          "requested_parameters": {
+            "lat": -24.5,
+            "lng": 135.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:21.309628+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_s25e135_climate_04031ed06c56b503.json",
+          "sha256": "bdbd33d9e7020c578acb41da57356aaf1844d9408efbf7d2bfda73b6c193bf1d",
+          "metadata_path": "data/raw/context/earth_s25e135_climate_04031ed06c56b503.request.json",
+          "metadata_sha256": "50c1c821f216052c251bffc9f273a270fe5c9ad22cdb39fac20eef312c71f824",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-24.5&longitude=135.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": -24.5,
+            "longitude": 135.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:04.974664+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n34w116": {
+      "latitude": 34.5,
+      "longitude": -115.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 22.70602244730359,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 87.07000000000001,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 11.412903225806451,
+          "2": 13.665371024734982,
+          "3": 17.311612903225807,
+          "4": 22.209333333333333,
+          "5": 26.028387096774193,
+          "6": 32.55433333333333,
+          "7": 35.373225806451615,
+          "8": 34.501290322580644,
+          "9": 30.035,
+          "10": 23.043225806451613,
+          "11": 15.15,
+          "12": 10.694516129032259
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 2885167,
+            "source_id": 133,
+            "name": "Quaternary alluvium and marine deposits",
+            "lith": "Major:{coarse alluvium}, Minor:{fine alluvium}",
+            "descrip": "Alluvium, lake, playa, and terrace deposits; unconsolidated and semi-consolidated. Mostly nonmarine, but includes marine deposits near the coast.",
+            "scale": "medium",
+            "best_int_name": "Cenozoic"
+          },
+          {
+            "map_id": 4551520,
+            "source_id": 548,
+            "name": "Alluvium, lake, playa, and terrace deposits",
+            "lith": "unconsolidated",
+            "descrip": "Alluvium, lake, playa, and terrace deposits; unconsolidated and semi-consolidated. Mostly nonmarine, but includes marine deposits near the coast",
+            "scale": "medium",
+            "best_int_name": "Quaternary"
+          }
+        ],
+        "lithology_classes": [
+          "unconsolidated"
+        ],
+        "references": {
+          "133": "Horton, J.D., C.A. San Juan, and D.B. Stoeser. The State Geologic Map Compilation (SGMC) geodatabase of the conterminous United States. doi: 10.3133/ds1052. U.S. Geological Survey Data Series 1052. ",
+          "548": "Jennings, C.W., Gutierrez, C., Bryant, W., Saucedo, G., and Wills, C., 2010, Geologic Map of California: California Geological Survey Geologic Data Map GDM-2.2010. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n34w116_geology_1618b4dd307ead70.json",
+          "sha256": "e83cda4f1ae5a02b69a954665aa4d7502bbdae8bea439a8a148f21b4dae8f949",
+          "metadata_path": "data/raw/context/earth_n34w116_geology_1618b4dd307ead70.request.json",
+          "metadata_sha256": "1c98d47e732e8f72ae10b36c9c007835975af3c32e98c1e05aa14a1c1779e9f9",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=34.5&lng=-115.5",
+          "requested_parameters": {
+            "lat": 34.5,
+            "lng": -115.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:26.622418+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n34w116_climate_c535f35fa3b2f565.json",
+          "sha256": "35d4ee8e20b71a5da930208318279c089f14479267325019015d44ff0e73cc6a",
+          "metadata_path": "data/raw/context/earth_n34w116_climate_c535f35fa3b2f565.request.json",
+          "metadata_sha256": "b3e54eb3a60af705c932af8aba3d367260682d40b4c6ddc5f71195f54eab0630",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.5&longitude=-115.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 34.5,
+            "longitude": -115.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:06.626636+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_n24e010": {
+      "latitude": 24.5,
+      "longitude": 10.5,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": 24.13692855187517,
+        "freezing_mean_day_fraction": 0.0,
+        "mean_annual_precipitation_mm": 11.16,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": 11.894193548387095,
+          "2": 15.096113074204947,
+          "3": 20.169354838709676,
+          "4": 26.644,
+          "5": 30.27064516129032,
+          "6": 32.63066666666667,
+          "7": 32.48,
+          "8": 32.31193548387097,
+          "9": 30.111666666666668,
+          "10": 25.410967741935483,
+          "11": 18.701666666666668,
+          "12": 13.506774193548388
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 3306998,
+            "source_id": 190,
+            "name": "",
+            "lith": "sedimentary",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Paleozoic"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "190": "Thi\u00e9blemont, D. (ed.). New edition of the 1:10,000,000 geological map of Africa. CGMW-BRGM. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_n24e010_geology_6e913d2412745bef.json",
+          "sha256": "6bea9b216b821acca24a5f333e5a450928c7968af20cf74d86de537419f9cd7e",
+          "metadata_path": "data/raw/context/earth_n24e010_geology_6e913d2412745bef.request.json",
+          "metadata_sha256": "40fa661e515acddbae2714b00651f066a415bcfd92d6362fd9254a7c1593bc83",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=24.5&lng=10.5",
+          "requested_parameters": {
+            "lat": 24.5,
+            "lng": 10.5
+          },
+          "retrieved_utc": "2026-11-14T01:09:28.757647+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_n24e010_climate_2491a491763b3086.json",
+          "sha256": "c4238840a3480270f23318b69e021edbfadcd88a833b0ff80b91200cf55a91be",
+          "metadata_path": "data/raw/context/earth_n24e010_climate_2491a491763b3086.request.json",
+          "metadata_sha256": "4b341eb40461d9f19b54d1c1ec4d64adda4baa81b82dc34b6ba0561c34ff6e29",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.5&longitude=10.5&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 24.5,
+            "longitude": 10.5,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:08.282197+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_rema_18_35": {
+      "latitude": -77.81689181335317,
+      "longitude": 160.20112364547506,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": -32.4098549137695,
+        "freezing_mean_day_fraction": 1.0,
+        "mean_annual_precipitation_mm": 29.07,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": -18.956774193548387,
+          "2": -25.80494699646643,
+          "3": -34.61483870967742,
+          "4": -38.37433333333333,
+          "5": -38.12258064516129,
+          "6": -38.34166666666667,
+          "7": -39.62290322580645,
+          "8": -39.22548387096774,
+          "9": -39.267,
+          "10": -32.72967741935484,
+          "11": -25.270666666666667,
+          "12": -18.386774193548387
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 4925288,
+            "source_id": 1084,
+            "name": "Feather Conglomerate",
+            "lith": "sandstone, conglomerate, mudstone",
+            "descrip": "Coarse sandstone and conglomerate; intercalated mudstone, some paleosols",
+            "scale": "medium",
+            "best_int_name": "Early Triassic"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "1084": "GeoMAP: SCAR Antarctic geological map dataset. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_rema_18_35_geology_8d14ab77b678dc23.json",
+          "sha256": "4a661f037c0021da2c6f1932ee413b2e4f81a0d6411cc84694d0cae2aedd3538",
+          "metadata_path": "data/raw/context/earth_rema_18_35_geology_8d14ab77b678dc23.request.json",
+          "metadata_sha256": "006ec0b2e1dec311efa58521d18aeb56ca156e36aa99f1666825292cc3310836",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=-77.81689181335317&lng=160.20112364547506",
+          "requested_parameters": {
+            "lat": -77.81689181335317,
+            "lng": 160.20112364547506
+          },
+          "retrieved_utc": "2026-11-14T01:09:35.512213+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_rema_18_35_climate_571cb4e81f20d16d.json",
+          "sha256": "201c954de6e178c5f06ead4979fc1eb377fb1bdc04811cc35b7bb176285480e4",
+          "metadata_path": "data/raw/context/earth_rema_18_35_climate_571cb4e81f20d16d.request.json",
+          "metadata_sha256": "1235fecde11bbf460bf4116decd1689531e9f15bb2d391ee4095d42bdd8b4ab2",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-77.81689181335317&longitude=160.20112364547506&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": -77.81689181335317,
+            "longitude": 160.20112364547506,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:17.007598+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_arctic_26_29": {
+      "latitude": 73.0359066517747,
+      "longitude": -83.418055344822,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": -15.420175198467014,
+        "freezing_mean_day_fraction": 0.7539009033670956,
+        "mean_annual_precipitation_mm": 248.82,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": -33.90709677419355,
+          "2": -36.63180212014134,
+          "3": -31.210322580645165,
+          "4": -21.135,
+          "5": -9.416129032258064,
+          "6": 1.6053333333333333,
+          "7": 8.333870967741936,
+          "8": 5.503225806451613,
+          "9": -2.733,
+          "10": -13.018709677419356,
+          "11": -24.319,
+          "12": -29.473870967741934
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 972481,
+            "source_id": 7,
+            "name": "Mesoproterozoic sedimentary",
+            "lith": "sedimentary",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Mesoproterozoic"
+          },
+          {
+            "map_id": 656744,
+            "source_id": 2,
+            "name": "Sedimentary; Clastic: shallow marine",
+            "lith": "subarkose, quartz arenite, siltstone, dolostone, shale; conglomerate, limestone",
+            "descrip": "North America, Borden Basin",
+            "scale": "small",
+            "best_int_name": "Stenian"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "7": "Garrity, C.P., and Soller, D.R.,. Database of the Geologic Map of North America: adapted from the map by J.C. Reed, Jr. and others (2005). U.S. Geological Survey Data Series 424 . ",
+          "2": "J.C. Harrison, M.R. St-Onge, O.V. Petrov, S.I. Strelnikov, B.G. Lopatin, \nF.H. Wilson, S. Tella, D. Paul, T. Lynds, S.P. Shokalsky, C.K. Hults, \nS. Bergman, H.F. Jepsen, and A. Solli. Geological map of the Arctic. doi:10.4095/287868. Geological Survey of Canada Map 2159A. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_arctic_26_29_geology_8ec05c08432febea.json",
+          "sha256": "497ffd3c72d9b02b3e5df98a8345c74a51329dccf35c922cad5c8ada713f73b4",
+          "metadata_path": "data/raw/context/earth_arctic_26_29_geology_8ec05c08432febea.request.json",
+          "metadata_sha256": "145da22135c2cbfca59efd4e67053ecda77133bbe72a0a689b222abe9f0c9f07",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=73.0359066517747&lng=-83.418055344822",
+          "requested_parameters": {
+            "lat": 73.0359066517747,
+            "lng": -83.418055344822
+          },
+          "retrieved_utc": "2026-11-14T01:17:46.153322+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_arctic_26_29_climate_1a09c262d5603b5a.json",
+          "sha256": "9819d5efdd1f7d4fc7d849ca081a3ccf975aa919b626f56ce5f08d42cb310622",
+          "metadata_path": "data/raw/context/earth_arctic_26_29_climate_1a09c262d5603b5a.request.json",
+          "metadata_sha256": "2e9b52c1ce7b2b848404c03286e6b534438ffc2cd11428d078495df46e8f0d98",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=73.0359066517747&longitude=-83.418055344822&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 73.0359066517747,
+            "longitude": -83.418055344822,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:39.377141+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_arctic_28_30": {
+      "latitude": 75.01268271051367,
+      "longitude": -85.0302592718897,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": -16.382069531891595,
+        "freezing_mean_day_fraction": 0.8286339994525048,
+        "mean_annual_precipitation_mm": 239.67,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": -31.186451612903223,
+          "2": -34.65583038869258,
+          "3": -31.966451612903228,
+          "4": -24.003,
+          "5": -12.157741935483871,
+          "6": -1.9863333333333333,
+          "7": 4.08258064516129,
+          "8": 2.017741935483871,
+          "9": -5.572666666666667,
+          "10": -13.419032258064515,
+          "11": -21.725333333333335,
+          "12": -27.209032258064514
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 961597,
+            "source_id": 7,
+            "name": "Ordovician sedimentary",
+            "lith": "sedimentary",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Ordovician"
+          },
+          {
+            "map_id": 635664,
+            "source_id": 2,
+            "name": "ice",
+            "lith": "",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": null
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "7": "Garrity, C.P., and Soller, D.R.,. Database of the Geologic Map of North America: adapted from the map by J.C. Reed, Jr. and others (2005). U.S. Geological Survey Data Series 424 . ",
+          "2": "J.C. Harrison, M.R. St-Onge, O.V. Petrov, S.I. Strelnikov, B.G. Lopatin, \nF.H. Wilson, S. Tella, D. Paul, T. Lynds, S.P. Shokalsky, C.K. Hults, \nS. Bergman, H.F. Jepsen, and A. Solli. Geological map of the Arctic. doi:10.4095/287868. Geological Survey of Canada Map 2159A. "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_arctic_28_30_geology_7e94c4d83c277e08.json",
+          "sha256": "7e472a63edd5322b3f519a219bb190af0e85246f4546cd8358f91b0ee47ab57c",
+          "metadata_path": "data/raw/context/earth_arctic_28_30_geology_7e94c4d83c277e08.request.json",
+          "metadata_sha256": "4f680f615fa282c0f06b85ee9f1186f5773eb43fc0cbf7fa15c225f515eb566d",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=75.01268271051367&lng=-85.0302592718897",
+          "requested_parameters": {
+            "lat": 75.01268271051367,
+            "lng": -85.0302592718897
+          },
+          "retrieved_utc": "2026-11-14T01:18:02.038524+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_arctic_28_30_climate_35fb161cd86192d6.json",
+          "sha256": "f3abe5004ad299f5c62dc6bdd03539dfa7e5d8762d2bbcd340f1fa72ddf792e2",
+          "metadata_path": "data/raw/context/earth_arctic_28_30_climate_35fb161cd86192d6.request.json",
+          "metadata_sha256": "e68a2104e1047cc3bd0c7a32d328607f189ded41bf427f9de8acc5aca9cbc672",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=75.01268271051367&longitude=-85.0302592718897&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 75.01268271051367,
+            "longitude": -85.0302592718897,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:22:53.693641+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    },
+    "earth_arctic_29_25": {
+      "latitude": 72.31936845390412,
+      "longitude": -98.42696902148067,
+      "climate": {
+        "period_start": "2015-01-01",
+        "period_end": "2024-12-31",
+        "sample_days": 3653,
+        "valid_temperature_fraction": 1.0,
+        "mean_temperature_c": -13.880782918149466,
+        "freezing_mean_day_fraction": 0.7347385710375034,
+        "mean_annual_precipitation_mm": 177.85,
+        "complete_precipitation_years": 10,
+        "monthly_mean_temperature_c": {
+          "1": -31.954193548387096,
+          "2": -34.67667844522968,
+          "3": -29.681935483870966,
+          "4": -20.499666666666666,
+          "5": -8.014516129032257,
+          "6": 2.578666666666667,
+          "7": 8.81,
+          "8": 5.672903225806452,
+          "9": -1.0796666666666666,
+          "10": -9.323870967741936,
+          "11": -21.350666666666665,
+          "12": -28.37161290322581
+        },
+        "spatial_scope": "Model grid cell selected near Earth ROI centroid, not an ROI average",
+        "model": "Copernicus ERA5 via Open-Meteo; 0.25 degree reanalysis",
+        "resource_inference": "Precipitation and temperature do not measure extractable water or ice"
+      },
+      "geology": {
+        "status": "mapped_context",
+        "units": [
+          {
+            "map_id": 639598,
+            "source_id": 2,
+            "name": "Sedimentary; Carbonate",
+            "lith": "limestone, dolostone, shale, evaporites, chalk; carbonate reefs",
+            "descrip": "Canada Shield, Greenland Shield, and cover, Interior Platform, Arctic Platform, M'Clintock Basin",
+            "scale": "small",
+            "best_int_name": "Paleozoic"
+          },
+          {
+            "map_id": 954017,
+            "source_id": 7,
+            "name": "Silurian-Devonian sedimentary",
+            "lith": "sedimentary",
+            "descrip": "",
+            "scale": "small",
+            "best_int_name": "Paleozoic"
+          }
+        ],
+        "lithology_classes": [
+          "sedimentary"
+        ],
+        "references": {
+          "2": "J.C. Harrison, M.R. St-Onge, O.V. Petrov, S.I. Strelnikov, B.G. Lopatin, \nF.H. Wilson, S. Tella, D. Paul, T. Lynds, S.P. Shokalsky, C.K. Hults, \nS. Bergman, H.F. Jepsen, and A. Solli. Geological map of the Arctic. doi:10.4095/287868. Geological Survey of Canada Map 2159A. ",
+          "7": "Garrity, C.P., and Soller, D.R.,. Database of the Geologic Map of North America: adapted from the map by J.C. Reed, Jr. and others (2005). U.S. Geological Survey Data Series 424 . "
+        },
+        "license": "CC-BY 4.0",
+        "spatial_scope": "Mapped units intersecting the ROI centroid; not whole-ROI geology",
+        "classification_method": "Explicit lithology-name keyword screening, not mineral inference"
+      },
+      "evidence": [
+        {
+          "kind": "geology",
+          "raw_path": "data/raw/context/earth_arctic_29_25_geology_a60e37906ed83cdc.json",
+          "sha256": "696c8a079f95ec860f44fe71e8fd0c129b4bf3c5f6c95a36b2614d47495363a6",
+          "metadata_path": "data/raw/context/earth_arctic_29_25_geology_a60e37906ed83cdc.request.json",
+          "metadata_sha256": "37d45c77cfc9e6550b1cb91f9c29595d343bc3e9bf90bc3bd0d924c747bfdb69",
+          "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=72.31936845390412&lng=-98.42696902148067",
+          "requested_parameters": {
+            "lat": 72.31936845390412,
+            "lng": -98.42696902148067
+          },
+          "retrieved_utc": "2026-11-14T01:18:19.423519+00:00",
+          "license": "Macrostrat CC-BY 4.0; original map references retained"
+        },
+        {
+          "kind": "climate",
+          "raw_path": "data/raw/context/earth_arctic_29_25_climate_fd8bf8978ff1d388.json",
+          "sha256": "229b32e409bc2714a01ee4b4e40333ea21bf1904a0a5c478ebaea98b678cdfc1",
+          "metadata_path": "data/raw/context/earth_arctic_29_25_climate_fd8bf8978ff1d388.request.json",
+          "metadata_sha256": "727faf83518aeb80cb2386f36131df6430f99f65abdb07b4de2da1d9f94fb923",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=72.31936845390412&longitude=-98.42696902148067&start_date=2015-01-01&end_date=2024-12-31&daily=temperature_2m_mean%2Cprecipitation_sum&models=era5&timezone=UTC&elevation=nan",
+          "requested_parameters": {
+            "latitude": 72.31936845390412,
+            "longitude": -98.42696902148067,
+            "start_date": "2015-01-01",
+            "end_date": "2024-12-31",
+            "daily": "temperature_2m_mean,precipitation_sum",
+            "models": "era5",
+            "timezone": "UTC",
+            "elevation": "nan"
+          },
+          "retrieved_utc": "2026-11-14T01:23:08.285748+00:00",
+          "license": "Credit Open-Meteo and Copernicus Climate Change Service ERA5; CC-BY 4.0"
+        }
+      ],
+      "acquisition_errors": {},
+      "resources": {
+        "status": "not_assessed",
+        "water_ice": null,
+        "minerals": null,
+        "cave_access": null,
+        "note": "No extraction feasibility or subsurface survey supplied"
+      },
+      "novelty": {
+        "status": "unreviewed",
+        "note": "A ranking does not establish a new analog; literature and field validation required"
+      }
+    }
+  },
+  "note": "Earth context is not a cross-body suitability score"
+}

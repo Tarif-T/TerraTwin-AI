@@ -1,0 +1,14 @@
+version: mission_presets_v1
+missions:
+  - id: terrain_baseline
+    name: Terrain baseline
+    purpose: Compare overall terrain aggregates at the common analysis scale.
+    weights: {slope_median_deg: 0.4, relief_p90_p10_m: 0.3, roughness_local_std_m: 0.2, steep_fraction_15deg: 0.1}
+  - id: rover_mobility
+    name: Rover mobility field testing
+    purpose: Prioritize slope and steep terrain for early mobility-test shortlisting. A 1 km grid cannot resolve wheel-scale hazards.
+    weights: {slope_median_deg: 0.45, relief_p90_p10_m: 0.1, roughness_local_std_m: 0.2, steep_fraction_15deg: 0.25}
+  - id: terrain_diversity
+    name: Geological fieldwork terrain
+    purpose: Prioritize relief and roughness when choosing fieldwork terrain; inspect mapped Earth geology separately. These weights do not measure mineralogical similarity.
+    weights: {slope_median_deg: 0.2, relief_p90_p10_m: 0.4, roughness_local_std_m: 0.3, steep_fraction_15deg: 0.1}

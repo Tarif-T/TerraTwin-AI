@@ -1,0 +1,22 @@
+product_type: topographic_elevation
+sample_unit: m
+scale: 1
+offset: 0
+longitude_convention: '-180_180'
+mask_land_value: 0
+body: Earth
+source_crs: EPSG:4326
+horizontal_datum: WGS84
+vertical_datum: EGM96 geoid
+latitude_type: geodetic
+nodata: -32768
+label_path: ../evidence/NASADEM_HGT_n34w116.umm.json
+label_sha256: 0e5d366a63215cf2c75a719d03986daaa2ab69f528e0a62daf54e8867a040e1b
+mask_path: ../../raw/Earth/NASADEM_archives/n34w116.swb
+mask_sha256: 2edda3bed7c78eadd7dd70ce98b838846aebabd34816cb4c574a5d2458a3452d
+interpretation_evidence: 'NASADEM user guide Table 1: HGT big-endian int16 EGM96 metres,
+  WGS84 1 arcsecond posts; SWB uint8 0=land, 255=water. Exploratory tile-centered
+  ROI selected before scoring; geology unassessed. User-supplied extracted members;
+  original ZIP unavailable, ZIP CRC unverified. Local checksums are not independently
+  published NASA checksums. Original retrieval time may be unknown for manually supplied
+  files; accessed_utc records verification time.'

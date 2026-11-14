@@ -1,8 +1,18 @@
+# Current challenge expansion
+
+Two references and 15 Earth profiles are prepared; 14 Earth profiles pass QA.
+89 tests and the terrain dataset release gate pass. Mission presets, Earth
+climate/geology context, systematic polar discovery and candidate comparisons
+are implemented. Resources, caves and independent novelty/suitability review
+remain incomplete. See [challenge progress](challenge-progress.md).
+
+The earlier eleven-site milestone below is retained as development history.
+
 # Development status
 
-The first real Mars/one-Earth slice is now prepared and numerically verified.
+One real Mars reference and eleven distinct Earth profiles are prepared and numerically verified.
 See [real-data validation](real-data-validation.md) for the actual measurements,
-provenance, score and limits. The full two-body/ten-Earth-site MVP remains incomplete.
+provenance, score and limits. The full two-body MVP remains blocked by missing valid lunar data.
 
 ## Guide review
 
@@ -16,11 +26,11 @@ numerical-first sequence. The repository initially contained only a title README
 | Ticket | Status | Evidence / remaining work |
 | --- | --- | --- |
 | T-01 Scaffold | Implemented | Python 3.11 environment, package, config, Streamlit shell, README, license |
-| T-02 Contracts | Implemented | Strict schemas and real manifest with four source members |
+| T-02 Contracts | Implemented | Strict schemas and real manifest with 34 source members |
 | T-03 Features | Implemented and unit-tested | Analytical slopes, relief, roughness, masks, empty samples, quality thresholds |
 | T-04 PDS | Mars verified numerically | Actual MOLA decoded; full archive hash matches; Moon binary blocked |
-| T-05 Earth | First real ROI prepared | NASADEM HGT plus external SWB mask; bounds equivalence and source hashes checked |
-| T-06 Real profiles | Partial | One Mars and one Earth profile; Moon and additional sites missing |
+| T-05 Earth | 11 real ROIs prepared | NASADEM HGT plus external SWB mask; bounds equivalence and source hashes checked |
+| T-06 Real profiles | Partial | One Mars and eleven eligible Earth profiles; Moon missing |
 | T-07 Scoring | Implemented and unit-tested | Identity, monotonicity, missingness, deterministic ordering, quality and export checks |
 | T-08/T-09 App/evidence/export | Real slice working | Actual profile selection, score, evidence and CSV parity verified |
 | T-10 Integration/offline | Partial | Real-grid independent arithmetic and deterministic processing verified; full release blocked |
@@ -32,8 +42,9 @@ numerical-first sequence. The repository initially contained only a title README
 The environment was created with `uv venv --python 3.11 .venv` and dependencies
 installed with `uv pip install --python .venv/Scripts/python.exe -e '.[dev]'`.
 Validation commands are documented in [README](../README.md).
-The current suite has 63 passing tests, including external masks, footprint
-equivalence and PDS binary length rejection. Historical first-pass evidence is in
+The current suite has 73 passing tests, including external masks, footprint
+equivalence, PDS binary length rejection, NASADEM ZIP safeguards, append-only
+registration, and independent multi-site ranking verification. Historical first-pass evidence is in
 [verification](verification.md); current real-data evidence is in
 [real-data validation](real-data-validation.md).
 
@@ -51,8 +62,8 @@ Affine 3. The tested environment is captured in
 ## Next exact tasks
 
 1. Replace and interpret the damaged LOLA IMG; define a documented lunar ROI.
-2. Obtain at least nine additional distinct Earth ROIs and their full provenance;
-   do not multiply overlapping windows into supposedly distinct sites.
+2. Eleven Earth profiles are operational. Review the real ranking evidence and
+   broaden the candidate catalog if the research question requires wider coverage.
 3. Independently verify the Earth original ZIP against the provider where possible.
 4. Review real rankings against independent expert assessments and literature;
    tune weights only with separated calibration/evaluation sites.

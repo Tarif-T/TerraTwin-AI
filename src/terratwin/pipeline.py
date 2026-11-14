@@ -18,7 +18,7 @@ from terratwin.geo.features import extract_features
 from terratwin.geo.quality import quality_reasons
 from terratwin.geo.rasters import metric_roi
 from terratwin.geo.regions import validate_earth_footprint
-from terratwin.ingest.earth_loader import load_nasadem
+from terratwin.ingest.earth_loader import load_earth
 from terratwin.ingest.manifest import load_manifest, sha256_file
 from terratwin.ingest.pds_loader import load_pds
 from terratwin.models import Contract, Profile
@@ -80,7 +80,7 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
             root / job.raster_path,
             root / job.interpretation_path,
         )
-        adapter = load_nasadem if source.planetary_body == "Earth" else load_pds
+        adapter = load_earth if source.planetary_body == "Earth" else load_pds
         metadata = adapter(raster_path, interpretation_path, source)
         if source.roi_id != job.identity.get("roi_id"):
             raise ValueError("Job ROI differs from source manifest")

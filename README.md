@@ -3,13 +3,19 @@
 An offline-first terrain analog shortlisting tool for Analognauts, built from the
 TerraTwin AI MVP Technical Architecture Agent Guide (v1.0, November 10, 2026).
 
-**Status: limited real-data prototype.** One measured MOLA Jezero reference and
-one NASADEM Death Valley-area candidate are prepared at matching physical scale.
-The pipeline, arithmetic, UI and CSV are verified for this slice. The initial
-terrain index is **94.0643 / 100** under the engineering defaults; it does not
-establish scientific suitability or ranking utility with a single candidate.
-The damaged Moon raster and >=10-site acceptance requirement remain unresolved.
-See [the real-data validation report](docs/real-data-validation.md).
+**Status: operational Mars/Moon terrain catalog with Earth characterization.**
+Two measured references (Jezero and Shackleton) are compared with 15 Earth regions.
+Fourteen Earth sites pass terrain QA; one Arctic candidate is explicitly rejected.
+The app includes mission presets, geological context, 2015?2024 ERA5 temperature
+and precipitation, evidence filters, candidate cards and two-site comparisons.
+Resources, caves, novelty and scientific suitability remain unassessed.
+See [the challenge progress report](docs/challenge-progress.md) for rankings,
+validation, primary sources and the remaining research requirements.
+
+The original damaged global lunar image was preserved. A newly downloaded public
+LOLA polar product supplies the lunar reference. Antarctic REMA and a bounded
+ArcticDEM search add polar candidates. The terrain dataset count/ranking gate
+passes; it does not certify the full scientific challenge.
 
 ## Run locally
 
@@ -48,7 +54,7 @@ binary wheels are unavailable. Do not change the system Python environment.
 
 The PDS adapter delegates supported label decoding to GDAL and requires a manually
 audited interpretation. It is **not** a universal PDS parser. The actual MOLA
-product has been decoded and checked numerically; LOLA remains blocked.
+products have been decoded and checked numerically, including the new LOLA polar DEM.
 A valid metadata schema is not
 evidence of a correct scientific interpretation.
 
@@ -62,6 +68,21 @@ Register source records in
 [the manifest](data/metadata/sources.csv), verified Earth polygons in
 [the catalog](data/catalog/earth_sites.geojson), and jobs in
 [the pipeline configuration](config/pipeline.yaml).
+
+To expand the existing study, download the ZIPs in the
+[expansion checklist](docs/earth-catalog-expansion.md), keep their original filenames
+in `data/raw/Earth/NASADEM_archives/`, then run:
+
+```powershell
+.venv/Scripts/python.exe scripts/expand_earth_catalog.py --register --build
+```
+
+The script resumes from available archives, validates ZIP members, appends source
+records and ROIs, builds profiles, and verifies ranking order and UI/CSV parity.
+If Earthdata credentials are already configured in a local `.netrc`/`_netrc`, add
+`--download` to retrieve missing archives automatically. Do not put credentials
+in source files or chat. `prepare_real_slice.py` below is only the initial two-ROI
+bootstrap and intentionally refuses to overwrite an expanded study.
 
 ```powershell
 .venv/Scripts/python.exe scripts/prepare_real_slice.py
@@ -81,7 +102,8 @@ verifies the complete Mars image against PDS, and fixes the study footprints bef
 scoring. Original user download dates are unknown and recorded as such. It does
 not require Earthdata credentials or rewrite raw images. The Earth ZIP publisher
 checksum is unverified; that limitation is preserved in the app and exports.
-The full `--release` check still fails because Moon and >=10 Earth sites are missing.
+The `--release` dataset count/ranking gate now passes for Mars and Moon.
+Independent scientific assessment remains incomplete.
 
 Expected prepared outputs are `data/processed/planetary_profiles.parquet`,
 `data/processed/earth_profiles.parquet`, and

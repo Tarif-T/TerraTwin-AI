@@ -1,0 +1,9 @@
+{
+  "url": "https://macrostrat.org/api/v2/geologic_units/map?lat=36.5&lng=-116.5",
+  "requested_parameters": {
+    "lat": 36.5,
+    "lng": -116.5
+  },
+  "retrieved_utc": "2026-11-14T01:08:49.375397+00:00",
+  "license": "Macrostrat CC-BY 4.0; original map references retained"
+}

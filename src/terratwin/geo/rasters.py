@@ -45,8 +45,11 @@ def metric_roi(
             [left, right, left, right],
             [bottom, bottom, top, top],
         )
-        if metadata.body == "Earth" and (min(lats) < -56 or max(lats) > 60):
-            raise ValueError("NASADEM ROI extends beyond 56 S to 60 N coverage")
+        if metadata.body == "Earth" and (
+            min(lats) < metadata.latitude_bounds_deg[0]
+            or max(lats) > metadata.latitude_bounds_deg[1]
+        ):
+            raise ValueError("Earth ROI extends beyond the source's declared latitude coverage")
         # Source spacing is measured in destination metres at nine ROI locations.
         # Conservative maximum prevents upsampling in either axis.
         for x in np.linspace(left, right, 3):

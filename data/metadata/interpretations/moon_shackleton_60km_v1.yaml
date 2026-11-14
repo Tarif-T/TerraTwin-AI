@@ -1,0 +1,22 @@
+body: Moon
+product_type: topographic_elevation
+sample_unit: m
+source_crs: PROJCS["Polar Stereographic Moon",GEOGCS["GCS_Moon",DATUM["D_Moon",SPHEROID["Moon_polarRadius",1737400,0]],PRIMEM["Reference_Meridian",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Polar_Stereographic"],PARAMETER["latitude_of_origin",-90],PARAMETER["central_meridian",0],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Metre",1],AXIS["Easting",NORTH],AXIS["Northing",NORTH]]
+horizontal_datum: DE421 mean Earth/polar axis; sphere R=1737400 m
+vertical_datum: Height above 1737400 m lunar reference sphere
+latitude_type: planetocentric
+longitude_convention: '0_360'
+scale: 0.5
+offset: 0
+nodata: null
+value_interpretation: lola_height
+latitude_bounds_deg:
+- -90
+- 90
+label_path: ../../raw/Moon/LOLA_polar/ldem_875s_20m.xml
+label_sha256: 68b8b28df4d1094d77afeca1ec96417fbfc7798ee97d0d08d2e3cbc4f82cae8f
+interpretation_evidence: Original LOLA PDS4/PDS3 HEIGHT=DN*0.5; radius offset 1737400
+  m is not added to height. Polar stereographic 20 m source. Interpolated altimetry
+  is not direct-shot coverage. Study center from USGS/IAU Shackleton feature 5450
+  (-89.67,129.78); not a designated base site.
+raster_data_path: ../../raw/Moon/LOLA_polar/ldem_875s_20m.img

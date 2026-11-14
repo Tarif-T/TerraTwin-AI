@@ -21,7 +21,7 @@ def test_empty_app_is_offline_and_disables_science(monkeypatch):
     assert not app.exception
     assert any("No validated scientific profiles loaded" in w.value for w in app.warning)
     assert app.button[0].disabled
-    app.selectbox[0].select("Moon").run()
+    next(s for s in app.selectbox if s.label == "Planetary body").select("Moon").run()
     assert not app.exception
     assert app.button[0].disabled
     assert any("LOLA GDR" in caption.value for caption in app.caption)
