@@ -1,0 +1,10 @@
+{
+  "source_url": "https://planetarynames.wr.usgs.gov/Feature/14300",
+  "feature_id": 14300,
+  "feature_name": "Jezero",
+  "center_latitude_deg": 18.41,
+  "center_longitude_deg": 77.69,
+  "coordinate_system": "Planetocentric, positive East, 0-360",
+  "verified_utc": "2026-11-13T23:56:14.490217+00:00",
+  "evidence_type": "Structured transcription of the USGS/IAU Gazetteer page checked with web research"
+}

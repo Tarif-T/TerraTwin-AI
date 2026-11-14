@@ -1,0 +1,62 @@
+{
+  "git_commit": "5ff59c7fe60d4aad9e76bb053c05ecb8d53b42d3",
+  "code_sha256": "d4b5884032261b078cfaf8de44cd55b9ec0015503b86605a26d7703f6f34b7f1",
+  "pipeline_config_sha256": "de709a71789d0e1d0e4426ad924bd3ab4c1cc2cadfc6f52eaca40552ea1c1485",
+  "packages": {
+    "terratwin-ai": "0.1.0",
+    "numpy": "2.4.6",
+    "rasterio": "1.4.4",
+    "pyproj": "3.7.2",
+    "pydantic": "2.14.3",
+    "pandas": "2.3.3"
+  },
+  "profiles": [
+    {
+      "profile_id": "mars_jezero_60km_v1",
+      "raster_sha256": "14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36",
+      "reader_entrypoint_sha256": "f6de640ed5603eb03395616214c9a5707c9d49273f699d2cbeec53e93df6bd08",
+      "supporting_source_ids": [],
+      "interpretation_sha256": "4cb260605cfd5872cce53346a37819dee23da3226d0421c44ccdf508da0a5fb3",
+      "label_sha256": "f6de640ed5603eb03395616214c9a5707c9d49273f699d2cbeec53e93df6bd08",
+      "config_sha256": "8861031b06b22e2a331ad88cbd83da47245e3762d4211d822a5749c46e2f7e77",
+      "destination_crs": "+proj=aeqd +lat_0=18.41 +lon_0=77.69 +R=3396000 +units=m +type=crs",
+      "bounds_m": [
+        -30000.0,
+        -30000.0,
+        30000.0,
+        30000.0
+      ],
+      "valid_elevation_count": 3600,
+      "valid_slope_count": 3364,
+      "valid_roughness_count": 3364,
+      "quality_reasons": [],
+      "analysis_raster": "terrain/2089a8daf24b9c2e.tif",
+      "analysis_raster_sha256": "1c6ed9532425bee2045e343c1bbc9df9ab001bd01d575d2d9fc2b4a7962ff5de"
+    },
+    {
+      "profile_id": "earth_n36w117_60km_v1",
+      "raster_sha256": "31395a35998dd9787daa3cbd8f501b42ee74f7609bd361c202eeb0cdb220f442",
+      "reader_entrypoint_sha256": "31395a35998dd9787daa3cbd8f501b42ee74f7609bd361c202eeb0cdb220f442",
+      "supporting_source_ids": [
+        "NASADEM_N36W117_NUM",
+        "NASADEM_N36W117_SWB"
+      ],
+      "interpretation_sha256": "ac50a2317c5da187523bee6a9f5212d342b1fadc4c551a81c892b77a9b9e9264",
+      "label_sha256": "219260574b47f47554c2c8122da1e0934de2ea99ea29c2031b6223aa3982f9fd",
+      "config_sha256": "b925ef96bb89e1373af0240da15190f354f3da08dd91f4889724cdba553409d1",
+      "destination_crs": "+proj=aeqd +lat_0=36.5 +lon_0=-116.5 +datum=WGS84 +units=m +type=crs",
+      "bounds_m": [
+        -30000.0,
+        -30000.0,
+        30000.0,
+        30000.0
+      ],
+      "valid_elevation_count": 3592,
+      "valid_slope_count": 3342,
+      "valid_roughness_count": 3332,
+      "quality_reasons": [],
+      "analysis_raster": "terrain/7e47fa63c3e14ea4.tif",
+      "analysis_raster_sha256": "15535321aa14ebaf5b4d1cda3501275b9aa391a86457d9e26d3e8700023ebef8"
+    }
+  ]
+}

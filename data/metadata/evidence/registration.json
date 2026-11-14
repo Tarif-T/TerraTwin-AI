@@ -1,0 +1,35 @@
+{
+  "metadata_accessed_utc": "2026-11-13T23:56:14.490217+00:00",
+  "original_user_download_utc": null,
+  "selection_rule": "Jezero Gazetteer center; Earth tile midpoint; fixed before scoring",
+  "evidence": {
+    "mars_original_xml": {
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg128/megt44n000hb.xml",
+      "local_path": "data\\metadata\\evidence\\megt44n000hb.xml",
+      "sha256": "f6de640ed5603eb03395616214c9a5707c9d49273f699d2cbeec53e93df6bd08"
+    },
+    "nasadem_granule": {
+      "url": "https://cmr.earthdata.nasa.gov/search/concepts/G2816846943-LPCLOUD.umm_json",
+      "local_path": "data\\metadata\\evidence\\NASADEM_HGT_n36w117.umm.json",
+      "sha256": "219260574b47f47554c2c8122da1e0934de2ea99ea29c2031b6223aa3982f9fd"
+    },
+    "nasadem_guide": {
+      "url": "https://lpdaac.usgs.gov/documents/1318/NASADEM_User_Guide_V12.pdf",
+      "local_path": "data\\metadata\\evidence\\NASADEM_User_Guide_V12.pdf",
+      "sha256": "6f60bbdedf5d39873cba644661df90c78cc8e222377ca9bfe9f9c2e427745b72"
+    },
+    "jezero_location": {
+      "url": "https://planetarynames.wr.usgs.gov/Feature/14300",
+      "local_path": "data\\metadata\\evidence\\jezero_location.json",
+      "sha256": "83f3e1aa053d8bebad7fa583ddc2fa5015f92dc9a153ad3173eda420277c2e53"
+    }
+  },
+  "mars_integrity": {
+    "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg128/megt44n000hb.img",
+    "sha256": "14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36",
+    "byte_count": 129761280,
+    "verified_utc": "2026-11-13T23:56:14.490217+00:00",
+    "full_byte_comparison": true
+  },
+  "earth_integrity": "Local hashes and provider granule identity/extent; publisher ZIP hash unverified"
+}

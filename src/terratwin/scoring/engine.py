@@ -54,6 +54,8 @@ def rank_candidates(reference: Profile, sites: list[Profile], config: ScoringCon
             else None
         )
         warnings = [site.data_warning] if site.data_warning else []
+        if reference.data_warning:
+            warnings.append("Reference: " + reference.data_warning)
         if missing_reference:
             warnings.append("Missing reference features: " + ", ".join(missing_reference))
         if coverage < config.minimum_coverage:

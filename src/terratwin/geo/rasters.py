@@ -1,5 +1,7 @@
 """Bounded ROI reprojection with nodata preservation and no resolution invention."""
 
+from pathlib import Path
+
 import numpy as np
 import rasterio
 from pyproj import Transformer
@@ -19,6 +21,7 @@ def metric_roi(
     bounds: tuple[float, float, float, float],
     grid_m: float,
     roi_size_km: float,
+    interpretation_path: str | Path | None = None,
 ) -> np.ndarray:
     target = validate_body_crs(destination_crs, metadata.body, metric=True)
     left, bottom, right, top = bounds
@@ -74,7 +77,23 @@ def metric_roi(
         if window.width * window.height > 25_000_000:
             raise ValueError("ROI input exceeds memory limit; pre-clip/mosaic the source offline")
         raw = dataset.read(1, window=window, masked=True, boundless=True).astype("float64")
-        mask = np.ma.getmaskarray(raw) | (raw.data == metadata.nodata) | ~np.isfinite(raw.data)
+        mask = np.ma.getmaskarray(raw) | ~np.isfinite(raw.data)
+        if metadata.nodata is not None:
+            mask |= raw.data == metadata.nodata
+        if metadata.mask_path:
+            if interpretation_path is None:
+                raise ValueError("Ground mask requires its interpretation path")
+            mask_path = Path(interpretation_path).parent / metadata.mask_path
+            water = np.memmap(
+                mask_path, dtype="uint8", mode="r", shape=(dataset.height, dataset.width)
+            )
+            ground = np.zeros(raw.shape, dtype=bool)
+            r0, c0 = int(window.row_off), int(window.col_off)
+            r1, c1 = r0 + raw.shape[0], c0 + raw.shape[1]
+            a, b, c, d = max(0, r0), min(dataset.height, r1), max(0, c0), min(dataset.width, c1)
+            ground[a - r0 : b - r0, c - c0 : d - c0] = water[a:b, c:d] == metadata.mask_land_value
+            mask |= ~ground
+            del water
         source = np.where(mask, np.nan, raw.data * metadata.scale + metadata.offset)
         output = np.full(shape, np.nan)
         reproject(

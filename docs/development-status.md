@@ -1,4 +1,8 @@
-# First implementation pass
+# Development status
+
+The first real Mars/one-Earth slice is now prepared and numerically verified.
+See [real-data validation](real-data-validation.md) for the actual measurements,
+provenance, score and limits. The full two-body/ten-Earth-site MVP remains incomplete.
 
 ## Guide review
 
@@ -12,14 +16,14 @@ numerical-first sequence. The repository initially contained only a title README
 | Ticket | Status | Evidence / remaining work |
 | --- | --- | --- |
 | T-01 Scaffold | Implemented | Python 3.11 environment, package, config, Streamlit shell, README, license |
-| T-02 Contracts | Initial implementation | Strict Pydantic schemas, manifest reader, >=10 synthetic test-only records; production records pending |
+| T-02 Contracts | Implemented | Strict schemas and real manifest with four source members |
 | T-03 Features | Implemented and unit-tested | Analytical slopes, relief, roughness, masks, empty samples, quality thresholds |
-| T-04 PDS | Adapter prepared | Local audited metadata + GDAL; actual Mars/Moon product decoding not validated |
-| T-05 Earth | Adapter prepared | Local NASADEM guardrails, metric ROI, masks, no upsampling; real clips pending |
-| T-06 Real profiles | Not complete | No verified source rasters, ROI catalog or measured profiles |
+| T-04 PDS | Mars verified numerically | Actual MOLA decoded; full archive hash matches; Moon binary blocked |
+| T-05 Earth | First real ROI prepared | NASADEM HGT plus external SWB mask; bounds equivalence and source hashes checked |
+| T-06 Real profiles | Partial | One Mars and one Earth profile; Moon and additional sites missing |
 | T-07 Scoring | Implemented and unit-tested | Identity, monotonicity, missingness, deterministic ordering, quality and export checks |
-| T-08/T-09 App/evidence/export | Initial integration | Empty-state smoke tested; real-data golden path pending |
-| T-10 Integration/offline | Partial | Synthetic raster mechanics and empty app offline; real prepared-data release blocked |
+| T-08/T-09 App/evidence/export | Real slice working | Actual profile selection, score, evidence and CSV parity verified |
+| T-10 Integration/offline | Partial | Real-grid independent arithmetic and deterministic processing verified; full release blocked |
 | T-11 Compare/weights | Deferred P1 | No production sliders or two-site page yet |
 | T-12 Pitch | Not complete | Demo script covers honest prototype state; real screenshots pending |
 
@@ -28,8 +32,10 @@ numerical-first sequence. The repository initially contained only a title README
 The environment was created with `uv venv --python 3.11 .venv` and dependencies
 installed with `uv pip install --python .venv/Scripts/python.exe -e '.[dev]'`.
 Validation commands are documented in [README](../README.md).
-The first pass has 56 passing tests, clean Ruff checks, compatible dependencies,
-and a verified browser-rendered shell. See [verification evidence](verification.md).
+The current suite has 63 passing tests, including external masks, footprint
+equivalence and PDS binary length rejection. Historical first-pass evidence is in
+[verification](verification.md); current real-data evidence is in
+[real-data validation](real-data-validation.md).
 
 Assumptions introduced: fully valid roughness windows, central differences with
 edge exclusion, effectively complete source support for aggregated ground cells,
@@ -44,16 +50,14 @@ Affine 3. The tested environment is captured in
 
 ## Next exact tasks
 
-1. Validate one real MOLA and one LOLA product against labels/SIS and shaded relief;
-   select scientific reference geolocations and body-correct local ROIs.
-2. Obtain two NASADEM clips and their ground masks/metadata through authorized
-   Earthdata access; document exact Earth polygons and provenance.
-3. Enforce automated polygon/analysis footprint equivalence and complete parent
-   provenance for any converted/mosaicked products.
-4. Generate the first real profiles, independently check feature values, run a
-   genuine comparison, and expand to >=10 geographically distinct Earth ROIs.
-5. Exercise map/table/details/CSV parity with real profiles, supply an offline map
-   fallback, run sensitivity analysis, and complete scientific/release review.
+1. Replace and interpret the damaged LOLA IMG; define a documented lunar ROI.
+2. Obtain at least nine additional distinct Earth ROIs and their full provenance;
+   do not multiply overlapping windows into supposedly distinct sites.
+3. Independently verify the Earth original ZIP against the provider where possible.
+4. Review real rankings against independent expert assessments and literature;
+   tune weights only with separated calibration/evaluation sites.
+5. Supply an offline basemap fallback, broaden sensitivity analysis and complete
+   the full two-body/ten-site scientific acceptance review.
 
-No credentials are required to run the shell/tests. A working empty app does not
-satisfy the guide's real-data release criteria.
+No credentials are required to browse the prepared prototype. The working limited
+comparison does not satisfy the guide's full real-data release criteria.

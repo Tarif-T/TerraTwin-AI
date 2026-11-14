@@ -1,0 +1,161 @@
+{
+  "validated_utc": "2026-11-14T00:06:48.340028+00:00",
+  "status": "numerically_verified_limited_real_slice",
+  "scientific_suitability_validated": false,
+  "input_data_hash": "eaef4049ce83c7112851569ce44775f8afc519fd9755f47d918d3fac67c6c64f",
+  "run_id": "a42d91bc31a4d3a3",
+  "profiles": [
+    {
+      "profile_id": "mars_jezero_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.8805139866265086,
+        "relief_p90_p10_m": 697.9246059956658,
+        "roughness_local_std_m": 28.25126846340881,
+        "steep_fraction_15deg": 0.005648038049940547
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 3.552713678800501e-15,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 1.0,
+      "water_mask_removed_analysis_cells": null,
+      "raw_to_grid_repeat_exact": true
+    },
+    {
+      "profile_id": "earth_n36w117_60km_v1",
+      "independent_features": {
+        "slope_median_deg": 1.6581225710490757,
+        "relief_p90_p10_m": 525.9304645945928,
+        "roughness_local_std_m": 27.6888951072003,
+        "steep_fraction_15deg": 0.01615798922800718
+      },
+      "absolute_errors": {
+        "slope_median_deg": 0.0,
+        "relief_p90_p10_m": 0.0,
+        "roughness_local_std_m": 3.552713678800501e-15,
+        "steep_fraction_15deg": 0.0
+      },
+      "valid_cell_fraction": 0.9977777777777778,
+      "water_mask_removed_analysis_cells": 8,
+      "raw_to_grid_repeat_exact": true
+    }
+  ],
+  "rankings": [
+    {
+      "site_id": "earth_n36w117",
+      "site_name": "Death Valley-area tile-centered ROI",
+      "similarity_index": 94.0642908732807,
+      "feature_coverage": 1.0,
+      "reference_feature_coverage": 1.0,
+      "eligible": true,
+      "components": {
+        "slope_median_deg": {
+          "reference_value": 1.8805139866265086,
+          "site_value": 1.6581225710490757,
+          "similarity": 0.9780063251274592,
+          "weight": 0.4,
+          "contribution": 0.3912025300509837,
+          "missing": false
+        },
+        "relief_p90_p10_m": {
+          "reference_value": 697.9246059956658,
+          "site_value": 525.9304645945928,
+          "similarity": 0.8419841060012301,
+          "weight": 0.3,
+          "contribution": 0.252595231800369,
+          "missing": false
+        },
+        "roughness_local_std_m": {
+          "reference_value": 28.251268463408813,
+          "site_value": 27.688895107200295,
+          "similarity": 0.997192082813576,
+          "weight": 0.2,
+          "contribution": 0.19943841656271522,
+          "missing": false
+        },
+        "steep_fraction_15deg": {
+          "reference_value": 0.005648038049940547,
+          "site_value": 0.01615798922800718,
+          "similarity": 0.9740673031873908,
+          "weight": 0.1,
+          "contribution": 0.09740673031873909,
+          "missing": false
+        }
+      },
+      "source_ids": [
+        "MOLA_MEGT44N000HB",
+        "NASADEM_N36W117_HGT",
+        "NASADEM_N36W117_NUM",
+        "NASADEM_N36W117_SWB"
+      ],
+      "warning": "Single availability-selected candidate; rank 1 does not establish superiority.; Original Earth ZIP publisher checksum not independently verified.; Reference: MOLA includes interpolated bins; raster validity is not direct-shot coverage.",
+      "rank": 1
+    }
+  ],
+  "ui": {
+    "checked": true,
+    "real_rank_table_csv_parity": true,
+    "unavailable_moon_blocked": true
+  },
+  "weight_sensitivity": [
+    {
+      "feature": "slope_median_deg",
+      "weight_multiplier": 0.9,
+      "score": 93.90860997163632
+    },
+    {
+      "feature": "slope_median_deg",
+      "weight_multiplier": 1.1,
+      "score": 94.20799632095243
+    },
+    {
+      "feature": "relief_p90_p10_m",
+      "weight_multiplier": 0.9,
+      "score": 94.36942119100722
+    },
+    {
+      "feature": "relief_p90_p10_m",
+      "weight_multiplier": 1.1,
+      "score": 93.7769351371693
+    },
+    {
+      "feature": "roughness_local_std_m",
+      "weight_multiplier": 0.9,
+      "score": 93.94888439556485
+    },
+    {
+      "feature": "roughness_local_std_m",
+      "weight_multiplier": 1.1,
+      "score": 94.1751716067724
+    },
+    {
+      "feature": "steep_fraction_15deg",
+      "weight_multiplier": 0.9,
+      "score": 94.03052885868011
+    },
+    {
+      "feature": "steep_fraction_15deg",
+      "weight_multiplier": 1.1,
+      "score": 94.09738433313673
+    }
+  ],
+  "ablations": [
+    {
+      "removed": "slope_median_deg",
+      "score": 91.57339644697056
+    },
+    {
+      "removed": "roughness_local_std_m",
+      "score": 92.65056152126147
+    }
+  ],
+  "limitations": [
+    "One candidate cannot establish ranking utility or novelty.",
+    "Engineering weights/tolerances are uncalibrated.",
+    "Independent arithmetic checks use the same measured grids.",
+    "Earth publisher ZIP checksum remains unverified.",
+    "Lunar profile and >=10-site acceptance remain incomplete."
+  ]
+}

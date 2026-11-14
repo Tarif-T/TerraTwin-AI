@@ -230,3 +230,63 @@ def test_partial_ground_aggregate_remains_masked(local_input):
     array = metric_roi(path, metadata, "EPSG:32631", (500000, 0, 512000, 12000), 2000, 12)
     assert np.isnan(array[0, 0])
     assert np.isfinite(array[1:, 1:]).all()
+
+
+def test_external_water_mask_is_applied_and_checksummed(local_input):
+    path, sidecar, source, metadata = local_input
+    mask = np.zeros((12, 12), dtype="uint8")
+    mask[3, 3] = 255
+    mask_path = sidecar.parent / "SYNTHETIC.swb"
+    mask.tofile(mask_path)
+    metadata.update(mask_path=mask_path.name, mask_sha256=sha256_file(mask_path))
+    sidecar.write_text(yaml.safe_dump(metadata), encoding="utf-8")
+    parsed = load_nasadem(path, sidecar, source)
+    z = metric_roi(
+        path,
+        parsed,
+        "EPSG:32631",
+        (500000, 0, 512000, 12000),
+        1000,
+        12,
+        interpretation_path=sidecar,
+    )
+    assert np.isnan(z[3, 3])
+    assert z[3, 4] == 200
+    mask[3, 3] = 0
+    mask.tofile(mask_path)
+    with pytest.raises(ValueError, match="mask checksum"):
+        load_nasadem(path, sidecar, source)
+
+
+def test_pds_extra_bytes_rejected_before_measurement(local_input, monkeypatch):
+    from types import SimpleNamespace
+
+    path, sidecar, source, metadata = local_input
+    image = sidecar.parent / "SYNTHETIC.img"
+    image.write_bytes(b"\x00" * 34)  # Declared 4x4 int16 array must have exactly 32 bytes.
+    metadata["raster_data_path"] = image.name
+    sidecar.write_text(yaml.safe_dump(metadata), encoding="utf-8")
+    source = source.model_copy(update={"checksum_sha256": sha256_file(image)})
+
+    class Reader:
+        def __enter__(self):
+            return SimpleNamespace(
+                count=1, driver="PDS4", files=[str(image)], width=4, height=4, dtypes=["int16"]
+            )
+
+        def __exit__(self, *args):
+            pass
+
+    monkeypatch.setattr(rasterio, "open", lambda *args, **kwargs: Reader())
+    with pytest.raises(ValueError, match="byte count"):
+        load_nasadem(path, sidecar, source)
+
+
+def test_catalog_footprint_matches_analysis_bounds():
+    from terratwin.geo.regions import geographic_ring, validate_earth_footprint
+
+    bounds = (500000, 0, 512000, 12000)
+    geometry = {"type": "Polygon", "coordinates": [geographic_ring("EPSG:32631", "Earth", bounds)]}
+    validate_earth_footprint(geometry, "EPSG:32631", bounds)
+    with pytest.raises(ValueError, match="footprint"):
+        validate_earth_footprint(geometry, "EPSG:32631", (500000, 0, 506000, 12000))

@@ -1,0 +1,19 @@
+product_type: topographic_elevation
+sample_unit: m
+scale: 1
+offset: 0
+longitude_convention: '-180_180'
+mask_land_value: 0
+body: Earth
+source_crs: EPSG:4326
+horizontal_datum: WGS84
+vertical_datum: EGM96 geoid
+latitude_type: geodetic
+nodata: -32768
+label_path: ../evidence/NASADEM_HGT_n36w117.umm.json
+label_sha256: 219260574b47f47554c2c8122da1e0934de2ea99ea29c2031b6223aa3982f9fd
+mask_path: ../../raw/Earth/NASADEM_HGT_s01w047/n36w117.swb
+mask_sha256: b32defe6d14e5fe87a10d6d3a63fec34d5160b921f1ad9a0ef8549db75dc7364
+interpretation_evidence: 'NASADEM user guide v1.2 Table 1: HGT big-endian signed int16
+  metres relative to EGM96; WGS84 one-arc-second posts. SWB uint8 0=land, 255=water.
+  Earth ROI is centered at the documented n36w117 tile midpoint before scoring.'

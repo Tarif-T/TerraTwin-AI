@@ -1,22 +1,23 @@
 # Real data acquisition and intake contract
 
-No verified rasters, Earth ROI polygons or scientific feature rows have been
-prepared. Exact Earth tile IDs cannot be selected before the actual ROI footprints
-are documented. Do not fill the catalog with approximate coordinates from the seed
-names in the architecture guide.
+A real MOLA Jezero profile and a NASADEM n36w117 Earth profile are now prepared.
+Their fixed 60 km study footprints, source records and numerical validation are
+documented in [the real-data report](real-data-validation.md). Additional site
+footprints must be documented before scores are inspected; seed names alone do
+not establish scientific geolocation.
 
 ## Required files and current state
 
 | Body | Required local source | State |
 | --- | --- | --- |
-| Mars | MOLA MEGDR topography IMG, original PDS XML/LBL and any companion HDR | Not downloaded; candidate `megt44n000hb.img` at 128 pixels/degree, for the proposed Jezero-area investigation |
-| Moon | LOLA GDR topography IMG and original XML/LBL | Not downloaded; global `ldem_64.img`, `ldem_64.lbl`, `ldem_64.xml` identified in the official directory; final study ROI not selected |
-| Earth | NASADEM_HGT.001 elevation tiles/clips, original metadata, and a validated ground/nodata mask | None downloaded; first two then at least ten geographically distinct ROI footprints required |
+| Mars | MOLA MEGDR topography IMG, original PDS XML/LBL and any companion HDR | MEGT44N000HB downloaded; complete archive hash matches; actual PDS4-grid Jezero ROI processed |
+| Moon | LOLA GDR topography IMG and original XML/LBL | Files present; IMG has an extra encoding marker and incorrect byte count; processing blocked |
+| Earth | NASADEM_HGT.001 elevation and ground mask | n36w117 HGT/SWB/NUM processed; provider CMR metadata registered; ZIP publisher checksum unverified |
 
-Archive filenames above were located in the official directories on November 10,
-2026; their raster bytes, checksums, scale and georeferencing have **not** been
-validated. They are acquisition candidates, not accepted sources. A 1 km grid is
-provisional until actual source spacing supports it at every ROI.
+The prepared slice uses source-supported 1 km analysis spacing. This is a matched
+analysis scale, not a claim of direct altimeter observations in every source cell.
+MOLA includes interpolated bins. Original user download dates are unknown;
+`accessed_utc` records metadata verification, with that distinction stated in notes.
 
 - [MOLA archive and naming rules](https://pds-geosciences.wustl.edu/missions/mgs/megdr.html)
 - [Candidate MOLA directory](https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg128/)
@@ -75,8 +76,12 @@ record; do not copy invented numerical defaults into a product interpretation.
 | `label_sha256` | SHA256 of that original metadata file |
 | `interpretation_evidence` | Label fields/SIS section supporting the interpretation (>=20 characters) |
 
-The finite nodata contract intentionally blocks products whose missing-value
-semantics have not been established. GDAL scale metadata are not applied twice:
+Nodata may be null only when the audited product declares no special missing
+constant (as in this MOLA PDS4 array). Zero must not silently become nodata.
+PDS jobs additionally require `raster_data_path`, relative to the interpretation,
+so the IMG bytes and declared dimensions are checked even when opening an XML.
+Earth masks use `mask_path`, `mask_sha256`, and `mask_land_value` (0 for SWB land).
+GDAL scale metadata are not applied twice:
 Rasterio raw samples are converted once with the audited scale/offset.
 
 ## Pipeline job fields
@@ -91,10 +96,10 @@ also needs `site_id`, `site_name`, `country`, `centroid_lat`, and `centroid_lon`
 matching its catalog entry. Measurements, QA, hashes, source IDs, scale and body
 are pipeline-generated and cannot be overridden by identity fields.
 
-The current intake checks polygon/centroid identity but does not yet prove the
-catalog polygon equals the projected analysis footprint. Verify that manually
-before accepting any scientific output; automated footprint-equivalence checks
-are a remaining ticket.
+The pipeline now projects the Earth catalog polygon back to its local analysis
+CRS and rejects disagreement with the measured bounds. Densified ROI boundaries
+are generated from those bounds. Jobs can declare checksummed `supporting_files`
+keyed by manifest source IDs, and explicit `warnings` that survive into exports.
 
 ## Blocking and unsupported inputs
 

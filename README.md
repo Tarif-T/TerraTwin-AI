@@ -3,11 +3,13 @@
 An offline-first terrain analog shortlisting tool for Analognauts, built from the
 TerraTwin AI MVP Technical Architecture Agent Guide (v1.0, November 10, 2026).
 
-**Status: first implementation pass.** The numerical engine, local raster intake,
-profile preparation, and Streamlit shell are implemented. No scientific reference
-or Earth candidate profiles are bundled yet. The app deliberately says
-**No validated scientific profiles loaded** and disables analysis until verified
-products are prepared. This is not the completed scientific MVP.
+**Status: limited real-data prototype.** One measured MOLA Jezero reference and
+one NASADEM Death Valley-area candidate are prepared at matching physical scale.
+The pipeline, arithmetic, UI and CSV are verified for this slice. The initial
+terrain index is **94.0643 / 100** under the engineering defaults; it does not
+establish scientific suitability or ranking utility with a single candidate.
+The damaged Moon raster and >=10-site acceptance requirement remain unresolved.
+See [the real-data validation report](docs/real-data-validation.md).
 
 ## Run locally
 
@@ -45,34 +47,41 @@ binary wheels are unavailable. Do not change the system Python environment.
 - An app smoke test and a separate scientific release gate.
 
 The PDS adapter delegates supported label decoding to GDAL and requires a manually
-audited interpretation. It is **not** a universal PDS parser, and it has not yet
-been validated against a real MOLA or LOLA raster. A valid metadata schema is not
+audited interpretation. It is **not** a universal PDS parser. The actual MOLA
+product has been decoded and checked numerically; LOLA remains blocked.
+A valid metadata schema is not
 evidence of a correct scientific interpretation.
 
 ## Prepare real data
 
 Read [the acquisition guide](docs/data-acquisition.md) for required source products,
 label/sidecar fields, ROI contracts, exact archive entry points and current blockers.
-Large rasters, original labels, and local interpretation sidecars belong under
-`data/raw/`, which is ignored by Git. Register verified source records in
+Large rasters and original labels belong under `data/raw/`, which is ignored by
+Git. Audited sidecars are tracked under `data/metadata/interpretations/`.
+Register source records in
 [the manifest](data/metadata/sources.csv), verified Earth polygons in
 [the catalog](data/catalog/earth_sites.geojson), and jobs in
 [the pipeline configuration](config/pipeline.yaml).
 
 ```powershell
+.venv/Scripts/python.exe scripts/prepare_real_slice.py
 .venv/Scripts/python.exe scripts/validate_sources.py
 .venv/Scripts/python.exe scripts/prepare_planetary.py --config config/pipeline.yaml
 .venv/Scripts/python.exe scripts/prepare_earth.py --sites data/catalog/earth_sites.geojson
 .venv/Scripts/python.exe scripts/build_profiles.py --config config/pipeline.yaml
+.venv/Scripts/python.exe scripts/validate_real_slice.py
 .venv/Scripts/python.exe scripts/run_smoke_test.py
 .venv/Scripts/python.exe scripts/run_smoke_test.py --release
 ```
 
 The first two preparation scripts validate inputs; `build_profiles.py` performs
 extraction. All CLIs support `--help` and exit nonzero on blocking input errors.
-With the current empty manifest/catalog/job list, preparation and release checks
-are **expected to fail with an actionable message**. The ordinary app smoke test
-must pass even without scientific data.
+`prepare_real_slice.py` registers the exact inspected downloads, fetches metadata,
+verifies the complete Mars image against PDS, and fixes the study footprints before
+scoring. Original user download dates are unknown and recorded as such. It does
+not require Earthdata credentials or rewrite raw images. The Earth ZIP publisher
+checksum is unverified; that limitation is preserved in the app and exports.
+The full `--release` check still fails because Moon and >=10 Earth sites are missing.
 
 Expected prepared outputs are `data/processed/planetary_profiles.parquet`,
 `data/processed/earth_profiles.parquet`, and
@@ -102,13 +111,15 @@ part of baseline scoring.
 ```
 
 See [development status](docs/development-status.md) for ticket-level progress,
-remaining acceptance criteria and known limitations. The next scientific milestone
-is a verified Mars/Moon/two-Earth raster availability checkpoint, then an end-to-end
-real comparison. Expand to ten distinct Earth ROIs only after validating that slice.
+remaining acceptance criteria and known limitations. The Mars/one-Earth slice is
+numerically verified; next obtain a corrected Moon raster and additional distinct
+Earth ROIs, then assess scientific usefulness independently. See the saved CSV,
+validation JSON and actual-grid terrain review under `data/processed/`.
 
 ## Attribution and license
 
 Original code is Apache-2.0 licensed; see [LICENSE](LICENSE).
-Dataset rights are independent of this code license. No third-party raster is
-redistributed in this initial pass. See [source credits](docs/sources.md).
+Dataset rights are independent of this code license. Small derived analysis grids,
+profiles and source metadata are included; large original rasters are excluded.
+See [source credits](docs/sources.md).
 Credentials belong in environment variables or a local secret store, never Git.

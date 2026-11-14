@@ -73,3 +73,12 @@ settings. The processing manifest records source/label/interpretation/config
 checksums, grid bounds, CRS, sample counts, git commit and numerical package versions.
 Creation timestamps change across preparation runs; the numerical calculations and
 ordering remain deterministic for fixed inputs/configuration.
+
+The first real slice uses Jezero's USGS/IAU Gazetteer center (18.41 N, 77.69 E)
+and the n36w117 provider-tile midpoint (36.5 N, 116.5 W). Both local azimuthal
+equidistant study grids cover 60 x 60 km. These choices were fixed before scores
+were examined. Earth selection reflects available data, not a scored discovery.
+Analysis rasters and their checksums are saved alongside profiles. A second,
+scalar-loop implementation independently checks features and the score; raw-to-grid
+repeat processing checks determinism. These checks establish numerical agreement
+on the same grids, not independent expert validation of analog suitability.

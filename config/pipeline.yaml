@@ -3,7 +3,40 @@ features_version: features_v1
 common_grid_m: 1000.0
 roi_size_km: 60.0
 roughness_kernel_cells: 3
-minimum_valid_cell_fraction: 0.90
-# Deliberately empty until local products, original labels and ROIs are verified.
-# See docs/data-acquisition.md for the job contract.
-jobs: []
+minimum_valid_cell_fraction: 0.9
+jobs:
+- raster_path: data/raw/Mars/megt44n000hb.xml
+  interpretation_path: data/metadata/interpretations/mars_jezero.yaml
+  source_id: MOLA_MEGT44N000HB
+  destination_crs: +proj=aeqd +lat_0=18.41 +lon_0=77.69 +R=3396000 +units=m +type=crs
+  bounds_m: &id001
+  - -30000
+  - -30000
+  - 30000
+  - 30000
+  identity:
+    profile_id: mars_jezero_60km_v1
+    region_name: Jezero crater 60 km study ROI
+    roi_id: mars_jezero_roi_60km_v1
+  warnings:
+  - MOLA includes interpolated bins; raster validity is not direct-shot coverage.
+- raster_path: data/raw/Earth/NASADEM_HGT_s01w047/n36w117.hgt
+  interpretation_path: data/metadata/interpretations/earth_n36w117.yaml
+  source_id: NASADEM_N36W117_HGT
+  destination_crs: +proj=aeqd +lat_0=36.5 +lon_0=-116.5 +datum=WGS84 +units=m +type=crs
+  bounds_m: *id001
+  supporting_files:
+    NASADEM_N36W117_SWB: data/raw/Earth/NASADEM_HGT_s01w047/n36w117.swb
+    NASADEM_N36W117_NUM: data/raw/Earth/NASADEM_HGT_s01w047/n36w117.num
+  identity:
+    profile_id: earth_n36w117_60km_v1
+    roi_id: earth_n36w117_roi_60km_v1
+    region_name: Death Valley-area tile-centered ROI
+    site_id: earth_n36w117
+    site_name: Death Valley-area tile-centered ROI
+    country: United States
+    centroid_lat: 36.5
+    centroid_lon: -116.5
+  warnings:
+  - Single availability-selected candidate; rank 1 does not establish superiority.
+  - Original Earth ZIP publisher checksum not independently verified.

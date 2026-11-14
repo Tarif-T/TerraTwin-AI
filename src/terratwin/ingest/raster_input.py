@@ -8,6 +8,7 @@ GDAL handles supported label formats; unsupported labels fail closed.
 from pathlib import Path
 from typing import Literal
 
+import numpy as np
 import rasterio
 from pydantic import Field, model_validator
 
@@ -28,7 +29,11 @@ class RasterInterpretation(Contract):
     sample_unit: Literal["m"]
     scale: float
     offset: float
-    nodata: float
+    nodata: float | None
+    raster_data_path: str | None = None
+    mask_path: str | None = None
+    mask_sha256: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    mask_land_value: int = Field(default=0, ge=0, le=255)
     label_path: str = Field(min_length=1)
     label_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     interpretation_evidence: str = Field(min_length=20)
@@ -37,6 +42,8 @@ class RasterInterpretation(Contract):
     def valid_scale(self):
         if self.scale == 0:
             raise ValueError("Elevation scale cannot be zero")
+        if (self.mask_path is None) != (self.mask_sha256 is None):
+            raise ValueError("A ground mask requires both a path and checksum")
         validate_body_crs(self.source_crs, self.body)
         return self
 
@@ -54,7 +61,12 @@ def validate_local_raster(
         raise ValueError("Horizontal datum differs from source manifest")
     if source.vertical_datum != metadata.vertical_datum:
         raise ValueError("Vertical datum differs from source manifest")
-    if sha256_file(raster_path) != source.checksum_sha256:
+    data_path = (
+        (interpretation_path.parent / metadata.raster_data_path).resolve()
+        if metadata.raster_data_path
+        else raster_path
+    )
+    if sha256_file(data_path) != source.checksum_sha256:
         raise ValueError("Raster checksum does not match source manifest")
     label = (interpretation_path.parent / metadata.label_path).resolve()
     if sha256_file(label) != metadata.label_sha256:
@@ -64,6 +76,24 @@ def validate_local_raster(
     with rasterio.open(raster_path) as dataset:
         if dataset.count != 1:
             raise ValueError("Intake requires a verified single-band topographic elevation product")
+        if dataset.driver in ("PDS", "PDS4"):
+            if metadata.raster_data_path is None:
+                raise ValueError(
+                    "PDS intake requires the underlying image path for integrity checks"
+                )
+            if data_path.resolve() not in {Path(name).resolve() for name in dataset.files}:
+                raise ValueError("PDS label does not reference the declared image")
+            expected_bytes = dataset.width * dataset.height * np.dtype(dataset.dtypes[0]).itemsize
+            if data_path.stat().st_size != expected_bytes:
+                raise ValueError(
+                    "PDS image byte count does not match its declared single-band array"
+                )
+        if metadata.mask_path:
+            mask_path = (interpretation_path.parent / metadata.mask_path).resolve()
+            if sha256_file(mask_path) != metadata.mask_sha256:
+                raise ValueError("Ground mask checksum mismatch")
+            if mask_path.stat().st_size != dataset.width * dataset.height:
+                raise ValueError("Ground mask must contain one uint8 value per source sample")
         if dataset.crs is None:
             raise ValueError("GDAL cannot decode source CRS; prepare a verified labeled product")
         expected = validate_body_crs(metadata.source_crs, body)

@@ -30,6 +30,14 @@ except (ValueError, OSError, KeyError, TypeError) as error:
     references, sites, sources = [], [], {}
     data_error = str(error)
 
+if references and sites and (len(sites) < 10 or {p.body for p in references} != {"Mars", "Moon"}):
+    st.info(
+        f"Limited real-data prototype: {len(references)} reference "
+        f"and {len(sites)} Earth candidate(s). "
+        "A single candidate's rank 1 does not establish superiority. "
+        "Full MVP coverage and independent scientific validation remain incomplete."
+    )
+
 with explore:
     left, right = st.columns([1, 2])
     with left:
@@ -127,6 +135,12 @@ with explore:
                 site = next(p for p in sites if p.site_id == selected["site_id"])
                 st.metric("Terrain similarity index", f"{selected['similarity_index']:.2f} / 100")
                 st.caption(f"Weighted feature coverage: {selected['feature_coverage']:.1%}")
+                if selected["warning"]:
+                    st.warning(selected["warning"])
+                st.caption(
+                    "This index compares four aggregate measurements. "
+                    "It does not compare crater shape or the spatial arrangement of landforms."
+                )
                 breakdown = pd.DataFrame(selected["components"]).T
                 st.dataframe(breakdown, width="stretch")
                 st.write(

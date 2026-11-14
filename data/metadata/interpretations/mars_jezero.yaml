@@ -1,0 +1,18 @@
+product_type: topographic_elevation
+sample_unit: m
+scale: 1
+offset: 0
+longitude_convention: '0_360'
+mask_land_value: 0
+body: Mars
+source_crs: PROJCS["Equirectangular Mars",GEOGCS["GCS_Mars",DATUM["D_Mars",SPHEROID["Mars",3396000,0]],PRIMEM["Reference_Meridian",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Equirectangular"],PARAMETER["standard_parallel_1",0],PARAMETER["central_meridian",180],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Metre",1],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+horizontal_datum: IAU2000 planetocentric; sphere R=3396000 m
+vertical_datum: GMM3 (mgm1025) areoid, degree/order 50
+latitude_type: planetocentric
+nodata: null
+raster_data_path: ../../raw/Mars/megt44n000hb.img
+label_path: ../../raw/Mars/megt44n000hb.xml
+label_sha256: f6de640ed5603eb03395616214c9a5707c9d49273f699d2cbeec53e93df6bd08
+interpretation_evidence: 'MOLA PDS4 SignedMSB2 metre topography; scale 1, offset 0;
+  radius 3396000 m. XML declares no special missing constant; zero is valid elevation.
+  Interpolated bins are present: nonmissing coverage is not direct-shot coverage.'

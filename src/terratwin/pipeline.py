@@ -6,14 +6,18 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+import rasterio
 from pydantic import Field
+from rasterio.transform import from_origin
 
 from terratwin.config import ROOT, content_hash, read_yaml
 from terratwin.datasets import load_catalog
 from terratwin.geo.features import extract_features
 from terratwin.geo.quality import quality_reasons
 from terratwin.geo.rasters import metric_roi
+from terratwin.geo.regions import validate_earth_footprint
 from terratwin.ingest.earth_loader import load_nasadem
 from terratwin.ingest.manifest import load_manifest, sha256_file
 from terratwin.ingest.pds_loader import load_pds
@@ -38,6 +42,8 @@ class Job(Contract):
     bounds_m: tuple[float, float, float, float]
     # Identity only: measurements, scale, QA and hashes are computed by the pipeline.
     identity: dict
+    supporting_files: dict[str, str] = Field(default_factory=dict)
+    warnings: list[str] = Field(default_factory=list)
 
 
 def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
@@ -52,12 +58,24 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
         raise ValueError("Roughness kernel must be odd")
     manifest = load_manifest(root / "data/metadata/sources.csv")
     catalog = load_catalog(root / "data/catalog/earth_sites.geojson")
-    profiles, reports = [], []
+    profiles, reports, arrays = [], [], []
     for raw_job in config.jobs:
         job = Job.model_validate(raw_job)
         if job.source_id not in manifest:
             raise ValueError(f"Missing source manifest record: {job.source_id}")
         source = manifest[job.source_id]
+        support_records = {}
+        for source_id, relative_path in job.supporting_files.items():
+            if source_id not in manifest:
+                raise ValueError(f"Missing supporting source: {source_id}")
+            supporting = manifest[source_id]
+            if supporting.planetary_body != source.planetary_body:
+                raise ValueError("Supporting source body mismatch")
+            if supporting.roi_id != source.roi_id:
+                raise ValueError("Supporting source ROI mismatch")
+            if sha256_file(root / relative_path) != supporting.checksum_sha256:
+                raise ValueError(f"Supporting file checksum mismatch: {source_id}")
+            support_records[source_id] = supporting.model_dump(mode="json")
         raster_path, interpretation_path = (
             root / job.raster_path,
             root / job.interpretation_path,
@@ -75,6 +93,7 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
             job.bounds_m,
             config.common_grid_m,
             config.roi_size_km,
+            interpretation_path=interpretation_path,
         )
         features = extract_features(
             array,
@@ -89,7 +108,7 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
             roughness_kernel_cells=config.roughness_kernel_cells,
             valid_cell_fraction=features.valid_cell_fraction,
             qa_pass=not reasons,
-            source_ids=[source.source_id],
+            source_ids=[source.source_id, *sorted(support_records)],
             processing_version=config.processing_version,
             features_version=config.features_version,
             config_sha256=content_hash(
@@ -97,12 +116,13 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
                     "pipeline": config.model_dump(),
                     "source": source.model_dump(mode="json"),
                     "interpretation": metadata.model_dump(),
+                    "supporting_sources": support_records,
                 }
             ),
             created_utc=datetime.now(timezone.utc),
             coordinate_convention=f"{metadata.latitude_type}; {metadata.longitude_convention}",
             processing_notes=metadata.interpretation_evidence,
-            data_warning="; ".join(reasons),
+            data_warning="; ".join([*job.warnings, *reasons]),
             synthetic=False,
             **features.measurements.model_dump(),
         )
@@ -113,6 +133,9 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
             if profile.site_id not in catalog:
                 raise ValueError(f"No verified Earth polygon for {profile.site_id}")
             properties = catalog[profile.site_id]["properties"]
+            validate_earth_footprint(
+                catalog[profile.site_id]["geometry"], job.destination_crs, job.bounds_m
+            )
             if any(
                 getattr(profile, key) != properties[key]
                 for key in (
@@ -123,10 +146,13 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
             ):
                 raise ValueError("Earth profile/catalog identity mismatch")
         profiles.append(profile)
+        arrays.append((profile, array, job))
         reports.append(
             {
                 "profile_id": profile.profile_id,
-                "raster_sha256": sha256_file(raster_path),
+                "raster_sha256": source.checksum_sha256,
+                "reader_entrypoint_sha256": sha256_file(raster_path),
+                "supporting_source_ids": sorted(support_records),
                 "interpretation_sha256": sha256_file(interpretation_path),
                 "label_sha256": metadata.label_sha256,
                 "config_sha256": profile.config_sha256,
@@ -145,6 +171,31 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
         raise ValueError("Duplicate Earth site IDs in pipeline jobs")
     output = root / "data/processed"
     output.mkdir(parents=True, exist_ok=True)
+    terrain = output / "terrain"
+    terrain.mkdir(exist_ok=True)
+    for profile, array, job in arrays:
+        # Use a digest filename: identifiers never become filesystem paths.
+        name = content_hash(profile.profile_id)[:16] + ".tif"
+        path = terrain / name
+        with rasterio.open(
+            path,
+            "w",
+            driver="GTiff",
+            height=array.shape[0],
+            width=array.shape[1],
+            count=1,
+            dtype="float64",
+            nodata=np.nan,
+            crs=job.destination_crs,
+            transform=from_origin(
+                job.bounds_m[0], job.bounds_m[3], config.common_grid_m, config.common_grid_m
+            ),
+            compress="deflate",
+        ) as dataset:
+            dataset.write(array, 1)
+        report = next(r for r in reports if r["profile_id"] == profile.profile_id)
+        report["analysis_raster"] = f"terrain/{name}"
+        report["analysis_raster_sha256"] = sha256_file(path)
     for name, group in (
         ("planetary_profiles", [p for p in profiles if p.body != "Earth"]),
         ("earth_profiles", [p for p in profiles if p.body == "Earth"]),
@@ -164,6 +215,13 @@ def build_profiles(config_path: Path, root: Path = ROOT) -> list[Profile]:
     )
     report = {
         "git_commit": git.stdout.strip() or "unavailable",
+        "code_sha256": content_hash(
+            {
+                str(path.relative_to(root)).replace("\\", "/"): sha256_file(path)
+                for folder in (root / "src", root / "scripts")
+                for path in sorted(folder.rglob("*.py"))
+            }
+        ),
         "pipeline_config_sha256": content_hash(config.model_dump()),
         "packages": {
             package: importlib.metadata.version(package)
